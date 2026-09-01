@@ -1,0 +1,143 @@
+{
+  "weekdayMap": ["testimonial", "engagement", "transformation", "tip", "bts", "featured", "booking"],
+  "baseTags": ["#MobilePetWorks", "#MobileDogGrooming", "#DogGrooming"],
+  "pillars": {
+    "engagement": {
+      "label": "Engagement",
+      "color": "#5b21b6",
+      "soft": "#ede9fe",
+      "time": "19:00",
+      "prefersPhoto": false,
+      "imageIdea": "A cute candid dog photo, or a simple branded graphic with the question text.",
+      "captions": [
+        "Monday question 🐾 What's your dog's most dramatic reaction to bath time? Tell us below! 🛁",
+        "Paws up if your pup runs and hides the second they hear the word \"bath\" 🐶 Good thing we come to YOU. 😉",
+        "Fill in the blank: My dog's favorite spot to get scratched is ______ 🐾 Go!",
+        "New week, new floofs! Drop a photo of your pup in the comments — we love meeting our {area} neighbors' dogs. 📸🐕"
+      ],
+      "graphicLines": [
+        "Paws up if your pup hides at bath time",
+        "What's your dog's most dramatic bath-time reaction?",
+        "Where's your dog's favorite scratch spot?",
+        "Show us your floof in the comments"
+      ],
+      "tags": ["#DogsOfFacebook", "#DogLovers"]
+    },
+    "transformation": {
+      "label": "Transformation",
+      "color": "#0f766e",
+      "soft": "#ccfbf1",
+      "time": "12:00",
+      "prefersPhoto": true,
+      "imageIdea": "A before/after side-by-side. TIP: photograph every dog before and after — this is your best-performing content.",
+      "captions": [
+        "Transformation Tuesday! ✨ Swipe to see this pup's before & after — done right in their own driveway. No stress, no car ride, just a fresh new look. 🐩",
+        "From scruffy to spectacular — and they never had to leave home. 🚐✨ This is exactly why we love what we do.",
+        "Before ➡️ after. Same happy dog, way fluffier. 🐕 Mobile grooming means we come to you and your pup gets our full, undivided attention."
+      ],
+      "graphicLines": [
+        "Before to after, right in the driveway",
+        "Same happy dog, way fluffier",
+        "No stress, no car ride — just a fresh look"
+      ],
+      "tags": ["#TransformationTuesday", "#BeforeAndAfter", "#GroomingTransformation"]
+    },
+    "tip": {
+      "label": "Pet care tip",
+      "color": "#92400e",
+      "soft": "#fef3c7",
+      "time": "08:00",
+      "prefersPhoto": false,
+      "imageIdea": "A grooming-in-action photo, or a clean text graphic with the tip on-brand.",
+      "captions": [
+        "🐾 Grooming tip: Brushing your dog a few times a week between grooms cuts down on matting and shedding — and keeps them comfy. Need a hand? We come to you. 🚐",
+        "Did you know? Regular grooming isn't just about looks — it helps catch skin issues, lumps, and ear infections early. 🩺🐶 Book a mobile groom and we'll keep an eye out.",
+        "Wednesday wisdom 🐾 Overgrown nails can actually hurt your dog's posture and joints. We trim them right at your door — quick and stress-free.",
+        "Hot weather tip ☀️🐕 Never shave a double-coated breed all the way down — their coat helps regulate temperature. Ask us what's best for your pup's coat!"
+      ],
+      "graphicLines": [
+        "Brush a few times a week to cut matting & shedding",
+        "Regular grooming catches skin issues early",
+        "Overgrown nails hurt your dog's joints",
+        "Never fully shave a double-coated breed"
+      ],
+      "tags": ["#DogCare", "#PetTips", "#DogGroomingTips"]
+    },
+    "bts": {
+      "label": "Behind the scenes",
+      "color": "#1e40af",
+      "soft": "#dbeafe",
+      "time": "18:00",
+      "prefersPhoto": true,
+      "imageIdea": "A photo or short video inside/of the van, or the groomer at work with a dog.",
+      "captions": [
+        "Ever wonder what's inside the Mobile Pet Works van? 🚐 A full grooming salon on wheels — warm water, pro tools, and zero waiting rooms. Your dog gets the VIP treatment right outside your door. 🐾",
+        "Meet your mobile groomer! 👋 One dog at a time, one-on-one attention, in a place your pup already knows — home. 🏡🐕",
+        "Behind the scenes: this is where the magic happens ✨🚐 No cages, no kennels, no other barking dogs — just your pup and us. That's the mobile difference."
+      ],
+      "graphicLines": [
+        "A full grooming salon on wheels",
+        "No cages, no kennels — just your pup & us",
+        "The VIP treatment, right outside your door"
+      ],
+      "tags": ["#BehindTheScenes", "#MobileGrooming", "#SmallBusiness"]
+    },
+    "featured": {
+      "label": "Featured pup",
+      "color": "#9d174d",
+      "soft": "#fce7f3",
+      "time": "17:00",
+      "prefersPhoto": true,
+      "imageIdea": "A great photo of a freshly groomed dog. Ask clients for permission to feature their pup.",
+      "captions": [
+        "Furry Friday! 🐶 Look at this good boy after his spa day. Tag your dog so we can feature them next! 📸",
+        "Happy Friday from one of our favorite {area} clients! 🐩💛 Who's ready for the weekend? Book your pup's next groom before spots fill up.",
+        "Featured floof of the week! 🌟🐕 Freshly groomed and feeling fabulous — right at home. Want your pup featured? Tag us!"
+      ],
+      "graphicLines": [
+        "Featured floof of the week",
+        "Freshly groomed & feeling fabulous",
+        "Happy Friday from our favorite clients"
+      ],
+      "tags": ["#FurryFriday", "#DogsOfInstagram", "#FluffyPup"]
+    },
+    "booking": {
+      "label": "Booking CTA",
+      "color": "#166534",
+      "soft": "#dcfce7",
+      "time": "10:00",
+      "prefersPhoto": false,
+      "imageIdea": "The van in a driveway, or a clean graphic with \"Book Now\" + your website.",
+      "captions": [
+        "Weekend spots go fast! 📅 Skip the salon trip — we bring professional grooming right to your driveway in {area}. Book online today at mobilepetworks.com 🚐🐾",
+        "Your dog deserves a spa day and you deserve to skip the car ride 😌 Booking is easy — visit mobilepetworks.com and we'll come to you. 🐕✨",
+        "Still driving your dog across town for grooming? 🚗 There's a better way 🚐 Mobile Pet Works comes to you in {area}. Book now → mobilepetworks.com"
+      ],
+      "graphicLines": [
+        "Skip the salon trip — we come to your driveway",
+        "Book online at mobilepetworks.com",
+        "Weekend spots go fast — book today"
+      ],
+      "tags": ["#BookNow", "#MobileDogGrooming", "#DogGroomer"]
+    },
+    "testimonial": {
+      "label": "Testimonial",
+      "color": "#9a3412",
+      "soft": "#ffedd5",
+      "time": "19:00",
+      "prefersPhoto": false,
+      "imageIdea": "A styled review screenshot on-brand, or a happy dog photo with the quote overlaid.",
+      "captions": [
+        "⭐⭐⭐⭐⭐ \"So convenient and my dog was so calm — no stress at all!\" We love hearing this. 🐾 Book your own stress-free groom at mobilepetworks.com",
+        "Nothing makes us happier than a happy pup and a happy owner 💛🐕 Thank you to all our {area} clients who trust us with your fur babies!",
+        "Real review from a real client: \"Best decision ever — they came right to our house and my senior dog was so comfortable.\" 🥰 That's the mobile difference."
+      ],
+      "graphicLines": [
+        "\"So convenient and my dog was so calm\"",
+        "\"Best decision ever — right at our house\"",
+        "5-star mobile grooming, right at home"
+      ],
+      "tags": ["#HappyClients", "#5StarReview", "#DogGrooming"]
+    }
+  }
+}

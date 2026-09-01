@@ -1,0 +1,45 @@
+name: Build calendar
+
+# Regenerates a rolling 30-day calendar. Runs on the 1st of each month and can
+# be triggered by hand from the Actions tab. Posts already in flight are kept.
+on:
+  workflow_dispatch:
+    inputs:
+      days:
+        description: "How many days to generate"
+        default: "30"
+      start:
+        description: "Start date (YYYY-MM-DD), blank = today"
+        default: ""
+  schedule:
+    - cron: "0 16 1 * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mpw-calendar
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: npm install --no-audit --no-fund
+      - name: Generate calendar
+        run: |
+          ARGS="--days ${{ github.event.inputs.days || '30' }}"
+          if [ -n "${{ github.event.inputs.start }}" ]; then ARGS="$ARGS --start ${{ github.event.inputs.start }}"; fi
+          node scripts/generate-calendar.mjs $ARGS
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "Rebuild calendar [skip ci]"
+          git pull --rebase --autostash || true
+          git push

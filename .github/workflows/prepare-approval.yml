@@ -1,0 +1,46 @@
+name: Prepare approval
+
+# Daily, ~8am Pacific (15:00 UTC). Builds tomorrow's image and opens the
+# approval issue you react to. Also runnable by hand to test.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 15 * * *"
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: mpw-write
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: npm install --no-audit --no-fund
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+      - name: Phase 1 — resolve & commit images
+        run: |
+          node scripts/prepare.mjs --images-only
+          git add -A
+          git diff --cached --quiet || git commit -m "Resolve post images [skip ci]"
+          git pull --rebase --autostash || true
+          git push
+      - name: Phase 2 — open approval issues (images now public)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          node scripts/prepare.mjs --issues-only
+          git add -A
+          git diff --cached --quiet || git commit -m "Open approval issues [skip ci]"
+          git pull --rebase --autostash || true
+          git push

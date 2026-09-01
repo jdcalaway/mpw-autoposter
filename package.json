@@ -1,0 +1,17 @@
+{
+  "name": "mpw-autoposter",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Automated 30-day social calendar + review-queue auto-posting to Facebook & Instagram for Mobile Pet Works.",
+  "scripts": {
+    "build-calendar": "node scripts/generate-calendar.mjs",
+    "prep": "node scripts/prepare.mjs",
+    "publish": "node scripts/publish.mjs",
+    "sample": "node scripts/make-graphic.mjs --sample"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "sharp": "^0.33.5"
+  }
+}

@@ -1,0 +1,7 @@
+# Force LF so shell blocks in workflows and .mjs scripts run correctly on the
+# Linux GitHub Actions runners, regardless of the OS they were committed from.
+* text=auto eol=lf
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.webp binary
