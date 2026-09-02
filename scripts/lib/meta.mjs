@@ -17,12 +17,15 @@ function apiVersion(cfg) {
 
 async function graph(version, path, params, method = "POST") {
   const url = new URL(`${GRAPH}/${version}/${path}`);
-  const body = new URLSearchParams(params);
-  const res = await fetch(url, {
-    method,
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body,
-  });
+  const opts = { method, headers: {} };
+  if (method === "GET" || method === "HEAD") {
+    // GET requests carry params in the query string — a body is illegal.
+    for (const [k, v] of Object.entries(params)) url.searchParams.set(k, v);
+  } else {
+    opts.headers["Content-Type"] = "application/x-www-form-urlencoded";
+    opts.body = new URLSearchParams(params);
+  }
+  const res = await fetch(url, opts);
   const json = await res.json().catch(() => ({}));
   if (!res.ok || json.error) {
     const e = json.error || {};
@@ -34,13 +37,29 @@ async function graph(version, path, params, method = "POST") {
   return json;
 }
 
+// Publishing to a Page (and its linked IG account) requires a *Page* access
+// token. META_PAGE_TOKEN may be a Page token already, or a System User token —
+// in the latter case we exchange it for the Page token via /me/accounts. Either
+// way works, and the derived token is cached for the run.
+let cachedPageToken;
+async function pageToken(cfg) {
+  if (cachedPageToken) return cachedPageToken;
+  const configured = env("META_PAGE_TOKEN");
+  try {
+    const r = await graph(apiVersion(cfg), "me/accounts", { fields: "id,access_token", access_token: configured }, "GET");
+    const pg = (r.data || []).find((p) => p.id === env("META_PAGE_ID"));
+    if (pg && pg.access_token) return (cachedPageToken = pg.access_token);
+  } catch { /* fall through — treat the configured token as a Page token */ }
+  return (cachedPageToken = configured);
+}
+
 /** Post a photo with caption to the Facebook Page. Returns { post_id } or { id }. */
 export async function postToFacebook({ cfg, imageUrl, message }) {
   const v = apiVersion(cfg);
   return graph(v, `${env("META_PAGE_ID")}/photos`, {
     url: imageUrl,
     caption: message,
-    access_token: env("META_PAGE_TOKEN"),
+    access_token: await pageToken(cfg),
   });
 }
 
@@ -48,7 +67,7 @@ export async function postToFacebook({ cfg, imageUrl, message }) {
 export async function postToInstagram({ cfg, imageUrl, caption }) {
   const v = apiVersion(cfg);
   const ig = env("META_IG_USER_ID");
-  const token = env("META_PAGE_TOKEN");
+  const token = await pageToken(cfg);
 
   const container = await graph(v, `${ig}/media`, {
     image_url: imageUrl,
