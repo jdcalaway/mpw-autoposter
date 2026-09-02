@@ -9,7 +9,7 @@
 // It handles any planned post dated today or tomorrow, so a missed run self-heals.
 
 import {
-  loadConfig, loadCalendar, saveCalendar, todayLocal, addDays, rawUrl, log,
+  loadConfig, loadPillars, loadCalendar, saveCalendar, todayLocal, addDays, rawUrl, log,
 } from "./lib/util.mjs";
 import { resolveImage } from "./lib/images.mjs";
 import { createIssue } from "./lib/github.mjs";
@@ -23,6 +23,8 @@ function inHorizon(cfg, post) {
 }
 
 async function resolveImages(cfg, cal) {
+  const pillars = await loadPillars();
+  const area = cfg.business.serviceArea || "your area";
   let changed = false;
   for (const post of cal.posts) {
     if (post.status !== "planned" || post.image || !inHorizon(cfg, post)) continue;
@@ -30,6 +32,14 @@ async function resolveImages(cfg, cal) {
     post.image = relPath;
     post.imageUrl = rawUrl(relPath);
     post.imageSource = source;
+    // If a photo-based pillar fell back to a generated graphic, swap in a
+    // caption that doesn't promise a photo (no "swipe to see the before & after").
+    const gc = pillars.pillars[post.pillar].graphicCaptions;
+    if (source === "graphic" && gc && gc.length) {
+      let h = 0;
+      for (const c of post.date) h = (h * 31 + c.charCodeAt(0)) >>> 0;
+      post.caption = gc[h % gc.length].replace(/\{area\}/g, area);
+    }
     changed = true;
     log(`Resolved image for ${post.date} (${post.pillar}, ${source}).`);
   }
