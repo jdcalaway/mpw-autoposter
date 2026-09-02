@@ -49,8 +49,8 @@
       "prefersPhoto": true,
       "image": "images/generated/2026-09-03-bts.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-09-03-bts.jpg",
-      "issueNumber": null,
-      "status": "planned",
+      "issueNumber": 3,
+      "status": "pending_approval",
       "imageSource": "graphic"
     },
     {
