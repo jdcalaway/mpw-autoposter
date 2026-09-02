@@ -43,14 +43,15 @@
       "datetimeLocal": "2026-09-03T18:00:00",
       "pillar": "bts",
       "pillarLabel": "Behind the scenes",
-      "caption": "Ever wonder what's inside the Mobile Pet Works van? 🚐 A full grooming salon on wheels — warm water, pro tools, and zero waiting rooms. Your dog gets the VIP treatment right outside your door. 🐾",
+      "caption": "No cages, no kennels, no other barking dogs — just your pup and us. 🐕 That's the mobile difference. Book at mobilepetworks.com",
       "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #BehindTheScenes #MobileGrooming #SmallBusiness #TriCities #TriCitiesDogs",
       "imageIdea": "A photo or short video inside/of the van, or the groomer at work with a dog.",
       "prefersPhoto": true,
-      "image": null,
-      "imageUrl": null,
+      "image": "images/generated/2026-09-03-bts.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-09-03-bts.jpg",
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "imageSource": "graphic"
     },
     {
       "id": "2026-09-04",
