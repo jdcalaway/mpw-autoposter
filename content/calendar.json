@@ -15,8 +15,8 @@
       "prefersPhoto": true,
       "image": "images/generated/2026-09-01-transformation.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-09-01-transformation.jpg",
-      "issueNumber": null,
-      "status": "planned",
+      "issueNumber": 1,
+      "status": "pending_approval",
       "imageSource": "graphic"
     },
     {
@@ -32,8 +32,8 @@
       "prefersPhoto": false,
       "image": "images/generated/2026-09-02-tip.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-09-02-tip.jpg",
-      "issueNumber": null,
-      "status": "planned",
+      "issueNumber": 2,
+      "status": "pending_approval",
       "imageSource": "graphic"
     },
     {
