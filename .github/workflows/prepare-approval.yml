@@ -18,6 +18,10 @@ concurrency:
 jobs:
   prepare:
     runs-on: ubuntu-latest
+    env:
+      # Make the bundled Quicksand brand font discoverable to sharp/librsvg.
+      FONTCONFIG_FILE: ${{ github.workspace }}/assets/fonts/fonts.conf
+      FONTCONFIG_PATH: ${{ github.workspace }}/assets/fonts
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

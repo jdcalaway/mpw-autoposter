@@ -3,3 +3,8 @@ npm-debug.log*
 .DS_Store
 Thumbs.db
 .env
+assets/fonts/cache/
+images/generated/font-test.png
+images/generated/sample-*.jpg
+
+/cache/

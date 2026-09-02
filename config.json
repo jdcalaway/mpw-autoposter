@@ -12,8 +12,13 @@
   "graphic": {
     "width": 1080,
     "height": 1080,
-    "cream": "#faf7f2",
-    "ink": "#1a1a1a",
-    "muted": "#6b6b6b"
+    "font": "Quicksand, 'Segoe UI', Helvetica, Arial, sans-serif",
+    "brandBlue": "#0146A3",
+    "gold": "#FFD25A",
+    "coral": "#D54B5D",
+    "navy": "#172E4D",
+    "card": "#FFFFFF",
+    "ink": "#172E4D",
+    "muted": "#6B7A8F"
   }
 }
