@@ -3,19 +3,18 @@
 //
 // Setup (one time):
 //   cd moego && npm install && npx playwright install chromium
-//
-// Step 1 — sign in once so we have a session (saved to .auth.json):
-//   npm run discover     (log into MoeGo in the window that opens)
-//
-// Step 2 — pull the last N days of grooming reports into the poster's library:
+// Sign in once (session saved to .auth.json):
+//   npm run discover
+// Pull the last N days of grooming reports into the poster's library:
 //   npm run pull                 (default: last 7 days)
 //   node pull.mjs --pull --days 14
 //
-// Reads report photos from MoeGo's fulfillmentReport API (cookie auth) and
-// builds a branded before/after image per report in images/photos/transformation/.
+// Before/after images are rendered with a real headless-browser HTML/CSS
+// template (Quicksand web font, gradients, shadows, emoji) for a polished look.
 // .auth.json / discovery.json / pulled.json are git-ignored.
 
 import { chromium } from "playwright";
+import sharp from "sharp";
 import { writeFile, readFile, mkdir } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { fileURLToPath } from "node:url";
@@ -33,36 +32,29 @@ const argVal = (name, def) => {
   const i = process.argv.indexOf(name);
   return i !== -1 && process.argv[i + 1] ? process.argv[i + 1] : def;
 };
-
-const ymd = (d) =>
-  new Intl.DateTimeFormat("en-CA", { timeZone: TZ, year: "numeric", month: "2-digit", day: "2-digit" }).format(d);
+const ymd = (d) => new Intl.DateTimeFormat("en-CA", { timeZone: TZ, year: "numeric", month: "2-digit", day: "2-digit" }).format(d);
 const cleanName = (s) => (s || "pup").replace(/[^A-Za-z0-9' ]+/g, "").trim() || "pup";
 const slugify = (s) => cleanName(s).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
-const escapeXml = (s) =>
-  String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
 // ---------- DISCOVERY (one-time login + API recording) ----------
 async function discover() {
   const browser = await chromium.launch({ headless: false });
   const context = await browser.newContext(existsSync(AUTH) ? { storageState: AUTH } : {});
   const page = await context.newPage();
-
   const captured = [];
   page.on("response", async (res) => {
     try {
       const req = res.request();
       const url = res.url();
-      if (!/moego\.pet|amazonaws|cloudfront|imgix|\.(jpg|jpeg|png|webp)/i.test(url)) return;
+      if (!/moego\.pet|amazonaws|cloudfront|\.(jpg|jpeg|png|webp)/i.test(url)) return;
       const ct = res.headers()["content-type"] || "";
-      const rec = { method: req.method(), status: res.status(), type: req.resourceType(), url, contentType: ct };
+      const rec = { method: req.method(), status: res.status(), url, contentType: ct };
       if (req.method() === "POST") rec.reqBody = (req.postData() || "").slice(0, 4000);
-      if (ct.includes("application/json") && req.resourceType() !== "document") {
-        rec.body = (await res.text().catch(() => "")).slice(0, 8000);
-      }
+      if (ct.includes("application/json")) rec.body = (await res.text().catch(() => "")).slice(0, 8000);
       captured.push(rec);
     } catch { /* ignore */ }
   });
-
   console.log("\n=== MoeGo — DISCOVERY (log in if prompted) ===");
   await page.goto(CALENDAR_URL, { waitUntil: "domcontentloaded" }).catch(() => {});
   const deadline = Date.now() + 5 * 60 * 1000;
@@ -77,51 +69,56 @@ async function discover() {
   await browser.close();
 }
 
-// ---------- PULL (download reports -> branded before/after images) ----------
-async function fetchImage(url) {
-  const r = await fetch(url);
-  if (!r.ok) throw new Error(`image ${r.status}`);
-  return Buffer.from(await r.arrayBuffer());
-}
-
-async function makeBeforeAfter(sharp, { photos, pet }) {
-  const W = 1080, H = 1350;
-  const slotW = 452, slotH = 604, gap = 24, py = 372;
-  const leftX = Math.round((W - (slotW * 2 + gap)) / 2);
-  const rightX = leftX + slotW + gap;
+// ---------- HTML template for a before/after card ----------
+function cardHtml({ photos, pet, note }) {
   const both = photos.length >= 2;
-  const imgs = await Promise.all(
-    (both ? [photos[0], photos[1]] : [photos[0]]).map(async (u) =>
-      sharp(await fetchImage(u)).resize(both ? slotW : slotW * 2 + gap, slotH, { fit: "cover" }).jpeg().toBuffer()
-    )
-  );
-
-  const font = "Quicksand, 'Segoe UI', Arial, sans-serif";
-  const blue = "#0146A3", gold = "#FFD25A", navy = "#172E4D", muted = "#6B7A8F";
-  const headline = `${cleanName(pet)}'s Spa Day`;
-  const labels = both
-    ? `<text x="${leftX + slotW / 2}" y="${py - 22}" text-anchor="middle" font-family="${font}" font-size="30" font-weight="700" fill="${gold}">BEFORE</text>
-       <text x="${rightX + slotW / 2}" y="${py - 22}" text-anchor="middle" font-family="${font}" font-size="30" font-weight="700" fill="${gold}">AFTER</text>`
-    : "";
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
-    <rect width="${W}" height="${H}" fill="${blue}"/>
-    <rect x="40" y="40" width="${W - 80}" height="${H - 80}" rx="44" fill="#FFFFFF"/>
-    <rect x="40" y="40" width="${W - 80}" height="18" rx="9" fill="${gold}"/>
-    <text x="${W / 2}" y="150" text-anchor="middle" font-family="${font}" font-size="32" font-weight="700" letter-spacing="6" fill="${gold}">TRANSFORMATION</text>
-    <text x="${W / 2}" y="232" text-anchor="middle" font-family="${font}" font-size="60" font-weight="700" fill="${navy}">${escapeXml(headline)}</text>
-    ${labels}
-    <text x="${W / 2}" y="${py + slotH + 66}" text-anchor="middle" font-family="${font}" font-size="30" font-weight="500" fill="${muted}">Groomed at home in the Tri-Cities</text>
-    <text x="${W / 2}" y="${H - 150}" text-anchor="middle" font-family="${font}" font-size="46" font-weight="700" fill="${blue}">Mobile Pet Works</text>
-    <text x="${W / 2}" y="${H - 104}" text-anchor="middle" font-family="${font}" font-size="30" font-weight="500" fill="${muted}">mobilepetworks.com  ·  (509) 591-5913</text>
-  </svg>`;
-
-  const base = await sharp(Buffer.from(svg)).png().toBuffer();
-  const layers = both
-    ? [{ input: imgs[0], left: leftX, top: py }, { input: imgs[1], left: rightX, top: py }]
-    : [{ input: imgs[0], left: leftX, top: py }];
-  return sharp(base).composite(layers).jpeg({ quality: 88 }).toBuffer();
+  const quote = note ? `“${esc(note)}”` : "Groomed with love, right at home 🐾";
+  const pics = both
+    ? `<div class="pair">
+         <figure><span class="badge">BEFORE</span><img src="${esc(photos[0])}"></figure>
+         <div class="arrow">→</div>
+         <figure><span class="badge">AFTER</span><img src="${esc(photos[1])}"></figure>
+       </div>`
+    : `<div class="pair"><figure class="single"><img src="${esc(photos[0])}"></figure></div>`;
+  return `<!doctype html><html><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--blue:#0146A3;--blue2:#012c6b;--gold:#FFD25A;--navy:#172E4D;--muted:#6B7A8F;--cream:#FFFDF9;}
+  *{margin:0;box-sizing:border-box;-webkit-font-smoothing:antialiased;}
+  body{width:1080px;height:1350px;font-family:'Quicksand',sans-serif;background:linear-gradient(155deg,var(--blue),var(--blue2));display:flex;align-items:center;justify-content:center;}
+  .card{position:relative;width:1012px;height:1282px;background:var(--cream);border-radius:54px;box-shadow:0 26px 70px rgba(0,0,0,.30);overflow:hidden;padding:60px 54px 0;text-align:center;}
+  .card::before{content:'';position:absolute;top:0;left:0;right:0;height:20px;background:linear-gradient(90deg,var(--gold),#ffc42d);}
+  .paw{position:absolute;font-size:130px;opacity:.06;user-select:none;}
+  .tag{display:inline-block;background:var(--gold);color:var(--navy);font-weight:700;letter-spacing:3px;font-size:23px;padding:9px 24px;border-radius:30px;margin-top:6px;}
+  h1{font-size:92px;font-weight:700;color:var(--navy);line-height:1;margin:16px 0 4px;}
+  .swash{width:130px;height:7px;background:var(--gold);border-radius:4px;margin:0 auto 10px;}
+  .sub{color:var(--muted);font-size:30px;font-weight:500;margin-bottom:34px;}
+  .pair{display:flex;align-items:center;justify-content:center;}
+  figure{position:relative;width:430px;height:566px;border-radius:28px;overflow:hidden;border:6px solid var(--gold);box-shadow:0 14px 32px rgba(1,44,107,.28);}
+  figure.single{width:892px;}
+  figure img{width:100%;height:100%;object-fit:cover;display:block;}
+  .badge{position:absolute;top:18px;left:18px;background:var(--blue);color:#fff;font-weight:700;font-size:23px;letter-spacing:2px;padding:7px 18px;border-radius:22px;z-index:2;}
+  .arrow{flex:0 0 auto;width:78px;height:78px;margin:0 -22px;z-index:3;background:var(--gold);color:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:46px;font-weight:700;box-shadow:0 8px 18px rgba(0,0,0,.22);}
+  .quote{font-style:italic;color:var(--navy);font-size:35px;font-weight:500;line-height:1.35;margin:40px 34px 0;}
+  .footer{position:absolute;left:0;right:0;bottom:52px;}
+  .brand{color:var(--blue);font-weight:700;font-size:50px;}
+  .contact{color:var(--muted);font-weight:500;font-size:30px;margin-top:6px;}
+</style></head>
+<body><div class="card">
+  <div class="paw" style="top:118px;left:34px;transform:rotate(-18deg)">🐾</div>
+  <div class="paw" style="bottom:196px;right:34px;transform:rotate(14deg)">🐾</div>
+  <div class="tag">✨ TRANSFORMATION</div>
+  <h1>${esc(cleanName(pet))}</h1>
+  <div class="swash"></div>
+  <div class="sub">fresh from the grooming van 🚐</div>
+  ${pics}
+  <div class="quote">${quote}</div>
+  <div class="footer"><div class="brand">Mobile Pet Works</div><div class="contact">mobilepetworks.com &nbsp;·&nbsp; (509) 591-5913</div></div>
+</div></body></html>`;
 }
 
+// ---------- PULL ----------
 async function pull() {
   const days = parseInt(argVal("--days", "7"), 10);
   if (!existsSync(AUTH)) return console.log("No session — run `npm run discover` first.");
@@ -140,9 +137,11 @@ async function pull() {
   const cards = j.fulfillmentReportCards || [];
   console.log(`${start} → ${end}: ${cards.length} reports.`);
 
-  const sharp = (await import("sharp")).default;
   const outDir = join(ROOT, "images", "photos", "transformation");
   await mkdir(outDir, { recursive: true });
+
+  const browser = await chromium.launch({ headless: true });
+  const page = await browser.newPage({ viewport: { width: 1080, height: 1350 }, deviceScaleFactor: 2 });
   const manifest = [];
 
   for (const c of cards) {
@@ -150,27 +149,23 @@ async function pull() {
     const photos = ((sc && sc.photos) || []).filter(Boolean);
     if (!photos.length) continue;
     const pet = cleanName(c.pet && c.pet.petName);
+    const noteF = (sc.feedbacks || []).find((f) => f.key === "additional_note");
+    const noteText = (noteF && noteF.inputText) || "";
     const file = join(outDir, `${slugify(pet)}-${c.serviceDate}.jpg`);
     try {
-      const img = await makeBeforeAfter(sharp, { photos, pet });
-      await writeFile(file, img);
-      const note = (sc.feedbacks || []).find((f) => f.key === "additional_note");
-      manifest.push({
-        pet, date: c.serviceDate, photos: photos.length,
-        file: file.replace(ROOT + "\\", "").replace(/\\/g, "/"),
-        note: (note && note.inputText) || "",
-        frequency: (sc.recommendation && sc.recommendation.frequencyText) || "",
-      });
-      console.log(`  ✓ ${pet} (${photos.length === 2 ? "before/after" : "single"}) -> ${file.split(/[\\/]/).pop()}`);
+      await page.setContent(cardHtml({ photos, pet, note: noteText }), { waitUntil: "networkidle" });
+      await page.evaluate(() => document.fonts.ready);
+      const shot = await page.screenshot({ type: "png" });
+      await writeFile(file, await sharp(shot).resize(1080, 1350).jpeg({ quality: 90 }).toBuffer());
+      manifest.push({ pet, date: c.serviceDate, photos: photos.length, file: file.replace(ROOT + "\\", "").replace(/\\/g, "/"), note: noteText, frequency: (sc.recommendation && sc.recommendation.frequencyText) || "" });
+      console.log(`  ✓ ${pet} (${photos.length === 2 ? "before/after" : "single"})`);
     } catch (e) {
       console.log(`  ✗ ${pet}: ${e.message}`);
     }
   }
+  await browser.close();
   await writeFile(join(HERE, "pulled.json"), JSON.stringify(manifest, null, 2));
   console.log(`\nDone: ${manifest.length} before/after images in images/photos/transformation/.`);
 }
 
-(MODE === "pull" ? pull() : discover()).catch((e) => {
-  console.error(e);
-  process.exit(1);
-});
+(MODE === "pull" ? pull() : discover()).catch((e) => { console.error(e); process.exit(1); });
