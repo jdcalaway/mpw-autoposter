@@ -1,0 +1,14 @@
+{
+  "name": "mpw-moego-puller",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Local tool that pulls grooming-report before/after photos from MoeGo into the poster's image library. Runs on your PC (Claude's browser tools are blocked from MoeGo's domain).",
+  "scripts": {
+    "discover": "node pull.mjs --discover",
+    "pull": "node pull.mjs --pull"
+  },
+  "dependencies": {
+    "playwright": "^1.48.0"
+  }
+}

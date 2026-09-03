@@ -8,3 +8,7 @@ images/generated/font-test.png
 images/generated/sample-*.jpg
 
 /cache/
+moego/.auth.json
+moego/discovery.json
+moego/last-screen.png
+moego/out/
