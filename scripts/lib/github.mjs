@@ -31,8 +31,8 @@ async function gh(path, { method = "GET", body } = {}) {
   return json;
 }
 
-export async function createIssue({ title, body, labels = [] }) {
-  return gh(`/repos/${repo()}/issues`, { method: "POST", body: { title, body, labels } });
+export async function createIssue({ title, body, labels = [], assignees = [] }) {
+  return gh(`/repos/${repo()}/issues`, { method: "POST", body: { title, body, labels, assignees } });
 }
 
 export async function commentIssue(number, body) {

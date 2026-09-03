@@ -89,7 +89,7 @@ async function openIssues(cfg, cal) {
       "_No reaction by post time = it holds and won't publish._",
     ].join("\n");
 
-    const issue = await createIssue({ title, body, labels: ["approval-pending"] });
+    const issue = await createIssue({ title, body, labels: ["approval-pending"], assignees: [cfg.approverLogin] });
     post.issueNumber = issue.number;
     post.status = "pending_approval";
     changed = true;
