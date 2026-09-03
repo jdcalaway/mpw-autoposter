@@ -9,10 +9,10 @@ Set-Location "$repo\moego"
 node pull.mjs --pull
 
 Set-Location $repo
-git add images/photos
-$changes = git status --porcelain images/photos
+git add images/photos images/reels
+$changes = git status --porcelain images/photos images/reels
 if ($changes) {
-  git commit -m "MoeGo: new before/after photos [skip ci]"
+  git commit -m "MoeGo: new before/after photos + reels [skip ci]"
   git pull --rebase --autostash
   git push
   Write-Output "Pushed new before/after photos."
