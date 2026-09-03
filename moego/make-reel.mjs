@@ -75,9 +75,12 @@ export async function generateReel({ page, beforeUrl, afterUrl, pet, outPath }) 
     "-c:a", "aac", "-b:a", "128k", "-shortest", "-movflags", "+faststart",
     outPath,
   ]);
+  // thumbnail (the AFTER frame) for the approval-issue preview
+  const thumbPath = outPath.replace(/\.mp4$/, ".jpg");
+  await run(ffmpegPath, ["-y", "-i", tmpB, "-q:v", "3", thumbPath]);
   await rm(tmpA, { force: true });
   await rm(tmpB, { force: true });
-  return outPath;
+  return { videoPath: outPath, thumbPath };
 }
 
 // ---- standalone test: node make-reel.mjs --pet tucker ----

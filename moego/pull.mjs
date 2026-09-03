@@ -15,6 +15,7 @@
 
 import { chromium } from "playwright";
 import sharp from "sharp";
+import { generateReel } from "./make-reel.mjs";
 import { writeFile, readFile, mkdir } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { fileURLToPath } from "node:url";
@@ -140,8 +141,13 @@ async function pull() {
   const outDir = join(ROOT, "images", "photos", "transformation");
   await mkdir(outDir, { recursive: true });
 
+  const reelsDir = join(ROOT, "images", "reels");
+  await mkdir(reelsDir, { recursive: true });
+  const force = process.argv.includes("--force");
+
   const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage({ viewport: { width: 1080, height: 1350 }, deviceScaleFactor: 2 });
+  const reelPage = await browser.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: 1 });
   const manifest = [];
 
   for (const c of cards) {
@@ -149,23 +155,41 @@ async function pull() {
     const photos = ((sc && sc.photos) || []).filter(Boolean);
     if (!photos.length) continue;
     const pet = cleanName(c.pet && c.pet.petName);
+    const slug = slugify(pet);
     const noteF = (sc.feedbacks || []).find((f) => f.key === "additional_note");
     const noteText = (noteF && noteF.inputText) || "";
-    const file = join(outDir, `${slugify(pet)}-${c.serviceDate}.jpg`);
-    if (existsSync(file) && !process.argv.includes("--force")) {
-      console.log(`  · ${pet} (already have it)`);
-      continue;
+
+    // 1) static before/after composite image
+    const file = join(outDir, `${slug}-${c.serviceDate}.jpg`);
+    if (existsSync(file) && !force) {
+      console.log(`  · ${pet} (image exists)`);
+    } else {
+      try {
+        await page.setContent(cardHtml({ photos, pet, note: noteText }), { waitUntil: "networkidle" });
+        await page.evaluate(() => document.fonts.ready);
+        const shot = await page.screenshot({ type: "png" });
+        await writeFile(file, await sharp(shot).resize(1080, 1350).jpeg({ quality: 90 }).toBuffer());
+        console.log(`  ✓ ${pet} image (${photos.length === 2 ? "before/after" : "single"})`);
+      } catch (e) {
+        console.log(`  ✗ ${pet} image: ${e.message}`);
+      }
     }
-    try {
-      await page.setContent(cardHtml({ photos, pet, note: noteText }), { waitUntil: "networkidle" });
-      await page.evaluate(() => document.fonts.ready);
-      const shot = await page.screenshot({ type: "png" });
-      await writeFile(file, await sharp(shot).resize(1080, 1350).jpeg({ quality: 90 }).toBuffer());
-      manifest.push({ pet, date: c.serviceDate, photos: photos.length, file: file.replace(ROOT + "\\", "").replace(/\\/g, "/"), note: noteText, frequency: (sc.recommendation && sc.recommendation.frequencyText) || "" });
-      console.log(`  ✓ ${pet} (${photos.length === 2 ? "before/after" : "single"})`);
-    } catch (e) {
-      console.log(`  ✗ ${pet}: ${e.message}`);
+
+    // 2) before/after Reel — only when we have both photos
+    if (photos.length >= 2) {
+      const reelFile = join(reelsDir, `${slug}-${c.serviceDate}.mp4`);
+      if (existsSync(reelFile) && !force) {
+        console.log(`  · ${pet} (reel exists)`);
+      } else {
+        try {
+          await generateReel({ page: reelPage, beforeUrl: photos[0], afterUrl: photos[1], pet, outPath: reelFile });
+          console.log(`  🎬 ${pet} reel`);
+        } catch (e) {
+          console.log(`  ✗ ${pet} reel: ${e.message}`);
+        }
+      }
     }
+    manifest.push({ pet, date: c.serviceDate, photos: photos.length, note: noteText, frequency: (sc.recommendation && sc.recommendation.frequencyText) || "" });
   }
   await browser.close();
   await writeFile(join(HERE, "pulled.json"), JSON.stringify(manifest, null, 2));

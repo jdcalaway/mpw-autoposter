@@ -83,6 +83,31 @@ export async function postToInstagram({ cfg, imageUrl, caption }) {
   });
 }
 
+/** Publish a Reel to Instagram (video). Container -> wait (video processing) -> publish. */
+export async function postReelToInstagram({ cfg, videoUrl, caption }) {
+  const v = apiVersion(cfg);
+  const ig = env("META_IG_USER_ID");
+  const token = await pageToken(cfg);
+  const container = await graph(v, `${ig}/media`, {
+    media_type: "REELS",
+    video_url: videoUrl,
+    caption,
+    access_token: token,
+  });
+  await waitForContainer(v, container.id, token, 50, 6000); // video processing is slower
+  return graph(v, `${ig}/media_publish`, { creation_id: container.id, access_token: token });
+}
+
+/** Post a video to the Facebook Page (from a public URL). */
+export async function postVideoToFacebook({ cfg, videoUrl, message }) {
+  const v = apiVersion(cfg);
+  return graph(v, `${env("META_PAGE_ID")}/videos`, {
+    file_url: videoUrl,
+    description: message,
+    access_token: await pageToken(cfg),
+  });
+}
+
 async function waitForContainer(v, creationId, token, tries = 10, delayMs = 3000) {
   for (let i = 0; i < tries; i++) {
     const status = await graph(

@@ -29,6 +29,11 @@ const PET_CAPTIONS = [
   "Look at {pet}'s glow-up! 🐩 Fresh, clean, and stress-free — no cages, no car ride, just our van in your driveway. Book at mobilepetworks.com 🚐",
   "Another happy pup 💛 {pet} is looking fabulous after a mobile groom. Want this for your dog? mobilepetworks.com 🐕✨",
 ];
+const REEL_CAPTIONS = [
+  "Watch {pet}'s glow-up! ▶️🐾 From scruffy to spa-fresh — mobile grooming right at home in the {area}. Book your pup's spa day at mobilepetworks.com 🚐",
+  "{pet}'s before ➡️ after, in motion ✨ No cages, no car ride — just our van in your driveway. Book at mobilepetworks.com 🐕",
+  "Press play for {pet}'s transformation! 🎬🐾 This is the mobile difference — a full spa day without ever leaving home. mobilepetworks.com",
+];
 const hashDate = (s) => { let h = 0; for (const c of s) h = (h * 31 + c.charCodeAt(0)) >>> 0; return h; };
 
 function inHorizon(cfg, post) {
@@ -42,15 +47,23 @@ async function resolveImages(cfg, cal) {
   let changed = false;
   for (const post of cal.posts) {
     if (post.status !== "planned" || post.image || !inHorizon(cfg, post)) continue;
-    const { relPath, source, sourceName } = await resolveImage({ cfg, post });
+    const { relPath, source, sourceName, videoRelPath } = await resolveImage({ cfg, post });
     post.image = relPath;
     post.imageUrl = rawUrl(relPath);
     post.imageSource = source;
+    if (source === "reel") {
+      post.mediaType = "reel";
+      post.videoUrl = rawUrl(videoRelPath);
+    } else {
+      delete post.mediaType;
+      delete post.videoUrl;
+    }
     const gc = pillars.pillars[post.pillar].graphicCaptions;
-    const pet = source === "photo" ? petFromFilename(sourceName) : null;
+    const pet = source === "photo" || source === "reel" ? petFromFilename(sourceName) : null;
     if (pet) {
-      // Real before/after photo with the pet's name baked into the filename.
-      post.caption = PET_CAPTIONS[hashDate(post.date) % PET_CAPTIONS.length]
+      // Real before/after (photo or Reel) with the pet's name in the filename.
+      const caps = source === "reel" ? REEL_CAPTIONS : PET_CAPTIONS;
+      post.caption = caps[hashDate(post.date) % caps.length]
         .replace(/\{pet\}/g, pet)
         .replace(/\{area\}/g, area);
       post.pet = pet;
@@ -73,9 +86,10 @@ async function openIssues(cfg, cal) {
     const title = `📅 Approve ${post.date} — ${post.pillarLabel} (${post.time})`;
     const body = [
       `**Scheduled:** ${post.datetimeLocal.replace("T", " ")} (${cfg.timezone})`,
-      `**Pillar:** ${post.pillarLabel}${post.imageSource === "graphic" ? " · auto-generated graphic" : " · your photo"}`,
+      `**Pillar:** ${post.pillarLabel}${post.imageSource === "reel" ? " · 🎬 Reel (video)" : post.imageSource === "graphic" ? " · auto-generated graphic" : " · your photo"}`,
       "",
       `![preview](${post.imageUrl})`,
+      post.mediaType === "reel" ? `\n▶️ **[Watch the Reel](${post.videoUrl})** before approving` : "",
       "",
       "**Caption**",
       "",

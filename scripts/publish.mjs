@@ -6,7 +6,7 @@
 
 import { loadConfig, loadCalendar, saveCalendar, nowLocalString, log } from "./lib/util.mjs";
 import { approvalDecision, commentIssue, closeIssue } from "./lib/github.mjs";
-import { postToFacebook, postToInstagram } from "./lib/meta.mjs";
+import { postToFacebook, postToInstagram, postReelToInstagram, postVideoToFacebook } from "./lib/meta.mjs";
 
 function hoursBetween(aLocal, bLocal) {
   return (new Date(bLocal + "Z") - new Date(aLocal + "Z")) / 3.6e6;
@@ -48,11 +48,17 @@ async function main() {
       continue;
     }
 
-    // Approved — publish.
+    // Approved — publish (as a Reel/video, or an image).
     const message = `${post.caption}\n\n${post.hashtags}`;
     try {
-      const fb = await postToFacebook({ cfg, imageUrl: post.imageUrl, message });
-      const ig = await postToInstagram({ cfg, imageUrl: post.imageUrl, caption: message });
+      let fb, ig;
+      if (post.mediaType === "reel" && post.videoUrl) {
+        fb = await postVideoToFacebook({ cfg, videoUrl: post.videoUrl, message });
+        ig = await postReelToInstagram({ cfg, videoUrl: post.videoUrl, caption: message });
+      } else {
+        fb = await postToFacebook({ cfg, imageUrl: post.imageUrl, message });
+        ig = await postToInstagram({ cfg, imageUrl: post.imageUrl, caption: message });
+      }
       post.status = "posted";
       post.postedAt = now;
       post.results = { facebook: fb.post_id || fb.id, instagram: ig.id };

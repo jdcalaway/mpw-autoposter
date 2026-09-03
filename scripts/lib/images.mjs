@@ -18,10 +18,15 @@ async function listPhotos(pillarKey) {
 }
 
 // Deterministic index from the date so re-runs pick the same photo.
+const hash = (s) => { let h = 0; for (const c of s) h = (h * 31 + c.charCodeAt(0)) >>> 0; return h; };
 function pick(list, seedStr) {
-  let h = 0;
-  for (const c of seedStr) h = (h * 31 + c.charCodeAt(0)) >>> 0;
-  return list[h % list.length];
+  return list[hash(seedStr) % list.length];
+}
+
+async function listReels() {
+  const dir = join(ROOT, "images", "reels");
+  if (!existsSync(dir)) return [];
+  return (await readdir(dir)).filter((f) => f.endsWith(".mp4")).sort();
 }
 
 /** Resolves the image for a post, materializing it under images/generated when needed.
@@ -31,6 +36,25 @@ export async function resolveImage({ cfg, post }) {
   const pillar = pillars.pillars[post.pillar];
   const genDir = join(ROOT, "images", "generated");
   await mkdir(genDir, { recursive: true });
+
+  // Transformation posts alternate between Reels (video) and static before/after
+  // images — on "reel" dates, use a Reel if one is available (with its thumbnail
+  // for the approval-issue preview).
+  if (post.pillar === "transformation" && hash(post.date) % 2 === 0) {
+    const reels = await listReels();
+    if (reels.length) {
+      const mp4 = pick(reels, post.date);
+      const thumbRel = join("images", "reels", mp4.replace(/\.mp4$/, ".jpg")).replace(/\\/g, "/");
+      if (existsSync(join(ROOT, thumbRel))) {
+        return {
+          relPath: thumbRel,
+          videoRelPath: join("images", "reels", mp4).replace(/\\/g, "/"),
+          source: "reel",
+          sourceName: mp4,
+        };
+      }
+    }
+  }
 
   const photos = await listPhotos(post.pillar);
   if (photos.length) {
