@@ -1,5 +1,5 @@
 {
-  "weekdayMap": ["testimonial", "engagement", "transformation", "tip", "bts", "featured", "booking"],
+  "weekdayMap": ["testimonial", "engagement", "transformation", "tip", "transformation", "booking", "transformation"],
   "baseTags": ["#MobilePetWorks", "#MobileDogGrooming", "#DogGrooming"],
   "pillars": {
     "engagement": {
