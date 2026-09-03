@@ -152,6 +152,10 @@ async function pull() {
     const noteF = (sc.feedbacks || []).find((f) => f.key === "additional_note");
     const noteText = (noteF && noteF.inputText) || "";
     const file = join(outDir, `${slugify(pet)}-${c.serviceDate}.jpg`);
+    if (existsSync(file) && !process.argv.includes("--force")) {
+      console.log(`  · ${pet} (already have it)`);
+      continue;
+    }
     try {
       await page.setContent(cardHtml({ photos, pet, note: noteText }), { waitUntil: "networkidle" });
       await page.evaluate(() => document.fonts.ready);
