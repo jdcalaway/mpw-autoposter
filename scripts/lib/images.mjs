@@ -38,7 +38,7 @@ export async function resolveImage({ cfg, post }) {
     const ext = chosen.match(PHOTO_EXT)[0].toLowerCase();
     const rel = join("images", "generated", `${post.date}-${post.pillar}${ext}`);
     await copyFile(join(ROOT, "images", "photos", post.pillar, chosen), join(ROOT, rel));
-    return { relPath: rel.replace(/\\/g, "/"), source: "photo" };
+    return { relPath: rel.replace(/\\/g, "/"), source: "photo", sourceName: chosen };
   }
 
   const lines = pillar.graphicLines && pillar.graphicLines.length ? pillar.graphicLines : [post.caption];

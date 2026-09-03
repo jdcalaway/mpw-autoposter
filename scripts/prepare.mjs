@@ -17,6 +17,20 @@ import { createIssue } from "./lib/github.mjs";
 const IMAGES_ONLY = process.argv.includes("--images-only");
 const ISSUES_ONLY = process.argv.includes("--issues-only");
 
+// A real photo named like "daisy-2026-08-27.jpg" (from the MoeGo puller) carries
+// the pet's name — pull it out so the caption can use it.
+function petFromFilename(name) {
+  const m = String(name || "").match(/^(.+?)-\d{4}-\d{2}-\d{2}\.[^.]+$/);
+  if (!m) return null;
+  return m[1].split("-").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
+}
+const PET_CAPTIONS = [
+  "{pet} came in for a spa day and left looking like a whole new pup! ✨ Before ➡️ after, done right at home in the {area}. 🐾 Book yours at mobilepetworks.com",
+  "Look at {pet}'s glow-up! 🐩 Fresh, clean, and stress-free — no cages, no car ride, just our van in your driveway. Book at mobilepetworks.com 🚐",
+  "Another happy pup 💛 {pet} is looking fabulous after a mobile groom. Want this for your dog? mobilepetworks.com 🐕✨",
+];
+const hashDate = (s) => { let h = 0; for (const c of s) h = (h * 31 + c.charCodeAt(0)) >>> 0; return h; };
+
 function inHorizon(cfg, post) {
   const today = todayLocal(cfg.timezone);
   return post.date === today || post.date === addDays(today, 1);
@@ -28,17 +42,22 @@ async function resolveImages(cfg, cal) {
   let changed = false;
   for (const post of cal.posts) {
     if (post.status !== "planned" || post.image || !inHorizon(cfg, post)) continue;
-    const { relPath, source } = await resolveImage({ cfg, post });
+    const { relPath, source, sourceName } = await resolveImage({ cfg, post });
     post.image = relPath;
     post.imageUrl = rawUrl(relPath);
     post.imageSource = source;
-    // If a photo-based pillar fell back to a generated graphic, swap in a
-    // caption that doesn't promise a photo (no "swipe to see the before & after").
     const gc = pillars.pillars[post.pillar].graphicCaptions;
-    if (source === "graphic" && gc && gc.length) {
-      let h = 0;
-      for (const c of post.date) h = (h * 31 + c.charCodeAt(0)) >>> 0;
-      post.caption = gc[h % gc.length].replace(/\{area\}/g, area);
+    const pet = source === "photo" ? petFromFilename(sourceName) : null;
+    if (pet) {
+      // Real before/after photo with the pet's name baked into the filename.
+      post.caption = PET_CAPTIONS[hashDate(post.date) % PET_CAPTIONS.length]
+        .replace(/\{pet\}/g, pet)
+        .replace(/\{area\}/g, area);
+      post.pet = pet;
+    } else if (source === "graphic" && gc && gc.length) {
+      // Photo-based pillar fell back to a generated graphic — use a caption
+      // that doesn't promise a photo (no "swipe to see the before & after").
+      post.caption = gc[hashDate(post.date) % gc.length].replace(/\{area\}/g, area);
     }
     changed = true;
     log(`Resolved image for ${post.date} (${post.pillar}, ${source}).`);
