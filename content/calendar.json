@@ -48,10 +48,11 @@
       "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #BookNow #MobileDogGrooming #DogGroomer #TriCities #TriCitiesDogs",
       "imageIdea": "The van in a driveway, or a clean graphic with \"Book Now\" + your website.",
       "prefersPhoto": false,
-      "image": null,
-      "imageUrl": null,
+      "image": "images/generated/2026-09-04-booking.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-09-04-booking.jpg",
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "imageSource": "graphic"
     },
     {
       "id": "2026-09-05",
