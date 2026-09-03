@@ -50,8 +50,8 @@
       "prefersPhoto": false,
       "image": "images/generated/2026-09-04-booking.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-09-04-booking.jpg",
-      "issueNumber": null,
-      "status": "planned",
+      "issueNumber": 4,
+      "status": "pending_approval",
       "imageSource": "graphic"
     },
     {
