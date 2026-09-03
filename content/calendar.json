@@ -33,8 +33,9 @@
       "image": "images/generated/2026-09-03-bts.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-09-03-bts.jpg",
       "issueNumber": 3,
-      "status": "pending_approval",
-      "imageSource": "graphic"
+      "status": "skipped",
+      "imageSource": "graphic",
+      "skipReason": "replaced by manual before/after post"
     },
     {
       "id": "2026-09-04",
