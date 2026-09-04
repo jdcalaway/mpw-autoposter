@@ -61,14 +61,18 @@
       "datetimeLocal": "2026-09-05T12:00:00",
       "pillar": "transformation",
       "pillarLabel": "Transformation",
-      "caption": "From scruffy to spectacular — and they never had to leave home. 🚐✨ This is exactly why we love what we do.",
+      "caption": "Watch Joey's glow-up! ▶️🐾 From scruffy to spa-fresh — mobile grooming right at home in the Tri-Cities. Book your pup's spa day at mobilepetworks.com 🚐",
       "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #TransformationTuesday #BeforeAndAfter #GroomingTransformation #TriCities #TriCitiesDogs",
       "imageIdea": "A before/after side-by-side. TIP: photograph every dog before and after — this is your best-performing content.",
       "prefersPhoto": true,
-      "image": null,
-      "imageUrl": null,
+      "image": "images/reels/joey-2026-08-29.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/reels/joey-2026-08-29.jpg",
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "imageSource": "reel",
+      "mediaType": "reel",
+      "videoUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/reels/joey-2026-08-29.mp4",
+      "pet": "Joey"
     },
     {
       "id": "2026-09-06",
