@@ -73,11 +73,16 @@
       "image": "images/reels/joey-2026-08-29.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/reels/joey-2026-08-29.jpg",
       "issueNumber": 5,
-      "status": "pending_approval",
+      "status": "posted",
       "imageSource": "reel",
       "mediaType": "reel",
       "videoUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/reels/joey-2026-08-29.mp4",
-      "pet": "Joey"
+      "pet": "Joey",
+      "postedAt": "2026-09-05T12:09:30",
+      "results": {
+        "facebook": "1603890387998207",
+        "instagram": "18025856477885713"
+      }
     },
     {
       "id": "2026-09-06",
