@@ -92,8 +92,8 @@
       "prefersPhoto": false,
       "image": "images/generated/2026-09-06-testimonial.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-09-06-testimonial.jpg",
-      "issueNumber": null,
-      "status": "planned",
+      "issueNumber": 6,
+      "status": "pending_approval",
       "imageSource": "graphic"
     },
     {
