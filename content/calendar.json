@@ -112,10 +112,11 @@
       "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #DogsOfFacebook #DogLovers #TriCities #TriCitiesDogs",
       "imageIdea": "A cute candid dog photo, or a simple branded graphic with the question text.",
       "prefersPhoto": false,
-      "image": null,
-      "imageUrl": null,
+      "image": "images/generated/2026-09-07-engagement.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-09-07-engagement.jpg",
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "imageSource": "graphic"
     },
     {
       "id": "2026-09-08",
