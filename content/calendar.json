@@ -508,6 +508,26 @@
       "imageUrl": null,
       "issueNumber": null,
       "status": "planned"
+    },
+    {
+      "id": "test-2026-09-07",
+      "date": "2026-09-07",
+      "isTest": true,
+      "time": "12:47",
+      "datetimeLocal": "2026-09-07T12:47:59",
+      "pillar": "booking",
+      "pillarLabel": "Test — new van artwork",
+      "conceptId": "booking-car",
+      "caption": "Your dog has an appointment. Your car doesn’t.\n\nSkip the drop-off and pickup trips. Mobile Pet Works brings the grooming salon to your driveway in the Tri-Cities.\n\nAsk about availability at mobilepetworks.com.",
+      "hashtags": "#MobilePetWorks #TriCities #MobileDogGrooming",
+      "objective": "booking",
+      "illustration": true,
+      "creativeAsset": "images/creative/booking-van-v2.png",
+      "image": "images/generated/test-2026-09-07-creative.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/test-2026-09-07-creative.jpg",
+      "imageSource": "illustration",
+      "issueNumber": null,
+      "status": "planned"
     }
   ]
 }
