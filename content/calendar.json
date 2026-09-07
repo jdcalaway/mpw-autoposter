@@ -526,8 +526,8 @@
       "image": "images/generated/test-2026-09-07-creative.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/test-2026-09-07-creative.jpg",
       "imageSource": "illustration",
-      "issueNumber": null,
-      "status": "planned"
+      "issueNumber": 9,
+      "status": "pending_approval"
     }
   ]
 }
