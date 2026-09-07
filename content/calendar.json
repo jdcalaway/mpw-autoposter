@@ -130,14 +130,16 @@
       "datetimeLocal": "2026-09-08T12:00:00",
       "pillar": "transformation",
       "pillarLabel": "Transformation",
-      "caption": "Before ➡️ after. Same happy dog, way fluffier. 🐕 Mobile grooming means we come to you and your pup gets our full, undivided attention.",
+      "caption": "Aurora came in for a spa day and left looking like a whole new pup! ✨ Before ➡️ after, done right at home in the Tri-Cities. 🐾 Book yours at mobilepetworks.com",
       "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #TransformationTuesday #BeforeAndAfter #GroomingTransformation #TriCities #TriCitiesDogs",
       "imageIdea": "A before/after side-by-side. TIP: photograph every dog before and after — this is your best-performing content.",
       "prefersPhoto": true,
-      "image": null,
-      "imageUrl": null,
+      "image": "images/generated/2026-09-08-transformation.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-09-08-transformation.jpg",
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "imageSource": "photo",
+      "pet": "Aurora"
     },
     {
       "id": "2026-09-09",
