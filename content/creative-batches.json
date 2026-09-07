@@ -1,0 +1,10 @@
+{
+  "batches": [
+    {
+      "date": "2026-09-07",
+      "status": "complete",
+      "assets": ["images/creative/booking-van-v2.png", "images/creative/hiring-illustration.png"],
+      "promptsFile": "docs/image-prompts.json"
+    }
+  ]
+}

@@ -60,7 +60,9 @@ async function resolveImages(cfg, cal) {
     }
     const gc = pillars.pillars[post.pillar].graphicCaptions;
     const pet = source === "photo" || source === "reel" ? petFromFilename(sourceName) : null;
-    if (pet) {
+    if (post.conceptId) {
+      // Caption, review attribution, and image were selected as a single concept.
+    } else if (pet) {
       // Real before/after (photo or Reel) with the pet's name in the filename.
       const caps = source === "reel" ? REEL_CAPTIONS : PET_CAPTIONS;
       post.caption = caps[hashDate(post.date) % caps.length]
@@ -86,7 +88,9 @@ async function openIssues(cfg, cal) {
     const title = `📅 Approve ${post.date} — ${post.pillarLabel} (${post.time})`;
     const body = [
       `**Scheduled:** ${post.datetimeLocal.replace("T", " ")} (${cfg.timezone})`,
-      `**Pillar:** ${post.pillarLabel}${post.imageSource === "reel" ? " · 🎬 Reel (video)" : post.imageSource === "graphic" ? " · auto-generated graphic" : " · your photo"}`,
+      post.illustration ? "**Creative:** AI illustration — not an actual client pet or employee photograph." : "",
+      post.review ? `**Review source:** ${post.review.sourceUrl}\n**Reviewer:** ${post.review.author} · ${post.review.rating}/5\nVerify the quote and attribution before approving.` : "",
+      `**Pillar:** ${post.pillarLabel}${post.imageSource === "reel" ? " · 🎬 Reel (video)" : post.imageSource === "graphic" ? " · auto-generated graphic" : post.imageSource === "illustration" ? " · AI campaign artwork" : " · your photo"}`,
       "",
       `![preview](${post.imageUrl})`,
       post.mediaType === "reel" ? `\n▶️ **[Watch the Reel](${post.videoUrl})** before approving` : "",

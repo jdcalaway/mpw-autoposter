@@ -28,6 +28,17 @@ jobs:
         with:
           node-version: "20"
       - run: npm install --no-audit --no-fund
+      - name: Import Google reviews when connected
+        if: vars.GOOGLE_REVIEWS_ENABLED == 'true'
+        env:
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
+          GOOGLE_BUSINESS_LOCATION: ${{ vars.GOOGLE_BUSINESS_LOCATION }}
+          GOOGLE_REVIEWS_URL: ${{ vars.GOOGLE_REVIEWS_URL }}
+        run: node scripts/import-reviews.mjs
+      - name: Refresh upcoming concepts and reviews
+        run: node scripts/generate-calendar.mjs
       - name: Configure git
         run: |
           git config user.name "github-actions[bot]"

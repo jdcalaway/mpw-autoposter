@@ -4,7 +4,7 @@
 
 import { readdir, copyFile, mkdir } from "node:fs/promises";
 import { existsSync } from "node:fs";
-import { join } from "node:path";
+import { join, resolve, relative, isAbsolute } from "node:path";
 import { ROOT, loadPillars } from "./util.mjs";
 import { renderGraphic } from "../make-graphic.mjs";
 
@@ -37,6 +37,23 @@ export async function resolveImage({ cfg, post }) {
   const genDir = join(ROOT, "images", "generated");
   await mkdir(genDir, { recursive: true });
 
+  if (post.creativeAsset) {
+    const asset = resolve(ROOT, post.creativeAsset);
+    const relAsset = relative(resolve(ROOT, "images", "creative"), asset);
+    if (relAsset.startsWith("..") || isAbsolute(relAsset) || !PHOTO_EXT.test(asset)) throw new Error("Invalid creative asset path.");
+    const sharp = (await import("sharp")).default;
+    const relPath = `images/generated/${post.date}-creative.jpg`;
+    await sharp(asset).resize(1080, 1080, { fit: "contain", background: "#fff8eb" }).jpeg({ quality: 92 }).toFile(join(ROOT, relPath));
+    return { relPath, source: "illustration" };
+  }
+  if (post.forceGraphic || post.review || post.pillar === "testimonial" || post.pillar === "hiring") {
+    const relPath = `images/generated/${post.date}-${post.pillar}.jpg`;
+    await renderGraphic({ cfg, pillar, pillarKey: post.pillar,
+      bodyText: post.graphicText || "Grooming that comes to you", review: post.review,
+      variantSeed: post.date, outPath: join(ROOT, relPath) });
+    return { relPath, source: "graphic" };
+  }
+
   // Transformation posts alternate between Reels (video) and static before/after
   // images — on "reel" dates, use a Reel if one is available (with its thumbnail
   // for the approval-issue preview).
@@ -66,13 +83,14 @@ export async function resolveImage({ cfg, post }) {
   }
 
   const lines = pillar.graphicLines && pillar.graphicLines.length ? pillar.graphicLines : [post.caption];
-  const bodyText = pick(lines, post.date);
+  const bodyText = post.graphicText || pick(lines, post.date);
   const rel = join("images", "generated", `${post.date}-${post.pillar}.jpg`);
   await renderGraphic({
     cfg,
     pillar,
     pillarKey: post.pillar,
     bodyText,
+    variantSeed: post.date,
     outPath: join(ROOT, rel),
   });
   return { relPath: rel.replace(/\\/g, "/"), source: "graphic" };

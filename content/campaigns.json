@@ -1,0 +1,123 @@
+[
+  {
+    "id": "booking-car",
+    "pillar": "booking",
+    "objective": "booking",
+    "headline": "Your dog has an appointment. Your car doesn’t.",
+    "caption": "Your dog has an appointment. Your car doesn’t.\n\nSkip the drop-off and pickup trips. Mobile Pet Works brings the grooming salon to your driveway in the Tri-Cities.\n\nAsk about availability at mobilepetworks.com.",
+    "asset": "images/creative/booking-van-v2.png"
+  },
+  {
+    "id": "hiring-wheels",
+    "pillar": "hiring",
+    "objective": "recruiting",
+    "headline": "Your next chapter could have four wheels.",
+    "caption": "Your next chapter could have four wheels.\n\nWe’re hiring groomers at Mobile Pet Works in the Tri-Cities. Curious about working in a mobile salon? Let’s talk about the role, schedule, and whether it fits what you want next.\n\nCall (509) 591-5913 and ask about joining the team.",
+    "asset": "images/creative/hiring-illustration.png"
+  },
+  {
+    "id": "booking-errand",
+    "pillar": "booking",
+    "objective": "booking",
+    "headline": "One less errand. One freshly groomed dog.",
+    "caption": "Some appointments require a drive across town. Your dog’s grooming doesn’t have to.\n\nWe bring the salon to your home in the Tri-Cities. Text your ZIP code and your dog’s breed to (509) 591-5913 to ask about availability."
+  },
+  {
+    "id": "booking-calendar",
+    "pillar": "booking",
+    "objective": "booking",
+    "headline": "Make room for the groom. Skip the drive.",
+    "caption": "Work. School pickup. Groceries. And somewhere in there, the dog needs a haircut.\n\nWe can take the salon trips out of the equation. Ask about mobile grooming at mobilepetworks.com."
+  },
+  {
+    "id": "booking-first",
+    "pillar": "booking",
+    "objective": "booking",
+    "headline": "New to mobile grooming? Start here.",
+    "caption": "Wondering how a salon fits inside a van? Our grooming workspace travels with us, right to your home.\n\nIf you’re considering a first appointment, text your questions to (509) 591-5913."
+  },
+  {
+    "id": "booking-neighbor",
+    "pillar": "booking",
+    "objective": "booking",
+    "headline": "The salon in your driveway.",
+    "caption": "Seen our Mobile Pet Works vans around the Tri-Cities?\n\nNext time, one could be stopping at your home. Ask about service in your neighborhood at mobilepetworks.com."
+  },
+  {
+    "id": "booking-plan",
+    "pillar": "booking",
+    "objective": "booking",
+    "headline": "A little planning. A fresh coat.",
+    "caption": "Before your calendar gets busy again, ask about your dog’s next grooming appointment.\n\nMobile Pet Works comes to you. Text (509) 591-5913 to discuss availability."
+  },
+  {
+    "id": "hiring-curious",
+    "pillar": "hiring",
+    "objective": "recruiting",
+    "headline": "Curious about mobile grooming?",
+    "caption": "You’ve seen our vans around town. Ever pictured yourself working in one?\n\nMobile Pet Works is hiring groomers in the Tri-Cities. Call (509) 591-5913 to talk about the role."
+  },
+  {
+    "id": "hiring-conversation",
+    "pillar": "hiring",
+    "objective": "recruiting",
+    "headline": "Let’s talk about your next grooming role.",
+    "caption": "A new job should fit the person doing it.\n\nAsk us about the schedule, day-to-day work, and what mobile grooming involves. We’re hiring at Mobile Pet Works.\n\nCall (509) 591-5913."
+  },
+  {
+    "id": "hiring-local",
+    "pillar": "hiring",
+    "objective": "recruiting",
+    "headline": "Tri-Cities groomers, let’s meet.",
+    "caption": "Looking for your next grooming role in the Tri-Cities?\n\nOur family’s business, Mobile Pet Works, is hiring. Call (509) 591-5913 and tell us about your grooming experience."
+  },
+  {
+    "id": "hiring-craft",
+    "pillar": "hiring",
+    "objective": "recruiting",
+    "headline": "Bring your grooming experience.",
+    "caption": "The shape of a trim. The finishing details. The care that goes into the work.\n\nIf grooming is your craft, we’d like to meet you. Mobile Pet Works is hiring groomers in the Tri-Cities.\n\nCall (509) 591-5913 to learn about the position."
+  },
+  {
+    "id": "hiring-questions",
+    "pillar": "hiring",
+    "objective": "recruiting",
+    "headline": "Your next job starts with questions.",
+    "caption": "What does a day in a mobile salon look like? What schedule is available? What experience are we looking for?\n\nLet’s talk through it. Mobile Pet Works is hiring groomers. Call (509) 591-5913."
+  },
+  {
+    "id": "hiring-family",
+    "pillar": "hiring",
+    "objective": "recruiting",
+    "headline": "Meet the business behind the vans.",
+    "caption": "Mobile Pet Works is our family’s business, and we’re looking for our next groomer.\n\nInterested in mobile grooming in the Tri-Cities? Call (509) 591-5913 and ask about the opportunity."
+  },
+  {
+    "id": "hiring-switch",
+    "pillar": "hiring",
+    "objective": "recruiting",
+    "headline": "A grooming salon that travels.",
+    "caption": "Thinking about taking your grooming experience into a mobile salon?\n\nMobile Pet Works is hiring in the Tri-Cities. Find out what the work involves before deciding your next step.\n\nCall (509) 591-5913."
+  },
+  {
+    "id": "hiring-next",
+    "pillar": "hiring",
+    "objective": "recruiting",
+    "headline": "Ready to explore what’s next?",
+    "caption": "Your next grooming role starts with a conversation.\n\nWe’re hiring at Mobile Pet Works. Call (509) 591-5913 to discuss your experience and ask about the role."
+  },
+  {
+    "id": "bts-bathtub",
+    "pillar": "bts",
+    "objective": "booking",
+    "headline": "No, we don’t need your bathtub.",
+    "caption": "Does mobile grooming mean we use your bathtub?\n\nNope. The salon comes with us. Our equipped vans bring the grooming workspace to your home.\n\nAsk about your first appointment at mobilepetworks.com."
+  },
+  {
+    "id": "bts-origin",
+    "pillar": "bts",
+    "objective": "booking",
+    "headline": "It started with two dogs and too much driving.",
+    "caption": "Two dogs. A grooming appointment. A workday interrupted by trips between Pasco and Richland.\n\nThat experience inspired Eric and Jalyn to start Mobile Pet Works in 2015.\n\nOur family built the business around making grooming more convenient. Ask about an appointment at mobilepetworks.com."
+  }
+]

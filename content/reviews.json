@@ -1,0 +1,44 @@
+{
+  "syncedAt": "2026-09-07T14:40:16.577Z",
+  "reviews": [
+    {
+      "id": "google-profile-108732434922719317980",
+      "text": "They do an amazing job on our labradoodle!!!!",
+      "author": "Anita Corkrum",
+      "rating": 5,
+      "sourceUrl": "https://www.google.com/maps/place/Mobile+Pet+Works/data=!4m2!3m1!1s0x0:0x987ac2118047f288",
+      "reviewerProfile": "https://www.google.com/maps/contrib/108732434922719317980/reviews?hl=en",
+      "sourceMethod": "google-business-profile-browser",
+      "observedAt": "2026-09-07",
+      "verified": true,
+      "enabled": true,
+      "updatedAt": null
+    },
+    {
+      "id": "google-profile-101570481427403709664",
+      "text": "Mobile Pet Works is fantastic. No trips to the groomer for nails, they come to your home. Brianna is so very good with our golden retrievers. They're always happy to see her pull up.",
+      "author": "Linda",
+      "rating": 5,
+      "sourceUrl": "https://www.google.com/maps/place/Mobile+Pet+Works/data=!4m2!3m1!1s0x0:0x987ac2118047f288",
+      "reviewerProfile": "https://www.google.com/maps/contrib/101570481427403709664/reviews?hl=en",
+      "sourceMethod": "google-business-profile-browser",
+      "observedAt": "2026-09-07",
+      "verified": true,
+      "enabled": true,
+      "updatedAt": null
+    },
+    {
+      "id": "google-profile-113031657637048312174",
+      "text": "The groomers and Yancy are absolutely amazing! Sadie groomed my kitten Artemis and then she was able to cut the nails on my 1 year old cat. Absolutely mind blown away that she was able to do this. Briana is also amazing she does my dog Chai Latte who’s 13. And the office is so kind and accommodating for rescheduling. Chai had to go to the vet unexpectedly on the day I was getting the Artemis groomed and they were able to move my appointment for later in the day with no trouble. I also needed to move chais appointment due to personal issues and they were able to move her schedule as well. I have been using them I think sense last year 2025 and they have always been super kind and they do amazing with my girls.",
+      "author": "Deafies Do It Better",
+      "rating": 5,
+      "sourceUrl": "https://www.google.com/maps/place/Mobile+Pet+Works/data=!4m2!3m1!1s0x0:0x987ac2118047f288",
+      "reviewerProfile": "https://www.google.com/maps/contrib/113031657637048312174/reviews?hl=en",
+      "sourceMethod": "google-business-profile-browser",
+      "observedAt": "2026-09-07",
+      "verified": true,
+      "enabled": true,
+      "updatedAt": null
+    }
+  ]
+}

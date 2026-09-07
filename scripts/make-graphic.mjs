@@ -23,6 +23,7 @@ const KICKER = {
   featured: "Featured Pup",
   booking: "Book Now",
   testimonial: "5-Star Review",
+  hiring: "We're Hiring Groomers",
 };
 
 // Accent per pillar, drawn from the brand palette (the field is brand blue, so
@@ -62,30 +63,43 @@ function wrap(text, maxChars, maxLines) {
   return lines;
 }
 
-export async function renderGraphic({ cfg, pillar, pillarKey, bodyText, outPath }) {
-  const g = cfg.graphic;
+export async function renderGraphic({ cfg, pillar, pillarKey, bodyText, outPath, variantSeed = "0", review }) {
+  const palettes = [
+    { field: "#0146A3", card: "#FFFFFF", ink: "#172E4D", accent: "#0146A3" },
+    { field: "#FFD25A", card: "#FFF8EB", ink: "#172E4D", accent: "#0146A3" },
+    { field: "#172E4D", card: "#014078", ink: "#FFFFFF", accent: "#FFD25A" },
+    { field: "#D54B5D", card: "#FFF8F3", ink: "#172E4D", accent: "#973345" },
+  ];
+  const seed = [...variantSeed].reduce((n, c) => n + c.charCodeAt(0), 0);
+  const palette = palettes[seed % palettes.length];
+  const g = { ...cfg.graphic, card: palette.card, ink: palette.ink,
+    brandBlue: palette.accent, muted: palette.ink };
   const W = g.width, H = g.height;
   const font = g.font;
-  const accent = g[ACCENT[pillarKey] || "gold"];
+  const accent = palette.accent;
 
-  const kicker = (KICKER[pillarKey] || pillar.label).toUpperCase();
-  const body = wrap(stripEmoji(bodyText), 22, 4);
-  const bodyStartY = H / 2 - ((body.length - 1) * 82) / 2 - 10;
+  const kicker = (review ? `${review.rating}/5 · GOOGLE REVIEW` : pillarKey === "testimonial" ? "OUR CUSTOMERS" : KICKER[pillarKey] || pillar.label).toUpperCase();
+  const body = wrap(stripEmoji(bodyText), review ? 34 : 22, review ? 6 : 4);
+  const step = review ? 60 : 82;
+  const bodyStartY = H / 2 - ((body.length - 1) * step) / 2 - 10;
   const bodyTspans = body
-    .map((line, i) => `<tspan x="${W / 2}" y="${bodyStartY + i * 82}">${escapeXml(line)}</tspan>`)
+    .map((line, i) => `<tspan x="${W / 2}" y="${bodyStartY + i * step}">${escapeXml(line)}</tspan>`)
     .join("");
 
   const m = 56;               // outer margin (brand-blue border)
   const cardR = 44;
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
-    <rect width="${W}" height="${H}" fill="${g.brandBlue}"/>
+    <rect width="${W}" height="${H}" fill="${palette.field}"/>
+    <circle cx="20" cy="10" r="210" fill="${palette.accent}" opacity="0.25"/>
+    <circle cx="${W}" cy="${H}" r="280" fill="#FFFFFF" opacity="0.12"/>
     <rect x="${m}" y="${m}" width="${W - 2 * m}" height="${H - 2 * m}" rx="${cardR}" fill="${g.card}"/>
     <rect x="${m}" y="${m}" width="${W - 2 * m}" height="18" rx="9" fill="${accent}"/>
     <circle cx="${W / 2}" cy="${m + 96}" r="30" fill="${accent}"/>
-    <text x="${W / 2}" y="${m + 106}" text-anchor="middle" font-family="${font}" font-size="30" font-weight="700" fill="${g.brandBlue}">MPW</text>
+    <text x="${W / 2}" y="${m + 106}" text-anchor="middle" font-family="${font}" font-size="22" font-weight="700" fill="${palette.card}">MPW</text>
     <text x="${W / 2}" y="248" text-anchor="middle" font-family="${font}"
-          font-size="34" font-weight="700" letter-spacing="7" fill="${accent}">${escapeXml(kicker)}</text>
-    <text text-anchor="middle" font-family="${font}" font-size="70" font-weight="700" fill="${g.ink}">${bodyTspans}</text>
+          font-size="30" font-weight="700" letter-spacing="3" fill="${accent}">${escapeXml(kicker)}</text>
+    <text text-anchor="middle" font-family="${font}" font-size="${review ? 46 : 70}" font-weight="700" fill="${g.ink}">${bodyTspans}</text>
+    ${review ? `<text x="${W / 2}" y="790" text-anchor="middle" font-family="${font}" font-size="27" fill="${g.ink}">${escapeXml(stripEmoji(review.author).slice(0, 45))} · Review excerpt</text>` : ""}
     <text x="${W / 2}" y="${H - 172}" text-anchor="middle" font-family="${font}"
           font-size="44" font-weight="700" fill="${g.brandBlue}">${escapeXml(cfg.business.name)}</text>
     <text x="${W / 2}" y="${H - 122}" text-anchor="middle" font-family="${font}"

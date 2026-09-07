@@ -5,6 +5,8 @@
 // Usage:  node scripts/generate-calendar.mjs [--days 30] [--start YYYY-MM-DD] [--shuffle N]
 
 import { loadConfig, loadPillars, loadCalendar, saveCalendar, todayLocal, addDays } from "./lib/util.mjs";
+import { chooseConcept, readContent } from "./lib/campaigns.mjs";
+import { writeFile } from "node:fs/promises";
 
 function arg(name, fallback) {
   const i = process.argv.indexOf(`--${name}`);
@@ -30,6 +32,8 @@ async function main() {
   const area = cfg.business.serviceArea || "";
 
   const existing = await loadCalendar();
+  const concepts = await readContent("campaigns.json", []);
+  const { reviews } = await readContent("reviews.json", { reviews: [] });
   const byDate = new Map(existing.posts.map((p) => [p.date, p]));
   const counters = {};
   const posts = [];
@@ -37,7 +41,10 @@ async function main() {
   for (let i = 0; i < days; i++) {
     const date = addDays(start, i);
     const dow = new Date(`${date}T12:00:00Z`).getUTCDay();
-    const key = pillars.weekdayMap[dow];
+    let key = pillars.weekdayMap[dow];
+    const history = [...existing.posts.filter(p => p.date < start), ...posts];
+    const concept = chooseConcept({ key, date, concepts, reviews, history });
+    if (key === "testimonial" && !concept?.review) key = "booking";
     const p = pillars.pillars[key];
     counters[key] = (counters[key] || 0) + 1;
     const idx = (counters[key] - 1 + shuffle) % p.captions.length;
@@ -61,14 +68,21 @@ async function main() {
       hashtags: buildHashtags(pillars, key, area),
       imageIdea: p.imageIdea,
       prefersPhoto: !!p.prefersPhoto,
-      image: prior ? prior.image : null,
-      imageUrl: prior ? prior.imageUrl : null,
-      issueNumber: prior ? prior.issueNumber : null,
+      graphicText: p.graphicLines?.[idx % p.graphicLines.length],
+      ...(concept || {}),
+      image: null,
+      imageUrl: null,
+      issueNumber: null,
       status: "planned",
     });
   }
 
-  await saveCalendar({ generatedAt: new Date().toISOString(), timezone: cfg.timezone, posts });
+  const result = { generatedAt: new Date().toISOString(), timezone: cfg.timezone,
+    posts: [...existing.posts.filter(p => p.date < start || p.date >= addDays(start, days)), ...posts]
+      .sort((a,b) => a.date.localeCompare(b.date)) };
+  const output = arg("output", "");
+  if (output) await writeFile(output, JSON.stringify(result, null, 2) + "\n");
+  else await saveCalendar(result);
   console.log(`Wrote ${posts.length} posts, ${start} → ${addDays(start, days - 1)}.`);
 }
 

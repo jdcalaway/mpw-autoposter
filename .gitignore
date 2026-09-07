@@ -12,3 +12,7 @@ moego/.auth.json
 moego/discovery.json
 moego/last-screen.png
 moego/out/
+moego/pulled.json
+moego/LOCAL_APPDATA_FONTCONFIG_CACHE/
+output/
+images/generated/preview-*.jpg

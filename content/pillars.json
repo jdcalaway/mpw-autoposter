@@ -1,6 +1,18 @@
 {
-  "weekdayMap": ["testimonial", "engagement", "transformation", "tip", "transformation", "booking", "transformation"],
-  "baseTags": ["#MobilePetWorks", "#MobileDogGrooming", "#DogGrooming"],
+  "weekdayMap": [
+    "testimonial",
+    "hiring",
+    "transformation",
+    "tip",
+    "bts",
+    "booking",
+    "hiring"
+  ],
+  "baseTags": [
+    "#MobilePetWorks",
+    "#MobileDogGrooming",
+    "#DogGrooming"
+  ],
   "pillars": {
     "engagement": {
       "label": "Engagement",
@@ -21,7 +33,10 @@
         "Where's your dog's favorite scratch spot?",
         "Show us your floof in the comments"
       ],
-      "tags": ["#DogsOfFacebook", "#DogLovers"]
+      "tags": [
+        "#DogsOfFacebook",
+        "#DogLovers"
+      ]
     },
     "transformation": {
       "label": "Transformation",
@@ -45,7 +60,11 @@
         "Mobile grooming means your pup gets our full attention — no cages, no car ride, just a fresh new look. 🐩 Book at mobilepetworks.com",
         "Transformation Tuesday! ✨ There's nothing better than a freshly groomed pup — done right at home in {area}. Book yours at mobilepetworks.com"
       ],
-      "tags": ["#TransformationTuesday", "#BeforeAndAfter", "#GroomingTransformation"]
+      "tags": [
+        "#TransformationTuesday",
+        "#BeforeAndAfter",
+        "#GroomingTransformation"
+      ]
     },
     "tip": {
       "label": "Pet care tip",
@@ -66,7 +85,11 @@
         "Overgrown nails hurt your dog's joints",
         "Never fully shave a double-coated breed"
       ],
-      "tags": ["#DogCare", "#PetTips", "#DogGroomingTips"]
+      "tags": [
+        "#DogCare",
+        "#PetTips",
+        "#DogGroomingTips"
+      ]
     },
     "bts": {
       "label": "Behind the scenes",
@@ -90,7 +113,11 @@
         "No cages, no kennels, no other barking dogs — just your pup and us. 🐕 That's the mobile difference. Book at mobilepetworks.com",
         "One dog at a time, one-on-one attention, in a place your pup already knows — home. 🏡🐾 Book your mobile groom at mobilepetworks.com"
       ],
-      "tags": ["#BehindTheScenes", "#MobileGrooming", "#SmallBusiness"]
+      "tags": [
+        "#BehindTheScenes",
+        "#MobileGrooming",
+        "#SmallBusiness"
+      ]
     },
     "featured": {
       "label": "Featured pup",
@@ -114,7 +141,11 @@
         "Happy Friday from your friends at Mobile Pet Works! 🐩💛 Freshly groomed and feeling fabulous — right at home in {area}. Book at mobilepetworks.com",
         "Feeling fabulous and freshly groomed 🌟🐕 That's the mobile difference — a spa day without ever leaving home. mobilepetworks.com"
       ],
-      "tags": ["#FurryFriday", "#DogsOfInstagram", "#FluffyPup"]
+      "tags": [
+        "#FurryFriday",
+        "#DogsOfInstagram",
+        "#FluffyPup"
+      ]
     },
     "booking": {
       "label": "Booking CTA",
@@ -124,16 +155,20 @@
       "prefersPhoto": false,
       "imageIdea": "The van in a driveway, or a clean graphic with \"Book Now\" + your website.",
       "captions": [
-        "Weekend spots go fast! 📅 Skip the salon trip — we bring professional grooming right to your driveway in {area}. Book online today at mobilepetworks.com 🚐🐾",
-        "Your dog deserves a spa day and you deserve to skip the car ride 😌 Booking is easy — visit mobilepetworks.com and we'll come to you. 🐕✨",
-        "Still driving your dog across town for grooming? 🚗 There's a better way 🚐 Mobile Pet Works comes to you in {area}. Book now → mobilepetworks.com"
+        "Your dog has an appointment. Your car does not. Ask about mobile grooming at mobilepetworks.com.",
+        "Make room for grooming without the drive across town. Text (509) 591-5913 to ask about availability.",
+        "We bring the salon to your home in the Tri-Cities. Ask about your first appointment at mobilepetworks.com."
       ],
       "graphicLines": [
-        "Skip the salon trip — we come to your driveway",
-        "Book online at mobilepetworks.com",
-        "Weekend spots go fast — book today"
+        "Your dog has an appointment. Your car does not.",
+        "Grooming without the drive across town",
+        "The salon comes to you"
       ],
-      "tags": ["#BookNow", "#MobileDogGrooming", "#DogGroomer"]
+      "tags": [
+        "#BookNow",
+        "#MobileDogGrooming",
+        "#DogGroomer"
+      ]
     },
     "testimonial": {
       "label": "Testimonial",
@@ -143,16 +178,32 @@
       "prefersPhoto": false,
       "imageIdea": "A styled review screenshot on-brand, or a happy dog photo with the quote overlaid.",
       "captions": [
-        "⭐⭐⭐⭐⭐ \"So convenient and my dog was so calm — no stress at all!\" We love hearing this. 🐾 Book your own stress-free groom at mobilepetworks.com",
-        "Nothing makes us happier than a happy pup and a happy owner 💛🐕 Thank you to all our {area} clients who trust us with your fur babies!",
-        "Real review from a real client: \"Best decision ever — they came right to our house and my senior dog was so comfortable.\" 🥰 That's the mobile difference."
+        "Thank you to our customers for supporting Mobile Pet Works. Ask about your next appointment at mobilepetworks.com."
       ],
       "graphicLines": [
-        "\"So convenient and my dog was so calm\"",
-        "\"Best decision ever — right at our house\"",
-        "5-star mobile grooming, right at home"
+        "Grooming that comes to you"
       ],
-      "tags": ["#HappyClients", "#5StarReview", "#DogGrooming"]
+      "tags": [
+        "#MobilePetWorks"
+      ]
+    },
+    "hiring": {
+      "label": "Groomer careers",
+      "color": "#0146A3",
+      "soft": "#fff8eb",
+      "time": "18:00",
+      "prefersPhoto": false,
+      "imageIdea": "Illustrated recruiting campaign or branded hiring card",
+      "captions": [
+        "Mobile Pet Works is hiring groomers in the Tri-Cities. Call (509) 591-5913 to ask about joining the team."
+      ],
+      "graphicLines": [
+        "We are hiring groomers"
+      ],
+      "tags": [
+        "#TriCitiesJobs",
+        "#GroomerJobs"
+      ]
     }
   }
 }

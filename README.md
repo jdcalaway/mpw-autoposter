@@ -1,5 +1,7 @@
 # Mobile Pet Works — Auto-Poster
 
+**Marketing upgrade:** See [the current creative and Google review setup guide](docs/marketing-upgrade.md) for recruiting posts, illustrated ads, rotating backgrounds, and sourced reviews. The weekly rotation and setup details there supersede the original seven-pillar description below.
+
 A hands-off social media system: it builds a rolling 30-day content calendar and
 **auto-posts to Facebook and Instagram** — but every post waits for a one-tap
 approval from you first. Runs entirely on free GitHub Actions. No server, no
