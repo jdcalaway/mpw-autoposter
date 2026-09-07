@@ -527,7 +527,12 @@
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/test-2026-09-07-creative.jpg",
       "imageSource": "illustration",
       "issueNumber": 9,
-      "status": "pending_approval"
+      "status": "posted",
+      "postedAt": "2026-09-07T13:11:20",
+      "results": {
+        "facebook": "1585957798283717_1729833795811938",
+        "instagram": "18089031740259563"
+      }
     }
   ]
 }
