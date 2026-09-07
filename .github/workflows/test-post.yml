@@ -1,0 +1,34 @@
+name: Prepare test post
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: mpw-write
+  cancel-in-progress: false
+jobs:
+  prepare-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: npm ci --no-audit --no-fund
+      - name: Prepare test artwork and save queue
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          node scripts/prepare-test.mjs
+          git add content/calendar.json images/generated
+          git diff --cached --quiet || git commit -m "Prepare owner-approved test post [skip ci]"
+          git push
+      - name: Open approval preview
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          node scripts/prepare.mjs --issues-only
+          git add content/calendar.json
+          git diff --cached --quiet || git commit -m "Save test approval issue [skip ci]"
+          git push
