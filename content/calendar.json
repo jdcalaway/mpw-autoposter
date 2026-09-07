@@ -136,8 +136,8 @@
       "prefersPhoto": true,
       "image": "images/generated/2026-09-08-transformation.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-09-08-transformation.jpg",
-      "issueNumber": null,
-      "status": "planned",
+      "issueNumber": 8,
+      "status": "pending_approval",
       "imageSource": "photo",
       "pet": "Aurora"
     },
