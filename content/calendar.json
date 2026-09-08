@@ -185,8 +185,8 @@
       "graphicText": "Brush a few times a week to cut matting & shedding",
       "image": "images/generated/2026-09-09-tip.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-09-09-tip.jpg",
-      "issueNumber": null,
-      "status": "planned",
+      "issueNumber": 10,
+      "status": "pending_approval",
       "imageSource": "graphic"
     },
     {
