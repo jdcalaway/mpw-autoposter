@@ -3,9 +3,10 @@ import assert from "node:assert/strict";
 import { mkdtemp, mkdir, readFile, writeFile, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
+import { execFileSync } from "node:child_process";
 import { ROOT } from "../scripts/lib/util.mjs";
 import { planBatch, requestBlock, headlineLines, generateArtwork, ImageRequestError, renderCampaign } from "../scripts/lib/ai-creative.mjs";
-import { runGeneration } from "../scripts/generate-ai-creatives.mjs";
+import { runGeneration, gitCheckpoint } from "../scripts/generate-ai-creatives.mjs";
 
 const settings = JSON.parse(await readFile(join(ROOT, "content/ai-creative.json"), "utf8"));
 const campaigns = JSON.parse(await readFile(join(ROOT, "content/campaigns.json"), "utf8"));
@@ -145,6 +146,37 @@ test("render failure keeps the paid source so rerendering does not buy it again"
   assert.equal((await ledger()).batches.at(-1).items[0].status, "received");
   const result = await runGeneration({ ...common, root, generate });
   assert.equal(result.status, "complete"); assert.equal(calls, 2);
+});
+
+test("real Git checkpoints push the reservation before requesting and preserve both finished assets", async t => {
+  const { root } = await fixture(t);
+  const remote = await mkdtemp(join(tmpdir(), "mpw-ai-remote-test-"));
+  t.after(() => rm(remote, { recursive: true, force: true }));
+  const git = (args, cwd = root) => execFileSync("git", args, { cwd, encoding: "utf8", stdio: ["ignore", "pipe", "pipe"] });
+  git(["init", "--bare", remote]);
+  git(["init", "-b", "main"]);
+  git(["config", "user.name", "MPW Test"]);
+  git(["config", "user.email", "test@example.com"]);
+  git(["add", "."]); git(["commit", "-m", "Fixture"]);
+  git(["remote", "add", "origin", remote]); git(["push", "origin", "main"]);
+  const keys = { GITHUB_ACTIONS: "true", GITHUB_REPOSITORY: "jdcalaway/mpw-autoposter", GITHUB_REF: "refs/heads/main" };
+  const saved = Object.fromEntries(Object.keys(keys).map(k => [k, process.env[k]]));
+  Object.assign(process.env, keys);
+  try {
+    let calls = 0;
+    const result = await runGeneration({ ...common, root, checkpoint: gitCheckpoint(root), generate: async ({ item }) => {
+      const remoteLedger = JSON.parse(git(["--git-dir", remote, "show", "main:content/creative-batches.json"]));
+      assert.equal(remoteLedger.batches.at(-1).items.find(i => i.id === item.id).status, "requesting");
+      calls++;
+      return fakeResult();
+    } });
+    assert.equal(calls, 2);
+    const remoteLedger = JSON.parse(git(["--git-dir", remote, "show", "main:content/creative-batches.json"]));
+    assert.equal(remoteLedger.batches.at(-1).status, "complete");
+    for (const item of result.batch.items) assert.equal(git(["--git-dir", remote, "show", `main:${item.asset}`]), "rendered-fixture");
+  } finally {
+    for (const [key, value] of Object.entries(saved)) { if (value === undefined) delete process.env[key]; else process.env[key] = value; }
+  }
 });
 
 test("real renderer rejects invalid sources and makes platform-ready images for every base headline", async () => {
