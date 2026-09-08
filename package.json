@@ -10,6 +10,7 @@
     "publish": "node scripts/publish.mjs",
     "sample": "node scripts/make-graphic.mjs --sample",
     "import-reviews": "node scripts/import-reviews.mjs",
+    "preview-ai": "node scripts/generate-ai-creatives.mjs --preview",
     "test": "node --test tests/*.test.mjs"
   },
   "engines": { "node": ">=20" },

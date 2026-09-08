@@ -1,0 +1,31 @@
+{
+  "provider": "github-openai",
+  "model": "gpt-image-2",
+  "quality": "high",
+  "size": "1536x1024",
+  "intervalDays": 7,
+  "maxRequestsPerRun": 2,
+  "maxAttemptsPerImage": 2,
+  "maxRequestsPerMonth": 12,
+  "reference": "images/creative/van-reference.jpg",
+  "styles": [
+    { "name": "sunlit-paper", "direction": "Sophisticated tactile cut-paper illustration with layered shadows, cream sky, golden sunlight and royal-blue accents.", "background": "#FFF8EB", "ink": "#172E4D", "accent": "#0146A3" },
+    { "name": "blue-hour", "direction": "Elegant editorial gouache illustration, rich navy and royal-blue background, warm golden window light, tiny coral accents.", "background": "#172E4D", "ink": "#FFF8EB", "accent": "#FFD25A" },
+    { "name": "coral-studio", "direction": "Beautiful softly dimensional clay illustration with subtle tactile surfaces, coral color field and cream shapes, royal-blue accents.", "background": "#FFF4EE", "ink": "#172E4D", "accent": "#A52E46" },
+    { "name": "golden-poster", "direction": "Premium mid-century travel-poster illustration with refined screenprint texture, warm golden landscape, blue silhouettes and expressive character design.", "background": "#FFD25A", "ink": "#172E4D", "accent": "#0146A3" },
+    { "name": "blue-garden", "direction": "Painterly editorial illustration with a royal-blue field, cream highlights, soft botanical silhouettes and restrained coral details.", "background": "#0146A3", "ink": "#FFFFFF", "accent": "#FFD25A" },
+    { "name": "cream-collage", "direction": "Artful paper collage with clean large shapes, oatmeal paper texture, navy contours, blue and coral cutouts and generous breathing room.", "background": "#FFF8EB", "ink": "#172E4D", "accent": "#A52E46" }
+  ],
+  "bookingScenes": [
+    "An expressive freshly groomed cream dog in the foreground, coral bandana, the reference van behind it in a sunny residential driveway.",
+    "A charming terrier on a front porch, the reference van parked nearby, a relaxed illustration of a home and garden in the background.",
+    "A beautiful spaniel with flowing ears beside its home, the reference van arriving on a quiet suburban street; warm everyday neighborhood atmosphere.",
+    "An elegant poodle in a blue bandana on a garden path with the reference van behind it, late afternoon light and stylized Tri-Cities hills."
+  ],
+  "hiringScenes": [
+    "An illustrated adult professional groomer wearing a navy apron and gently brushing a terrier on a stable grooming table, in a conceptual cutaway of a mobile salon. Include the reference van exterior as a small secondary vignette.",
+    "An illustrated adult groomer beside the reference van with a friendly spaniel, a professional grooming brush in hand and a confident welcoming posture.",
+    "A close editorial view of an illustrated adult groomer's hands carefully brushing a dog's shoulder on a stable table; a small secondary exterior view of the reference van establishes mobile grooming.",
+    "An illustrated adult groomer and a freshly brushed poodle beside the open door of the reference van, warm light and inviting professional atmosphere."
+  ]
+}

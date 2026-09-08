@@ -88,7 +88,7 @@ async function openIssues(cfg, cal) {
     const title = `📅 Approve ${post.date} — ${post.pillarLabel} (${post.time})`;
     const body = [
       `**Scheduled:** ${post.datetimeLocal.replace("T", " ")} (${cfg.timezone})`,
-      post.illustration ? "**Creative:** AI illustration — not an actual client pet or employee photograph." : "",
+      post.illustration ? "**Creative:** AI illustration — not an actual client pet or employee photograph. Check the van branding, animal/groomer details, headline and contact information before approving." : "",
       post.review ? `**Review source:** ${post.review.sourceUrl}\n**Reviewer:** ${post.review.author} · ${post.review.rating}/5\nVerify the quote and attribution before approving.` : "",
       `**Pillar:** ${post.pillarLabel}${post.imageSource === "reel" ? " · 🎬 Reel (video)" : post.imageSource === "graphic" ? " · auto-generated graphic" : post.imageSource === "illustration" ? " · AI campaign artwork" : " · your photo"}`,
       "",

@@ -1,0 +1,61 @@
+name: Weekly AI campaign images
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Preview costs nothing. Generate makes a due batch using the API secret."
+        type: choice
+        options:
+          - preview
+          - generate
+        default: preview
+  schedule:
+    # Check daily; create a pair only when seven days have passed. Runs before
+    # the 15:00 UTC approval preparation, and catches up after an outage.
+    - cron: "17 13 * * *"
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/generate-ai-creatives.yml'
+      - 'scripts/generate-ai-creatives.mjs'
+      - 'scripts/lib/ai-creative.mjs'
+      - 'tests/ai-creative.test.mjs'
+      - 'content/ai-creative.json'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mpw-write
+  cancel-in-progress: false
+
+jobs:
+  images:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      FONTCONFIG_FILE: ${{ github.workspace }}/assets/fonts/fonts.conf
+      FONTCONFIG_PATH: ${{ github.workspace }}/assets/fonts
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - run: npm test
+      - name: Configure checkpoints
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+      - name: Preview (never calls OpenAI)
+        if: github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.mode == 'preview')
+        run: node scripts/generate-ai-creatives.mjs --preview
+      - name: Generate a due weekly batch
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.mode == 'generate')
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          AI_IMAGES_PAUSED: ${{ vars.AI_IMAGES_PAUSED }}
+        run: node scripts/generate-ai-creatives.mjs --generate

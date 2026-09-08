@@ -2,7 +2,7 @@
 
 ## Runtime
 
-A Codex task in this conversation runs daily at 6:30 AM America/Los_Angeles. It reads Google reviews through the signed-in Chrome browser, inspects MoeGo through the existing authorized browser UI, and refreshes AI artwork when the latest completed batch is at least seven days old. This path requires the computer on, Codex running, browser access available, and sufficient account usage. It does not require a separate image API key or MoeGo API plan. GitHub Actions continues preparing approval issues and publishing approved posts independently.
+A Codex task in this conversation runs daily at 6:30 AM America/Los_Angeles. It reads Google reviews through the signed-in Chrome browser and inspects MoeGo through the existing authorized browser UI. Those two tasks require the computer on, Codex running, browser access available, and sufficient account usage. GitHub Actions owns weekly AI artwork as described in `docs/cloud-ai-images.md`, using the OPENAI_API_KEY repository secret. Do not generate weekly artwork in this local task, even if the cloud key is missing; report the setup blocker instead of creating a duplicate batch. GitHub Actions continues preparing approval issues and publishing approved posts independently.
 
 Google API OAuth remains an optional alternative, not the active syncing method. Leave `GOOGLE_REVIEWS_ENABLED` unset/false for browser syncing.
 
@@ -22,11 +22,11 @@ Distinguish off-duty grey/hatched time from potential free time. Pending and unc
 
 Save only a summary in ignored `output/moego-availability-latest.md`; no customer names, street addresses, contact information, screenshots, or raw schedule data in the public repository. Highlight significant new candidate gaps to the owner. Never advertise exact availability automatically from this observation. The present poster uses evergreen booking requests; a dispatcher must verify any specific availability claim.
 
-## Weekly creative procedure
+## Weekly creative procedure (moved to GitHub)
 
-Read `content/creative-batches.json`. If a completed batch is less than seven days old, do nothing. Otherwise use the imagegen skill and built-in image tool to make exactly two new finished square campaign ads: one booking and one recruiting. Use fresh hooks and compositions informed by `content/campaigns.json`; maintain brand blue, navy, cream, gold and coral. Vary backgrounds; keep legible high-contrast typography. Use `images/creative/booking-van-v2.png` as visual reference for the white shuttle van with blue paw/lettering when including a van. Inspect reference files before editing. No fabricated before/after photos, employee portraits, reviews, pay, perks, scarcity, or guaranteed availability. Include mobilepetworks.com or (509) 591-5913 accurately.
+The `.github/workflows/generate-ai-creatives.yml` workflow is the sole owner of recurring artwork. It creates a booking/hiring pair, records paid attempts durably, rotates art direction and uses the real white shuttle-van photo. See `docs/cloud-ai-images.md` for activation and recovery. The local task must not make additional image batches or reset cloud attempt records.
 
-Inspect each generated image for text and visual quality. Save final files under `images/creative/YYYY-MM-DD-booking.png` and `YYYY-MM-DD-hiring.png`; do not overwrite the previous assets. Add paired concepts to `content/campaigns.json` with unique id, pillar, objective, headline, caption, asset, createdAt, availableFrom, and expiresOn 60 days later. New dated concepts get selection priority and retain the 30-day cooldown. Never label illustration as a real groom or actual employee. Record the exact prompts and batch date in `content/creative-batches.json` only after both assets and concepts are ready. If one succeeds, record it as a partial batch and resume only the missing item next time.
+The owner checks visual quality in the normal post approval issue. No fabricated before/afters, employee portraits, reviews, pay, perks, scarcity or guaranteed availability. Any requested one-off creative work is separate from this recurring task.
 
 ## Deliver to the autoposter
 
