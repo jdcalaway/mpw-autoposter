@@ -120,8 +120,13 @@
       "image": "images/generated/2026-09-07-engagement.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-09-07-engagement.jpg",
       "issueNumber": 7,
-      "status": "pending_approval",
-      "imageSource": "graphic"
+      "status": "posted",
+      "imageSource": "graphic",
+      "postedAt": "2026-09-07T19:11:16",
+      "results": {
+        "facebook": "1585957798283717_1730039555791362",
+        "instagram": "18113217532817387"
+      }
     },
     {
       "id": "2026-09-08",
