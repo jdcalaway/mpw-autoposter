@@ -153,19 +153,28 @@ export async function renderCampaign({ source, item, business }) {
   const { background, ink, accent } = item.style;
   const lines = headlineLines(item.headline);
   const hiring = item.pillar === "hiring";
-  const text = lines.map((line, i) => `<tspan x="56" y="${816 + i * 58}">${xml(line)}</tspan>`).join("");
   const overlay = Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080">
     <rect y="720" width="1080" height="360" fill="${background}"/>
     <rect y="720" width="1080" height="8" fill="${accent}"/>
-    <g font-family="Quicksand, sans-serif">
-      <text x="56" y="764" font-size="22" font-weight="700" letter-spacing="2" fill="${accent}">${hiring ? "WE’RE HIRING GROOMERS" : "MOBILE DOG GROOMING · TRI-CITIES"}</text>
-      <text font-size="52" font-weight="700" fill="${ink}">${text}</text>
-      <text x="56" y="997" font-size="30" font-weight="700" fill="${ink}">${xml(business.name)}</text>
-      <text x="56" y="1040" font-size="26" font-weight="600" fill="${accent}">${xml(hiring ? `Let’s talk: ${business.phone}` : `Ask about availability: ${business.website}`)}</text>
-    </g>
   </svg>`);
+  // Explicit fontfile avoids silent SVG font substitution on Windows/runners.
+  const textLayer = async (text, size, color, top) => {
+    const { data, info } = await sharp({ text: {
+      text: `<span foreground="${color}">${xml(text)}</span>`,
+      font: `Quicksand Bold ${size}`, fontfile: join(ROOT, "assets/fonts/Quicksand.ttf"),
+      rgba: true, dpi: 72
+    } }).png().toBuffer({ resolveWithObject: true });
+    if (info.width > 968 || top + info.height > 1060) throw new Error("Ad text exceeds its safe area; shorten the copy before rendering.");
+    return { input: data, left: 56, top };
+  };
+  const typography = await Promise.all([
+    textLayer(hiring ? "WE’RE HIRING GROOMERS" : "MOBILE DOG GROOMING · TRI-CITIES", 22, accent, 747),
+    ...lines.map((line, i) => textLayer(line, 52, ink, 788 + (3 - lines.length) * 29 + i * 58)),
+    textLayer(business.name, 30, ink, 973),
+    textLayer(hiring ? `Let’s talk: ${business.phone}` : `Ask about availability: ${business.website}`, 26, accent, 1016)
+  ]);
   return sharp({ create: { width: 1080, height: 1080, channels: 3, background } })
-    .composite([{ input: art, top: 0, left: 0 }, { input: overlay }]).jpeg({ quality: 93 }).toBuffer();
+    .composite([{ input: art, top: 0, left: 0 }, { input: overlay }, ...typography]).jpeg({ quality: 93 }).toBuffer();
 }
 
 export function campaignFromItem(batch, item, today) {
