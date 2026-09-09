@@ -3,8 +3,71 @@
     {
       "date": "2026-09-07",
       "status": "complete",
-      "assets": ["images/creative/booking-van-v2.png", "images/creative/hiring-illustration.png"],
+      "assets": [
+        "images/creative/booking-van-v2.png",
+        "images/creative/hiring-illustration.png"
+      ],
       "promptsFile": "docs/image-prompts.json"
+    },
+    {
+      "id": "cloud-2026-09-08",
+      "date": "2026-09-08",
+      "provider": "github-openai",
+      "status": "partial",
+      "model": "gpt-image-2",
+      "size": "1536x1024",
+      "quality": "high",
+      "reference": "images/creative/van-reference.jpg",
+      "items": [
+        {
+          "id": "ai-2026-09-08-booking",
+          "pillar": "booking",
+          "objective": "booking",
+          "sourceTemplateId": "booking-errand",
+          "headline": "One less errand. One freshly groomed dog.",
+          "caption": "Some appointments require a drive across town. Your dog’s grooming doesn’t have to.\n\nWe bring the salon to your home in the Tri-Cities. Text your ZIP code and your dog’s breed to (509) 591-5913 to ask about availability.",
+          "style": {
+            "name": "sunlit-paper",
+            "direction": "Sophisticated tactile cut-paper illustration with layered shadows, cream sky, golden sunlight and royal-blue accents.",
+            "background": "#FFF8EB",
+            "ink": "#172E4D",
+            "accent": "#0146A3"
+          },
+          "prompt": "Create new premium landscape social advertising artwork for Mobile Pet Works, mobile dog grooming in Tri-Cities, Washington.\nThe uploaded photo is ONLY a vehicle design reference. Invent a fresh illustration, composition, dog and environment; do not reproduce the photograph or its neighborhood.\nWhen the van is shown, preserve its distinctive elongated white shuttle-bus body, long dark tinted window band, white cab facing right, front passenger doors, blue lower stripe and large blue paw near the rear.\nThe side brand name, if visible, must read MOBILE PET WORKS. Omit the old website and phone lettering from the reference. Do not invent a different logo or vehicle.\nArt direction: Sophisticated tactile cut-paper illustration with layered shadows, cream sky, golden sunlight and royal-blue accents.\nScene: An expressive freshly groomed cream dog in the foreground, coral bandana, the reference van behind it in a sunny residential driveway.\nThe separately typeset ad headline will be: One less errand. One freshly groomed dog.\nCreate illustration only: no headline, contact details, captions, watermarks, badges, prices or extra text in the artwork. The ad typography is added separately below the illustration.\nUse the entire 3:2 landscape canvas. Keep all important subjects within a generous 8% safe margin. Expressive beautiful dogs, correct anatomy and gentle, credible grooming handling.\nClearly crafted illustration, not a documentary photograph or a real employee/customer portrait. No before-and-after comparison, fabricated review, pay/benefit claim, scarcity, guaranteed results or availability. No scissors near faces.",
+          "sourceAsset": "images/creative/cloud/ai-2026-09-08-booking-source.png",
+          "asset": "images/creative/cloud/ai-2026-09-08-booking.jpg",
+          "status": "requesting",
+          "attempts": [
+            {
+              "date": "2026-09-08",
+              "startedAt": "2026-09-09T03:43:12.974Z",
+              "status": "requesting"
+            }
+          ]
+        },
+        {
+          "id": "ai-2026-09-08-hiring",
+          "pillar": "hiring",
+          "objective": "recruiting",
+          "sourceTemplateId": "hiring-curious",
+          "headline": "Curious about mobile grooming?",
+          "caption": "You’ve seen our vans around town. Ever pictured yourself working in one?\n\nMobile Pet Works is hiring groomers in the Tri-Cities. Call (509) 591-5913 to talk about the role.",
+          "style": {
+            "name": "blue-hour",
+            "direction": "Elegant editorial gouache illustration, rich navy and royal-blue background, warm golden window light, tiny coral accents.",
+            "background": "#172E4D",
+            "ink": "#FFF8EB",
+            "accent": "#FFD25A"
+          },
+          "prompt": "Create new premium landscape social advertising artwork for Mobile Pet Works, mobile dog grooming in Tri-Cities, Washington.\nThe uploaded photo is ONLY a vehicle design reference. Invent a fresh illustration, composition, dog and environment; do not reproduce the photograph or its neighborhood.\nWhen the van is shown, preserve its distinctive elongated white shuttle-bus body, long dark tinted window band, white cab facing right, front passenger doors, blue lower stripe and large blue paw near the rear.\nThe side brand name, if visible, must read MOBILE PET WORKS. Omit the old website and phone lettering from the reference. Do not invent a different logo or vehicle.\nArt direction: Elegant editorial gouache illustration, rich navy and royal-blue background, warm golden window light, tiny coral accents.\nScene: An illustrated adult professional groomer wearing a navy apron and gently brushing a terrier on a stable grooming table, in a conceptual cutaway of a mobile salon. Include the reference van exterior as a small secondary vignette.\nThe separately typeset ad headline will be: Curious about mobile grooming?\nCreate illustration only: no headline, contact details, captions, watermarks, badges, prices or extra text in the artwork. The ad typography is added separately below the illustration.\nUse the entire 3:2 landscape canvas. Keep all important subjects within a generous 8% safe margin. Expressive beautiful dogs, correct anatomy and gentle, credible grooming handling.\nClearly crafted illustration, not a documentary photograph or a real employee/customer portrait. No before-and-after comparison, fabricated review, pay/benefit claim, scarcity, guaranteed results or availability. No scissors near faces.",
+          "sourceAsset": "images/creative/cloud/ai-2026-09-08-hiring-source.png",
+          "asset": "images/creative/cloud/ai-2026-09-08-hiring.jpg",
+          "status": "planned",
+          "attempts": []
+        }
+      ],
+      "assets": [],
+      "referenceSha256": "e154ddfddbac882caeca42cc8346b04f1196c856da5cbcfa98eecf5aaa483259"
     }
   ]
 }
