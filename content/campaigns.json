@@ -119,5 +119,19 @@
     "objective": "booking",
     "headline": "It started with two dogs and too much driving.",
     "caption": "Two dogs. A grooming appointment. A workday interrupted by trips between Pasco and Richland.\n\nThat experience inspired Eric and Jalyn to start Mobile Pet Works in 2015.\n\nOur family built the business around making grooming more convenient. Ask about an appointment at mobilepetworks.com."
+  },
+  {
+    "id": "ai-2026-09-08-booking",
+    "pillar": "booking",
+    "objective": "booking",
+    "headline": "One less errand. One freshly groomed dog.",
+    "caption": "Some appointments require a drive across town. Your dog’s grooming doesn’t have to.\n\nWe bring the salon to your home in the Tri-Cities. Text your ZIP code and your dog’s breed to (509) 591-5913 to ask about availability.",
+    "asset": "images/creative/cloud/ai-2026-09-08-booking.jpg",
+    "generator": "github-openai",
+    "sourceTemplateId": "booking-errand",
+    "createdAt": "2026-09-08",
+    "availableFrom": "2026-09-08",
+    "expiresOn": "2026-11-07",
+    "batchId": "cloud-2026-09-08"
   }
 ]
