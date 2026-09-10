@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-09-07T14:40:16.577Z",
+  "syncedAt": "2026-09-10T14:58:37.318Z",
   "reviews": [
     {
       "id": "google-profile-108732434922719317980",
@@ -36,6 +36,19 @@
       "reviewerProfile": "https://www.google.com/maps/contrib/113031657637048312174/reviews?hl=en",
       "sourceMethod": "google-business-profile-browser",
       "observedAt": "2026-09-07",
+      "verified": true,
+      "enabled": true,
+      "updatedAt": null
+    },
+    {
+      "id": "google-profile-107023004372323123671",
+      "text": "Best groomer ever ❤️",
+      "author": "Melanie Kohler",
+      "rating": 5,
+      "sourceUrl": "https://www.google.com/maps/place/Mobile+Pet+Works/data=!4m2!3m1!1s0x0:0x987ac2118047f288",
+      "reviewerProfile": "https://www.google.com/maps/contrib/107023004372323123671/reviews?hl=en",
+      "sourceMethod": "google-business-profile-browser",
+      "observedAt": "2026-09-10T14:58:00Z",
       "verified": true,
       "enabled": true,
       "updatedAt": null
