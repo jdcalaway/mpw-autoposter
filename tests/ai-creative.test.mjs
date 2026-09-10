@@ -133,7 +133,12 @@ test("partial batches retain the first image and resume only the failed item the
   const result = await runGeneration({ ...common, root, today: "2026-09-08", generate });
   assert.equal(result.status, "complete"); assert.equal(calls, 3);
   const savedCampaigns = JSON.parse(await readFile(join(root, "content/campaigns.json"), "utf8"));
-  assert.equal(savedCampaigns.filter(c => c.generator === "github-openai").length, 2);
+  // Real campaign history is part of the fixture. Count this batch, not every
+  // cloud campaign already saved by earlier successful production runs.
+  const batchIds = result.batch.items.map(item => item.id);
+  assert.equal(batchIds.length, 2);
+  assert.deepEqual(savedCampaigns.filter(c => batchIds.includes(c.id)).map(c => c.id).sort(), [...batchIds].sort());
+  assert.deepEqual(savedCampaigns.filter(c => !batchIds.includes(c.id)), campaigns);
   assert.equal((await runGeneration({ ...common, root, today: "2026-09-08", generate })).status, "not-due");
   assert.equal(calls, 3);
 });
