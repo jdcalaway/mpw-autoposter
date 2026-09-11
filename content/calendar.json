@@ -214,8 +214,13 @@
       "image": "images/generated/2026-09-10-bts.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-09-10-bts.jpg",
       "issueNumber": 11,
-      "status": "pending_approval",
-      "imageSource": "graphic"
+      "status": "posted",
+      "imageSource": "graphic",
+      "postedAt": "2026-09-10T18:10:19",
+      "results": {
+        "facebook": "1585957798283717_1733065995488718",
+        "instagram": "17916960729244522"
+      }
     },
     {
       "id": "2026-09-11",
