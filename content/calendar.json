@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-11T15:11:18.809Z",
+  "generatedAt": "2026-09-12T15:10:41.682Z",
   "timezone": "America/Los_Angeles",
   "posts": [
     {
@@ -301,10 +301,11 @@
         "updatedAt": null
       },
       "forceGraphic": true,
-      "image": null,
-      "imageUrl": null,
+      "image": "images/generated/2026-09-13-testimonial.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-09-13-testimonial.jpg",
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "imageSource": "graphic"
     },
     {
       "id": "2026-09-14",
@@ -873,6 +874,28 @@
       "creativeAsset": null,
       "forceGraphic": true,
       "illustration": false,
+      "image": null,
+      "imageUrl": null,
+      "issueNumber": null,
+      "status": "planned"
+    },
+    {
+      "id": "2026-10-11",
+      "date": "2026-10-11",
+      "time": "10:00",
+      "datetimeLocal": "2026-10-11T10:00:00",
+      "pillar": "booking",
+      "pillarLabel": "Booking CTA",
+      "caption": "Some appointments require a drive across town. Your dog’s grooming doesn’t have to.\n\nWe bring the salon to your home in the Tri-Cities. Text your ZIP code and your dog’s breed to (509) 591-5913 to ask about availability.",
+      "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #BookNow #MobileDogGrooming #DogGroomer #TriCities #TriCitiesDogs",
+      "imageIdea": "The van in a driveway, or a clean graphic with \"Book Now\" + your website.",
+      "prefersPhoto": false,
+      "graphicText": "One less errand. One freshly groomed dog.",
+      "conceptId": "ai-2026-09-08-booking",
+      "objective": "booking",
+      "creativeAsset": "images/creative/cloud/ai-2026-09-08-booking.jpg",
+      "forceGraphic": false,
+      "illustration": true,
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
