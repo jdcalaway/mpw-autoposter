@@ -303,8 +303,8 @@
       "forceGraphic": true,
       "image": "images/generated/2026-09-13-testimonial.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-09-13-testimonial.jpg",
-      "issueNumber": null,
-      "status": "planned",
+      "issueNumber": 14,
+      "status": "pending_approval",
       "imageSource": "graphic"
     },
     {
