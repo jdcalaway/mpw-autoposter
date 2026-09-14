@@ -309,8 +309,13 @@
       "image": "images/generated/2026-09-13-testimonial.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-09-13-testimonial.jpg",
       "issueNumber": 14,
-      "status": "pending_approval",
-      "imageSource": "graphic"
+      "status": "posted",
+      "imageSource": "graphic",
+      "postedAt": "2026-09-13T19:12:00",
+      "results": {
+        "facebook": "1585957798283717_1736059931855991",
+        "instagram": "18091765493557175"
+      }
     },
     {
       "id": "2026-09-14",
