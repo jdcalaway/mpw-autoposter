@@ -360,9 +360,14 @@
       "image": "images/generated/2026-09-15-transformation.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-09-15-transformation.jpg",
       "issueNumber": 16,
-      "status": "pending_approval",
+      "status": "posted",
       "imageSource": "photo",
-      "pet": "Ernie"
+      "pet": "Ernie",
+      "postedAt": "2026-09-15T12:10:17",
+      "results": {
+        "facebook": "1585957798283717_1737801321681852",
+        "instagram": "17946137046329772"
+      }
     },
     {
       "id": "2026-09-16",
