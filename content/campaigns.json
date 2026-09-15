@@ -147,5 +147,19 @@
     "availableFrom": "2026-09-08",
     "expiresOn": "2026-11-07",
     "batchId": "cloud-2026-09-08"
+  },
+  {
+    "id": "ai-2026-09-15-booking",
+    "pillar": "booking",
+    "objective": "booking",
+    "headline": "Make room for the groom. Skip the drive.",
+    "caption": "Work. School pickup. Groceries. And somewhere in there, the dog needs a haircut.\n\nWe can take the salon trips out of the equation. Ask about mobile grooming at mobilepetworks.com.",
+    "asset": "images/creative/cloud/ai-2026-09-15-booking.jpg",
+    "generator": "github-openai",
+    "sourceTemplateId": "booking-calendar",
+    "createdAt": "2026-09-15",
+    "availableFrom": "2026-09-15",
+    "expiresOn": "2026-11-14",
+    "batchId": "cloud-2026-09-15"
   }
 ]
