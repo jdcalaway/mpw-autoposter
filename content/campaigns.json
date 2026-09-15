@@ -161,5 +161,19 @@
     "availableFrom": "2026-09-15",
     "expiresOn": "2026-11-14",
     "batchId": "cloud-2026-09-15"
+  },
+  {
+    "id": "ai-2026-09-15-hiring",
+    "pillar": "hiring",
+    "objective": "recruiting",
+    "headline": "Let’s talk about your next grooming role.",
+    "caption": "A new job should fit the person doing it.\n\nAsk us about the schedule, day-to-day work, and what mobile grooming involves. We’re hiring at Mobile Pet Works.\n\nCall (509) 591-5913.",
+    "asset": "images/creative/cloud/ai-2026-09-15-hiring.jpg",
+    "generator": "github-openai",
+    "sourceTemplateId": "hiring-conversation",
+    "createdAt": "2026-09-15",
+    "availableFrom": "2026-09-15",
+    "expiresOn": "2026-11-14",
+    "batchId": "cloud-2026-09-15"
   }
 ]
