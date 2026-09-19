@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T15:11:26.823Z",
+  "generatedAt": "2026-09-19T15:10:21.444Z",
   "timezone": "America/Los_Angeles",
   "posts": [
     {
@@ -499,10 +499,11 @@
         "updatedAt": null
       },
       "forceGraphic": true,
-      "image": null,
-      "imageUrl": null,
+      "image": "images/generated/2026-09-20-testimonial.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-09-20-testimonial.jpg",
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "imageSource": "graphic"
     },
     {
       "id": "2026-09-21",
@@ -1060,6 +1061,39 @@
       "creativeAsset": "images/creative/hiring-illustration.png",
       "forceGraphic": false,
       "illustration": true,
+      "image": null,
+      "imageUrl": null,
+      "issueNumber": null,
+      "status": "planned"
+    },
+    {
+      "id": "2026-10-18",
+      "date": "2026-10-18",
+      "time": "19:00",
+      "datetimeLocal": "2026-10-18T19:00:00",
+      "pillar": "testimonial",
+      "pillarLabel": "Testimonial",
+      "caption": "“They do an amazing job on our labradoodle!!!!”\n— Anita Corkrum, Google review (5/5)\n\nThank you for trusting Mobile Pet Works. Ask about your dog's next appointment at mobilepetworks.com.",
+      "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #MobilePetWorks #TriCities #TriCitiesDogs",
+      "imageIdea": "A styled review screenshot on-brand, or a happy dog photo with the quote overlaid.",
+      "prefersPhoto": false,
+      "graphicText": "They do an amazing job on our labradoodle!!!!",
+      "conceptId": "review-google-profile-108732434922719317980",
+      "objective": "booking",
+      "review": {
+        "id": "google-profile-108732434922719317980",
+        "text": "They do an amazing job on our labradoodle!!!!",
+        "author": "Anita Corkrum",
+        "rating": 5,
+        "sourceUrl": "https://www.google.com/maps/place/Mobile+Pet+Works/data=!4m2!3m1!1s0x0:0x987ac2118047f288",
+        "reviewerProfile": "https://www.google.com/maps/contrib/108732434922719317980/reviews?hl=en",
+        "sourceMethod": "google-business-profile-browser",
+        "observedAt": "2026-09-07",
+        "verified": true,
+        "enabled": true,
+        "updatedAt": null
+      },
+      "forceGraphic": true,
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
