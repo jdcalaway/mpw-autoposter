@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-19T15:10:21.444Z",
+  "generatedAt": "2026-09-20T15:10:50.313Z",
   "timezone": "America/Los_Angeles",
   "posts": [
     {
@@ -527,10 +527,11 @@
       "creativeAsset": null,
       "forceGraphic": true,
       "illustration": false,
-      "image": null,
-      "imageUrl": null,
+      "image": "images/generated/2026-09-21-hiring.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-09-21-hiring.jpg",
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "imageSource": "graphic"
     },
     {
       "id": "2026-09-22",
@@ -1099,6 +1100,28 @@
         "updatedAt": null
       },
       "forceGraphic": true,
+      "image": null,
+      "imageUrl": null,
+      "issueNumber": null,
+      "status": "planned"
+    },
+    {
+      "id": "2026-10-19",
+      "date": "2026-10-19",
+      "time": "18:00",
+      "datetimeLocal": "2026-10-19T18:00:00",
+      "pillar": "hiring",
+      "pillarLabel": "Groomer careers",
+      "caption": "A new job should fit the person doing it.\n\nAsk us about the schedule, day-to-day work, and what mobile grooming involves. We’re hiring at Mobile Pet Works.\n\nCall (509) 591-5913.",
+      "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #TriCitiesJobs #GroomerJobs #TriCities #TriCitiesDogs",
+      "imageIdea": "Illustrated recruiting campaign or branded hiring card",
+      "prefersPhoto": false,
+      "graphicText": "Let’s talk about your next grooming role.",
+      "conceptId": "ai-2026-09-15-hiring",
+      "objective": "recruiting",
+      "creativeAsset": "images/creative/cloud/ai-2026-09-15-hiring.jpg",
+      "forceGraphic": false,
+      "illustration": true,
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
