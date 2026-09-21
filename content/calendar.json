@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-20T15:10:50.313Z",
+  "generatedAt": "2026-09-21T15:10:27.447Z",
   "timezone": "America/Los_Angeles",
   "posts": [
     {
@@ -545,15 +545,17 @@
       "datetimeLocal": "2026-09-22T12:00:00",
       "pillar": "transformation",
       "pillarLabel": "Transformation",
-      "caption": "Transformation Tuesday! ✨ Swipe to see this pup's before & after — done right in their own driveway. No stress, no car ride, just a fresh new look. 🐩",
+      "caption": "Another happy pup 💛 Lucy is looking fabulous after a mobile groom. Want this for your dog? mobilepetworks.com 🐕✨",
       "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #TransformationTuesday #BeforeAndAfter #GroomingTransformation #TriCities #TriCitiesDogs",
       "imageIdea": "A before/after side-by-side. TIP: photograph every dog before and after — this is your best-performing content.",
       "prefersPhoto": true,
       "graphicText": "Before to after, right in the driveway",
-      "image": null,
-      "imageUrl": null,
+      "image": "images/generated/2026-09-22-transformation.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-09-22-transformation.jpg",
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "imageSource": "photo",
+      "pet": "Lucy"
     },
     {
       "id": "2026-09-23",
@@ -1127,6 +1129,23 @@
       "creativeAsset": "images/creative/cloud/ai-2026-09-15-hiring.jpg",
       "forceGraphic": false,
       "illustration": true,
+      "image": null,
+      "imageUrl": null,
+      "issueNumber": null,
+      "status": "planned"
+    },
+    {
+      "id": "2026-10-20",
+      "date": "2026-10-20",
+      "time": "12:00",
+      "datetimeLocal": "2026-10-20T12:00:00",
+      "pillar": "transformation",
+      "pillarLabel": "Transformation",
+      "caption": "From scruffy to spectacular — and they never had to leave home. 🚐✨ This is exactly why we love what we do.",
+      "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #TransformationTuesday #BeforeAndAfter #GroomingTransformation #TriCities #TriCitiesDogs",
+      "imageIdea": "A before/after side-by-side. TIP: photograph every dog before and after — this is your best-performing content.",
+      "prefersPhoto": true,
+      "graphicText": "Same happy dog, way fluffier",
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
