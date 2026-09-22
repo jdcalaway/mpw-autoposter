@@ -175,5 +175,19 @@
     "availableFrom": "2026-09-15",
     "expiresOn": "2026-11-14",
     "batchId": "cloud-2026-09-15"
+  },
+  {
+    "id": "ai-2026-09-22-booking",
+    "pillar": "booking",
+    "objective": "booking",
+    "headline": "New to mobile grooming? Start here.",
+    "caption": "Wondering how a salon fits inside a van? Our grooming workspace travels with us, right to your home.\n\nIf you’re considering a first appointment, text your questions to (509) 591-5913.",
+    "asset": "images/creative/cloud/ai-2026-09-22-booking.jpg",
+    "generator": "github-openai",
+    "sourceTemplateId": "booking-first",
+    "createdAt": "2026-09-22",
+    "availableFrom": "2026-09-22",
+    "expiresOn": "2026-11-21",
+    "batchId": "cloud-2026-09-22"
   }
 ]
