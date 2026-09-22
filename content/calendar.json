@@ -558,7 +558,7 @@
       "image": "images/generated/2026-09-22-transformation.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-09-22-transformation.jpg",
       "issueNumber": 23,
-      "status": "pending_approval",
+      "status": "skipped",
       "imageSource": "photo",
       "pet": "Lucy"
     },
