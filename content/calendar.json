@@ -599,8 +599,8 @@
       "graphicText": "A full grooming salon on wheels",
       "image": "images/generated/2026-09-24-bts.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-09-24-bts.jpg",
-      "issueNumber": null,
-      "status": "planned",
+      "issueNumber": 25,
+      "status": "pending_approval",
       "imageSource": "graphic"
     },
     {
