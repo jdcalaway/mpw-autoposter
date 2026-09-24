@@ -622,8 +622,8 @@
       "illustration": true,
       "image": "images/generated/2026-09-25-creative.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-09-25-creative.jpg",
-      "issueNumber": null,
-      "status": "planned",
+      "issueNumber": 26,
+      "status": "pending_approval",
       "imageSource": "illustration"
     },
     {
