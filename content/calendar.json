@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T15:12:48.831Z",
+  "generatedAt": "2026-09-26T15:11:11.161Z",
   "timezone": "America/Los_Angeles",
   "posts": [
     {
@@ -687,10 +687,11 @@
         "updatedAt": null
       },
       "forceGraphic": true,
-      "image": null,
-      "imageUrl": null,
+      "image": "images/generated/2026-09-27-testimonial.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-09-27-testimonial.jpg",
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "imageSource": "graphic"
     },
     {
       "id": "2026-09-28",
@@ -1253,6 +1254,39 @@
       "creativeAsset": null,
       "forceGraphic": true,
       "illustration": false,
+      "image": null,
+      "imageUrl": null,
+      "issueNumber": null,
+      "status": "planned"
+    },
+    {
+      "id": "2026-10-25",
+      "date": "2026-10-25",
+      "time": "19:00",
+      "datetimeLocal": "2026-10-25T19:00:00",
+      "pillar": "testimonial",
+      "pillarLabel": "Testimonial",
+      "caption": "“Mobile Pet Works is fantastic. No trips to the groomer for nails, they come to your home. Brianna is so very good with our golden retrievers. They're always happy to see her pull up.”\n— Linda, Google review (5/5)\n\nThank you for trusting Mobile Pet Works. Ask about your dog's next appointment at mobilepetworks.com.",
+      "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #MobilePetWorks #TriCities #TriCitiesDogs",
+      "imageIdea": "A styled review screenshot on-brand, or a happy dog photo with the quote overlaid.",
+      "prefersPhoto": false,
+      "graphicText": "Mobile Pet Works is fantastic. No trips to the groomer for nails, they come to your home. Brianna is so very good with our golden retrievers. They're always happy to see her pull up.",
+      "conceptId": "review-google-profile-101570481427403709664",
+      "objective": "booking",
+      "review": {
+        "id": "google-profile-101570481427403709664",
+        "text": "Mobile Pet Works is fantastic. No trips to the groomer for nails, they come to your home. Brianna is so very good with our golden retrievers. They're always happy to see her pull up.",
+        "author": "Linda",
+        "rating": 5,
+        "sourceUrl": "https://www.google.com/maps/place/Mobile+Pet+Works/data=!4m2!3m1!1s0x0:0x987ac2118047f288",
+        "reviewerProfile": "https://www.google.com/maps/contrib/101570481427403709664/reviews?hl=en",
+        "sourceMethod": "google-business-profile-browser",
+        "observedAt": "2026-09-07",
+        "verified": true,
+        "enabled": true,
+        "updatedAt": null
+      },
+      "forceGraphic": true,
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
