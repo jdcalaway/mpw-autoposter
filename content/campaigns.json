@@ -203,5 +203,19 @@
     "availableFrom": "2026-09-22",
     "expiresOn": "2026-11-21",
     "batchId": "cloud-2026-09-22"
+  },
+  {
+    "id": "ai-2026-09-29-booking",
+    "pillar": "booking",
+    "objective": "booking",
+    "headline": "The salon in your driveway.",
+    "caption": "Seen our Mobile Pet Works vans around the Tri-Cities?\n\nNext time, one could be stopping at your home. Ask about service in your neighborhood at mobilepetworks.com.",
+    "asset": "images/creative/cloud/ai-2026-09-29-booking.jpg",
+    "generator": "github-openai",
+    "sourceTemplateId": "booking-neighbor",
+    "createdAt": "2026-09-29",
+    "availableFrom": "2026-09-29",
+    "expiresOn": "2026-11-28",
+    "batchId": "cloud-2026-09-29"
   }
 ]
