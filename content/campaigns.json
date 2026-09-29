@@ -217,5 +217,19 @@
     "availableFrom": "2026-09-29",
     "expiresOn": "2026-11-28",
     "batchId": "cloud-2026-09-29"
+  },
+  {
+    "id": "ai-2026-09-29-hiring",
+    "pillar": "hiring",
+    "objective": "recruiting",
+    "headline": "Bring your grooming experience.",
+    "caption": "The shape of a trim. The finishing details. The care that goes into the work.\n\nIf grooming is your craft, we’d like to meet you. Mobile Pet Works is hiring groomers in the Tri-Cities.\n\nCall (509) 591-5913 to learn about the position.",
+    "asset": "images/creative/cloud/ai-2026-09-29-hiring.jpg",
+    "generator": "github-openai",
+    "sourceTemplateId": "hiring-craft",
+    "createdAt": "2026-09-29",
+    "availableFrom": "2026-09-29",
+    "expiresOn": "2026-11-28",
+    "batchId": "cloud-2026-09-29"
   }
 ]
