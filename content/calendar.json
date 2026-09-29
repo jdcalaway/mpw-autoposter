@@ -746,7 +746,7 @@
       "image": "images/reels/pickles-2026-08-29.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/reels/pickles-2026-08-29.jpg",
       "issueNumber": 30,
-      "status": "pending_approval",
+      "status": "skipped",
       "imageSource": "reel",
       "mediaType": "reel",
       "videoUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/reels/pickles-2026-08-29.mp4",
