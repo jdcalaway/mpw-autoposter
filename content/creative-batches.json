@@ -282,12 +282,18 @@
           "prompt": "Create new premium landscape social advertising artwork for Mobile Pet Works, mobile dog grooming in Tri-Cities, Washington.\nThe uploaded photo is ONLY a vehicle design reference. Invent a fresh illustration, composition, dog and environment; do not reproduce the photograph or its neighborhood.\nWhen the van is shown, preserve its distinctive elongated white shuttle-bus body, long dark tinted window band, white cab facing right, front passenger doors, blue lower stripe and large blue paw near the rear.\nThe side brand name, if visible, must read MOBILE PET WORKS. Omit the old website and phone lettering from the reference. Do not invent a different logo or vehicle.\nArt direction: Premium mid-century travel-poster illustration with refined screenprint texture, warm golden landscape, blue silhouettes and expressive character design.\nScene: An elegant poodle in a blue bandana on a garden path with the reference van behind it, late afternoon light and stylized Tri-Cities hills.\nThe separately typeset ad headline will be: The salon in your driveway.\nCreate illustration only: no headline, contact details, captions, watermarks, badges, prices or extra text in the artwork. The ad typography is added separately below the illustration.\nUse the entire 3:2 landscape canvas. Keep all important subjects within a generous 8% safe margin. Expressive beautiful dogs, correct anatomy and gentle, credible grooming handling.\nClearly crafted illustration, not a documentary photograph or a real employee/customer portrait. No before-and-after comparison, fabricated review, pay/benefit claim, scarcity, guaranteed results or availability. No scissors near faces.",
           "sourceAsset": "images/creative/cloud/ai-2026-09-29-booking-source.png",
           "asset": "images/creative/cloud/ai-2026-09-29-booking.jpg",
-          "status": "requesting",
+          "status": "received",
           "attempts": [
             {
               "date": "2026-09-29",
               "startedAt": "2026-09-29T13:31:27.998Z",
-              "status": "requesting"
+              "status": "received",
+              "requestId": "req_9e8b8e9bf0c440989435c60962ae79c0",
+              "usage": {
+                "total_tokens": 6581,
+                "input_tokens": 1093,
+                "output_tokens": 5488
+              }
             }
           ]
         },
