@@ -723,8 +723,13 @@
       "image": "images/generated/2026-09-28-hiring.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-09-28-hiring.jpg",
       "issueNumber": 29,
-      "status": "pending_approval",
-      "imageSource": "graphic"
+      "status": "posted",
+      "imageSource": "graphic",
+      "postedAt": "2026-09-28T18:11:56",
+      "results": {
+        "facebook": "1585957798283717_1751571970304787",
+        "instagram": "18107547689224699"
+      }
     },
     {
       "id": "2026-09-29",
