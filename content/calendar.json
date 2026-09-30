@@ -767,8 +767,13 @@
       "image": "images/generated/2026-09-30-tip.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-09-30-tip.jpg",
       "issueNumber": 31,
-      "status": "pending_approval",
-      "imageSource": "graphic"
+      "status": "posted",
+      "imageSource": "graphic",
+      "postedAt": "2026-09-30T08:15:54",
+      "results": {
+        "facebook": "1585957798283717_1753347056793945",
+        "instagram": "18116397218061186"
+      }
     },
     {
       "id": "2026-10-01",
