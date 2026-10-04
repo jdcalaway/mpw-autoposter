@@ -907,8 +907,8 @@
       "illustration": false,
       "image": "images/generated/2026-10-05-hiring.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-10-05-hiring.jpg",
-      "issueNumber": null,
-      "status": "planned",
+      "issueNumber": 36,
+      "status": "pending_approval",
       "imageSource": "graphic"
     },
     {
