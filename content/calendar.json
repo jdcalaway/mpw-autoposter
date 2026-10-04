@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T18:33:30.616Z",
+  "generatedAt": "2026-10-04T18:32:03.111Z",
   "timezone": "America/Los_Angeles",
   "posts": [
     {
@@ -905,10 +905,11 @@
       "creativeAsset": null,
       "forceGraphic": true,
       "illustration": false,
-      "image": null,
-      "imageUrl": null,
+      "image": "images/generated/2026-10-05-hiring.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-10-05-hiring.jpg",
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "imageSource": "graphic"
     },
     {
       "id": "2026-10-06",
@@ -1482,6 +1483,28 @@
         "updatedAt": null
       },
       "forceGraphic": true,
+      "image": null,
+      "imageUrl": null,
+      "issueNumber": null,
+      "status": "planned"
+    },
+    {
+      "id": "2026-11-02",
+      "date": "2026-11-02",
+      "time": "18:00",
+      "datetimeLocal": "2026-11-02T18:00:00",
+      "pillar": "hiring",
+      "pillarLabel": "Groomer careers",
+      "caption": "The shape of a trim. The finishing details. The care that goes into the work.\n\nIf grooming is your craft, we’d like to meet you. Mobile Pet Works is hiring groomers in the Tri-Cities.\n\nCall (509) 591-5913 to learn about the position.",
+      "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #TriCitiesJobs #GroomerJobs #TriCities #TriCitiesDogs",
+      "imageIdea": "Illustrated recruiting campaign or branded hiring card",
+      "prefersPhoto": false,
+      "graphicText": "Bring your grooming experience.",
+      "conceptId": "ai-2026-09-29-hiring",
+      "objective": "recruiting",
+      "creativeAsset": "images/creative/cloud/ai-2026-09-29-hiring.jpg",
+      "forceGraphic": false,
+      "illustration": true,
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
