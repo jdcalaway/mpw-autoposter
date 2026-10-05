@@ -930,8 +930,8 @@
       "graphicText": "Before to after, right in the driveway",
       "image": "images/generated/2026-10-06-transformation.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-10-06-transformation.jpg",
-      "issueNumber": null,
-      "status": "planned",
+      "issueNumber": 37,
+      "status": "pending_approval",
       "imageSource": "photo",
       "pet": "Roxy"
     },
