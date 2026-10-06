@@ -245,5 +245,19 @@
     "availableFrom": "2026-10-06",
     "expiresOn": "2026-12-05",
     "batchId": "cloud-2026-10-06"
+  },
+  {
+    "id": "ai-2026-10-06-hiring",
+    "pillar": "hiring",
+    "objective": "recruiting",
+    "headline": "Your next job starts with questions.",
+    "caption": "What does a day in a mobile salon look like? What schedule is available? What experience are we looking for?\n\nLet’s talk through it. Mobile Pet Works is hiring groomers. Call (509) 591-5913.",
+    "asset": "images/creative/cloud/ai-2026-10-06-hiring.jpg",
+    "generator": "github-openai",
+    "sourceTemplateId": "hiring-questions",
+    "createdAt": "2026-10-06",
+    "availableFrom": "2026-10-06",
+    "expiresOn": "2026-12-05",
+    "batchId": "cloud-2026-10-06"
   }
 ]
