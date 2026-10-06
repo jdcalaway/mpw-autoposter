@@ -336,6 +336,66 @@
       ],
       "referenceSha256": "e154ddfddbac882caeca42cc8346b04f1196c856da5cbcfa98eecf5aaa483259",
       "completedOn": "2026-09-29"
+    },
+    {
+      "id": "cloud-2026-10-06",
+      "date": "2026-10-06",
+      "provider": "github-openai",
+      "status": "partial",
+      "model": "gpt-image-2",
+      "size": "1536x1024",
+      "quality": "high",
+      "reference": "images/creative/van-reference.jpg",
+      "items": [
+        {
+          "id": "ai-2026-10-06-booking",
+          "pillar": "booking",
+          "objective": "booking",
+          "sourceTemplateId": "booking-plan",
+          "headline": "A little planning. A fresh coat.",
+          "caption": "Before your calendar gets busy again, ask about your dog’s next grooming appointment.\n\nMobile Pet Works comes to you. Text (509) 591-5913 to discuss availability.",
+          "style": {
+            "name": "blue-garden",
+            "direction": "Painterly editorial illustration with a royal-blue field, cream highlights, soft botanical silhouettes and restrained coral details.",
+            "background": "#0146A3",
+            "ink": "#FFFFFF",
+            "accent": "#FFD25A"
+          },
+          "prompt": "Create new premium landscape social advertising artwork for Mobile Pet Works, mobile dog grooming in Tri-Cities, Washington.\nThe uploaded photo is ONLY a vehicle design reference. Invent a fresh illustration, composition, dog and environment; do not reproduce the photograph or its neighborhood.\nWhen the van is shown, preserve its distinctive elongated white shuttle-bus body, long dark tinted window band, white cab facing right, front passenger doors, blue lower stripe and large blue paw near the rear.\nThe side brand name, if visible, must read MOBILE PET WORKS. Omit the old website and phone lettering from the reference. Do not invent a different logo or vehicle.\nArt direction: Painterly editorial illustration with a royal-blue field, cream highlights, soft botanical silhouettes and restrained coral details.\nScene: An expressive freshly groomed cream dog in the foreground, coral bandana, the reference van behind it in a sunny residential driveway.\nThe separately typeset ad headline will be: A little planning. A fresh coat.\nCreate illustration only: no headline, contact details, captions, watermarks, badges, prices or extra text in the artwork. The ad typography is added separately below the illustration.\nUse the entire 3:2 landscape canvas. Keep all important subjects within a generous 8% safe margin. Expressive beautiful dogs, correct anatomy and gentle, credible grooming handling.\nClearly crafted illustration, not a documentary photograph or a real employee/customer portrait. No before-and-after comparison, fabricated review, pay/benefit claim, scarcity, guaranteed results or availability. No scissors near faces.",
+          "sourceAsset": "images/creative/cloud/ai-2026-10-06-booking-source.png",
+          "asset": "images/creative/cloud/ai-2026-10-06-booking.jpg",
+          "status": "requesting",
+          "attempts": [
+            {
+              "date": "2026-10-06",
+              "startedAt": "2026-10-06T18:54:17.819Z",
+              "status": "requesting"
+            }
+          ]
+        },
+        {
+          "id": "ai-2026-10-06-hiring",
+          "pillar": "hiring",
+          "objective": "recruiting",
+          "sourceTemplateId": "hiring-questions",
+          "headline": "Your next job starts with questions.",
+          "caption": "What does a day in a mobile salon look like? What schedule is available? What experience are we looking for?\n\nLet’s talk through it. Mobile Pet Works is hiring groomers. Call (509) 591-5913.",
+          "style": {
+            "name": "cream-collage",
+            "direction": "Artful paper collage with clean large shapes, oatmeal paper texture, navy contours, blue and coral cutouts and generous breathing room.",
+            "background": "#FFF8EB",
+            "ink": "#172E4D",
+            "accent": "#A52E46"
+          },
+          "prompt": "Create new premium landscape social advertising artwork for Mobile Pet Works, mobile dog grooming in Tri-Cities, Washington.\nThe uploaded photo is ONLY a vehicle design reference. Invent a fresh illustration, composition, dog and environment; do not reproduce the photograph or its neighborhood.\nWhen the van is shown, preserve its distinctive elongated white shuttle-bus body, long dark tinted window band, white cab facing right, front passenger doors, blue lower stripe and large blue paw near the rear.\nThe side brand name, if visible, must read MOBILE PET WORKS. Omit the old website and phone lettering from the reference. Do not invent a different logo or vehicle.\nArt direction: Artful paper collage with clean large shapes, oatmeal paper texture, navy contours, blue and coral cutouts and generous breathing room.\nScene: An illustrated adult professional groomer wearing a navy apron and gently brushing a terrier on a stable grooming table, in a conceptual cutaway of a mobile salon. Include the reference van exterior as a small secondary vignette.\nThe separately typeset ad headline will be: Your next job starts with questions.\nCreate illustration only: no headline, contact details, captions, watermarks, badges, prices or extra text in the artwork. The ad typography is added separately below the illustration.\nUse the entire 3:2 landscape canvas. Keep all important subjects within a generous 8% safe margin. Expressive beautiful dogs, correct anatomy and gentle, credible grooming handling.\nClearly crafted illustration, not a documentary photograph or a real employee/customer portrait. No before-and-after comparison, fabricated review, pay/benefit claim, scarcity, guaranteed results or availability. No scissors near faces.",
+          "sourceAsset": "images/creative/cloud/ai-2026-10-06-hiring-source.png",
+          "asset": "images/creative/cloud/ai-2026-10-06-hiring.jpg",
+          "status": "planned",
+          "attempts": []
+        }
+      ],
+      "assets": [],
+      "referenceSha256": "e154ddfddbac882caeca42cc8346b04f1196c856da5cbcfa98eecf5aaa483259"
     }
   ]
 }
