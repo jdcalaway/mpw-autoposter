@@ -231,5 +231,19 @@
     "availableFrom": "2026-09-29",
     "expiresOn": "2026-11-28",
     "batchId": "cloud-2026-09-29"
+  },
+  {
+    "id": "ai-2026-10-06-booking",
+    "pillar": "booking",
+    "objective": "booking",
+    "headline": "A little planning. A fresh coat.",
+    "caption": "Before your calendar gets busy again, ask about your dog’s next grooming appointment.\n\nMobile Pet Works comes to you. Text (509) 591-5913 to discuss availability.",
+    "asset": "images/creative/cloud/ai-2026-10-06-booking.jpg",
+    "generator": "github-openai",
+    "sourceTemplateId": "booking-plan",
+    "createdAt": "2026-10-06",
+    "availableFrom": "2026-10-06",
+    "expiresOn": "2026-12-05",
+    "batchId": "cloud-2026-10-06"
   }
 ]
