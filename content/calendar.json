@@ -955,9 +955,14 @@
       "image": "images/generated/2026-10-07-tip.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-10-07-tip.jpg",
       "issueNumber": 38,
-      "status": "pending_approval",
+      "status": "posted",
       "imageSource": "graphic",
-      "error": "Graph POST 1585957798283717/photos failed (500): Please reduce the amount of data you're asking for, then retry your request"
+      "error": "Graph POST 1585957798283717/photos failed (500): Please reduce the amount of data you're asking for, then retry your request",
+      "postedAt": "2026-10-07T17:44:04",
+      "results": {
+        "facebook": "1585957798283717_1761838899278094",
+        "instagram": "18148623328511694"
+      }
     },
     {
       "id": "2026-10-08",
