@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09T20:00:19.464Z",
+  "generatedAt": "2026-10-10T19:07:59.379Z",
   "timezone": "America/Los_Angeles",
   "posts": [
     {
@@ -1050,10 +1050,11 @@
       "creativeAsset": "images/creative/cloud/ai-2026-09-08-booking.jpg",
       "forceGraphic": false,
       "illustration": true,
-      "image": null,
-      "imageUrl": null,
+      "image": "images/generated/2026-10-11-creative.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-10-11-creative.jpg",
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "imageSource": "illustration"
     },
     {
       "id": "2026-10-12",
@@ -1627,6 +1628,39 @@
       "creativeAsset": null,
       "forceGraphic": true,
       "illustration": false,
+      "image": null,
+      "imageUrl": null,
+      "issueNumber": null,
+      "status": "planned"
+    },
+    {
+      "id": "2026-11-08",
+      "date": "2026-11-08",
+      "time": "19:00",
+      "datetimeLocal": "2026-11-08T19:00:00",
+      "pillar": "testimonial",
+      "pillarLabel": "Testimonial",
+      "caption": "“Best groomer ever ❤️”\n— Melanie Kohler, Google review (5/5)\n\nThank you for trusting Mobile Pet Works. Ask about your dog's next appointment at mobilepetworks.com.",
+      "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #MobilePetWorks #TriCities #TriCitiesDogs",
+      "imageIdea": "A styled review screenshot on-brand, or a happy dog photo with the quote overlaid.",
+      "prefersPhoto": false,
+      "graphicText": "Best groomer ever ❤️",
+      "conceptId": "review-google-profile-107023004372323123671",
+      "objective": "booking",
+      "review": {
+        "id": "google-profile-107023004372323123671",
+        "text": "Best groomer ever ❤️",
+        "author": "Melanie Kohler",
+        "rating": 5,
+        "sourceUrl": "https://www.google.com/maps/place/Mobile+Pet+Works/data=!4m2!3m1!1s0x0:0x987ac2118047f288",
+        "reviewerProfile": "https://www.google.com/maps/contrib/107023004372323123671/reviews?hl=en",
+        "sourceMethod": "google-business-profile-browser",
+        "observedAt": "2026-09-10T14:58:00Z",
+        "verified": true,
+        "enabled": true,
+        "updatedAt": null
+      },
+      "forceGraphic": true,
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
