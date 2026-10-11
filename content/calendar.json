@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T20:34:16.968Z",
+  "generatedAt": "2026-10-11T22:10:39.151Z",
   "timezone": "America/Los_Angeles",
   "posts": [
     {
@@ -1048,18 +1048,21 @@
       "datetimeLocal": "2026-10-11T10:00:00",
       "pillar": "booking",
       "pillarLabel": "Booking CTA",
-      "caption": "Your dog has an appointment. Your car does not. Ask about mobile grooming at mobilepetworks.com.",
+      "caption": "Your dog has an appointment. Your car doesn’t.\n\nSkip the drop-off and pickup trips. Mobile Pet Works brings the grooming salon to your driveway in the Tri-Cities.\n\nAsk about availability at mobilepetworks.com.",
       "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #BookNow #MobileDogGrooming #DogGroomer #TriCities #TriCitiesDogs",
       "imageIdea": "The van in a driveway, or a clean graphic with \"Book Now\" + your website.",
       "prefersPhoto": false,
-      "graphicText": "Your dog has an appointment. Your car does not.",
-      "awaitingCreative": true,
-      "creativeAsset": null,
+      "graphicText": "Your dog has an appointment. Your car doesn’t.",
+      "conceptId": "ai-2026-10-11-booking",
+      "objective": "booking",
+      "creativeAsset": "images/creative/cloud/ai-2026-10-11-booking.jpg",
+      "forceGraphic": false,
       "illustration": true,
-      "image": null,
-      "imageUrl": null,
+      "image": "images/generated/2026-10-11-creative.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-10-11-creative.jpg",
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "imageSource": "illustration"
     },
     {
       "supersededIssueNumbers": [
@@ -1071,18 +1074,21 @@
       "datetimeLocal": "2026-10-12T18:00:00",
       "pillar": "hiring",
       "pillarLabel": "Groomer careers",
-      "caption": "Mobile Pet Works is hiring groomers in the Tri-Cities. Call (509) 591-5913 to ask about joining the team.",
+      "caption": "Mobile Pet Works is our family’s business, and we’re looking for our next groomer.\n\nInterested in mobile grooming in the Tri-Cities? Call (509) 591-5913 and ask about the opportunity.",
       "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #TriCitiesJobs #GroomerJobs #TriCities #TriCitiesDogs",
       "imageIdea": "Illustrated recruiting campaign or branded hiring card",
       "prefersPhoto": false,
-      "graphicText": "We are hiring groomers",
-      "awaitingCreative": true,
-      "creativeAsset": null,
+      "graphicText": "Meet the business behind the vans.",
+      "conceptId": "ai-2026-10-12-hiring",
+      "objective": "recruiting",
+      "creativeAsset": "images/creative/cloud/ai-2026-10-12-hiring.jpg",
+      "forceGraphic": false,
       "illustration": true,
-      "image": null,
-      "imageUrl": null,
+      "image": "images/generated/2026-10-12-creative.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-10-12-creative.jpg",
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "imageSource": "illustration"
     },
     {
       "id": "2026-10-13",
