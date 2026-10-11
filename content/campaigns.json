@@ -274,5 +274,20 @@
     "availableFrom": "2026-10-11",
     "expiresOn": "2026-12-10",
     "batchId": "post-2026-10-11-2026-10-12"
+  },
+  {
+    "id": "ai-2026-10-12-hiring",
+    "targetDate": "2026-10-12",
+    "pillar": "hiring",
+    "objective": "recruiting",
+    "headline": "Meet the business behind the vans.",
+    "caption": "Mobile Pet Works is our family’s business, and we’re looking for our next groomer.\n\nInterested in mobile grooming in the Tri-Cities? Call (509) 591-5913 and ask about the opportunity.",
+    "asset": "images/creative/cloud/ai-2026-10-12-hiring.jpg",
+    "generator": "github-openai",
+    "sourceTemplateId": "hiring-family",
+    "createdAt": "2026-10-11",
+    "availableFrom": "2026-10-11",
+    "expiresOn": "2026-12-10",
+    "batchId": "post-2026-10-11-2026-10-12"
   }
 ]
