@@ -1030,8 +1030,13 @@
       "image": "images/generated/2026-10-10-creative.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-10-10-creative.jpg",
       "issueNumber": 41,
-      "status": "pending_approval",
-      "imageSource": "illustration"
+      "status": "posted",
+      "imageSource": "illustration",
+      "postedAt": "2026-10-10T23:50:24",
+      "results": {
+        "facebook": "1585957798283717_1765492128912771",
+        "instagram": "18032913719886095"
+      }
     },
     {
       "id": "2026-10-11",
