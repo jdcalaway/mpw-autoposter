@@ -1060,8 +1060,8 @@
       "illustration": true,
       "image": "images/generated/2026-10-11-creative.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-10-11-creative.jpg",
-      "issueNumber": null,
-      "status": "planned",
+      "issueNumber": 44,
+      "status": "pending_approval",
       "imageSource": "illustration"
     },
     {
@@ -1086,8 +1086,8 @@
       "illustration": true,
       "image": "images/generated/2026-10-12-creative.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-10-12-creative.jpg",
-      "issueNumber": null,
-      "status": "planned",
+      "issueNumber": 45,
+      "status": "pending_approval",
       "imageSource": "illustration"
     },
     {
