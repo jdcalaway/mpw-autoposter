@@ -259,5 +259,20 @@
     "availableFrom": "2026-10-06",
     "expiresOn": "2026-12-05",
     "batchId": "cloud-2026-10-06"
+  },
+  {
+    "id": "ai-2026-10-11-booking",
+    "targetDate": "2026-10-11",
+    "pillar": "booking",
+    "objective": "booking",
+    "headline": "Your dog has an appointment. Your car doesn’t.",
+    "caption": "Your dog has an appointment. Your car doesn’t.\n\nSkip the drop-off and pickup trips. Mobile Pet Works brings the grooming salon to your driveway in the Tri-Cities.\n\nAsk about availability at mobilepetworks.com.",
+    "asset": "images/creative/cloud/ai-2026-10-11-booking.jpg",
+    "generator": "github-openai",
+    "sourceTemplateId": "booking-car",
+    "createdAt": "2026-10-11",
+    "availableFrom": "2026-10-11",
+    "expiresOn": "2026-12-10",
+    "batchId": "post-2026-10-11-2026-10-12"
   }
 ]
