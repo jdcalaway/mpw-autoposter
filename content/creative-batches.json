@@ -418,6 +418,68 @@
       ],
       "referenceSha256": "e154ddfddbac882caeca42cc8346b04f1196c856da5cbcfa98eecf5aaa483259",
       "completedOn": "2026-10-06"
+    },
+    {
+      "id": "post-2026-10-11-2026-10-12",
+      "date": "2026-10-11",
+      "provider": "github-openai",
+      "status": "partial",
+      "model": "gpt-image-2",
+      "size": "1536x1024",
+      "quality": "high",
+      "reference": "images/creative/van-reference.jpg",
+      "items": [
+        {
+          "id": "ai-2026-10-11-booking",
+          "targetDate": "2026-10-11",
+          "pillar": "booking",
+          "objective": "booking",
+          "sourceTemplateId": "booking-car",
+          "headline": "Your dog has an appointment. Your car doesn’t.",
+          "caption": "Your dog has an appointment. Your car doesn’t.\n\nSkip the drop-off and pickup trips. Mobile Pet Works brings the grooming salon to your driveway in the Tri-Cities.\n\nAsk about availability at mobilepetworks.com.",
+          "style": {
+            "name": "cream-collage",
+            "direction": "Artful paper collage with clean large shapes, oatmeal paper texture, navy contours, blue and coral cutouts and generous breathing room.",
+            "background": "#FFF8EB",
+            "ink": "#172E4D",
+            "accent": "#A52E46"
+          },
+          "prompt": "Create new premium landscape social advertising artwork for Mobile Pet Works, mobile dog grooming in Tri-Cities, Washington.\nThe uploaded photo is ONLY a vehicle design reference. Invent a fresh illustration, composition, dog and environment; do not reproduce the photograph or its neighborhood.\nWhen the van is shown, preserve its distinctive elongated white shuttle-bus body, long dark tinted window band, white cab facing right, front passenger doors, blue lower stripe and large blue paw near the rear.\nThe side brand name, if visible, must read MOBILE PET WORKS. Omit the old website and phone lettering from the reference. Do not invent a different logo or vehicle.\nArt direction: Artful paper collage with clean large shapes, oatmeal paper texture, navy contours, blue and coral cutouts and generous breathing room.\nScene: A charming terrier on a front porch, the reference van parked nearby, a relaxed illustration of a home and garden in the background.\nThe separately typeset ad headline will be: Your dog has an appointment. Your car doesn’t.\nCreate illustration only: no headline, contact details, captions, watermarks, badges, prices or extra text in the artwork. The ad typography is added separately below the illustration.\nUse the entire 3:2 landscape canvas. Keep all important subjects within a generous 8% safe margin. Expressive beautiful dogs, correct anatomy and gentle, credible grooming handling.\nClearly crafted illustration, not a documentary photograph or a real employee/customer portrait. No before-and-after comparison, fabricated review, pay/benefit claim, scarcity, guaranteed results or availability. No scissors near faces.",
+          "sourceAsset": "images/creative/cloud/ai-2026-10-11-booking-source.png",
+          "asset": "images/creative/cloud/ai-2026-10-11-booking.jpg",
+          "status": "requesting",
+          "attempts": [
+            {
+              "date": "2026-10-11",
+              "startedAt": "2026-10-11T22:07:50.286Z",
+              "status": "requesting"
+            }
+          ]
+        },
+        {
+          "id": "ai-2026-10-12-hiring",
+          "targetDate": "2026-10-12",
+          "pillar": "hiring",
+          "objective": "recruiting",
+          "sourceTemplateId": "hiring-family",
+          "headline": "Meet the business behind the vans.",
+          "caption": "Mobile Pet Works is our family’s business, and we’re looking for our next groomer.\n\nInterested in mobile grooming in the Tri-Cities? Call (509) 591-5913 and ask about the opportunity.",
+          "style": {
+            "name": "sunlit-paper",
+            "direction": "Sophisticated tactile cut-paper illustration with layered shadows, cream sky, golden sunlight and royal-blue accents.",
+            "background": "#FFF8EB",
+            "ink": "#172E4D",
+            "accent": "#0146A3"
+          },
+          "prompt": "Create new premium landscape social advertising artwork for Mobile Pet Works, mobile dog grooming in Tri-Cities, Washington.\nThe uploaded photo is ONLY a vehicle design reference. Invent a fresh illustration, composition, dog and environment; do not reproduce the photograph or its neighborhood.\nWhen the van is shown, preserve its distinctive elongated white shuttle-bus body, long dark tinted window band, white cab facing right, front passenger doors, blue lower stripe and large blue paw near the rear.\nThe side brand name, if visible, must read MOBILE PET WORKS. Omit the old website and phone lettering from the reference. Do not invent a different logo or vehicle.\nArt direction: Sophisticated tactile cut-paper illustration with layered shadows, cream sky, golden sunlight and royal-blue accents.\nScene: An illustrated adult groomer beside the reference van with a friendly spaniel, a professional grooming brush in hand and a confident welcoming posture.\nThe separately typeset ad headline will be: Meet the business behind the vans.\nCreate illustration only: no headline, contact details, captions, watermarks, badges, prices or extra text in the artwork. The ad typography is added separately below the illustration.\nUse the entire 3:2 landscape canvas. Keep all important subjects within a generous 8% safe margin. Expressive beautiful dogs, correct anatomy and gentle, credible grooming handling.\nClearly crafted illustration, not a documentary photograph or a real employee/customer portrait. No before-and-after comparison, fabricated review, pay/benefit claim, scarcity, guaranteed results or availability. No scissors near faces.",
+          "sourceAsset": "images/creative/cloud/ai-2026-10-12-hiring-source.png",
+          "asset": "images/creative/cloud/ai-2026-10-12-hiring.jpg",
+          "status": "planned",
+          "attempts": []
+        }
+      ],
+      "assets": [],
+      "referenceSha256": "e154ddfddbac882caeca42cc8346b04f1196c856da5cbcfa98eecf5aaa483259"
     }
   ]
 }
