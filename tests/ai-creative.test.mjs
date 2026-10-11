@@ -9,6 +9,7 @@ import { planBatch, requestBlock, headlineLines, generateArtwork, ImageRequestEr
 import { runGeneration, gitCheckpoint } from "../scripts/generate-ai-creatives.mjs";
 
 const settings = JSON.parse(await readFile(join(ROOT, "content/ai-creative.json"), "utf8"));
+delete settings.generationMode; // Legacy ledger/retry regression fixtures.
 const campaigns = JSON.parse(await readFile(join(ROOT, "content/campaigns.json"), "utf8"));
 const fresh = () => ({ batches: [{ date: "2026-09-07", status: "complete", assets: ["old.png"] }] });
 const plan = (ledger = fresh(), today = "2026-09-07") => planBatch({ ledger, campaigns, settings, today });

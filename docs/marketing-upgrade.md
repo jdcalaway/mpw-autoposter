@@ -1,3 +1,5 @@
+> **October 10, 2026 update:** The per-post, single-use artwork policy in [cloud-ai-images.md](cloud-ai-images.md) supersedes the weekly artwork and 30-day AI reuse descriptions below. Existing API spending limits still apply.
+
 # Mobile Pet Works marketing upgrade
 
 **Active setup, September 7, 2026:** A daily Codex automation now uses the signed-in browser to import Google reviews and inspect MoeGo, with two new AI campaign ads every seven days. Three source-checked reviews have been imported. See [recurring-marketing.md](recurring-marketing.md) for the active procedure and local-runtime requirements. The OAuth method below is an optional alternative and is not enabled.

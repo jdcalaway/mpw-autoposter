@@ -1,4 +1,4 @@
-name: Weekly AI campaign images
+name: Fresh AI campaign images
 
 on:
   workflow_dispatch:
@@ -11,8 +11,7 @@ on:
           - generate
         default: preview
   schedule:
-    # Check daily; create a pair only when seven days have passed. Runs before
-    # the 15:00 UTC approval preparation, and catches up after an outage.
+    # Generate only missing artwork for today/tomorrow. Existing limits apply.
     - cron: "17 13 * * *"
   push:
     branches: [main]
@@ -46,6 +45,7 @@ jobs:
           cache: npm
       - run: npm ci --no-audit --no-fund
       - run: npm test
+      - run: node scripts/generate-calendar.mjs
       - name: Configure checkpoints
         run: |
           git config user.name 'github-actions[bot]'
@@ -53,7 +53,7 @@ jobs:
       - name: Preview (never calls OpenAI)
         if: github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.mode == 'preview')
         run: node scripts/generate-ai-creatives.mjs --preview
-      - name: Generate a due weekly batch
+      - name: Generate artwork needed by upcoming posts
         if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.mode == 'generate')
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}

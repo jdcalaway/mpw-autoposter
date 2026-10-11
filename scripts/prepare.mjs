@@ -11,6 +11,7 @@
 import {
   loadConfig, loadPillars, loadCalendar, saveCalendar, todayLocal, addDays, rawUrl, log,
 } from "./lib/util.mjs";
+import { creativeHoldReason } from "./lib/creative-policy.mjs";
 import { resolveImage } from "./lib/images.mjs";
 import { createIssue } from "./lib/github.mjs";
 
@@ -47,6 +48,8 @@ async function resolveImages(cfg, cal) {
   let changed = false;
   for (const post of cal.posts) {
     if (post.status !== "planned" || post.image || !inHorizon(cfg, post)) continue;
+    const hold = creativeHoldReason(post, cal.posts);
+    if (hold) { log(`${post.date}: ${hold}`); continue; }
     const { relPath, source, sourceName, videoRelPath } = await resolveImage({ cfg, post });
     post.image = relPath;
     post.imageUrl = rawUrl(relPath);
@@ -85,6 +88,7 @@ async function openIssues(cfg, cal) {
   for (const post of cal.posts) {
     if (post.status !== "planned" || !post.image || post.issueNumber || !inHorizon(cfg, post)) continue;
 
+    if (creativeHoldReason(post, cal.posts)) continue;
     const title = `📅 Approve ${post.date} — ${post.pillarLabel} (${post.time})`;
     const body = [
       `**Scheduled:** ${post.datetimeLocal.replace("T", " ")} (${cfg.timezone})`,

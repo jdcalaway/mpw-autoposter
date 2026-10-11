@@ -1,3 +1,5 @@
+> **October 10, 2026 update:** The per-post, single-use artwork policy in [cloud-ai-images.md](cloud-ai-images.md) supersedes the weekly artwork and 30-day AI reuse descriptions below. Existing API spending limits still apply.
+
 # Recurring marketing operations
 
 ## Runtime

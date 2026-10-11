@@ -5,6 +5,7 @@
 //   no reaction past the grace window -> mark skipped (held; never auto-posts)
 
 import { loadConfig, loadCalendar, saveCalendar, nowLocalString, log } from "./lib/util.mjs";
+import { creativeHoldReason } from "./lib/creative-policy.mjs";
 import { approvalDecision, commentIssue, closeIssue } from "./lib/github.mjs";
 import { postToFacebook, postToInstagram, postReelToInstagram, postVideoToFacebook } from "./lib/meta.mjs";
 
@@ -26,6 +27,8 @@ async function main() {
     if (post.status !== "pending_approval") continue;
     if (now < post.datetimeLocal) continue; // not due yet
 
+    const hold = creativeHoldReason(post, cal.posts);
+    if (hold) { log(`${post.date}: ${hold}`); continue; }
     const decision = await approvalDecision(post.issueNumber, cfg.approverLogin);
 
     if (decision === "pending") {

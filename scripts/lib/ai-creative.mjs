@@ -32,7 +32,7 @@ export function validateSettings(c) {
   }
 }
 
-export function planBatch({ ledger, campaigns, settings, today }) {
+export function planBatch({ ledger, campaigns, settings, today, posts }) {
   validateSettings(settings);
   const cloud = ledger.batches.filter(b => b.provider === PROVIDER);
   const pending = cloud.filter(b => b.status !== "complete");
@@ -40,9 +40,16 @@ export function planBatch({ ledger, campaigns, settings, today }) {
   if (pending.length) return { batch: pending[0], isNew: false };
   const latest = cloud.filter(b => b.status === "complete").sort((a,b) => b.date.localeCompare(a.date))[0];
   const nextDate = latest && addDays(latest.completedOn || latest.date, settings.intervalDays);
-  if (nextDate && today < nextDate) return { nextDate };
+  const perPost = settings.generationMode === "per-post";
+  if (perPost && !Array.isArray(posts)) throw new Error("Per-post generation requires the calendar.");
+  const targets = perPost ? posts.filter(p => p.status === "planned" && p.awaitingCreative &&
+    ["booking", "hiring"].includes(p.pillar) && p.date >= today && p.date <= addDays(today, 1))
+    .sort((a,b) => a.date.localeCompare(b.date)).slice(0, settings.maxRequestsPerRun) : null;
+  if (perPost && !targets.length) return { nextDate: addDays(today, 1) };
+  if (!perPost && nextDate && today < nextDate) return { nextDate };
   const index = cloud.length;
-  const items = ["booking", "hiring"].map((pillar, offset) => {
+  const items = (targets || [{pillar:"booking"}, {pillar:"hiring"}]).map((target, offset) => {
+    const pillar = target.pillar;
     const previous = cloud.flatMap(b => b.items || []).filter(i => i.pillar === pillar);
     const candidates = campaigns.filter(c => c.pillar === pillar && !c.generator && !c.createdAt);
     const usage = c => previous.filter(i => i.sourceTemplateId === c.id).length;
@@ -52,7 +59,8 @@ export function planBatch({ ledger, campaigns, settings, today }) {
     const style = settings.styles[(index + offset) % settings.styles.length];
     const scenes = settings[`${pillar}Scenes`];
     const scene = scenes[index % scenes.length];
-    const id = `ai-${today}-${pillar}`;
+    const id = `ai-${target.date || today}-${pillar}`;
+    if (cloud.some(b => b.items?.some(i => i.id === id))) throw new Error(`Existing artwork record for ${id}; inspect before buying again.`);
     const prompt = [
       "Create new premium landscape social advertising artwork for Mobile Pet Works, mobile dog grooming in Tri-Cities, Washington.",
       "The uploaded photo is ONLY a vehicle design reference. Invent a fresh illustration, composition, dog and environment; do not reproduce the photograph or its neighborhood.",
@@ -65,12 +73,12 @@ export function planBatch({ ledger, campaigns, settings, today }) {
       "Use the entire 3:2 landscape canvas. Keep all important subjects within a generous 8% safe margin. Expressive beautiful dogs, correct anatomy and gentle, credible grooming handling.",
       "Clearly crafted illustration, not a documentary photograph or a real employee/customer portrait. No before-and-after comparison, fabricated review, pay/benefit claim, scarcity, guaranteed results or availability. No scissors near faces."
     ].join("\n");
-    return { id, pillar, objective: template.objective, sourceTemplateId: template.id,
+    return { id, ...(target.date ? {targetDate: target.date} : {}), pillar, objective: template.objective, sourceTemplateId: template.id,
       headline: template.headline, caption: template.caption, style, prompt,
       sourceAsset: `images/creative/cloud/${id}-source.png`,
       asset: `images/creative/cloud/${id}.jpg`, status: "planned", attempts: [] };
   });
-  return { isNew: true, batch: { id: `cloud-${today}`, date: today, provider: PROVIDER, status: "partial",
+  return { isNew: true, batch: { id: targets ? `post-${targets.map(t => t.date).join("-")}` : `cloud-${today}`, date: today, provider: PROVIDER, status: "partial",
     model: settings.model, size: settings.size, quality: settings.quality,
     reference: settings.reference, items, assets: [] } };
 }
@@ -178,7 +186,7 @@ export async function renderCampaign({ source, item, business }) {
 }
 
 export function campaignFromItem(batch, item, today) {
-  return { id: item.id, pillar: item.pillar, objective: item.objective, headline: item.headline,
+  return { id: item.id, ...(item.targetDate ? {targetDate: item.targetDate} : {}), pillar: item.pillar, objective: item.objective, headline: item.headline,
     caption: item.caption, asset: item.asset, generator: PROVIDER, sourceTemplateId: item.sourceTemplateId,
     createdAt: today, availableFrom: today, expiresOn: addDays(today, 60), batchId: batch.id };
 }

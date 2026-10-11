@@ -42,7 +42,8 @@ async function main() {
     const date = addDays(start, i);
     const dow = new Date(`${date}T12:00:00Z`).getUTCDay();
     let key = pillars.weekdayMap[dow];
-    const history = [...existing.posts.filter(p => p.date < start || p.isTest), ...posts];
+    const history = [...existing.posts.filter(p => p.date < start || p.isTest ||
+      (p.status !== "planned" && p.date !== date)), ...posts];
     const concept = chooseConcept({ key, date, concepts, reviews, history });
     if (key === "testimonial" && !concept?.review) key = "booking";
     const p = pillars.pillars[key];
@@ -58,6 +59,7 @@ async function main() {
     }
 
     posts.push({
+      ...(prior?.supersededIssueNumbers ? {supersededIssueNumbers: prior.supersededIssueNumbers} : {}),
       id: date,
       date,
       time: p.time,

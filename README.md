@@ -1,5 +1,7 @@
 # Mobile Pet Works — Auto-Poster
 
+**AI artwork update (October 10, 2026):** Every AI campaign post requires unused artwork. Missing images are generated for upcoming posts; failures or spending limits hold the post. See [current image policy](docs/cloud-ai-images.md).
+
 **Marketing upgrade:** See [the current creative and Google review setup guide](docs/marketing-upgrade.md) for recruiting posts, illustrated ads, rotating backgrounds, and sourced reviews. The weekly rotation and setup details there supersede the original seven-pillar description below.
 
 A hands-off social media system: it builds a rolling 30-day content calendar and

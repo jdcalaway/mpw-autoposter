@@ -45,10 +45,10 @@ test("source review text is preserved and cannot repeat within 30 days", () => {
   const selected = chooseConcept(input);
   assert.ok(selected.caption.includes(review.text));
   assert.equal(selected.review.author, review.author);
-  assert.equal(chooseConcept({ ...input, history: [{ date: "2026-09-01", status: "posted", review }] }), null);
+  assert.equal(chooseConcept({ ...input, history: [{ date: "2026-09-01", status: "posted", review }] }).awaitingCreative, true);
 });
 test("review fallback is a booking concept, never an invented quotation", () => {
-  const selected = chooseConcept({ key: "testimonial", date: "2026-09-10", concepts: [{id: "booking", pillar: "booking", caption: "Ask about grooming", headline: "We come to you"}], reviews: [] });
+  const selected = chooseConcept({ key: "testimonial", date: "2026-09-10", concepts: [{id: "booking", pillar: "booking", caption: "Ask about grooming", headline: "We come to you", asset: "fresh.png"}], reviews: [] });
   assert.equal(selected.caption, "Ask about grooming");
   assert.equal(selected.review, undefined);
 });
@@ -67,7 +67,7 @@ test("Google normalization preserves exact text and manual imports need explicit
 test("fresh weekly creatives get priority while future and expired ads stay out", () => {
   const concepts = [
     {id:"old", pillar:"booking", caption:"Old"},
-    {id:"fresh", pillar:"booking", caption:"Fresh", createdAt:"2026-09-07", availableFrom:"2026-09-07", expiresOn:"2026-11-07"},
+    {id:"fresh", pillar:"booking", caption:"Fresh", asset:"fresh.png", createdAt:"2026-09-07", availableFrom:"2026-09-07", expiresOn:"2026-11-07"},
     {id:"future", pillar:"booking", caption:"Future", createdAt:"2026-09-08", availableFrom:"2026-09-15"},
     {id:"expired", pillar:"booking", caption:"Expired", createdAt:"2026-09-09", expiresOn:"2026-09-09"}
   ];

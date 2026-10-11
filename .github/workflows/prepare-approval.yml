@@ -3,6 +3,10 @@ name: Prepare approval
 # Daily, ~8am Pacific (15:00 UTC). Builds tomorrow's image and opens the
 # approval issue you react to. Also runnable by hand to test.
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/lib/creative-policy.mjs'
   workflow_dispatch:
   schedule:
     - cron: "0 15 * * *"
@@ -43,6 +47,14 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+      - name: Generate fresh artwork for upcoming posts
+        continue-on-error: true
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          AI_IMAGES_PAUSED: ${{ vars.AI_IMAGES_PAUSED }}
+        run: node scripts/generate-ai-creatives.mjs --generate
+      - name: Select newly generated artwork
+        run: node scripts/generate-calendar.mjs
       - name: Phase 1 — resolve & commit images
         run: |
           node scripts/prepare.mjs --images-only

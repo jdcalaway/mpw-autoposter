@@ -25,7 +25,7 @@ export function gitCheckpoint(root) {
   return async () => {
     git(["add", "--", LEDGER_PATH, CAMPAIGNS_PATH, "images/creative/cloud"]);
     if (git(["diff", "--cached", "--name-only"]).trim()) {
-      git(["commit", "-m", "Checkpoint weekly AI creatives [skip ci]"]);
+      git(["commit", "-m", "Checkpoint fresh AI creatives [skip ci]"]);
     }
     // Shared mpw-write concurrency serializes the scheduled workflows. If a
     // human pushes meanwhile, fail without a force push or another API call.
@@ -40,7 +40,8 @@ export async function runGeneration({ root = ROOT, today, apiKey, preview = true
     json(join(root, CAMPAIGNS_PATH)), json(join(root, "config.json"))
   ]);
   today ||= todayLocal(cfg.timezone);
-  const plan = planBatch({ ledger, campaigns, settings, today });
+  const posts = settings.generationMode === "per-post" ? (await json(join(root, "content/calendar.json"))).posts : undefined;
+  const plan = planBatch({ ledger, campaigns, settings, today, posts });
   if (!plan.batch) return { status: "not-due", nextDate: plan.nextDate };
   const batch = plan.batch;
   if (preview) return { status: "preview", isNew: plan.isNew, batch };
@@ -106,7 +107,7 @@ export async function runGeneration({ root = ROOT, today, apiKey, preview = true
 }
 
 async function summary(result) {
-  const lines = ["## Mobile Pet Works weekly AI artwork", ""];
+  const lines = ["## Mobile Pet Works fresh AI artwork", ""];
   if (result.status === "not-due") lines.push(`Next batch is due ${result.nextDate}. No API request made.`);
   else if (result.status === "paused") lines.push("Cloud image generation is paused. No API request made.");
   else {

@@ -30,13 +30,14 @@ export function chooseConcept({ key, date, concepts, reviews, history = [] }) {
     }
     key = "booking";
   }
-  const choices = concepts.filter(c => c.pillar === key && (!c.availableFrom || c.availableFrom <= date) &&
+  const choices = concepts.filter(c => c.pillar === key && c.asset && (!c.targetDate || c.targetDate === date) && (!c.availableFrom || c.availableFrom <= date) &&
     (!c.expiresOn || c.expiresOn >= date))
     .sort((a, b) => String(b.createdAt || "").localeCompare(String(a.createdAt || "")));
-  if (!choices.length) return null; // Existing MoeGo/photo pillars still work.
-  const selected = choices.find(c => !recent.some(p => p.conceptId === c.id));
+  if (!["booking", "hiring"].includes(key)) return null; // Photo pillars stay unchanged.
+  const selected = choices.find(c => !history.some(p => p.date !== date &&
+    (p.conceptId === c.id || (p.creativeAsset && p.creativeAsset === c.asset))));
   // Avoid exhausting the library by repeating the same finished ad every week.
-  if (!selected) return null;
+  if (!selected) return { awaitingCreative: true, creativeAsset: null, illustration: true };
   return { conceptId: selected.id, objective: selected.objective,
     caption: selected.caption, graphicText: selected.headline,
     creativeAsset: selected.asset || null, forceGraphic: !selected.asset,
