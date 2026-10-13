@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T22:24:08.266Z",
+  "generatedAt": "2026-10-13T20:31:03.390Z",
   "timezone": "America/Los_Angeles",
   "posts": [
     {
@@ -1131,10 +1131,11 @@
       "imageIdea": "A grooming-in-action photo, or a clean text graphic with the tip on-brand.",
       "prefersPhoto": false,
       "graphicText": "Brush a few times a week to cut matting & shedding",
-      "image": null,
-      "imageUrl": null,
+      "image": "images/generated/2026-10-14-tip.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-10-14-tip.jpg",
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "imageSource": "graphic"
     },
     {
       "id": "2026-10-15",
@@ -1690,6 +1691,23 @@
       "imageIdea": "A before/after side-by-side. TIP: photograph every dog before and after — this is your best-performing content.",
       "prefersPhoto": true,
       "graphicText": "Same happy dog, way fluffier",
+      "image": null,
+      "imageUrl": null,
+      "issueNumber": null,
+      "status": "planned"
+    },
+    {
+      "id": "2026-11-11",
+      "date": "2026-11-11",
+      "time": "08:00",
+      "datetimeLocal": "2026-11-11T08:00:00",
+      "pillar": "tip",
+      "pillarLabel": "Pet care tip",
+      "caption": "🐾 Grooming tip: Brushing your dog a few times a week between grooms cuts down on matting and shedding — and keeps them comfy. Need a hand? We come to you. 🚐",
+      "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #DogCare #PetTips #DogGroomingTips #TriCities #TriCitiesDogs",
+      "imageIdea": "A grooming-in-action photo, or a clean text graphic with the tip on-brand.",
+      "prefersPhoto": false,
+      "graphicText": "Brush a few times a week to cut matting & shedding",
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
