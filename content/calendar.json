@@ -1115,7 +1115,7 @@
       "image": "images/generated/2026-10-13-transformation.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-10-13-transformation.jpg",
       "issueNumber": 46,
-      "status": "pending_approval",
+      "status": "skipped",
       "imageSource": "photo",
       "pet": "Vino"
     },
