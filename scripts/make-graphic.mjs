@@ -1,3 +1,4 @@
+import { renderTextCard } from './lib/text-card.mjs';
 // Generates an on-brand 1080x1080 JPEG for posts that don't use a real photo.
 // Brand pulled from mobilepetworks.com: royal blue #0146A3, gold #FFD25A,
 // coral #D54B5D, navy ink, Quicksand type. librsvg has no emoji font, so we
@@ -63,7 +64,8 @@ function wrap(text, maxChars, maxLines) {
   return lines;
 }
 
-export async function renderGraphic({ cfg, pillar, pillarKey, bodyText, outPath, variantSeed = "0", review }) {
+export async function renderGraphic({ cfg, pillar, pillarKey, bodyText, outPath, variantSeed = "0", review, postFormat, supportLines }) {
+  if(postFormat && !review) return renderTextCard({sharp,cfg,bodyText,postFormat,supportLines,outPath});
   const palettes = [
     { field: "#0146A3", card: "#FFFFFF", ink: "#172E4D", accent: "#0146A3" },
     { field: "#FFD25A", card: "#FFF8EB", ink: "#172E4D", accent: "#0146A3" },

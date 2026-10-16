@@ -1,3 +1,4 @@
+import { graphicMode } from './lib/post-formats.mjs';
 // Builds a rolling content calendar from the pillar engine and writes
 // content/calendar.json. Preserves any status/image/issue data for dates that
 // already exist, so re-running never clobbers posts already in flight.
@@ -47,7 +48,8 @@ async function main() {
     const concept = chooseConcept({ key, date, concepts: concepts.filter(c => c.targetDate === date && c.freshCopy), reviews, history });
     if (key === "testimonial" && !concept?.review) key = "booking";
     const p = pillars.pillars[key];
-    const draft = drafts.find(d => d.date === date && d.pillar === key);
+    const revision = byDate.get(date)?.copyRevision || 1;
+    const draft = drafts.find(d => d.date === date && d.pillar === key && (d.revision||1) === revision);
     const caption = concept?.review ? concept.caption : draft?.caption || "";
 
     const prior = byDate.get(date);
@@ -59,6 +61,7 @@ async function main() {
 
     posts.push({
       ...(prior?.supersededIssueNumbers ? {supersededIssueNumbers: prior.supersededIssueNumbers} : {}),
+      copyRevision: revision,
       id: date,
       date,
       time: p.time,
@@ -75,6 +78,8 @@ async function main() {
       topic: draft?.topic,
       freshScene: draft?.scene,
       ...(concept || {}),
+      ...(draft ? {postFormat:draft.postFormat, supportLines:draft.supportLines,
+        ...(graphicMode(key,draft.postFormat) && !concept?.review ? {conceptId:null,creativeAsset:null,illustration:false,awaitingCreative:false,forceGraphic:true,graphicText:draft.headline,caption:draft.caption} : {})} : {}),
       image: null,
       imageUrl: null,
       issueNumber: null,

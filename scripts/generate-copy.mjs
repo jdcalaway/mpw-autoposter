@@ -11,17 +11,17 @@ export async function generateCopy({root=ROOT,apiKey,today,checkpoint,writer=wri
  const ledger=await read(root,'content/copy-ledger.json',{attempts:[]});
  const drafts=await read(root,'content/fresh-copy.json',[]);
  const persist=async()=>{await writeFile(join(root,'content/copy-ledger.json'),JSON.stringify(ledger,null,2)+'\n');await writeFile(join(root,'content/fresh-copy.json'),JSON.stringify(drafts,null,2)+'\n');await checkpoint();};
- const targets=cal.posts.filter(p=>p.status==='planned'&&!p.review&&p.date>=today&&p.date<=addDays(today,1)&&!drafts.some(d=>d.date===p.date&&d.pillar===p.pillar));
+ const targets=cal.posts.filter(p=>p.status==='planned'&&!p.review&&p.date>=today&&p.date<=addDays(today,1)&&!drafts.some(d=>d.date===p.date&&d.pillar===p.pillar&&(d.revision||1)===(p.copyRevision||1)));
  if(!targets.length) return;
  if(!apiKey||!checkpoint) throw new Error('Writing requires the existing API secret and durable checkpoints.');
  let failures=0;
  for(const post of targets){
-  const blocked=copyBlock(ledger.attempts,post.date,today);if(blocked){console.log(`${post.date}: ${blocked}`);continue;}
-  const attempt={date:post.date,day:today,status:'requesting',model:MODEL};ledger.attempts.push(attempt);await persist();
+  const blocked=copyBlock(ledger.attempts,post.date,today,post.copyRevision||1);if(blocked){console.log(`${post.date}: ${blocked}`);continue;}
+  const attempt={date:post.date,day:today,status:'requesting',model:MODEL,revision:post.copyRevision||1};ledger.attempts.push(attempt);await persist();
   try{
-   const history=[...cal.posts,...drafts.filter(d=>d.date!==post.date).map(d=>({...d,id:d.date,graphicText:d.headline,freshCopy:true,status:'draft'}))];
+   const history=[...cal.posts,...drafts.filter(d=>d.date!==post.date||(d.revision||1)!==(post.copyRevision||1)).map(d=>({...d,id:`draft-${d.date}-${d.revision||1}`,graphicText:d.headline,freshCopy:true,status:'draft'}))];
    const draft=await writer({post,history,business:cfg.business,apiKey});
-   drafts.push({...draft,date:post.date,pillar:post.pillar,model:MODEL,createdAt:new Date().toISOString()});attempt.status='complete';
+   drafts.push({...draft,date:post.date,pillar:post.pillar,revision:post.copyRevision||1,model:MODEL,createdAt:new Date().toISOString()});attempt.status='complete';
   }catch(e){failures++;attempt.status=e.status===401?'auth_error':'held';attempt.httpStatus=e.status||null;console.log(`${post.date}: fresh writing held (${e.message}).`);}
   await persist();
  }

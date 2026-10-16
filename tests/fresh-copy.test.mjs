@@ -8,7 +8,7 @@ import {ROOT} from '../scripts/lib/util.mjs';
 import {writeFreshCopy,validateCopy,copyBlock} from '../scripts/lib/fresh-copy.mjs';
 import {generateCopy} from '../scripts/generate-copy.mjs';
 const post={id:'2026-10-20',date:'2026-10-20',pillar:'tip',status:'planned',awaitingCopy:true};
-const draft={caption:'Bring your grooming questions to your next appointment. We can talk through a routine that fits your dog.',headline:'A routine for your dog',topic:'Planning a personal grooming routine',scene:'A thoughtful dog beside a calendar in a warm illustration'};
+const draft={postFormat:'question',supportLines:['A little more brushing?','A new appointment routine?','What would you like to ask?'],caption:'Bring your grooming questions to your next appointment. We can talk through a routine that fits your dog.',headline:'A routine for your dog',topic:'Planning a personal grooming routine',scene:'A thoughtful dog beside a calendar in a warm illustration'};
 async function fixture(fn){const root=await mkdtemp(join(tmpdir(),'mpw-copy-'));try{await mkdir(join(root,'content'));await writeFile(join(root,'config.json'),JSON.stringify({business:{name:'Mobile Pet Works'},timezone:'America/Los_Angeles'}));await writeFile(join(root,'content/calendar.json'),JSON.stringify({posts:[post]}));await fn(root);}finally{await rm(root,{recursive:true,force:true});}}
 test('writer uses structured output and history, rejects duplicates and incomplete responses',async()=>{
  let body;

@@ -1336,7 +1336,8 @@
     },
     {
       "supersededIssueNumbers": [
-        50
+        50,
+        51
       ],
       "id": "2026-10-17",
       "date": "2026-10-17",
@@ -1344,30 +1345,21 @@
       "datetimeLocal": "2026-10-17T18:00:00",
       "pillar": "hiring",
       "pillarLabel": "Groomer careers",
-      "caption": "Imagine a workday without traffic, without a salon full of barking dogs, just you, your craft, and a van that comes to the client. That’s mobile grooming with Mobile Pet Works in the Tri-Cities. If you’re a groomer curious about how this hands-on, local, flexible role could fit your life, let’s chat. Call us at (509) 591-5913 and explore the possibilities.",
+      "caption": "",
       "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #TriCitiesJobs #GroomerJobs #TriCities #TriCitiesDogs",
       "imageIdea": "Illustrated recruiting campaign or branded hiring card",
       "prefersPhoto": false,
-      "graphicText": "Work on wheels: Groom in the Tri-Cities neighborhood",
-      "freshCopy": true,
-      "awaitingCopy": false,
-      "topic": "Hiring groomers: Discover mobile grooming as your next role",
-      "freshScene": "A groomer stepping out of a Mobile Pet Works van parked in a cozy Tri-Cities neighborhood street, tools in hand, ready to greet a client’s dog—capturing the freedom and uniqueness of mobile grooming work.",
-      "conceptId": "ai-2026-10-17-hiring",
+      "graphicText": "",
+      "freshCopy": false,
+      "awaitingCopy": true,
       "objective": "recruiting",
-      "creativeAsset": "images/creative/cloud/ai-2026-10-17-hiring.jpg",
-      "forceGraphic": false,
       "illustration": true,
-      "image": "images/generated/2026-10-17-creative.jpg",
-      "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-10-17-creative.jpg",
-      "issueNumber": 51,
-      "status": "pending_approval",
-      "mediaHashes": [
-        "1bab8d9aa1835075b8da891d5fcb3e9092f48db960e6c71fe6f0e02136209bf8",
-        "0477597fbc3ca304db26e615ee070be925fcfdafbeac45065296b65afd64602f"
-      ],
-      "imageSource": "illustration",
-      "contentHold": null
+      "image": null,
+      "imageUrl": null,
+      "issueNumber": null,
+      "status": "planned",
+      "awaitingCreative": true,
+      "copyRevision": 2
     },
     {
       "id": "2026-10-18",

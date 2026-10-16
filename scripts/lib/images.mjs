@@ -50,7 +50,7 @@ export async function resolveImage({ cfg, post, posts = [] }) {
   if (post.forceGraphic || post.review || post.pillar === "testimonial" || post.pillar === "hiring") {
     const relPath = `images/generated/${post.date}-${post.pillar}.jpg`;
     await renderGraphic({ cfg, pillar, pillarKey: post.pillar,
-      bodyText: post.graphicText || "Grooming that comes to you", review: post.review,
+      bodyText: post.graphicText || "Grooming that comes to you", review: post.review, postFormat:post.postFormat, supportLines:post.supportLines,
       variantSeed: post.date, outPath: join(ROOT, relPath) });
     return { relPath, source: "graphic" };
   }
@@ -91,7 +91,7 @@ export async function resolveImage({ cfg, post, posts = [] }) {
     cfg,
     pillar,
     pillarKey: post.pillar,
-    bodyText,
+    bodyText, postFormat:post.postFormat, supportLines:post.supportLines,
     variantSeed: post.date,
     outPath: join(ROOT, rel),
   });
