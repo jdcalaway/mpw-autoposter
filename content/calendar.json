@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T21:41:18.677Z",
+  "generatedAt": "2026-10-16T22:21:09.680Z",
   "timezone": "America/Los_Angeles",
   "posts": [
     {
@@ -1344,20 +1344,30 @@
       "datetimeLocal": "2026-10-17T18:00:00",
       "pillar": "hiring",
       "pillarLabel": "Groomer careers",
-      "caption": "",
+      "caption": "Imagine a workday without traffic, without a salon full of barking dogs, just you, your craft, and a van that comes to the client. That’s mobile grooming with Mobile Pet Works in the Tri-Cities. If you’re a groomer curious about how this hands-on, local, flexible role could fit your life, let’s chat. Call us at (509) 591-5913 and explore the possibilities.",
       "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #TriCitiesJobs #GroomerJobs #TriCities #TriCitiesDogs",
       "imageIdea": "Illustrated recruiting campaign or branded hiring card",
       "prefersPhoto": false,
-      "graphicText": "",
-      "freshCopy": false,
-      "awaitingCopy": true,
-      "awaitingCreative": true,
-      "creativeAsset": null,
+      "graphicText": "Work on wheels: Groom in the Tri-Cities neighborhood",
+      "freshCopy": true,
+      "awaitingCopy": false,
+      "topic": "Hiring groomers: Discover mobile grooming as your next role",
+      "freshScene": "A groomer stepping out of a Mobile Pet Works van parked in a cozy Tri-Cities neighborhood street, tools in hand, ready to greet a client’s dog—capturing the freedom and uniqueness of mobile grooming work.",
+      "conceptId": "ai-2026-10-17-hiring",
+      "objective": "recruiting",
+      "creativeAsset": "images/creative/cloud/ai-2026-10-17-hiring.jpg",
+      "forceGraphic": false,
       "illustration": true,
-      "image": null,
-      "imageUrl": null,
+      "image": "images/generated/2026-10-17-creative.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-10-17-creative.jpg",
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": [
+        "1bab8d9aa1835075b8da891d5fcb3e9092f48db960e6c71fe6f0e02136209bf8",
+        "0477597fbc3ca304db26e615ee070be925fcfdafbeac45065296b65afd64602f"
+      ],
+      "imageSource": "illustration",
+      "contentHold": null
     },
     {
       "id": "2026-10-18",
@@ -1379,7 +1389,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-10-19",
@@ -1401,7 +1412,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-10-20",
@@ -1420,7 +1432,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-10-21",
@@ -1439,7 +1452,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-10-22",
@@ -1458,7 +1472,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-10-23",
@@ -1480,7 +1495,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-10-24",
@@ -1502,7 +1518,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-10-25",
@@ -1524,7 +1541,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-10-26",
@@ -1546,7 +1564,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-10-27",
@@ -1565,7 +1584,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-10-28",
@@ -1584,7 +1604,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-10-29",
@@ -1603,7 +1624,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-10-30",
@@ -1625,7 +1647,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-10-31",
@@ -1647,7 +1670,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-11-01",
@@ -1669,7 +1693,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-11-02",
@@ -1691,7 +1716,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-11-03",
@@ -1710,7 +1736,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-11-04",
@@ -1729,7 +1756,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-11-05",
@@ -1748,7 +1776,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-11-06",
@@ -1770,7 +1799,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-11-07",
@@ -1792,7 +1822,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-11-08",
@@ -1814,7 +1845,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-11-09",
@@ -1836,7 +1868,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-11-10",
@@ -1855,7 +1888,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-11-11",
@@ -1874,7 +1908,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-11-12",
@@ -1893,7 +1928,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-11-13",
@@ -1915,7 +1951,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-11-14",
@@ -1937,7 +1974,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     }
   ]
 }
