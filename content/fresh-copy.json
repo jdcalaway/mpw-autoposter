@@ -8,5 +8,22 @@
     "pillar": "hiring",
     "model": "gpt-4.1-mini",
     "createdAt": "2026-10-16T22:21:06.425Z"
+  },
+  {
+    "caption": "What’s the most surprising thing you think groomers experience on the road between homes? Share your guesses (or stories) below!\n\nTravel brings unique moments:\n- Unexpected pet personalities\n- Quick neighborhood insights\n- Finding the best local coffee spots\n\nDo you imagine mobile groomers prefer the drive or the doorstop? Let’s compare!",
+    "headline": "On the road or at the door: What’s your take?",
+    "topic": "The grooming journey: life between appointments",
+    "scene": "Illustrate a colorful van parked at a leafy, quiet suburban driveway with a grooming sign on the side. Nearby, a cheerful groomer stretches before work while dogs watch from nearby windows and steps, hinting at varied neighborhood stops ahead.",
+    "postFormat": "question",
+    "supportLines": [
+      "Unexpected pet moments on the move",
+      "Discover new neighborhoods one drive at a time",
+      "Groomers: love the road or love the doorstep?"
+    ],
+    "date": "2026-10-17",
+    "pillar": "hiring",
+    "revision": 2,
+    "model": "gpt-4.1-mini",
+    "createdAt": "2026-10-16T22:32:37.559Z"
   }
 ]
