@@ -14,6 +14,7 @@ export async function generateCopy({root=ROOT,apiKey,today,checkpoint,writer=wri
  const targets=cal.posts.filter(p=>p.status==='planned'&&!p.review&&p.date>=today&&p.date<=addDays(today,1)&&!drafts.some(d=>d.date===p.date&&d.pillar===p.pillar));
  if(!targets.length) return;
  if(!apiKey||!checkpoint) throw new Error('Writing requires the existing API secret and durable checkpoints.');
+ let failures=0;
  for(const post of targets){
   const blocked=copyBlock(ledger.attempts,post.date,today);if(blocked){console.log(`${post.date}: ${blocked}`);continue;}
   const attempt={date:post.date,day:today,status:'requesting',model:MODEL};ledger.attempts.push(attempt);await persist();
@@ -21,9 +22,10 @@ export async function generateCopy({root=ROOT,apiKey,today,checkpoint,writer=wri
    const history=[...cal.posts,...drafts.filter(d=>d.date!==post.date).map(d=>({...d,id:d.date,graphicText:d.headline,freshCopy:true,status:'draft'}))];
    const draft=await writer({post,history,business:cfg.business,apiKey});
    drafts.push({...draft,date:post.date,pillar:post.pillar,model:MODEL,createdAt:new Date().toISOString()});attempt.status='complete';
-  }catch(e){attempt.status='held';console.log(`${post.date}: fresh writing held (${e.message}).`);}
+  }catch(e){failures++;attempt.status=e.status===401?'auth_error':'held';attempt.httpStatus=e.status||null;console.log(`${post.date}: fresh writing held (${e.message}).`);}
   await persist();
  }
+ if(failures) throw new Error(`${failures} post(s) held: fresh writing failed. Check the writing step; HTTP 401 requires correcting OPENAI_API_KEY in repository Actions secrets.`);
 }
 if(import.meta.url===pathToFileURL(process.argv[1]||'').href){
  if(process.env.GITHUB_ACTIONS!=='true'||process.env.GITHUB_REPOSITORY!=='jdcalaway/mpw-autoposter'||process.env.GITHUB_REF!=='refs/heads/main') throw new Error('Run fresh writing in this repository’s main-branch workflow.');

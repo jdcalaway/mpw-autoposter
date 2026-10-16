@@ -28,7 +28,7 @@ test('checkpoint failure makes no API request; API failure holds without old-cap
  await assert.rejects(generateCopy({root,today:post.date,apiKey:'fixture',checkpoint:async()=>{throw Error('push failed');},writer:async()=>{requests++;}}),/push failed/);assert.equal(requests,0);
  await rm(join(root,'content/copy-ledger.json'));
  const args={root,today:post.date,apiKey:'fixture',checkpoint:async()=>{},writer:async()=>{requests++;throw Error('temporary failure');}};
- await generateCopy(args);await generateCopy(args);assert.equal(requests,1);assert.deepEqual(JSON.parse(await readFile(join(root,'content/fresh-copy.json'))),[]);
+ await assert.rejects(generateCopy(args),/held/);await generateCopy(args);assert.equal(requests,1);assert.deepEqual(JSON.parse(await readFile(join(root,'content/fresh-copy.json'))),[]);
 }));
 test('limits bound writing calls and do not reset on reruns',()=>{
  assert.ok(copyBlock(Array.from({length:4},(_,i)=>({day:post.date,date:`other${i}`})),post.date,post.date));
