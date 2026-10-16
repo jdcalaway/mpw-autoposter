@@ -304,5 +304,20 @@
     "availableFrom": "2026-10-15",
     "expiresOn": "2026-12-14",
     "batchId": "post-2026-10-16"
+  },
+  {
+    "id": "ai-2026-10-17-hiring",
+    "targetDate": "2026-10-17",
+    "pillar": "hiring",
+    "objective": "recruiting",
+    "headline": "A grooming salon that travels.",
+    "caption": "Thinking about taking your grooming experience into a mobile salon?\n\nMobile Pet Works is hiring in the Tri-Cities. Find out what the work involves before deciding your next step.\n\nCall (509) 591-5913.",
+    "asset": "images/creative/cloud/ai-2026-10-17-hiring.jpg",
+    "generator": "github-openai",
+    "sourceTemplateId": "hiring-switch",
+    "createdAt": "2026-10-16",
+    "availableFrom": "2026-10-16",
+    "expiresOn": "2026-12-15",
+    "batchId": "post-2026-10-17"
   }
 ]
