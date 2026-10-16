@@ -1,3 +1,4 @@
+import {logoLayer} from './branding.mjs';
 import {join,dirname} from 'node:path';
 import {mkdir,writeFile} from 'node:fs/promises';
 import {ROOT} from './util.mjs';
@@ -48,8 +49,9 @@ export async function renderTextCard({sharp,cfg,bodyText,postFormat,supportLines
   for(let i=0;i<3;i++)await text(lines[i],72,665+i*95,936,75,36,ink);
  } else throw new Error('Unknown text-card format.');
  rect(0,965,1080,115,postFormat==='question'?blue:ink);
- await text(cfg.business.name,72,982,936,40,27,cream);
- await text(`${cfg.business.website}  |  ${cfg.business.phone}`,72,1028,936,34,22,cream);
+ layers.push(await logoLayer(sharp,{left:54,top:976,size:90}));
+ await text(cfg.business.name,166,982,840,40,27,cream);
+ await text(`${cfg.business.website}  |  ${cfg.business.phone}`,166,1028,840,34,22,cream);
  const svg=Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080"><rect width="1080" height="1080" fill="${field}"/>${shapes}</svg>`);
  const buffer=await sharp(svg).composite(layers).jpeg({quality:93}).toBuffer();
  await mkdir(dirname(outPath),{recursive:true});await writeFile(outPath,buffer);return outPath;

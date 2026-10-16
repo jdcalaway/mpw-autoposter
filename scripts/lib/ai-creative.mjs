@@ -1,3 +1,4 @@
+import {logoLayer} from './branding.mjs';
 import { contentHoldReason } from "./content-policy.mjs";
 import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
@@ -169,23 +170,23 @@ export async function renderCampaign({ source, item, business }) {
     <rect y="720" width="1080" height="8" fill="${accent}"/>
   </svg>`);
   // Explicit fontfile avoids silent SVG font substitution on Windows/runners.
-  const textLayer = async (text, size, color, top) => {
+  const textLayer = async (text, size, color, top, left = 56) => {
     const { data, info } = await sharp({ text: {
       text: `<span foreground="${color}">${xml(text)}</span>`,
       font: `Quicksand Bold ${size}`, fontfile: join(ROOT, "assets/fonts/Quicksand.ttf"),
       rgba: true, dpi: 72
     } }).png().toBuffer({ resolveWithObject: true });
-    if (info.width > 968 || top + info.height > 1060) throw new Error("Ad text exceeds its safe area; shorten the copy before rendering.");
-    return { input: data, left: 56, top };
+    if (left + info.width > 1024 || top + info.height > 1060) throw new Error("Ad text exceeds its safe area; shorten the copy before rendering.");
+    return { input: data, left, top };
   };
   const typography = await Promise.all([
     textLayer(hiring ? "WE’RE HIRING GROOMERS" : "MOBILE DOG GROOMING · TRI-CITIES", 22, accent, 747),
     ...lines.map((line, i) => textLayer(line, 52, ink, 788 + (3 - lines.length) * 29 + i * 58)),
-    textLayer(business.name, 30, ink, 973),
-    textLayer(hiring ? `Let’s talk: ${business.phone}` : `Ask about availability: ${business.website}`, 26, accent, 1016)
+    textLayer(business.name, 30, ink, 973, 170),
+    textLayer(hiring ? `Let’s talk: ${business.phone}` : `Ask about availability: ${business.website}`, 26, accent, 1016, 170)
   ]);
   return sharp({ create: { width: 1080, height: 1080, channels: 3, background } })
-    .composite([{ input: art, top: 0, left: 0 }, { input: overlay }, ...typography]).jpeg({ quality: 93 }).toBuffer();
+    .composite([{ input: art, top: 0, left: 0 }, { input: overlay }, ...typography, await logoLayer(sharp,{left:56,top:966,size:94})]).jpeg({ quality: 93 }).toBuffer();
 }
 
 export function campaignFromItem(batch, item, today) {

@@ -1,3 +1,4 @@
+import {logoLayer} from './lib/branding.mjs';
 import { renderTextCard } from './lib/text-card.mjs';
 // Generates an on-brand 1080x1080 JPEG for posts that don't use a real photo.
 // Brand pulled from mobilepetworks.com: royal blue #0146A3, gold #FFD25A,
@@ -96,8 +97,6 @@ export async function renderGraphic({ cfg, pillar, pillarKey, bodyText, outPath,
     <circle cx="${W}" cy="${H}" r="280" fill="#FFFFFF" opacity="0.12"/>
     <rect x="${m}" y="${m}" width="${W - 2 * m}" height="${H - 2 * m}" rx="${cardR}" fill="${g.card}"/>
     <rect x="${m}" y="${m}" width="${W - 2 * m}" height="18" rx="9" fill="${accent}"/>
-    <circle cx="${W / 2}" cy="${m + 96}" r="30" fill="${accent}"/>
-    <text x="${W / 2}" y="${m + 106}" text-anchor="middle" font-family="${font}" font-size="22" font-weight="700" fill="${palette.card}">MPW</text>
     <text x="${W / 2}" y="248" text-anchor="middle" font-family="${font}"
           font-size="30" font-weight="700" letter-spacing="3" fill="${accent}">${escapeXml(kicker)}</text>
     <text text-anchor="middle" font-family="${font}" font-size="${review ? 46 : 70}" font-weight="700" fill="${g.ink}">${bodyTspans}</text>
@@ -110,7 +109,7 @@ export async function renderGraphic({ cfg, pillar, pillarKey, bodyText, outPath,
           font-size="27" font-weight="500" font-style="italic" fill="${g.muted}">We come to you — mobile dog grooming</text>
   </svg>`;
 
-  const buf = await sharp(Buffer.from(svg)).jpeg({ quality: 90 }).toBuffer();
+  const buf = await sharp(Buffer.from(svg)).composite([await logoLayer(sharp,{left:Math.round(W/2)-48,top:104,size:96})]).jpeg({ quality: 90 }).toBuffer();
   await mkdir(dirname(outPath), { recursive: true });
   await writeFile(outPath, buf);
   return outPath;

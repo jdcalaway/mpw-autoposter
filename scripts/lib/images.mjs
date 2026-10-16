@@ -1,3 +1,4 @@
+import {brandedPhoto} from './branding.mjs';
 import { unusedMedia } from "./content-policy.mjs";
 // Hybrid image resolution. For a given post: if you've dropped real photos into
 // images/photos/<pillar>/, use one (rotated deterministically by date). Otherwise
@@ -80,7 +81,8 @@ export async function resolveImage({ cfg, post, posts = [] }) {
     const chosen = pick(photos, post.date);
     const ext = chosen.match(PHOTO_EXT)[0].toLowerCase();
     const rel = join("images", "generated", `${post.date}-${post.pillar}${ext}`);
-    await copyFile(join(ROOT, "images", "photos", post.pillar, chosen), join(ROOT, rel));
+    const sharp = (await import("sharp")).default;
+    await (await brandedPhoto(sharp,join(ROOT,"images","photos",post.pillar,chosen))).toFile(join(ROOT,rel));
     return { relPath: rel.replace(/\\/g, "/"), source: "photo", sourceName: chosen, mediaSource: `images/photos/${post.pillar}/${chosen}` };
   }
 

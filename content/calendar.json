@@ -1369,15 +1369,16 @@
       "illustration": false,
       "awaitingCreative": false,
       "forceGraphic": true,
-      "image": "images/generated/2026-10-17-engagement.jpg",
-      "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-10-17-engagement.jpg",
+      "image": "images/generated/2026-10-17-engagement-logo.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-10-17-engagement-logo.jpg",
       "issueNumber": 54,
       "status": "pending_approval",
       "mediaHashes": [
-        "b458fcbbcf9f932610318b396e6fa5984bb7605aa011235ad3891dad1574da28"
+        "b5bed2b1f44d764e975be4d6b6493f2c47f517512e12a1f2bff65928ff3ad975"
       ],
       "imageSource": "graphic",
-      "contentHold": null
+      "contentHold": null,
+      "brandedLogo": "assets/brand/mobile-pet-works-logo.png"
     },
     {
       "copyRevision": 1,

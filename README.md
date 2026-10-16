@@ -165,3 +165,7 @@ The workflow writes today/tomorrow, reloads the calendar, and gives fresh headli
 ### Variety in writing and text graphics
 
 Each new draft is assigned the least-recently-used format: conversation starter, three-point list, two-sided choice, hypothetical vignette, or short humorous observation. The model writes the caption, headline and three graphic lines together; formats are structures, not reusable captions. Brand text cards use five separate compositions with measured text fitting. Tips/engagement use these cards; booking/hiring mix typographic cards with illustrated vignettes. Real photos and verified reviews retain their own handling. Unknown job benefits and traffic-free work claims are held. Explicit revisions preserve the original draft and count toward the existing per-post request cap.
+
+### Official logo
+
+`assets/brand/mobile-pet-works-logo.png` is rendered from the owner-supplied logo PDF. Text cards, review graphics, AI campaign composites and static photos include the exact blue paw on a light badge. Static photos use a dedicated footer to avoid covering the dog. Existing approvals and original video files are preserved; video branding requires a separately rendered video export. Never ask the image model to redraw the logo.
