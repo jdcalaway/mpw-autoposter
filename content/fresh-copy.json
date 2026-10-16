@@ -25,5 +25,22 @@
     "revision": 2,
     "model": "gpt-4.1-mini",
     "createdAt": "2026-10-16T22:32:37.559Z"
+  },
+  {
+    "caption": "Thinking about switching to mobile grooming? Here are three good questions to ask when you call us: \n\n• How does a typical workday flow when you’re working from our van?\n• What kind of support system do groomers have on the road?\n• How is the position structured in terms of appointment scheduling and client load?\n\nCurious to know more? Call us at (509) 591-5913 and let’s have a straight talk about what this role really looks like.",
+    "headline": "Three must-ask questions before joining a mobile grooming team",
+    "topic": "Hiring groomers: Knowing what mobile grooming work involves",
+    "scene": "Illustration of a professional groomer stepping into a fully equipped grooming van parked in a quiet neighborhood street, ready for the day’s appointments. The scene conveys focus, readiness, and a calm work environment distinct from busy salons.",
+    "postFormat": "checklist",
+    "supportLines": [
+      "How does a typical workday flow in a mobile van?",
+      "What support do groomers have while on the road?",
+      "How is the position structured appointment-wise?"
+    ],
+    "date": "2026-10-17",
+    "pillar": "hiring",
+    "revision": 3,
+    "model": "gpt-4.1-mini",
+    "createdAt": "2026-10-16T22:36:00.976Z"
   }
 ]
