@@ -43,7 +43,7 @@ export function planBatch({ ledger, campaigns, settings, today, posts }) {
   const nextDate = latest && addDays(latest.completedOn || latest.date, settings.intervalDays);
   const perPost = settings.generationMode === "per-post";
   if (perPost && !Array.isArray(posts)) throw new Error("Per-post generation requires the calendar.");
-  const targets = perPost ? posts.filter(p => p.status === "planned" && p.awaitingCreative &&
+  const targets = perPost ? posts.filter(p => p.status === "planned" && p.awaitingCreative && !p.awaitingCopy &&
     ["booking", "hiring"].includes(p.pillar) && p.date >= today && p.date <= addDays(today, 1))
     .sort((a,b) => a.date.localeCompare(b.date)).slice(0, settings.maxRequestsPerRun) : null;
   if (perPost && !targets.length) return { nextDate: addDays(today, 1) };
@@ -57,11 +57,11 @@ export function planBatch({ ledger, campaigns, settings, today, posts }) {
       !previous.some(i => i.caption === c.caption || i.headline === c.headline));
     const usage = c => previous.filter(i => i.sourceTemplateId === c.id).length;
     candidates.sort((a,b) => usage(a) - usage(b) || Number(!!a.asset) - Number(!!b.asset));
-    const template = candidates[0];
+    const template = perPost ? (target.freshCopy ? {id:`fresh-copy-${target.date}`, headline:target.graphicText, caption:target.caption, objective:target.pillar === 'hiring' ? 'hiring' : 'booking'} : null) : candidates[0];
     if (!template?.headline || !template.caption) throw new Error(`No unused ${pillar} campaign copy; add fresh content before buying artwork.`);
     const style = settings.styles[(index + offset) % settings.styles.length];
     const scenes = settings[`${pillar}Scenes`];
-    const scene = scenes[index % scenes.length];
+    const scene = target.freshScene || scenes[index % scenes.length];
     const id = `ai-${target.date || today}-${pillar}`;
     if (cloud.some(b => b.items?.some(i => i.id === id))) throw new Error(`Existing artwork record for ${id}; inspect before buying again.`);
     const prompt = [
@@ -76,7 +76,7 @@ export function planBatch({ ledger, campaigns, settings, today, posts }) {
       "Use the entire 3:2 landscape canvas. Keep all important subjects within a generous 8% safe margin. Expressive beautiful dogs, correct anatomy and gentle, credible grooming handling.",
       "Clearly crafted illustration, not a documentary photograph or a real employee/customer portrait. No before-and-after comparison, fabricated review, pay/benefit claim, scarcity, guaranteed results or availability. No scissors near faces."
     ].join("\n");
-    return { id, ...(target.date ? {targetDate: target.date} : {}), pillar, objective: template.objective, sourceTemplateId: template.id,
+    return { id, freshCopy: !!target.freshCopy, ...(target.date ? {targetDate: target.date} : {}), pillar, objective: template.objective, sourceTemplateId: template.id,
       headline: template.headline, caption: template.caption, style, prompt,
       sourceAsset: `images/creative/cloud/${id}-source.png`,
       asset: `images/creative/cloud/${id}.jpg`, status: "planned", attempts: [] };
@@ -189,7 +189,7 @@ export async function renderCampaign({ source, item, business }) {
 }
 
 export function campaignFromItem(batch, item, today) {
-  return { id: item.id, ...(item.targetDate ? {targetDate: item.targetDate} : {}), pillar: item.pillar, objective: item.objective, headline: item.headline,
+  return { id: item.id, freshCopy: !!item.freshCopy, ...(item.targetDate ? {targetDate: item.targetDate} : {}), pillar: item.pillar, objective: item.objective, headline: item.headline,
     caption: item.caption, asset: item.asset, generator: PROVIDER, sourceTemplateId: item.sourceTemplateId,
     createdAt: today, availableFrom: today, expiresOn: addDays(today, 60), batchId: batch.id };
 }

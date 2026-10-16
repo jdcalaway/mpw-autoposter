@@ -50,6 +50,14 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
+      - name: Write original upcoming posts
+        continue-on-error: true
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.mode == 'generate')
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: node scripts/generate-copy.mjs
+      - name: Load fresh writing
+        run: node scripts/generate-calendar.mjs
       - name: Preview (never calls OpenAI)
         if: github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.mode == 'preview')
         run: node scripts/generate-ai-creatives.mjs --preview

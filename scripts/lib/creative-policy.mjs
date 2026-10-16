@@ -1,5 +1,6 @@
 // An AI asset is single-use, including rejected approval previews.
 export function creativeHoldReason(post, posts) {
+  if (post.awaitingCopy) return "Waiting for original post writing.";
   if (post.awaitingCreative) return "Waiting for fresh AI artwork.";
   if (!post.illustration && !post.creativeAsset && post.imageSource !== "illustration") return null;
   if (!post.creativeAsset) return "AI artwork has no source asset.";

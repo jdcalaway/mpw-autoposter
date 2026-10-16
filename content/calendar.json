@@ -1341,26 +1341,22 @@
       "datetimeLocal": "2026-10-17T18:00:00",
       "pillar": "hiring",
       "pillarLabel": "Groomer careers",
-      "caption": "Thinking about taking your grooming experience into a mobile salon?\n\nMobile Pet Works is hiring in the Tri-Cities. Find out what the work involves before deciding your next step.\n\nCall (509) 591-5913.",
+      "caption": "",
       "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #TriCitiesJobs #GroomerJobs #TriCities #TriCitiesDogs",
       "imageIdea": "Illustrated recruiting campaign or branded hiring card",
       "prefersPhoto": false,
-      "graphicText": "A grooming salon that travels.",
-      "conceptId": "ai-2026-10-17-hiring",
+      "graphicText": "",
       "objective": "recruiting",
-      "creativeAsset": "images/creative/cloud/ai-2026-10-17-hiring.jpg",
-      "forceGraphic": false,
       "illustration": true,
-      "image": "images/generated/2026-10-17-creative.jpg",
-      "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-10-17-creative.jpg",
-      "issueNumber": 50,
-      "status": "pending_approval",
-      "mediaHashes": [
-        "ace05c360cdae2752967eadbea657315c54f4d4fe7892e2bfcb598fc43050aa6",
-        "087f645d6c8bec596a05f279fe7a5a6ec6d92235beafb9d4fcebe7034e305741"
+      "image": null,
+      "imageUrl": null,
+      "issueNumber": null,
+      "status": "planned",
+      "supersededIssueNumbers": [
+        50
       ],
-      "imageSource": "illustration",
-      "contentHold": null
+      "awaitingCopy": true,
+      "awaitingCreative": true
     },
     {
       "id": "2026-10-18",

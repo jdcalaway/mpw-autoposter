@@ -1,4 +1,4 @@
-import { contentHoldReason, fingerprint, sameCopy, priorContent } from "./lib/content-policy.mjs";
+import { contentHoldReason, fingerprint } from "./lib/content-policy.mjs";
 // Runs daily (morning PT), in two phases so the approval issue never references
 // an image that isn't public yet:
 //
@@ -10,7 +10,7 @@ import { contentHoldReason, fingerprint, sameCopy, priorContent } from "./lib/co
 // It handles any planned post dated today or tomorrow, so a missed run self-heals.
 
 import {
-  loadConfig, loadPillars, loadCalendar, saveCalendar, todayLocal, addDays, rawUrl, log,
+  loadConfig, loadCalendar, saveCalendar, todayLocal, addDays, rawUrl, log,
 } from "./lib/util.mjs";
 import { creativeHoldReason } from "./lib/creative-policy.mjs";
 import { resolveImage } from "./lib/images.mjs";
@@ -19,32 +19,12 @@ import { createIssue } from "./lib/github.mjs";
 const IMAGES_ONLY = process.argv.includes("--images-only");
 const ISSUES_ONLY = process.argv.includes("--issues-only");
 
-// A real photo named like "daisy-2026-08-27.jpg" (from the MoeGo puller) carries
-// the pet's name — pull it out so the caption can use it.
-function petFromFilename(name) {
-  const m = String(name || "").match(/^(.+?)-\d{4}-\d{2}-\d{2}\.[^.]+$/);
-  if (!m) return null;
-  return m[1].split("-").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
-}
-const PET_CAPTIONS = [
-  "{pet} came in for a spa day and left looking like a whole new pup! ✨ Before ➡️ after, done right at home in the {area}. 🐾 Book yours at mobilepetworks.com",
-  "Look at {pet}'s glow-up! 🐩 Fresh, clean, and stress-free — no cages, no car ride, just our van in your driveway. Book at mobilepetworks.com 🚐",
-  "Another happy pup 💛 {pet} is looking fabulous after a mobile groom. Want this for your dog? mobilepetworks.com 🐕✨",
-];
-const REEL_CAPTIONS = [
-  "Watch {pet}'s glow-up! ▶️🐾 From scruffy to spa-fresh — mobile grooming right at home in the {area}. Book your pup's spa day at mobilepetworks.com 🚐",
-  "{pet}'s before ➡️ after, in motion ✨ No cages, no car ride — just our van in your driveway. Book at mobilepetworks.com 🐕",
-  "Press play for {pet}'s transformation! 🎬🐾 This is the mobile difference — a full spa day without ever leaving home. mobilepetworks.com",
-];
-
 function inHorizon(cfg, post) {
   const today = todayLocal(cfg.timezone);
   return post.date === today || post.date === addDays(today, 1);
 }
 
 async function resolveImages(cfg, cal) {
-  const pillars = await loadPillars();
-  const area = cfg.business.serviceArea || "your area";
   let changed = false;
   for (const post of cal.posts) {
     if (post.status !== "planned" || post.image || !inHorizon(cfg, post)) continue;
@@ -62,23 +42,6 @@ async function resolveImages(cfg, cal) {
     } else {
       delete post.mediaType;
       delete post.videoUrl;
-    }
-    const gc = pillars.pillars[post.pillar].graphicCaptions;
-    const pet = source === "photo" || source === "reel" ? petFromFilename(sourceName) : null;
-    if (post.conceptId) {
-      // Caption, review attribution, and image were selected as a single concept.
-    } else if (pet) {
-      // Real before/after (photo or Reel) with the pet's name in the filename.
-      const caps = source === "reel" ? REEL_CAPTIONS : PET_CAPTIONS;
-      const options = caps.map(c => c.replace(/\{pet\}/g, pet).replace(/\{area\}/g, area));
-      post.caption = options.find(c => !priorContent(post, cal.posts).some(p => sameCopy(c, p.caption))) || options[0];
-      delete post.graphicText;
-      post.pet = pet;
-    } else if (source === "graphic" && gc && gc.length) {
-      // Photo-based pillar fell back to a generated graphic — use a caption
-      // that doesn't promise a photo (no "swipe to see the before & after").
-      const options = gc.map(c => c.replace(/\{area\}/g, area));
-      post.caption = options.find(c => !priorContent(post, cal.posts).some(p => sameCopy(c, p.caption))) || options[0];
     }
     await fingerprint(post);
     post.contentHold = contentHoldReason(post, cal.posts);

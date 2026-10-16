@@ -22,7 +22,7 @@ test('no artwork holds the post; photos and reviews remain allowed',()=>{
 });
 test('per-post generation ignores weekly interval and only buys for unfilled upcoming slots',()=>{
  const ledger={batches:[{provider:'github-openai',date:'2026-10-10',completedOn:'2026-10-10',status:'complete',items:[]}]};
- const posts=[{date:'2026-10-11',pillar:'booking',status:'planned',awaitingCreative:true},
+ const posts=[{date:'2026-10-11',pillar:'booking',status:'planned',awaitingCreative:true,freshCopy:true,caption:'A newly written booking message.',graphicText:'Fresh daily copy'},
   {date:'2026-10-12',pillar:'hiring',status:'planned',awaitingCreative:true},
   {date:'2026-10-10',pillar:'hiring',status:'pending_approval'}];
  const {batch}=planBatch({ledger,campaigns,settings,today:'2026-10-10',posts});

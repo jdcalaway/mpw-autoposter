@@ -33,6 +33,7 @@ async function main() {
 
   const existing = await loadCalendar();
   const concepts = await readContent("campaigns.json", []);
+  const drafts = await readContent("fresh-copy.json", []);
   const { reviews } = await readContent("reviews.json", { reviews: [] });
   const byDate = new Map(existing.posts.filter(p => !p.isTest).map((p) => [p.date, p]));
   const posts = [];
@@ -43,15 +44,14 @@ async function main() {
     let key = pillars.weekdayMap[dow];
     const history = [...existing.posts.filter(p => p.date < start || p.isTest ||
       (p.status !== "planned" && p.date !== date)), ...posts];
-    const concept = chooseConcept({ key, date, concepts, reviews, history });
+    const concept = chooseConcept({ key, date, concepts: concepts.filter(c => c.targetDate === date && c.freshCopy), reviews, history });
     if (key === "testimonial" && !concept?.review) key = "booking";
     const p = pillars.pillars[key];
-    const available = p.captions.map((caption, idx) => ({caption, idx})).filter(({caption, idx}) => !contentHoldReason({id:date, date, caption:caption.replace(/\{area\}/g, area || "your area"), graphicText:p.graphicLines?.[idx % p.graphicLines.length]}, history));
-    const idx = available[0]?.idx ?? 0;
-    const caption = p.captions[idx].replace(/\{area\}/g, area || "your area");
+    const draft = drafts.find(d => d.date === date && d.pillar === key);
+    const caption = concept?.review ? concept.caption : draft?.caption || "";
 
     const prior = byDate.get(date);
-    if (prior && prior.status && prior.status !== "planned") {
+    if (prior && ((prior.status && prior.status !== "planned") || (prior.freshCopy && prior.image))) {
       // A post already in flight (approved/posted/skipped/pending) — leave it be.
       posts.push(prior);
       continue;
@@ -69,7 +69,11 @@ async function main() {
       hashtags: buildHashtags(pillars, key, area),
       imageIdea: p.imageIdea,
       prefersPhoto: !!p.prefersPhoto,
-      graphicText: p.graphicLines?.[idx % p.graphicLines.length],
+      graphicText: draft?.headline || "",
+      freshCopy: !!draft,
+      awaitingCopy: !draft && !concept?.review,
+      topic: draft?.topic,
+      freshScene: draft?.scene,
       ...(concept || {}),
       image: null,
       imageUrl: null,

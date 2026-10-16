@@ -42,6 +42,19 @@ export async function runGeneration({ root = ROOT, today, apiKey, preview = true
   ]);
   today ||= todayLocal(cfg.timezone);
   const posts = settings.generationMode === "per-post" ? (await json(join(root, "content/calendar.json"))).posts : undefined;
+  // Refresh the typography on an unpublished image when its old stock copy is replaced.
+  // Keep the paid illustration source; do not buy the same date's image twice.
+  for (const post of posts || []) {
+    if (post.status !== "planned" || !post.freshCopy || post.date < today || post.date > new Date(Date.parse(today)+86400000).toISOString().slice(0,10)) continue;
+    for (const batch of ledger.batches) for (const item of batch.items || []) {
+      if (item.targetDate !== post.date || item.freshCopy || item.status !== "complete") continue;
+      item.caption = post.caption; item.headline = post.graphicText;
+      item.freshCopy = true; item.sourceTemplateId = `fresh-copy-${post.date}`;
+      item.status = "received"; batch.status = "partial";
+      const index = campaigns.findIndex(c => c.id === item.id);
+      if (index !== -1) campaigns.splice(index,1);
+    }
+  }
   const plan = planBatch({ ledger, campaigns, settings, today, posts });
   if (!plan.batch) return { status: "not-due", nextDate: plan.nextDate };
   const batch = plan.batch;
