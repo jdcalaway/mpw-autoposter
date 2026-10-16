@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T22:21:09.680Z",
+  "generatedAt": "2026-10-16T22:32:39.009Z",
   "timezone": "America/Los_Angeles",
   "posts": [
     {
@@ -1339,29 +1339,46 @@
         50,
         51
       ],
+      "copyRevision": 2,
       "id": "2026-10-17",
       "date": "2026-10-17",
       "time": "18:00",
       "datetimeLocal": "2026-10-17T18:00:00",
       "pillar": "hiring",
       "pillarLabel": "Groomer careers",
-      "caption": "",
+      "caption": "What’s the most surprising thing you think groomers experience on the road between homes? Share your guesses (or stories) below!\n\nTravel brings unique moments:\n- Unexpected pet personalities\n- Quick neighborhood insights\n- Finding the best local coffee spots\n\nDo you imagine mobile groomers prefer the drive or the doorstop? Let’s compare!",
       "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #TriCitiesJobs #GroomerJobs #TriCities #TriCitiesDogs",
       "imageIdea": "Illustrated recruiting campaign or branded hiring card",
       "prefersPhoto": false,
-      "graphicText": "",
-      "freshCopy": false,
-      "awaitingCopy": true,
+      "graphicText": "On the road or at the door: What’s your take?",
+      "freshCopy": true,
+      "awaitingCopy": false,
+      "topic": "The grooming journey: life between appointments",
+      "freshScene": "Illustrate a colorful van parked at a leafy, quiet suburban driveway with a grooming sign on the side. Nearby, a cheerful groomer stretches before work while dogs watch from nearby windows and steps, hinting at varied neighborhood stops ahead.",
+      "conceptId": null,
       "objective": "recruiting",
-      "illustration": true,
-      "image": null,
-      "imageUrl": null,
+      "creativeAsset": null,
+      "forceGraphic": true,
+      "illustration": false,
+      "postFormat": "question",
+      "supportLines": [
+        "Unexpected pet moments on the move",
+        "Discover new neighborhoods one drive at a time",
+        "Groomers: love the road or love the doorstep?"
+      ],
+      "awaitingCreative": false,
+      "image": "images/generated/2026-10-17-hiring.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-10-17-hiring.jpg",
       "issueNumber": null,
       "status": "planned",
-      "awaitingCreative": true,
-      "copyRevision": 2
+      "mediaHashes": [
+        "ec5c817d2aee3e9c624c08cc86ee4a6b155c558adc1093c05678d4ba4f7b0e81"
+      ],
+      "imageSource": "graphic",
+      "contentHold": null
     },
     {
+      "copyRevision": 1,
       "id": "2026-10-18",
       "date": "2026-10-18",
       "time": "10:00",
@@ -1385,6 +1402,7 @@
       "mediaHashes": []
     },
     {
+      "copyRevision": 1,
       "id": "2026-10-19",
       "date": "2026-10-19",
       "time": "18:00",
@@ -1408,6 +1426,7 @@
       "mediaHashes": []
     },
     {
+      "copyRevision": 1,
       "id": "2026-10-20",
       "date": "2026-10-20",
       "time": "12:00",
@@ -1428,6 +1447,7 @@
       "mediaHashes": []
     },
     {
+      "copyRevision": 1,
       "id": "2026-10-21",
       "date": "2026-10-21",
       "time": "08:00",
@@ -1448,6 +1468,7 @@
       "mediaHashes": []
     },
     {
+      "copyRevision": 1,
       "id": "2026-10-22",
       "date": "2026-10-22",
       "time": "18:00",
@@ -1468,6 +1489,7 @@
       "mediaHashes": []
     },
     {
+      "copyRevision": 1,
       "id": "2026-10-23",
       "date": "2026-10-23",
       "time": "10:00",
@@ -1491,6 +1513,7 @@
       "mediaHashes": []
     },
     {
+      "copyRevision": 1,
       "id": "2026-10-24",
       "date": "2026-10-24",
       "time": "18:00",
@@ -1514,6 +1537,7 @@
       "mediaHashes": []
     },
     {
+      "copyRevision": 1,
       "id": "2026-10-25",
       "date": "2026-10-25",
       "time": "10:00",
@@ -1537,6 +1561,7 @@
       "mediaHashes": []
     },
     {
+      "copyRevision": 1,
       "id": "2026-10-26",
       "date": "2026-10-26",
       "time": "18:00",
@@ -1560,6 +1585,7 @@
       "mediaHashes": []
     },
     {
+      "copyRevision": 1,
       "id": "2026-10-27",
       "date": "2026-10-27",
       "time": "12:00",
@@ -1580,6 +1606,7 @@
       "mediaHashes": []
     },
     {
+      "copyRevision": 1,
       "id": "2026-10-28",
       "date": "2026-10-28",
       "time": "08:00",
@@ -1600,6 +1627,7 @@
       "mediaHashes": []
     },
     {
+      "copyRevision": 1,
       "id": "2026-10-29",
       "date": "2026-10-29",
       "time": "18:00",
@@ -1620,6 +1648,7 @@
       "mediaHashes": []
     },
     {
+      "copyRevision": 1,
       "id": "2026-10-30",
       "date": "2026-10-30",
       "time": "10:00",
@@ -1643,6 +1672,7 @@
       "mediaHashes": []
     },
     {
+      "copyRevision": 1,
       "id": "2026-10-31",
       "date": "2026-10-31",
       "time": "18:00",
@@ -1666,6 +1696,7 @@
       "mediaHashes": []
     },
     {
+      "copyRevision": 1,
       "id": "2026-11-01",
       "date": "2026-11-01",
       "time": "10:00",
@@ -1689,6 +1720,7 @@
       "mediaHashes": []
     },
     {
+      "copyRevision": 1,
       "id": "2026-11-02",
       "date": "2026-11-02",
       "time": "18:00",
@@ -1712,6 +1744,7 @@
       "mediaHashes": []
     },
     {
+      "copyRevision": 1,
       "id": "2026-11-03",
       "date": "2026-11-03",
       "time": "12:00",
@@ -1732,6 +1765,7 @@
       "mediaHashes": []
     },
     {
+      "copyRevision": 1,
       "id": "2026-11-04",
       "date": "2026-11-04",
       "time": "08:00",
@@ -1752,6 +1786,7 @@
       "mediaHashes": []
     },
     {
+      "copyRevision": 1,
       "id": "2026-11-05",
       "date": "2026-11-05",
       "time": "18:00",
@@ -1772,6 +1807,7 @@
       "mediaHashes": []
     },
     {
+      "copyRevision": 1,
       "id": "2026-11-06",
       "date": "2026-11-06",
       "time": "10:00",
@@ -1795,6 +1831,7 @@
       "mediaHashes": []
     },
     {
+      "copyRevision": 1,
       "id": "2026-11-07",
       "date": "2026-11-07",
       "time": "18:00",
@@ -1818,6 +1855,7 @@
       "mediaHashes": []
     },
     {
+      "copyRevision": 1,
       "id": "2026-11-08",
       "date": "2026-11-08",
       "time": "10:00",
@@ -1841,6 +1879,7 @@
       "mediaHashes": []
     },
     {
+      "copyRevision": 1,
       "id": "2026-11-09",
       "date": "2026-11-09",
       "time": "18:00",
@@ -1864,6 +1903,7 @@
       "mediaHashes": []
     },
     {
+      "copyRevision": 1,
       "id": "2026-11-10",
       "date": "2026-11-10",
       "time": "12:00",
@@ -1884,6 +1924,7 @@
       "mediaHashes": []
     },
     {
+      "copyRevision": 1,
       "id": "2026-11-11",
       "date": "2026-11-11",
       "time": "08:00",
@@ -1904,6 +1945,7 @@
       "mediaHashes": []
     },
     {
+      "copyRevision": 1,
       "id": "2026-11-12",
       "date": "2026-11-12",
       "time": "18:00",
@@ -1924,6 +1966,7 @@
       "mediaHashes": []
     },
     {
+      "copyRevision": 1,
       "id": "2026-11-13",
       "date": "2026-11-13",
       "time": "10:00",
@@ -1947,6 +1990,7 @@
       "mediaHashes": []
     },
     {
+      "copyRevision": 1,
       "id": "2026-11-14",
       "date": "2026-11-14",
       "time": "18:00",
