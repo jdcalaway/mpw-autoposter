@@ -1369,8 +1369,8 @@
       "awaitingCreative": false,
       "image": "images/generated/2026-10-17-hiring.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-10-17-hiring.jpg",
-      "issueNumber": null,
-      "status": "planned",
+      "issueNumber": 52,
+      "status": "pending_approval",
       "mediaHashes": [
         "ec5c817d2aee3e9c624c08cc86ee4a6b155c558adc1093c05678d4ba4f7b0e81"
       ],
