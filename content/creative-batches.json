@@ -568,9 +568,9 @@
           "targetDate": "2026-10-17",
           "pillar": "hiring",
           "objective": "recruiting",
-          "sourceTemplateId": "hiring-switch",
-          "headline": "A grooming salon that travels.",
-          "caption": "Thinking about taking your grooming experience into a mobile salon?\n\nMobile Pet Works is hiring in the Tri-Cities. Find out what the work involves before deciding your next step.\n\nCall (509) 591-5913.",
+          "sourceTemplateId": "fresh-copy-2026-10-17",
+          "headline": "Work on wheels: Groom in the Tri-Cities neighborhood",
+          "caption": "Imagine a workday without traffic, without a salon full of barking dogs, just you, your craft, and a van that comes to the client. That’s mobile grooming with Mobile Pet Works in the Tri-Cities. If you’re a groomer curious about how this hands-on, local, flexible role could fit your life, let’s chat. Call us at (509) 591-5913 and explore the possibilities.",
           "style": {
             "name": "blue-hour",
             "direction": "Elegant editorial gouache illustration, rich navy and royal-blue background, warm golden window light, tiny coral accents.",
@@ -594,7 +594,8 @@
                 "output_tokens": 5488
               }
             }
-          ]
+          ],
+          "freshCopy": true
         }
       ],
       "assets": [
