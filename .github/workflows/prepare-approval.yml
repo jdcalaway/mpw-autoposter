@@ -6,6 +6,7 @@ on:
   push:
     branches: [main]
     paths:
+      - '.github/workflows/prepare-approval.yml'
       - 'scripts/lib/creative-policy.mjs'
       - 'scripts/lib/content-policy.mjs'
       - 'scripts/generate-copy.mjs'
@@ -31,6 +32,8 @@ jobs:
       FONTCONFIG_PATH: ${{ github.workspace }}/assets/fonts
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
@@ -70,7 +73,7 @@ jobs:
           node scripts/prepare.mjs --images-only
           git add -A
           git diff --cached --quiet || git commit -m "Resolve post images [skip ci]"
-          git pull --rebase --autostash || true
+          git pull --rebase --autostash
           git push
       - name: Phase 2 — open approval issues (images now public)
         env:
@@ -79,5 +82,5 @@ jobs:
           node scripts/prepare.mjs --issues-only
           git add -A
           git diff --cached --quiet || git commit -m "Open approval issues [skip ci]"
-          git pull --rebase --autostash || true
+          git pull --rebase --autostash
           git push
