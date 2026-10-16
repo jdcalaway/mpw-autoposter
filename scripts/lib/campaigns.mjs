@@ -1,3 +1,4 @@
+import { contentHoldReason } from "./content-policy.mjs";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { ROOT } from "./util.mjs";
@@ -16,10 +17,8 @@ export function eligibleReview(r) {
 
 // Select whole concepts together; never select a caption independently of its artwork.
 export function chooseConcept({ key, date, concepts, reviews, history = [] }) {
-  const recent = history.filter(p => p.date < date &&
-    (Date.parse(date) - Date.parse(p.date)) / 86400000 < 30 && p.status !== "skipped");
   if (key === "testimonial") {
-    const unused = reviews.filter(eligibleReview).filter(r => !recent.some(p => p.review?.id === r.id));
+    const unused = reviews.filter(eligibleReview).filter(r => !history.some(p => p.date !== date && (p.review?.id === r.id || p.review?.text === r.text)));
     if (unused.length) {
       const r = unused[0];
       return {
@@ -34,7 +33,7 @@ export function chooseConcept({ key, date, concepts, reviews, history = [] }) {
     (!c.expiresOn || c.expiresOn >= date))
     .sort((a, b) => String(b.createdAt || "").localeCompare(String(a.createdAt || "")));
   if (!["booking", "hiring"].includes(key)) return null; // Photo pillars stay unchanged.
-  const selected = choices.find(c => !history.some(p => p.date !== date &&
+  const selected = choices.find(c => !contentHoldReason({id:date,date,caption:c.caption,graphicText:c.headline}, history) && !history.some(p => p.date !== date &&
     (p.conceptId === c.id || (p.creativeAsset && p.creativeAsset === c.asset))));
   // Avoid exhausting the library by repeating the same finished ad every week.
   if (!selected) return { awaitingCreative: true, creativeAsset: null, illustration: true };

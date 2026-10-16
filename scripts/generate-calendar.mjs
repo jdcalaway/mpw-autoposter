@@ -6,6 +6,7 @@
 
 import { loadConfig, loadPillars, loadCalendar, saveCalendar, todayLocal, addDays } from "./lib/util.mjs";
 import { chooseConcept, readContent } from "./lib/campaigns.mjs";
+import { contentHoldReason } from "./lib/content-policy.mjs";
 import { writeFile } from "node:fs/promises";
 
 function arg(name, fallback) {
@@ -28,14 +29,12 @@ async function main() {
   const pillars = await loadPillars();
   const days = parseInt(arg("days", "30"), 10);
   const start = arg("start", todayLocal(cfg.timezone));
-  const shuffle = parseInt(arg("shuffle", "0"), 10);
   const area = cfg.business.serviceArea || "";
 
   const existing = await loadCalendar();
   const concepts = await readContent("campaigns.json", []);
   const { reviews } = await readContent("reviews.json", { reviews: [] });
   const byDate = new Map(existing.posts.filter(p => !p.isTest).map((p) => [p.date, p]));
-  const counters = {};
   const posts = [];
 
   for (let i = 0; i < days; i++) {
@@ -47,8 +46,8 @@ async function main() {
     const concept = chooseConcept({ key, date, concepts, reviews, history });
     if (key === "testimonial" && !concept?.review) key = "booking";
     const p = pillars.pillars[key];
-    counters[key] = (counters[key] || 0) + 1;
-    const idx = (counters[key] - 1 + shuffle) % p.captions.length;
+    const available = p.captions.map((caption, idx) => ({caption, idx})).filter(({caption, idx}) => !contentHoldReason({id:date, date, caption:caption.replace(/\{area\}/g, area || "your area"), graphicText:p.graphicLines?.[idx % p.graphicLines.length]}, history));
+    const idx = available[0]?.idx ?? 0;
     const caption = p.captions[idx].replace(/\{area\}/g, area || "your area");
 
     const prior = byDate.get(date);

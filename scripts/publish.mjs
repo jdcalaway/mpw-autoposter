@@ -1,3 +1,4 @@
+import { contentHoldReason, fingerprint } from "./lib/content-policy.mjs";
 // Runs hourly. For every post that is due (scheduled time has passed) and still
 // awaiting a decision, it reads the approval issue and acts:
 //   👍 approver reaction -> publish to Facebook + Instagram, close the issue
@@ -16,6 +17,7 @@ function hoursBetween(aLocal, bLocal) {
 async function main() {
   const cfg = await loadConfig();
   const cal = await loadCalendar();
+  for (const post of cal.posts) await fingerprint(post);
   const now = nowLocalString(cfg.timezone);
 
   if (cfg.approverLogin.startsWith("REPLACE_")) {
@@ -27,7 +29,7 @@ async function main() {
     if (post.status !== "pending_approval") continue;
     if (now < post.datetimeLocal) continue; // not due yet
 
-    const hold = creativeHoldReason(post, cal.posts);
+    const hold = creativeHoldReason(post, cal.posts) || contentHoldReason(post, cal.posts);
     if (hold) { log(`${post.date}: ${hold}`); continue; }
     const decision = await approvalDecision(post.issueNumber, cfg.approverLogin);
 

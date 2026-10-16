@@ -17,7 +17,10 @@
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-09-02-tip.jpg",
       "issueNumber": 2,
       "status": "skipped",
-      "imageSource": "graphic"
+      "imageSource": "graphic",
+      "mediaHashes": [
+        "9ae3273597364b170b690daec1c3408953ebb2c92281dd91826d357ed73d7b72"
+      ]
     },
     {
       "id": "2026-09-03",
@@ -35,7 +38,10 @@
       "issueNumber": 3,
       "status": "skipped",
       "imageSource": "graphic",
-      "skipReason": "replaced by manual before/after post"
+      "skipReason": "replaced by manual before/after post",
+      "mediaHashes": [
+        "8d9c1dc0a21f13745c009e08b05004e27359caa4631a44fcd6e3595cf4768c3d"
+      ]
     },
     {
       "id": "2026-09-04",
@@ -57,7 +63,10 @@
       "results": {
         "facebook": "1585957798283717_1726773956117922",
         "instagram": "18158159128500561"
-      }
+      },
+      "mediaHashes": [
+        "507b85a48c386409ea417d506fbef885b0a0ca5cc3a3490389aa37d500ce1be0"
+      ]
     },
     {
       "id": "2026-09-05",
@@ -82,7 +91,11 @@
       "results": {
         "facebook": "1603890387998207",
         "instagram": "18025856477885713"
-      }
+      },
+      "mediaHashes": [
+        "e3d48614d88f670ac5c9690bba094420e85c601113e59123680ad6f5030d59e4",
+        "6e07c3b316673936f0f23e58cf567ea39020fe8e036b501be59902870e0335f7"
+      ]
     },
     {
       "id": "2026-09-06",
@@ -104,7 +117,10 @@
       "results": {
         "facebook": "1585957798283717_1729082345887083",
         "instagram": "18090834755169317"
-      }
+      },
+      "mediaHashes": [
+        "4211523825b0818a26a973251d7bfd0fcc59fcc59ca86423691d324e55b31f29"
+      ]
     },
     {
       "id": "2026-09-07",
@@ -126,7 +142,10 @@
       "results": {
         "facebook": "1585957798283717_1730039555791362",
         "instagram": "18113217532817387"
-      }
+      },
+      "mediaHashes": [
+        "9a1c0459c37250d5e870376e4f4a59abc350f2577b178120d39ceed59ea26ce8"
+      ]
     },
     {
       "id": "test-2026-09-07",
@@ -151,7 +170,11 @@
       "results": {
         "facebook": "1585957798283717_1729833795811938",
         "instagram": "18089031740259563"
-      }
+      },
+      "mediaHashes": [
+        "5aa9c07576635a6a432581dd03ddd233b3c2eb48103d91138045f889b1318442",
+        "65877e6db9c6f739b343c02d118b5dc41ab3b2cbb0ac062dba0ce3a1520d0c43"
+      ]
     },
     {
       "id": "2026-09-08",
@@ -169,7 +192,10 @@
       "issueNumber": 8,
       "status": "skipped",
       "imageSource": "photo",
-      "pet": "Aurora"
+      "pet": "Aurora",
+      "mediaHashes": [
+        "265fee8e195ab59717512d98b9f3b7f1c34aeb8b835d4dd9fbb24a38a2a1532a"
+      ]
     },
     {
       "id": "2026-09-09",
@@ -192,7 +218,10 @@
       "results": {
         "facebook": "1585957798283717_1731616612300323",
         "instagram": "18117476251943211"
-      }
+      },
+      "mediaHashes": [
+        "6131ba1e12125b2e839e0390d4a707a6ed2aebf1188bcb4492efeb10479d5b95"
+      ]
     },
     {
       "id": "2026-09-10",
@@ -220,7 +249,10 @@
       "results": {
         "facebook": "1585957798283717_1733065995488718",
         "instagram": "17916960729244522"
-      }
+      },
+      "mediaHashes": [
+        "98d8eca4e4d1c6b3f1318fc76b65048fd1631797306829a8595886d2038d46ef"
+      ]
     },
     {
       "id": "2026-09-11",
@@ -248,7 +280,11 @@
       "results": {
         "facebook": "1585957798283717_1733807088747942",
         "instagram": "18426746662145095"
-      }
+      },
+      "mediaHashes": [
+        "7d70100f5afc7e553aef88bf6916682ff6e2ff43a099595b7466fba62a212e3b",
+        "c427bb24d4eb1fa2ecb87cc90ede05d865bce8e3322ee858946bec995d7685b4"
+      ]
     },
     {
       "id": "2026-09-12",
@@ -276,7 +312,11 @@
       "results": {
         "facebook": "1585957798283717_1735094988619152",
         "instagram": "18106640216595398"
-      }
+      },
+      "mediaHashes": [
+        "9c4283f85fe7a6e931b58f347e5295ab7673cbdb76e968bb8823348e3f34706b",
+        "edd2a3eef06b6bac84e3bb957e2268cdbd93a40a97cabba6c2a6ac4700e69a5e"
+      ]
     },
     {
       "id": "2026-09-13",
@@ -315,7 +355,10 @@
       "results": {
         "facebook": "1585957798283717_1736059931855991",
         "instagram": "18091765493557175"
-      }
+      },
+      "mediaHashes": [
+        "3e57c8b525986792b751c56f359058d2cc6e59caec536f71a2ff8976a271e145"
+      ]
     },
     {
       "id": "2026-09-14",
@@ -343,7 +386,11 @@
       "results": {
         "facebook": "1585957798283717_1737035628425088",
         "instagram": "18487282108097860"
-      }
+      },
+      "mediaHashes": [
+        "7a8021e350d752464b8dd91eda733c09db14714eda80851518d38d50fc0cac6f",
+        "35b38015612e8389d45aae41585e3396f2fbd922e25172f7453897bfcff5133e"
+      ]
     },
     {
       "id": "2026-09-15",
@@ -367,7 +414,10 @@
       "results": {
         "facebook": "1585957798283717_1737801321681852",
         "instagram": "17946137046329772"
-      }
+      },
+      "mediaHashes": [
+        "d216c455c8c2d0d0233bb6226a96ecfe6ebf38ae21e16f8fd1324449063c4a88"
+      ]
     },
     {
       "id": "2026-09-16",
@@ -390,7 +440,10 @@
       "results": {
         "facebook": "1585957798283717_1738596344935683",
         "instagram": "18114792806109673"
-      }
+      },
+      "mediaHashes": [
+        "c2493daee6e20db953514f84dbfb03fbc929df76a5ba71f100190ebffcb0e0bb"
+      ]
     },
     {
       "id": "2026-09-17",
@@ -418,7 +471,10 @@
       "results": {
         "facebook": "1585957798283717_1739970711464913",
         "instagram": "18425870881150405"
-      }
+      },
+      "mediaHashes": [
+        "4294591734ad3cbfaa4d9166079e741e1f41fb1e3fb3f2d144b00f081d617603"
+      ]
     },
     {
       "id": "2026-09-18",
@@ -446,7 +502,11 @@
       "results": {
         "facebook": "1585957798283717_1740696884725629",
         "instagram": "17895169794671529"
-      }
+      },
+      "mediaHashes": [
+        "41d53d6967db68c9fa77d2418ce3a1e3e8f86bd49c44a0daefa4489ab422bcad",
+        "991a99ccd13fa44d796017b991be3f3c691f6c8e4f6c8b9dcf2ed2809f6fa3c9"
+      ]
     },
     {
       "id": "2026-09-19",
@@ -474,7 +534,11 @@
       "results": {
         "facebook": "1585957798283717_1741968794598438",
         "instagram": "18634417702060511"
-      }
+      },
+      "mediaHashes": [
+        "dc4fdc0034d0299336aa019150b353d17fc09e7bcd8d1e8ab4c578d205fd0c34",
+        "c9897b0af38c8f23e900c44f49e0cd29b80e3e0d65ec87e9ff1783e174018475"
+      ]
     },
     {
       "id": "2026-09-20",
@@ -513,7 +577,10 @@
       "results": {
         "facebook": "1585957798283717_1742983961163588",
         "instagram": "18114359525120757"
-      }
+      },
+      "mediaHashes": [
+        "363d9cd9950f7df875a94ee25e92302831e8b1f2ff7e17ba6ecdc98148de314a"
+      ]
     },
     {
       "id": "2026-09-21",
@@ -541,7 +608,10 @@
       "results": {
         "facebook": "1585957798283717_1743946151067369",
         "instagram": "18115652549287163"
-      }
+      },
+      "mediaHashes": [
+        "b2f774e1c6a4eeacd2e56c6b785b752b5cc8e8b91a4ac00284ad7c67449abc37"
+      ]
     },
     {
       "id": "2026-09-22",
@@ -560,7 +630,10 @@
       "issueNumber": 23,
       "status": "skipped",
       "imageSource": "photo",
-      "pet": "Lucy"
+      "pet": "Lucy",
+      "mediaHashes": [
+        "5c1629a55caa9ac1cdfbc3696077a312feaabf5c0313435aefcfca1807923827"
+      ]
     },
     {
       "id": "2026-09-23",
@@ -583,7 +656,10 @@
       "results": {
         "facebook": "1585957798283717_1745591967569454",
         "instagram": "18149505931557589"
-      }
+      },
+      "mediaHashes": [
+        "6131ba1e12125b2e839e0390d4a707a6ed2aebf1188bcb4492efeb10479d5b95"
+      ]
     },
     {
       "id": "2026-09-24",
@@ -606,7 +682,10 @@
       "results": {
         "facebook": "1585957798283717_1747144464080871",
         "instagram": "18010828595768004"
-      }
+      },
+      "mediaHashes": [
+        "69d822f9ad758950d0e5ffa5a917a1c70632ddc71190b67fb6cb58e8f9c48a3e"
+      ]
     },
     {
       "id": "2026-09-25",
@@ -634,7 +713,11 @@
       "results": {
         "facebook": "1585957798283717_1747967467331904",
         "instagram": "18111059471032557"
-      }
+      },
+      "mediaHashes": [
+        "12c0ed6b8e838ff4e8c7f2ffc3142a52bb5b7c08b48558d73d99e1fb37c163ea",
+        "483ff1add33e82981e76d687b089934fb19ebc30578ebe4f86c7959d68fe44d3"
+      ]
     },
     {
       "id": "2026-09-26",
@@ -662,7 +745,11 @@
       "results": {
         "facebook": "1585957798283717_1749369607191690",
         "instagram": "17995362498041189"
-      }
+      },
+      "mediaHashes": [
+        "db00d8c6682be535057901e5e74e782b50cacde0868b285f16563923b608839b",
+        "ea134cf4ed21707abc18d10897ec22d4e5893774896d74d3a7e1433579ab917f"
+      ]
     },
     {
       "id": "2026-09-27",
@@ -701,7 +788,10 @@
       "results": {
         "facebook": "1585957798283717_1750528297075821",
         "instagram": "18100540004566039"
-      }
+      },
+      "mediaHashes": [
+        "417d79e60ecc9f79ba99aeeae951f25f5a73a0a4dc8a38ba69c8498d8aabb9a5"
+      ]
     },
     {
       "id": "2026-09-28",
@@ -729,7 +819,10 @@
       "results": {
         "facebook": "1585957798283717_1751571970304787",
         "instagram": "18107547689224699"
-      }
+      },
+      "mediaHashes": [
+        "37ce4a6d91c21b3d6414815c1fbb06c1e33caf4758554603864d73d139671044"
+      ]
     },
     {
       "id": "2026-09-29",
@@ -750,7 +843,11 @@
       "imageSource": "reel",
       "mediaType": "reel",
       "videoUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/reels/pickles-2026-08-29.mp4",
-      "pet": "Pickles"
+      "pet": "Pickles",
+      "mediaHashes": [
+        "c263443e45fc5095b128969f899056a70b5f61b39a8f44e3639193ea520a75b1",
+        "9d52f6466fbc03bb015ecfda72d7260f2a22bae1da434108b963e546a7893b26"
+      ]
     },
     {
       "id": "2026-09-30",
@@ -773,7 +870,10 @@
       "results": {
         "facebook": "1585957798283717_1753347056793945",
         "instagram": "18116397218061186"
-      }
+      },
+      "mediaHashes": [
+        "c2493daee6e20db953514f84dbfb03fbc929df76a5ba71f100190ebffcb0e0bb"
+      ]
     },
     {
       "id": "2026-10-01",
@@ -796,7 +896,10 @@
       "results": {
         "facebook": "1585957798283717_1755203399941644",
         "instagram": "18633671845037619"
-      }
+      },
+      "mediaHashes": [
+        "a3256982c67dde17279a1934dfaa989854c7d0556f947447b74c2e3c7d9a5050"
+      ]
     },
     {
       "id": "2026-10-02",
@@ -824,7 +927,11 @@
       "results": {
         "facebook": "1585957798283717_1756179433177374",
         "instagram": "17876684340566203"
-      }
+      },
+      "mediaHashes": [
+        "c0d1ee94f19de63440555c0d86d70b1a14db94aef89a3c1f5668c387fcdd5788",
+        "d541e66433104922010e644fae6416e91c88bacaa68c45b3bc57af54e9f7922c"
+      ]
     },
     {
       "id": "2026-10-03",
@@ -852,7 +959,11 @@
       "results": {
         "facebook": "1585957798283717_1757726049689379",
         "instagram": "18219676933345849"
-      }
+      },
+      "mediaHashes": [
+        "88074cc85409da1dde36373ed72bbcdd823d7fff6528aa66e08165d0fb76ffa8",
+        "8c945eb7302edf0efa6eb18b9cb4827157c662285bd53e1287a3fd2f52107f2f"
+      ]
     },
     {
       "id": "2026-10-04",
@@ -891,7 +1002,10 @@
       "results": {
         "facebook": "1585957798283717_1758725742922743",
         "instagram": "17905751844572054"
-      }
+      },
+      "mediaHashes": [
+        "dabc9d50bf9543205d11ce00ca57d82794cf37b5ca57c977378214fdad057d0d"
+      ]
     },
     {
       "id": "2026-10-05",
@@ -919,7 +1033,10 @@
       "results": {
         "facebook": "1585957798283717_1759715799490404",
         "instagram": "18130737598770546"
-      }
+      },
+      "mediaHashes": [
+        "547d07d3de710f9f4d06c3d899c0d1b10d880577821472e0796f8df27b9baa4c"
+      ]
     },
     {
       "id": "2026-10-06",
@@ -938,7 +1055,10 @@
       "issueNumber": 37,
       "status": "skipped",
       "imageSource": "photo",
-      "pet": "Roxy"
+      "pet": "Roxy",
+      "mediaHashes": [
+        "082566565ae86d112f92ebef3cf747560b52a060ba351388867da150b1ac376b"
+      ]
     },
     {
       "id": "2026-10-07",
@@ -962,7 +1082,10 @@
       "results": {
         "facebook": "1585957798283717_1761838899278094",
         "instagram": "18148623328511694"
-      }
+      },
+      "mediaHashes": [
+        "c2493daee6e20db953514f84dbfb03fbc929df76a5ba71f100190ebffcb0e0bb"
+      ]
     },
     {
       "id": "2026-10-08",
@@ -980,7 +1103,10 @@
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-10-08-bts.jpg",
       "issueNumber": 39,
       "status": "skipped",
-      "imageSource": "graphic"
+      "imageSource": "graphic",
+      "mediaHashes": [
+        "72028f86f2bf73921603fd38810e0065993880bf25707f921d76653a5b7cbe54"
+      ]
     },
     {
       "id": "2026-10-09",
@@ -1008,7 +1134,11 @@
       "results": {
         "facebook": "1585957798283717_1763925575736093",
         "instagram": "18116658043797920"
-      }
+      },
+      "mediaHashes": [
+        "c56c0bae342745479ca03ba8e8528625325dc2d4b272c5efd9b91c52e1519742",
+        "29f8438423bac2b610a128bdd6157d6017a91d4ff62287a9033ccb4d571a2e57"
+      ]
     },
     {
       "id": "2026-10-10",
@@ -1036,7 +1166,11 @@
       "results": {
         "facebook": "1585957798283717_1765492128912771",
         "instagram": "18032913719886095"
-      }
+      },
+      "mediaHashes": [
+        "6724526bedf70617edb38a94b3f80ee71c1c4d64999bfb24e3255b0287d138dd",
+        "4dcac6ca75b52fd704a6efbc38fd379ee34fd6d951c6d0c99cbd0d35aee2be88"
+      ]
     },
     {
       "supersededIssueNumbers": [
@@ -1067,7 +1201,11 @@
       "results": {
         "facebook": "1585957798283717_1766312998830684",
         "instagram": "18110677394274054"
-      }
+      },
+      "mediaHashes": [
+        "68384e38ef30ba5c2d2fcb85678a963224a63fc63a748d2dc7f263adbae403df",
+        "901401a4ffbb9ee80ff590c93494b135583e145df803d4a39b18ce5f458072c4"
+      ]
     },
     {
       "supersededIssueNumbers": [
@@ -1098,7 +1236,11 @@
       "results": {
         "facebook": "1585957798283717_1767658178696166",
         "instagram": "17941263996360830"
-      }
+      },
+      "mediaHashes": [
+        "3b708aaa962f18b1dd8497b147a6884f70b446dff8088d863bc5a0befc57d843",
+        "1680387b121cd05884b130b2fe5b8b15384a581ff0fec3b72bc9c1c870dd0fb1"
+      ]
     },
     {
       "id": "2026-10-13",
@@ -1117,7 +1259,10 @@
       "issueNumber": 46,
       "status": "skipped",
       "imageSource": "photo",
-      "pet": "Vino"
+      "pet": "Vino",
+      "mediaHashes": [
+        "5d45836f14deec36dd424e99a37b6967686eefdd9b322ede8d8fbd9e226a270c"
+      ]
     },
     {
       "id": "2026-10-14",
@@ -1135,7 +1280,10 @@
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-10-14-tip.jpg",
       "issueNumber": 47,
       "status": "skipped",
-      "imageSource": "graphic"
+      "imageSource": "graphic",
+      "mediaHashes": [
+        "6131ba1e12125b2e839e0390d4a707a6ed2aebf1188bcb4492efeb10479d5b95"
+      ]
     },
     {
       "id": "2026-10-15",
@@ -1153,7 +1301,10 @@
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-10-15-bts.jpg",
       "issueNumber": 48,
       "status": "skipped",
-      "imageSource": "graphic"
+      "imageSource": "graphic",
+      "mediaHashes": [
+        "69d822f9ad758950d0e5ffa5a917a1c70632ddc71190b67fb6cb58e8f9c48a3e"
+      ]
     },
     {
       "id": "2026-10-16",
@@ -1175,8 +1326,13 @@
       "image": "images/generated/2026-10-16-creative.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-10-16-creative.jpg",
       "issueNumber": 49,
-      "status": "pending_approval",
-      "imageSource": "illustration"
+      "status": "skipped",
+      "imageSource": "illustration",
+      "mediaHashes": [
+        "f12ffe0c108918cae465af751143c47b000ec1f48fe68f532b75f41ffe5c4587",
+        "5023c416e0a6f014ecdff64d25ad152f719c81d38bef2f23e60a7e7a4482411b"
+      ],
+      "skipReason": "Duplicate content blocked: Caption already used on 2026-09-11."
     },
     {
       "id": "2026-10-17",
@@ -1196,7 +1352,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-10-18",
@@ -1229,7 +1386,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-10-19",
@@ -1249,7 +1407,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-10-20",
@@ -1266,7 +1425,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-10-21",
@@ -1283,7 +1443,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-10-22",
@@ -1300,7 +1461,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-10-23",
@@ -1320,7 +1482,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-10-24",
@@ -1340,7 +1503,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-10-25",
@@ -1373,7 +1537,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-10-26",
@@ -1393,7 +1558,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-10-27",
@@ -1410,7 +1576,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-10-28",
@@ -1427,7 +1594,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-10-29",
@@ -1444,7 +1612,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-10-30",
@@ -1464,7 +1633,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-10-31",
@@ -1484,7 +1654,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-11-01",
@@ -1517,7 +1688,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-11-02",
@@ -1537,7 +1709,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-11-03",
@@ -1554,7 +1727,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-11-04",
@@ -1571,7 +1745,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-11-05",
@@ -1588,7 +1763,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-11-06",
@@ -1608,7 +1784,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-11-07",
@@ -1628,7 +1805,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-11-08",
@@ -1661,7 +1839,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-11-09",
@@ -1681,7 +1860,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-11-10",
@@ -1698,7 +1878,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-11-11",
@@ -1715,7 +1896,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-11-12",
@@ -1732,7 +1914,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "id": "2026-11-13",
@@ -1752,7 +1935,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     }
   ]
 }

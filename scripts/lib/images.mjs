@@ -1,3 +1,4 @@
+import { unusedMedia } from "./content-policy.mjs";
 // Hybrid image resolution. For a given post: if you've dropped real photos into
 // images/photos/<pillar>/, use one (rotated deterministically by date). Otherwise
 // generate an on-brand graphic. Returns a repo-relative path.
@@ -31,7 +32,7 @@ async function listReels() {
 
 /** Resolves the image for a post, materializing it under images/generated when needed.
  *  Returns { relPath, source: "photo" | "graphic" }. */
-export async function resolveImage({ cfg, post }) {
+export async function resolveImage({ cfg, post, posts = [] }) {
   const pillars = await loadPillars();
   const pillar = pillars.pillars[post.pillar];
   const genDir = join(ROOT, "images", "generated");
@@ -58,7 +59,7 @@ export async function resolveImage({ cfg, post }) {
   // images — on "reel" dates, use a Reel if one is available (with its thumbnail
   // for the approval-issue preview).
   if (post.pillar === "transformation" && hash(post.date) % 2 === 0) {
-    const reels = await listReels();
+    const reels = (await unusedMedia((await listReels()).map(f => `images/reels/${f}`), post, posts)).map(f => f.split("/").pop());
     if (reels.length) {
       const mp4 = pick(reels, post.date);
       const thumbRel = join("images", "reels", mp4.replace(/\.mp4$/, ".jpg")).replace(/\\/g, "/");
@@ -68,18 +69,19 @@ export async function resolveImage({ cfg, post }) {
           videoRelPath: join("images", "reels", mp4).replace(/\\/g, "/"),
           source: "reel",
           sourceName: mp4,
+          mediaSource: `images/reels/${mp4}`,
         };
       }
     }
   }
 
-  const photos = await listPhotos(post.pillar);
+  const photos = (await unusedMedia((await listPhotos(post.pillar)).map(f => `images/photos/${post.pillar}/${f}`), post, posts)).map(f => f.split("/").pop());
   if (photos.length) {
     const chosen = pick(photos, post.date);
     const ext = chosen.match(PHOTO_EXT)[0].toLowerCase();
     const rel = join("images", "generated", `${post.date}-${post.pillar}${ext}`);
     await copyFile(join(ROOT, "images", "photos", post.pillar, chosen), join(ROOT, rel));
-    return { relPath: rel.replace(/\\/g, "/"), source: "photo", sourceName: chosen };
+    return { relPath: rel.replace(/\\/g, "/"), source: "photo", sourceName: chosen, mediaSource: `images/photos/${post.pillar}/${chosen}` };
   }
 
   const lines = pillar.graphicLines && pillar.graphicLines.length ? pillar.graphicLines : [post.caption];

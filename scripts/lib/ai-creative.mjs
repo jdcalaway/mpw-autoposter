@@ -1,3 +1,4 @@
+import { contentHoldReason } from "./content-policy.mjs";
 import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
@@ -51,11 +52,13 @@ export function planBatch({ ledger, campaigns, settings, today, posts }) {
   const items = (targets || [{pillar:"booking"}, {pillar:"hiring"}]).map((target, offset) => {
     const pillar = target.pillar;
     const previous = cloud.flatMap(b => b.items || []).filter(i => i.pillar === pillar);
-    const candidates = campaigns.filter(c => c.pillar === pillar && !c.generator && !c.createdAt);
+    const candidates = campaigns.filter(c => c.pillar === pillar && !c.generator && !c.createdAt &&
+      !contentHoldReason({id:target.date || today,date:target.date || today,caption:c.caption,graphicText:c.headline}, posts || []) &&
+      !previous.some(i => i.caption === c.caption || i.headline === c.headline));
     const usage = c => previous.filter(i => i.sourceTemplateId === c.id).length;
     candidates.sort((a,b) => usage(a) - usage(b) || Number(!!a.asset) - Number(!!b.asset));
     const template = candidates[0];
-    if (!template?.headline || !template.caption) throw new Error(`No ${pillar} campaign template.`);
+    if (!template?.headline || !template.caption) throw new Error(`No unused ${pillar} campaign copy; add fresh content before buying artwork.`);
     const style = settings.styles[(index + offset) % settings.styles.length];
     const scenes = settings[`${pillar}Scenes`];
     const scene = scenes[index % scenes.length];

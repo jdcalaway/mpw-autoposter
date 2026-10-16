@@ -1,3 +1,4 @@
+import { contentHoldReason } from "./lib/content-policy.mjs";
 import { readFile, writeFile, mkdir, rename, appendFile } from "node:fs/promises";
 import { join, dirname, resolve } from "node:path";
 import { pathToFileURL } from "node:url";
@@ -64,6 +65,8 @@ export async function runGeneration({ root = ROOT, today, apiKey, preview = true
   let runRequests = 0;
   for (const item of batch.items) {
     if (item.status === "complete") continue;
+    const duplicate = contentHoldReason({id:item.targetDate || today, date:item.targetDate || today, caption:item.caption, graphicText:item.headline}, posts || []);
+    if (duplicate) throw new Error(`${item.id}: ${duplicate} Add fresh campaign copy before generating.`);
     if (item.status !== "received") {
       const blocked = requestBlock({ ledger, item, settings, today, runRequests });
       if (blocked) throw new Error(`${item.id}: ${blocked}`);

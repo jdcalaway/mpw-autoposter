@@ -1,3 +1,4 @@
+import { contentHoldReason, fingerprint, sameCopy, priorContent } from "./lib/content-policy.mjs";
 // Runs daily (morning PT), in two phases so the approval issue never references
 // an image that isn't public yet:
 //
@@ -35,7 +36,6 @@ const REEL_CAPTIONS = [
   "{pet}'s before ➡️ after, in motion ✨ No cages, no car ride — just our van in your driveway. Book at mobilepetworks.com 🐕",
   "Press play for {pet}'s transformation! 🎬🐾 This is the mobile difference — a full spa day without ever leaving home. mobilepetworks.com",
 ];
-const hashDate = (s) => { let h = 0; for (const c of s) h = (h * 31 + c.charCodeAt(0)) >>> 0; return h; };
 
 function inHorizon(cfg, post) {
   const today = todayLocal(cfg.timezone);
@@ -50,7 +50,9 @@ async function resolveImages(cfg, cal) {
     if (post.status !== "planned" || post.image || !inHorizon(cfg, post)) continue;
     const hold = creativeHoldReason(post, cal.posts);
     if (hold) { log(`${post.date}: ${hold}`); continue; }
-    const { relPath, source, sourceName, videoRelPath } = await resolveImage({ cfg, post });
+    const { relPath, source, sourceName, videoRelPath, mediaSource } = await resolveImage({ cfg, post, posts: cal.posts });
+    post.mediaSource = mediaSource;
+    post.videoRelPath = videoRelPath;
     post.image = relPath;
     post.imageUrl = rawUrl(relPath);
     post.imageSource = source;
@@ -68,15 +70,18 @@ async function resolveImages(cfg, cal) {
     } else if (pet) {
       // Real before/after (photo or Reel) with the pet's name in the filename.
       const caps = source === "reel" ? REEL_CAPTIONS : PET_CAPTIONS;
-      post.caption = caps[hashDate(post.date) % caps.length]
-        .replace(/\{pet\}/g, pet)
-        .replace(/\{area\}/g, area);
+      const options = caps.map(c => c.replace(/\{pet\}/g, pet).replace(/\{area\}/g, area));
+      post.caption = options.find(c => !priorContent(post, cal.posts).some(p => sameCopy(c, p.caption))) || options[0];
+      delete post.graphicText;
       post.pet = pet;
     } else if (source === "graphic" && gc && gc.length) {
       // Photo-based pillar fell back to a generated graphic — use a caption
       // that doesn't promise a photo (no "swipe to see the before & after").
-      post.caption = gc[hashDate(post.date) % gc.length].replace(/\{area\}/g, area);
+      const options = gc.map(c => c.replace(/\{area\}/g, area));
+      post.caption = options.find(c => !priorContent(post, cal.posts).some(p => sameCopy(c, p.caption))) || options[0];
     }
+    await fingerprint(post);
+    post.contentHold = contentHoldReason(post, cal.posts);
     changed = true;
     log(`Resolved image for ${post.date} (${post.pillar}, ${source}).`);
   }
@@ -88,7 +93,8 @@ async function openIssues(cfg, cal) {
   for (const post of cal.posts) {
     if (post.status !== "planned" || !post.image || post.issueNumber || !inHorizon(cfg, post)) continue;
 
-    if (creativeHoldReason(post, cal.posts)) continue;
+    const hold = creativeHoldReason(post, cal.posts) || contentHoldReason(post, cal.posts);
+    if (hold) { log(`${post.date}: ${hold}`); continue; }
     const title = `📅 Approve ${post.date} — ${post.pillarLabel} (${post.time})`;
     const body = [
       `**Scheduled:** ${post.datetimeLocal.replace("T", " ")} (${cfg.timezone})`,
@@ -123,6 +129,7 @@ async function openIssues(cfg, cal) {
 async function main() {
   const cfg = await loadConfig();
   const cal = await loadCalendar();
+  for (const post of cal.posts) await fingerprint(post);
 
   let changed = false;
   if (IMAGES_ONLY || !ISSUES_ONLY) changed = (await resolveImages(cfg, cal)) || changed;
