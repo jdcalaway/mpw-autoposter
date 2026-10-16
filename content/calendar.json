@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T22:36:02.709Z",
+  "generatedAt": "2026-10-16T22:39:13.955Z",
   "timezone": "America/Los_Angeles",
   "posts": [
     {
@@ -1341,39 +1341,43 @@
         52,
         53
       ],
+      "pillarOverride": "engagement",
       "copyRevision": 4,
       "id": "2026-10-17",
       "date": "2026-10-17",
-      "time": "18:00",
-      "datetimeLocal": "2026-10-17T18:00:00",
+      "time": "19:00",
+      "datetimeLocal": "2026-10-17T19:00:00",
       "pillar": "engagement",
       "pillarLabel": "Engagement",
       "caption": "Put on black pants. Cuddle the dog. Reconsider the black pants. 🐾\n\nWhere does your dog’s fur turn up most: your clothes, the couch, or somewhere completely unexplainable?\n\nTell us the most unexpected place you’ve found it. 😂",
-      "hashtags": "#MobilePetWorks #TriCitiesDogs #DogPeople #DogLife",
-      "imageIdea": "Illustrated recruiting campaign or branded hiring card",
+      "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #DogsOfFacebook #DogLovers #TriCities #TriCitiesDogs",
+      "imageIdea": "A cute candid dog photo, or a simple branded graphic with the question text.",
       "prefersPhoto": false,
       "graphicText": "Black pants. Bold choice.",
       "freshCopy": true,
       "awaitingCopy": false,
       "topic": "The dog owner's battle with fur on clothing",
       "freshScene": "A playful typographic joke for dog owners; no illustration needed.",
-      "conceptId": null,
-      "objective": "engagement",
-      "creativeAsset": null,
-      "forceGraphic": true,
-      "illustration": false,
       "postFormat": "punchline",
       "supportLines": [
         "One quick cuddle.",
         "A whole new outfit.",
         "Dog people know."
       ],
+      "conceptId": null,
+      "creativeAsset": null,
+      "illustration": false,
       "awaitingCreative": false,
-      "image": null,
-      "imageUrl": null,
+      "forceGraphic": true,
+      "image": "images/generated/2026-10-17-engagement.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-10-17-engagement.jpg",
       "issueNumber": null,
       "status": "planned",
-      "pillarOverride": "engagement"
+      "mediaHashes": [
+        "b458fcbbcf9f932610318b396e6fa5984bb7605aa011235ad3891dad1574da28"
+      ],
+      "imageSource": "graphic",
+      "contentHold": null
     },
     {
       "copyRevision": 1,
