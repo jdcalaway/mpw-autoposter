@@ -42,7 +42,8 @@ async function main() {
   for (let i = 0; i < days; i++) {
     const date = addDays(start, i);
     const dow = new Date(`${date}T12:00:00Z`).getUTCDay();
-    let key = pillars.weekdayMap[dow];
+    const override = byDate.get(date)?.pillarOverride;
+    let key = override && pillars.pillars[override] ? override : pillars.weekdayMap[dow];
     const history = [...existing.posts.filter(p => p.date < start || p.isTest ||
       (p.status !== "planned" && p.date !== date)), ...posts];
     const concept = chooseConcept({ key, date, concepts: concepts.filter(c => c.targetDate === date && c.freshCopy), reviews, history });
@@ -62,6 +63,7 @@ async function main() {
     posts.push({
       ...(prior?.supersededIssueNumbers ? {supersededIssueNumbers: prior.supersededIssueNumbers} : {}),
       ...(prior?.creativeBrief ? {creativeBrief: prior.creativeBrief} : {}),
+      ...(prior?.pillarOverride ? {pillarOverride: prior.pillarOverride} : {}),
       copyRevision: revision,
       id: date,
       date,

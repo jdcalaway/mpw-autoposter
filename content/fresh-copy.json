@@ -42,5 +42,22 @@
     "revision": 3,
     "model": "gpt-4.1-mini",
     "createdAt": "2026-10-16T22:36:00.976Z"
+  },
+  {
+    "date": "2026-10-17",
+    "pillar": "engagement",
+    "revision": 4,
+    "caption": "Put on black pants. Cuddle the dog. Reconsider the black pants. 🐾\n\nWhere does your dog’s fur turn up most: your clothes, the couch, or somewhere completely unexplainable?\n\nTell us the most unexpected place you’ve found it. 😂",
+    "headline": "Black pants. Bold choice.",
+    "topic": "The dog owner's battle with fur on clothing",
+    "scene": "A playful typographic joke for dog owners; no illustration needed.",
+    "postFormat": "punchline",
+    "supportLines": [
+      "One quick cuddle.",
+      "A whole new outfit.",
+      "Dog people know."
+    ],
+    "model": "editorial-draft",
+    "createdAt": "2026-10-16T22:38:00Z"
   }
 ]
