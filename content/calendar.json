@@ -1371,8 +1371,8 @@
       "forceGraphic": true,
       "image": "images/generated/2026-10-17-engagement.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-10-17-engagement.jpg",
-      "issueNumber": null,
-      "status": "planned",
+      "issueNumber": 54,
+      "status": "pending_approval",
       "mediaHashes": [
         "b458fcbbcf9f932610318b396e6fa5984bb7605aa011235ad3891dad1574da28"
       ],
