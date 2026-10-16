@@ -61,6 +61,7 @@ async function main() {
 
     posts.push({
       ...(prior?.supersededIssueNumbers ? {supersededIssueNumbers: prior.supersededIssueNumbers} : {}),
+      ...(prior?.creativeBrief ? {creativeBrief: prior.creativeBrief} : {}),
       copyRevision: revision,
       id: date,
       date,

@@ -29,7 +29,7 @@ export async function writeFreshCopy({post, history, business, apiKey, fetchImpl
   const format = nextFormat(history, post.date);
   const schema={type:'object',additionalProperties:false,properties:{...Object.fromEntries(['caption','headline','topic','scene'].map(k=>[k,{type:'string'}])),postFormat:{type:'string',enum:[format]},supportLines:{type:'array',items:{type:'string'},minItems:3,maxItems:3}},required:['caption','headline','topic','scene','postFormat','supportLines']};
   const archive=history.filter(p=>p.id!==post.id && p.caption && (p.status!=='planned'||p.freshCopy)).map(p=>({date:p.date,pillar:p.pillar,caption:p.caption,headline:p.graphicText,topic:p.topic,postFormat:p.postFormat}));
-  const data={business,date:post.date,pillar:post.pillar,assignedFormat:format,history:archive};
+  const data={business,date:post.date,pillar:post.pillar,assignedFormat:format,creativeBrief:post.creativeBrief||null,history:archive};
   if (JSON.stringify(data).length>180000) throw new Error('Content history needs compaction; holding rather than forgetting old posts.');
   const response=await fetchImpl('https://api.openai.com/v1/chat/completions',{
     method:'POST',redirect:'error',signal:AbortSignal.timeout(90000),

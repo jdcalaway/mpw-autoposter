@@ -1337,45 +1337,31 @@
     {
       "supersededIssueNumbers": [
         50,
-        51
+        51,
+        52
       ],
-      "copyRevision": 2,
+      "copyRevision": 3,
       "id": "2026-10-17",
       "date": "2026-10-17",
       "time": "18:00",
       "datetimeLocal": "2026-10-17T18:00:00",
       "pillar": "hiring",
       "pillarLabel": "Groomer careers",
-      "caption": "What’s the most surprising thing you think groomers experience on the road between homes? Share your guesses (or stories) below!\n\nTravel brings unique moments:\n- Unexpected pet personalities\n- Quick neighborhood insights\n- Finding the best local coffee spots\n\nDo you imagine mobile groomers prefer the drive or the doorstop? Let’s compare!",
+      "caption": "",
       "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #TriCitiesJobs #GroomerJobs #TriCities #TriCitiesDogs",
       "imageIdea": "Illustrated recruiting campaign or branded hiring card",
       "prefersPhoto": false,
-      "graphicText": "On the road or at the door: What’s your take?",
-      "freshCopy": true,
-      "awaitingCopy": false,
-      "topic": "The grooming journey: life between appointments",
-      "freshScene": "Illustrate a colorful van parked at a leafy, quiet suburban driveway with a grooming sign on the side. Nearby, a cheerful groomer stretches before work while dogs watch from nearby windows and steps, hinting at varied neighborhood stops ahead.",
-      "conceptId": null,
+      "graphicText": "",
+      "freshCopy": false,
+      "awaitingCopy": true,
       "objective": "recruiting",
-      "creativeAsset": null,
-      "forceGraphic": true,
       "illustration": false,
-      "postFormat": "question",
-      "supportLines": [
-        "Unexpected pet moments on the move",
-        "Discover new neighborhoods one drive at a time",
-        "Groomers: love the road or love the doorstep?"
-      ],
-      "awaitingCreative": false,
-      "image": "images/generated/2026-10-17-hiring.jpg",
-      "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-10-17-hiring.jpg",
-      "issueNumber": 52,
-      "status": "pending_approval",
-      "mediaHashes": [
-        "ec5c817d2aee3e9c624c08cc86ee4a6b155c558adc1093c05678d4ba4f7b0e81"
-      ],
-      "imageSource": "graphic",
-      "contentHold": null
+      "awaitingCreative": true,
+      "image": null,
+      "imageUrl": null,
+      "issueNumber": null,
+      "status": "planned",
+      "creativeBrief": "Write a practical hiring post for experienced groomers considering a job change. Use a three-question checklist about the actual role: how the workday runs, what support is available, and how the position is structured. These are questions to ask us, not promises about our terms. End with a simple invitation to talk to Mobile Pet Works at the configured phone number. Conversational, confident, plain language; no travel guessing games, coffee references, vague explore-the-possibilities language, or unsupported benefits. Headline and graphic points must be immediately useful and clearly about a grooming career."
     },
     {
       "copyRevision": 1,
