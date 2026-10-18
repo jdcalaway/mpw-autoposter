@@ -320,5 +320,21 @@
     "availableFrom": "2026-10-16",
     "expiresOn": "2026-12-15",
     "batchId": "post-2026-10-17"
+  },
+  {
+    "id": "ai-2026-10-19-hiring",
+    "freshCopy": true,
+    "targetDate": "2026-10-19",
+    "pillar": "hiring",
+    "objective": "hiring",
+    "headline": "A grooming day on wheels: What’s it like?",
+    "caption": "Picture this: You’re a groomer rolling up to your next appointment in a fully equipped van, no noisy salon, just fresh air and your client’s happy tail wagging in the front yard. The rhythm? Drive, groom, chat with pet parents, then off to the next door. It’s a different pace, a new kind of freedom — but also a craft that fits right into community streets.\n\nCurious about how this hands-on, local mobile grooming role could mesh with your skills and lifestyle? Let’s talk! Call (509) 591-5913 to explore what Mobile Pet Works offers groomers in the Tri-Cities.\n\nMobile Pet Works isn’t just a job; it’s grooming on wheels, right where you live and work.",
+    "asset": "images/creative/cloud/ai-2026-10-19-hiring.jpg",
+    "generator": "github-openai",
+    "sourceTemplateId": "fresh-copy-2026-10-19",
+    "createdAt": "2026-10-18",
+    "availableFrom": "2026-10-18",
+    "expiresOn": "2026-12-17",
+    "batchId": "post-2026-10-19"
   }
 ]
