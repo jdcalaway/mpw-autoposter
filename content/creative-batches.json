@@ -603,6 +603,48 @@
       ],
       "referenceSha256": "e154ddfddbac882caeca42cc8346b04f1196c856da5cbcfa98eecf5aaa483259",
       "completedOn": "2026-10-16"
+    },
+    {
+      "id": "post-2026-10-19",
+      "date": "2026-10-18",
+      "provider": "github-openai",
+      "status": "partial",
+      "model": "gpt-image-2",
+      "size": "1536x1024",
+      "quality": "high",
+      "reference": "images/creative/van-reference.jpg",
+      "items": [
+        {
+          "id": "ai-2026-10-19-hiring",
+          "freshCopy": true,
+          "targetDate": "2026-10-19",
+          "pillar": "hiring",
+          "objective": "hiring",
+          "sourceTemplateId": "fresh-copy-2026-10-19",
+          "headline": "A grooming day on wheels: What’s it like?",
+          "caption": "Picture this: You’re a groomer rolling up to your next appointment in a fully equipped van, no noisy salon, just fresh air and your client’s happy tail wagging in the front yard. The rhythm? Drive, groom, chat with pet parents, then off to the next door. It’s a different pace, a new kind of freedom — but also a craft that fits right into community streets.\n\nCurious about how this hands-on, local mobile grooming role could mesh with your skills and lifestyle? Let’s talk! Call (509) 591-5913 to explore what Mobile Pet Works offers groomers in the Tri-Cities.\n\nMobile Pet Works isn’t just a job; it’s grooming on wheels, right where you live and work.",
+          "style": {
+            "name": "coral-studio",
+            "direction": "Beautiful softly dimensional clay illustration with subtle tactile surfaces, coral color field and cream shapes, royal-blue accents.",
+            "background": "#FFF4EE",
+            "ink": "#172E4D",
+            "accent": "#A52E46"
+          },
+          "prompt": "Create new premium landscape social advertising artwork for Mobile Pet Works, mobile dog grooming in Tri-Cities, Washington.\nThe uploaded photo is ONLY a vehicle design reference. Invent a fresh illustration, composition, dog and environment; do not reproduce the photograph or its neighborhood.\nWhen the van is shown, preserve its distinctive elongated white shuttle-bus body, long dark tinted window band, white cab facing right, front passenger doors, blue lower stripe and large blue paw near the rear.\nThe side brand name, if visible, must read MOBILE PET WORKS. Omit the old website and phone lettering from the reference. Do not invent a different logo or vehicle.\nArt direction: Beautiful softly dimensional clay illustration with subtle tactile surfaces, coral color field and cream shapes, royal-blue accents.\nScene: Illustrate a cheerful groomer stepping out of a custom van with grooming tools, parked near a suburban home with leafy trees and a curious dog wagging its tail nearby. The neighborhood feels welcoming and lively, hinting at the community side of the mobile job.\nThe separately typeset ad headline will be: A grooming day on wheels: What’s it like?\nCreate illustration only: no headline, contact details, captions, watermarks, badges, prices or extra text in the artwork. The ad typography is added separately below the illustration.\nUse the entire 3:2 landscape canvas. Keep all important subjects within a generous 8% safe margin. Expressive beautiful dogs, correct anatomy and gentle, credible grooming handling.\nClearly crafted illustration, not a documentary photograph or a real employee/customer portrait. No before-and-after comparison, fabricated review, pay/benefit claim, scarcity, guaranteed results or availability. No scissors near faces.",
+          "sourceAsset": "images/creative/cloud/ai-2026-10-19-hiring-source.png",
+          "asset": "images/creative/cloud/ai-2026-10-19-hiring.jpg",
+          "status": "requesting",
+          "attempts": [
+            {
+              "date": "2026-10-18",
+              "startedAt": "2026-10-18T16:30:59.218Z",
+              "status": "requesting"
+            }
+          ]
+        }
+      ],
+      "assets": [],
+      "referenceSha256": "e154ddfddbac882caeca42cc8346b04f1196c856da5cbcfa98eecf5aaa483259"
     }
   ]
 }
