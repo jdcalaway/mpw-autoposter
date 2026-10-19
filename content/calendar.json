@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18T17:51:54.613Z",
+  "generatedAt": "2026-10-19T20:23:40.553Z",
   "timezone": "America/Los_Angeles",
   "posts": [
     {
@@ -1475,18 +1475,32 @@
       "datetimeLocal": "2026-10-20T12:00:00",
       "pillar": "transformation",
       "pillarLabel": "Transformation",
-      "caption": "",
+      "caption": "If you've ever paused mid-brush because your pup gave you the \"really, again?\" look, you're not alone. Keeping a grooming routine between salon visits can feel like a juggling act. Here are three simple habits that make the transition from scruffy to sleek easier and more stress-free:\n\n• Brush regularly to smooth out tangles before they become mats\n• Reward your dog with treats or play to make grooming a positive experience\n• Use a damp cloth to reduce loose hair around the house\n\nWhich of these do you already do, or have another tip to share? Drop your grooming routine wins and challenges below!",
       "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #TransformationTuesday #BeforeAndAfter #GroomingTransformation #TriCities #TriCitiesDogs",
       "imageIdea": "A before/after side-by-side. TIP: photograph every dog before and after — this is your best-performing content.",
       "prefersPhoto": true,
-      "graphicText": "",
-      "freshCopy": false,
-      "awaitingCopy": true,
-      "image": null,
-      "imageUrl": null,
+      "graphicText": "Keep their coat fresh between grooms: 3 simple habits",
+      "freshCopy": true,
+      "awaitingCopy": false,
+      "topic": "Helping dogs stay comfortable between grooming appointments",
+      "freshScene": "Illustration of a friendly pup sitting calmly while being brushed by a relaxed owner at home, with scattered pet grooming tools like a brush, towel, and treats nearby. Warm tones and a cozy domestic setting convey ease and care.",
+      "postFormat": "checklist",
+      "supportLines": [
+        "Brush often before mats form",
+        "Use treats to make brushing fun",
+        "Wipe loose hair with damp cloth"
+      ],
+      "image": "images/generated/2026-10-20-transformation.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-10-20-transformation.jpg",
       "issueNumber": null,
       "status": "planned",
-      "mediaHashes": []
+      "mediaHashes": [
+        "8ac430dc7ef3c82f7ec3a33c3bc9bf2c21c083dfa1a83196a45715a0f2171767",
+        "08d157838edeb9ff522f1ea90bff0dee47216287f38d6e35eb32f66b1c7b0a3b"
+      ],
+      "mediaSource": "images/photos/transformation/bear-bear-2026-08-27.jpg",
+      "imageSource": "photo",
+      "contentHold": null
     },
     {
       "copyRevision": 1,
@@ -2097,6 +2111,27 @@
       "awaitingCreative": true,
       "creativeAsset": null,
       "illustration": true,
+      "image": null,
+      "imageUrl": null,
+      "issueNumber": null,
+      "status": "planned",
+      "mediaHashes": []
+    },
+    {
+      "copyRevision": 1,
+      "id": "2026-11-17",
+      "date": "2026-11-17",
+      "time": "12:00",
+      "datetimeLocal": "2026-11-17T12:00:00",
+      "pillar": "transformation",
+      "pillarLabel": "Transformation",
+      "caption": "",
+      "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #TransformationTuesday #BeforeAndAfter #GroomingTransformation #TriCities #TriCitiesDogs",
+      "imageIdea": "A before/after side-by-side. TIP: photograph every dog before and after — this is your best-performing content.",
+      "prefersPhoto": true,
+      "graphicText": "",
+      "freshCopy": false,
+      "awaitingCopy": true,
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
