@@ -93,5 +93,22 @@
     "revision": 1,
     "model": "gpt-4.1-mini",
     "createdAt": "2026-10-18T16:30:57.965Z"
+  },
+  {
+    "caption": "If you've ever paused mid-brush because your pup gave you the \"really, again?\" look, you're not alone. Keeping a grooming routine between salon visits can feel like a juggling act. Here are three simple habits that make the transition from scruffy to sleek easier and more stress-free:\n\n• Brush regularly to smooth out tangles before they become mats\n• Reward your dog with treats or play to make grooming a positive experience\n• Use a damp cloth to reduce loose hair around the house\n\nWhich of these do you already do, or have another tip to share? Drop your grooming routine wins and challenges below!",
+    "headline": "Keep their coat fresh between grooms: 3 simple habits",
+    "topic": "Helping dogs stay comfortable between grooming appointments",
+    "scene": "Illustration of a friendly pup sitting calmly while being brushed by a relaxed owner at home, with scattered pet grooming tools like a brush, towel, and treats nearby. Warm tones and a cozy domestic setting convey ease and care.",
+    "postFormat": "checklist",
+    "supportLines": [
+      "Brush often before mats form",
+      "Use treats to make brushing fun",
+      "Wipe loose hair with damp cloth"
+    ],
+    "date": "2026-10-20",
+    "pillar": "transformation",
+    "revision": 1,
+    "model": "gpt-4.1-mini",
+    "createdAt": "2026-10-19T19:19:37.056Z"
   }
 ]
