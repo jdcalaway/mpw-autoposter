@@ -1498,14 +1498,19 @@
       "image": "images/generated/2026-10-20-transformation.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-10-20-transformation.jpg",
       "issueNumber": 57,
-      "status": "pending_approval",
+      "status": "posted",
       "mediaHashes": [
         "8ac430dc7ef3c82f7ec3a33c3bc9bf2c21c083dfa1a83196a45715a0f2171767",
         "08d157838edeb9ff522f1ea90bff0dee47216287f38d6e35eb32f66b1c7b0a3b"
       ],
       "mediaSource": "images/photos/transformation/bear-bear-2026-08-27.jpg",
       "imageSource": "photo",
-      "contentHold": null
+      "contentHold": null,
+      "postedAt": "2026-10-20T15:08:43",
+      "results": {
+        "facebook": "1585957798283717_1776829774445673",
+        "instagram": "18151643782553074"
+      }
     },
     {
       "copyRevision": 1,
