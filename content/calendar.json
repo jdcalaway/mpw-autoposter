@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19T20:23:40.553Z",
+  "generatedAt": "2026-10-20T18:57:29.313Z",
   "timezone": "America/Los_Angeles",
   "posts": [
     {
@@ -1515,18 +1515,35 @@
       "datetimeLocal": "2026-10-21T08:00:00",
       "pillar": "tip",
       "pillarLabel": "Pet care tip",
-      "caption": "",
+      "caption": "What’s the funniest or quirkiest thing your dog does when the groomer arrives? Does they sit still like a pro, or suddenly discover a new burst of energy? Share your pup's signature groom-time move below — we love hearing those local Tri-Cities tales!",
       "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #DogCare #PetTips #DogGroomingTips #TriCities #TriCitiesDogs",
       "imageIdea": "A grooming-in-action photo, or a clean text graphic with the tip on-brand.",
       "prefersPhoto": false,
-      "graphicText": "",
-      "freshCopy": false,
-      "awaitingCopy": true,
-      "image": null,
-      "imageUrl": null,
+      "graphicText": "How does your dog act when the groomer shows up?",
+      "freshCopy": true,
+      "awaitingCopy": false,
+      "topic": "Dogs’ unique reactions to mobile grooming visits",
+      "freshScene": "An illustration of a happy dog wagging its tail at an open grooming van door parked in a friendly Tri-Cities neighborhood, with a groomer kneeling to greet it warmly.",
+      "postFormat": "question",
+      "supportLines": [
+        "Sits calmly and waits patiently",
+        "Runs around excitedly or nervously",
+        "Does something totally unexpected"
+      ],
+      "conceptId": null,
+      "creativeAsset": null,
+      "illustration": false,
+      "awaitingCreative": false,
+      "forceGraphic": true,
+      "image": "images/generated/2026-10-21-tip.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-10-21-tip.jpg",
       "issueNumber": null,
       "status": "planned",
-      "mediaHashes": []
+      "mediaHashes": [
+        "50e5b11e9cf9c497122ded326c1405898b0da3fbca5ff91c45b6d9039f3792ae"
+      ],
+      "imageSource": "graphic",
+      "contentHold": null
     },
     {
       "copyRevision": 1,
@@ -2134,6 +2151,27 @@
       "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #TransformationTuesday #BeforeAndAfter #GroomingTransformation #TriCities #TriCitiesDogs",
       "imageIdea": "A before/after side-by-side. TIP: photograph every dog before and after — this is your best-performing content.",
       "prefersPhoto": true,
+      "graphicText": "",
+      "freshCopy": false,
+      "awaitingCopy": true,
+      "image": null,
+      "imageUrl": null,
+      "issueNumber": null,
+      "status": "planned",
+      "mediaHashes": []
+    },
+    {
+      "copyRevision": 1,
+      "id": "2026-11-18",
+      "date": "2026-11-18",
+      "time": "08:00",
+      "datetimeLocal": "2026-11-18T08:00:00",
+      "pillar": "tip",
+      "pillarLabel": "Pet care tip",
+      "caption": "",
+      "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #DogCare #PetTips #DogGroomingTips #TriCities #TriCitiesDogs",
+      "imageIdea": "A grooming-in-action photo, or a clean text graphic with the tip on-brand.",
+      "prefersPhoto": false,
       "graphicText": "",
       "freshCopy": false,
       "awaitingCopy": true,
