@@ -1537,8 +1537,8 @@
       "forceGraphic": true,
       "image": "images/generated/2026-10-21-tip.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-10-21-tip.jpg",
-      "issueNumber": null,
-      "status": "planned",
+      "issueNumber": 58,
+      "status": "pending_approval",
       "mediaHashes": [
         "50e5b11e9cf9c497122ded326c1405898b0da3fbca5ff91c45b6d9039f3792ae"
       ],
