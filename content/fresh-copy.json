@@ -110,5 +110,22 @@
     "revision": 1,
     "model": "gpt-4.1-mini",
     "createdAt": "2026-10-19T19:19:37.056Z"
+  },
+  {
+    "caption": "What’s the funniest or quirkiest thing your dog does when the groomer arrives? Does they sit still like a pro, or suddenly discover a new burst of energy? Share your pup's signature groom-time move below — we love hearing those local Tri-Cities tales!",
+    "headline": "How does your dog act when the groomer shows up?",
+    "topic": "Dogs’ unique reactions to mobile grooming visits",
+    "scene": "An illustration of a happy dog wagging its tail at an open grooming van door parked in a friendly Tri-Cities neighborhood, with a groomer kneeling to greet it warmly.",
+    "postFormat": "question",
+    "supportLines": [
+      "Sits calmly and waits patiently",
+      "Runs around excitedly or nervously",
+      "Does something totally unexpected"
+    ],
+    "date": "2026-10-21",
+    "pillar": "tip",
+    "revision": 1,
+    "model": "gpt-4.1-mini",
+    "createdAt": "2026-10-20T17:58:03.922Z"
   }
 ]
