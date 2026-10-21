@@ -59,9 +59,10 @@
     {
       "date": "2026-10-22",
       "day": "2026-10-21",
-      "status": "requesting",
+      "status": "held",
       "model": "gpt-4.1-mini",
-      "revision": 1
+      "revision": 1,
+      "httpStatus": null
     }
   ],
   "resolvedAuthAttempts": [
