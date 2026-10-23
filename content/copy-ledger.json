@@ -104,9 +104,16 @@
     {
       "date": "2026-10-24",
       "day": "2026-10-23",
-      "status": "requesting",
+      "status": "rejected",
       "model": "gpt-4.1-mini",
-      "revision": 1
+      "revision": 1,
+      "httpStatus": null,
+      "reason": "Topic already used.",
+      "rejectedDraft": {
+        "caption": "Would you rather spend your grooming day cruising the Tri-Cities streets or nestled in your van perfecting every clip? Some folks love the drive between appointments, enjoying the local views and quiet moments to reset. Others prefer to focus all their energy inside the mobile salon, keeping the rhythm tight and hands busy without the road pause. Which side do you land on if you were grooming on wheels? Share your take on the road versus the workbench below!",
+        "headline": "Drive or Stay? Groomers’ dilemma on the move",
+        "topic": "The grooming journey: life between appointments"
+      }
     }
   ],
   "resolvedAuthAttempts": [
