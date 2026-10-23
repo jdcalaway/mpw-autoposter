@@ -127,5 +127,22 @@
     "revision": 1,
     "model": "gpt-4.1-mini",
     "createdAt": "2026-10-20T17:58:03.922Z"
+  },
+  {
+    "caption": "Sometimes it's not just about the groom—it's about the vibe. Picture this: Your dog gets a fresh cut right outside your home, no car rides, no noisy waiting rooms. It’s grooming turned into a comfy neighborhood visit.\n\nWhy do you think dogs often seem calmer at home than at a busy salon? Share your thoughts or stories about your pet's 'at-home' mood here!",
+    "headline": "Why Dogs Prefer Grooming At Home",
+    "topic": "The calm comfort of mobile dog grooming at home",
+    "scene": "A serene suburban driveway with a mobile grooming van parked, a happy dog lounging nearby and a groomer chatting gently with the dog’s owner on a sunny afternoon.",
+    "postFormat": "punchline",
+    "supportLines": [
+      "Grooming happens right outside your door",
+      "No waiting rooms, just familiar surroundings",
+      "Less stress for dogs means happier grooms"
+    ],
+    "date": "2026-10-23",
+    "pillar": "booking",
+    "revision": 1,
+    "model": "gpt-4.1-mini",
+    "createdAt": "2026-10-23T17:24:51.875Z"
   }
 ]
