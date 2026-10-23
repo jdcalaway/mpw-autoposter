@@ -114,6 +114,13 @@
         "headline": "Drive or Stay? Groomers’ dilemma on the move",
         "topic": "The grooming journey: life between appointments"
       }
+    },
+    {
+      "date": "2026-10-24",
+      "day": "2026-10-23",
+      "status": "requesting",
+      "model": "gpt-4.1-mini",
+      "revision": 1
     }
   ],
   "resolvedAuthAttempts": [
