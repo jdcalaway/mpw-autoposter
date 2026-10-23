@@ -84,3 +84,5 @@ jobs:
           git diff --cached --quiet || git commit -m "Open approval issues [skip ci]"
           git pull --rebase --autostash
           git push
+      - name: Verify upcoming approvals were created
+        run: node scripts/check-approvals.mjs

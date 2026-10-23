@@ -14,18 +14,32 @@ export async function generateCopy({root=ROOT,apiKey,today,checkpoint,writer=wri
  const targets=cal.posts.filter(p=>p.status==='planned'&&!p.review&&p.date>=today&&p.date<=addDays(today,1)&&!drafts.some(d=>d.date===p.date&&d.pillar===p.pillar&&(d.revision||1)===(p.copyRevision||1)));
  if(!targets.length) return;
  if(!apiKey||!checkpoint) throw new Error('Writing requires the existing API secret and durable checkpoints.');
- let failures=0;
+ const unresolved=[];
  for(const post of targets){
-  const blocked=copyBlock(ledger.attempts,post.date,today,post.copyRevision||1);if(blocked){console.log(`${post.date}: ${blocked}`);continue;}
-  const attempt={date:post.date,day:today,status:'requesting',model:MODEL,revision:post.copyRevision||1};ledger.attempts.push(attempt);await persist();
-  try{
-   const history=[...cal.posts,...drafts.filter(d=>d.date!==post.date||(d.revision||1)!==(post.copyRevision||1)).map(d=>({...d,id:`draft-${d.date}-${d.revision||1}`,graphicText:d.headline,freshCopy:true,status:'draft'}))];
-   const draft=await writer({post,history,business:cfg.business,apiKey});
-   drafts.push({...draft,date:post.date,pillar:post.pillar,revision:post.copyRevision||1,model:MODEL,createdAt:new Date().toISOString()});attempt.status='complete';
-  }catch(e){failures++;attempt.status=e.status===401?'auth_error':'held';attempt.httpStatus=e.status||null;console.log(`${post.date}: fresh writing held (${e.message}).`);}
-  await persist();
+  let complete=false, reason='No fresh draft created.';
+  // A second draft is allowed only for a content rejection, within unchanged caps.
+  for(let pass=0;pass<2;pass++) {
+   const blocked=copyBlock(ledger.attempts,post.date,today,post.copyRevision||1);
+   if(blocked){reason=blocked;console.log(`${post.date}: ${blocked}`);break;}
+   const feedback=ledger.attempts.filter(a=>a.date===post.date&&a.reason).map(a=>({reason:a.reason,draft:a.rejectedDraft}));
+   const attempt={date:post.date,day:today,status:'requesting',model:MODEL,revision:post.copyRevision||1};ledger.attempts.push(attempt);await persist();
+   try{
+    const history=[...cal.posts,...drafts.filter(d=>d.date!==post.date||(d.revision||1)!==(post.copyRevision||1)).map(d=>({...d,id:`draft-${d.date}-${d.revision||1}`,graphicText:d.headline,freshCopy:true,status:'draft'}))];
+    const draft=await writer({post,history,business:cfg.business,apiKey,rejectionFeedback:feedback});
+    drafts.push({...draft,date:post.date,pillar:post.pillar,revision:post.copyRevision||1,model:MODEL,createdAt:new Date().toISOString()});attempt.status='complete';complete=true;
+   }catch(e){
+    attempt.status=e.status===401?'auth_error':e.code==='CONTENT_REJECTED'?'rejected':'held';attempt.httpStatus=e.status||null;
+    reason=e.status?`Writing API HTTP ${e.status}`:e.message;
+    attempt.reason=reason;
+    if(e.rejectedDraft) attempt.rejectedDraft=e.rejectedDraft;
+    console.log(`${post.date}: fresh writing held (${reason}).`);
+   }
+   await persist();
+   if(complete||attempt.status!=='rejected')break;
+  }
+  if(!complete)unresolved.push(`${post.date}: ${reason}`);
  }
- if(failures) throw new Error(`${failures} post(s) held: fresh writing failed. Check the writing step; HTTP 401 requires correcting OPENAI_API_KEY in repository Actions secrets.`);
+ if(unresolved.length)throw new Error(`Fresh writing held for ${unresolved.length} post(s): ${unresolved.join('; ')}`);
 }
 if(import.meta.url===pathToFileURL(process.argv[1]||'').href){
  if(process.env.GITHUB_ACTIONS!=='true'||process.env.GITHUB_REPOSITORY!=='jdcalaway/mpw-autoposter'||process.env.GITHUB_REF!=='refs/heads/main') throw new Error('Run fresh writing in this repository’s main-branch workflow.');
