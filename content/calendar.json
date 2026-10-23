@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T19:03:46.774Z",
+  "generatedAt": "2026-10-23T17:25:04.195Z",
   "timezone": "America/Los_Angeles",
   "posts": [
     {
@@ -1573,7 +1573,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -1583,20 +1584,35 @@
       "datetimeLocal": "2026-10-23T10:00:00",
       "pillar": "booking",
       "pillarLabel": "Booking CTA",
-      "caption": "",
+      "caption": "Sometimes it's not just about the groom—it's about the vibe. Picture this: Your dog gets a fresh cut right outside your home, no car rides, no noisy waiting rooms. It’s grooming turned into a comfy neighborhood visit.\n\nWhy do you think dogs often seem calmer at home than at a busy salon? Share your thoughts or stories about your pet's 'at-home' mood here!",
       "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #BookNow #MobileDogGrooming #DogGroomer #TriCities #TriCitiesDogs",
       "imageIdea": "The van in a driveway, or a clean graphic with \"Book Now\" + your website.",
       "prefersPhoto": false,
-      "graphicText": "",
-      "freshCopy": false,
-      "awaitingCopy": true,
-      "awaitingCreative": true,
+      "graphicText": "Why Dogs Prefer Grooming At Home",
+      "freshCopy": true,
+      "awaitingCopy": false,
+      "topic": "The calm comfort of mobile dog grooming at home",
+      "freshScene": "A serene suburban driveway with a mobile grooming van parked, a happy dog lounging nearby and a groomer chatting gently with the dog’s owner on a sunny afternoon.",
+      "awaitingCreative": false,
       "creativeAsset": null,
-      "illustration": true,
-      "image": null,
-      "imageUrl": null,
+      "illustration": false,
+      "postFormat": "punchline",
+      "supportLines": [
+        "Grooming happens right outside your door",
+        "No waiting rooms, just familiar surroundings",
+        "Less stress for dogs means happier grooms"
+      ],
+      "conceptId": null,
+      "forceGraphic": true,
+      "image": "images/generated/2026-10-23-booking.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-10-23-booking.jpg",
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": [
+        "93b733c3a77ee2fb8254c279f281f2e063bf90160f9dea136ffe79f3045f6283"
+      ],
+      "imageSource": "graphic",
+      "contentHold": null
     },
     {
       "copyRevision": 1,
@@ -1606,20 +1622,35 @@
       "datetimeLocal": "2026-10-24T18:00:00",
       "pillar": "hiring",
       "pillarLabel": "Groomer careers",
-      "caption": "",
+      "caption": "Mobile grooming blends two worlds: the artistry of hands-on care and the freedom of the open road through the Tri-Cities neighborhoods. Some days you might find yourself admiring a surprising garden during a client visit, while others you're all about the precise clip and styling in the quiet of the van. If you could design your ideal grooming pace, would it be more about the rhythm of constant motion or the calm focus between appointments? Share your take or questions about life on wheels below. Curious about how this career might fit your lifestyle? Call (509) 591-5913 for a real conversation about joining Mobile Pet Works.",
       "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #TriCitiesJobs #GroomerJobs #TriCities #TriCitiesDogs",
       "imageIdea": "Illustrated recruiting campaign or branded hiring card",
       "prefersPhoto": false,
-      "graphicText": "",
-      "freshCopy": false,
-      "awaitingCopy": true,
-      "awaitingCreative": true,
+      "graphicText": "Rhythm of the Road or Calm in the Salon? Groomers Decide",
+      "freshCopy": true,
+      "awaitingCopy": false,
+      "topic": "Hiring groomers: Choosing your mobile grooming pace",
+      "freshScene": "Illustrate a split scene: on one side, a groomer stepping out of a van, enjoying a leafy suburban street; on the other, the same groomer focused inside the van's grooming space, tools ready. Warm, inviting colors highlight community and craft, showcasing the mobile salon as a dynamic yet personal workplace.",
+      "awaitingCreative": false,
       "creativeAsset": null,
-      "illustration": true,
-      "image": null,
-      "imageUrl": null,
+      "illustration": false,
+      "postFormat": "two_sides",
+      "supportLines": [
+        "Enjoy the community vibe while driving between homes",
+        "Focus deeply during each grooming session in the van",
+        "Which work pace fits your style best? Join the talk!"
+      ],
+      "conceptId": null,
+      "forceGraphic": true,
+      "image": "images/generated/2026-10-24-hiring.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-10-24-hiring.jpg",
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": [
+        "e8f91f4cf8ebc81812539eb626990f08974cb88f83ac3bf6e7dab129e5820a7d"
+      ],
+      "imageSource": "graphic",
+      "contentHold": null
     },
     {
       "copyRevision": 1,
@@ -1642,7 +1673,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -1665,7 +1697,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -1685,7 +1718,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -1705,7 +1739,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -1725,7 +1760,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -1748,7 +1784,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -1771,7 +1808,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -1794,7 +1832,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -1817,7 +1856,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -1837,7 +1877,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -1857,7 +1898,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -1877,7 +1919,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -1900,7 +1943,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -1923,7 +1967,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -1946,7 +1991,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -1969,7 +2015,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -1989,7 +2036,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -2009,7 +2057,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -2029,7 +2078,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -2052,7 +2102,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -2075,7 +2126,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -2098,7 +2150,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -2121,7 +2174,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -2141,7 +2195,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -2161,7 +2216,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -2181,7 +2237,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -2204,7 +2261,32 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
+    },
+    {
+      "copyRevision": 1,
+      "id": "2026-11-21",
+      "date": "2026-11-21",
+      "time": "18:00",
+      "datetimeLocal": "2026-11-21T18:00:00",
+      "pillar": "hiring",
+      "pillarLabel": "Groomer careers",
+      "caption": "",
+      "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #TriCitiesJobs #GroomerJobs #TriCities #TriCitiesDogs",
+      "imageIdea": "Illustrated recruiting campaign or branded hiring card",
+      "prefersPhoto": false,
+      "graphicText": "",
+      "freshCopy": false,
+      "awaitingCopy": true,
+      "awaitingCreative": true,
+      "creativeAsset": null,
+      "illustration": true,
+      "image": null,
+      "imageUrl": null,
+      "issueNumber": null,
+      "status": "planned",
+      "mediaHashes": []
     }
   ]
 }
