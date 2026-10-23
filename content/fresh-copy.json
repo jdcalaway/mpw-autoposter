@@ -144,5 +144,22 @@
     "revision": 1,
     "model": "gpt-4.1-mini",
     "createdAt": "2026-10-23T17:24:51.875Z"
+  },
+  {
+    "caption": "Mobile grooming blends two worlds: the artistry of hands-on care and the freedom of the open road through the Tri-Cities neighborhoods. Some days you might find yourself admiring a surprising garden during a client visit, while others you're all about the precise clip and styling in the quiet of the van. If you could design your ideal grooming pace, would it be more about the rhythm of constant motion or the calm focus between appointments? Share your take or questions about life on wheels below. Curious about how this career might fit your lifestyle? Call (509) 591-5913 for a real conversation about joining Mobile Pet Works.",
+    "headline": "Rhythm of the Road or Calm in the Salon? Groomers Decide",
+    "topic": "Hiring groomers: Choosing your mobile grooming pace",
+    "scene": "Illustrate a split scene: on one side, a groomer stepping out of a van, enjoying a leafy suburban street; on the other, the same groomer focused inside the van's grooming space, tools ready. Warm, inviting colors highlight community and craft, showcasing the mobile salon as a dynamic yet personal workplace.",
+    "postFormat": "two_sides",
+    "supportLines": [
+      "Enjoy the community vibe while driving between homes",
+      "Focus deeply during each grooming session in the van",
+      "Which work pace fits your style best? Join the talk!"
+    ],
+    "date": "2026-10-24",
+    "pillar": "hiring",
+    "revision": 1,
+    "model": "gpt-4.1-mini",
+    "createdAt": "2026-10-23T17:25:02.795Z"
   }
 ]
