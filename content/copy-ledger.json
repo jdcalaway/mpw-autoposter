@@ -83,9 +83,16 @@
     {
       "date": "2026-10-23",
       "day": "2026-10-23",
-      "status": "requesting",
+      "status": "rejected",
       "model": "gpt-4.1-mini",
-      "revision": 1
+      "revision": 1,
+      "httpStatus": null,
+      "reason": "Topic already used.",
+      "rejectedDraft": {
+        "caption": "If your black pants could talk, would they complain about your shedding champ? 🐶 From finding fur in your morning coffee to a mysterious fluff at your desk, our pups have mastered the art of surprise fur locations. What's the wildest place you've found dog hair? Let us know — we’re all ears (and fur) here!",
+        "headline": "Black Pants: The Ultimate Hair Magnet",
+        "topic": "The dog owner's battle with fur on clothing"
+      }
     }
   ],
   "resolvedAuthAttempts": [
