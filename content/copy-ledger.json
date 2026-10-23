@@ -93,6 +93,13 @@
         "headline": "Black Pants: The Ultimate Hair Magnet",
         "topic": "The dog owner's battle with fur on clothing"
       }
+    },
+    {
+      "date": "2026-10-23",
+      "day": "2026-10-23",
+      "status": "requesting",
+      "model": "gpt-4.1-mini",
+      "revision": 1
     }
   ],
   "resolvedAuthAttempts": [
