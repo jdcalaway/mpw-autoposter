@@ -1606,8 +1606,8 @@
       "forceGraphic": true,
       "image": "images/generated/2026-10-23-booking.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-10-23-booking.jpg",
-      "issueNumber": null,
-      "status": "planned",
+      "issueNumber": 59,
+      "status": "pending_approval",
       "mediaHashes": [
         "93b733c3a77ee2fb8254c279f281f2e063bf90160f9dea136ffe79f3045f6283"
       ],
@@ -1644,8 +1644,8 @@
       "forceGraphic": true,
       "image": "images/generated/2026-10-24-hiring.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-10-24-hiring.jpg",
-      "issueNumber": null,
-      "status": "planned",
+      "issueNumber": 60,
+      "status": "pending_approval",
       "mediaHashes": [
         "e8f91f4cf8ebc81812539eb626990f08974cb88f83ac3bf6e7dab129e5820a7d"
       ],
