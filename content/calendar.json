@@ -1687,8 +1687,8 @@
       ],
       "image": "images/generated/2026-10-25-creative.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-10-25-creative.jpg",
-      "issueNumber": null,
-      "status": "planned",
+      "issueNumber": 61,
+      "status": "pending_approval",
       "mediaHashes": [
         "1897fe3e596f566600f4bdf3c286b630310ec5731f9054c99a3c19a8e808fe70",
         "a67dafff2b0b1765d2ab9a06e10a059ccc521d73b15aca0b85c676573907f1c9"
