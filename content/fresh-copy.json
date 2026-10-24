@@ -161,5 +161,22 @@
     "revision": 1,
     "model": "gpt-4.1-mini",
     "createdAt": "2026-10-23T17:25:02.795Z"
+  },
+  {
+    "caption": "Picture this: The doorbell rings, and your dog greets their groomer like an old friend. There’s no hustle, no strange sounds, just familiar sights and smells. Grooming starts on the familiar porch, with tail wags and curious sniffs—no car rides needed. By the end of the visit, your pup is fresh and relaxed, ready to lounge on their favorite spot at home.\n\nSounds ideal, right? Mobile grooming is more than a service—it’s a calm, personal experience crafted just for your dog in their own space.\n\nWondering if your dog would settle in this way? Share if your dog loves home visits, or if they’re the ballerina spinning away when groomers come around! \n\nAsk about appointments at mobilepetworks.com or call (509) 591-5913 to chat about mobile grooming in Tri-Cities.",
+    "headline": "Home Sweet Groom: Calm Care Just Outside Your Door",
+    "topic": "The comfort advantage of mobile grooming at home",
+    "scene": "Illustrate a cheerful dog resting by their front porch as a friendly groomer arrives with their mobile grooming van parked nearby, subtle neighborhood background suggesting a quiet, familiar street in the Tri-Cities.",
+    "postFormat": "mini_story",
+    "supportLines": [
+      "Grooming starts in your dog’s familiar home space",
+      "No car rides or noisy salons involved",
+      "Tail wags and relaxed visits, every time"
+    ],
+    "date": "2026-10-25",
+    "pillar": "booking",
+    "revision": 1,
+    "model": "gpt-4.1-mini",
+    "createdAt": "2026-10-24T16:34:46.988Z"
   }
 ]
