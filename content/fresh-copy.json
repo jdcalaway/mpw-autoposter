@@ -178,5 +178,22 @@
     "revision": 1,
     "model": "gpt-4.1-mini",
     "createdAt": "2026-10-24T16:34:46.988Z"
+  },
+  {
+    "caption": "Ever met a groomer who doubles as a road tripper? At Mobile Pet Works, our groomers hit the Tri-Cities streets daily, turning miles into smiles for pups and their people. Thinking of a career where each day brings a fresh neighborhood and a new furry friend? Here’s what you might want to know before hopping on board:\n\n• What does a typical route look like during the day?\n• How do we keep the grooming van feeling like a mini salon?\n• What support and resources help groomers on the go?\n\nIf mobile grooming sounds like your kind of adventure, give us a call at (509) 591-5913. Let’s chat about how this role fits in your world.",
+    "headline": "A day in the life of a mobile groomer: What’s it really like?",
+    "topic": "Hiring groomers: Insider look at mobile grooming work",
+    "scene": "Illustration of a cheerful groomer stepping out of a mobile salon van parked in a neighborhood driveway, with friendly dogs and familiar homes nearby. Bright, approachable and community-focused.",
+    "postFormat": "checklist",
+    "supportLines": [
+      "Typical mobile grooming day involves multiple home visits",
+      "Our vans are fully equipped mini grooming salons",
+      "Support available for groomers while on the road"
+    ],
+    "date": "2026-10-26",
+    "pillar": "hiring",
+    "revision": 1,
+    "model": "gpt-4.1-mini",
+    "createdAt": "2026-10-25T17:02:54.227Z"
   }
 ]
