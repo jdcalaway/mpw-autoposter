@@ -1650,7 +1650,7 @@
       "image": "images/generated/2026-10-24-hiring.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-10-24-hiring.jpg",
       "issueNumber": 60,
-      "status": "pending_approval",
+      "status": "skipped",
       "mediaHashes": [
         "e8f91f4cf8ebc81812539eb626990f08974cb88f83ac3bf6e7dab129e5820a7d"
       ],
