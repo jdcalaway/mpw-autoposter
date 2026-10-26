@@ -1764,8 +1764,8 @@
       ],
       "image": "images/reels/lil-bit-2026-08-28.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/reels/lil-bit-2026-08-28.jpg",
-      "issueNumber": null,
-      "status": "planned",
+      "issueNumber": 63,
+      "status": "pending_approval",
       "mediaHashes": [
         "53ccb96ab42bd0b227ac4d076ca80333589841134f0a7325a9cea68b8c4a3030",
         "eeb0c7fa393e2fa5a5cdd0caaa9a761327fa3f015006deb660ab7eee43650175"
