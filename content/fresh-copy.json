@@ -195,5 +195,22 @@
     "revision": 1,
     "model": "gpt-4.1-mini",
     "createdAt": "2026-10-25T17:02:54.227Z"
+  },
+  {
+    "caption": "If your dog could choose their ideal grooming day at home, would they pick a quick splash-and-dash or a slow spa experience with extra belly rubs? 🛁🐕 We’re curious: what’s your pup’s go-to vibe when it’s grooming time? Tell us about your dog's grooming personality below!",
+    "headline": "Quick Splash or Spa Day? What’s Your Dog’s Grooming Style?",
+    "topic": "Exploring dogs' unique grooming preferences at home",
+    "scene": "A cozy home porch with a happy dog wagging its tail near a grooming van parked on the driveway, with tools and grooming supplies visible but not intrusive, showcasing a calm, friendly atmosphere.",
+    "postFormat": "question",
+    "supportLines": [
+      "Quick clean-up or full spa treatment?",
+      "Tail wags or wiggles during grooming?",
+      "Share your pup’s grooming personality!"
+    ],
+    "date": "2026-10-27",
+    "pillar": "transformation",
+    "revision": 1,
+    "model": "gpt-4.1-mini",
+    "createdAt": "2026-10-26T19:16:54.158Z"
   }
 ]
