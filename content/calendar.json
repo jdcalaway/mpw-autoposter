@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T18:11:33.360Z",
+  "generatedAt": "2026-10-26T20:19:13.404Z",
   "timezone": "America/Los_Angeles",
   "posts": [
     {
@@ -1747,18 +1747,35 @@
       "datetimeLocal": "2026-10-27T12:00:00",
       "pillar": "transformation",
       "pillarLabel": "Transformation",
-      "caption": "",
+      "caption": "If your dog could choose their ideal grooming day at home, would they pick a quick splash-and-dash or a slow spa experience with extra belly rubs? 🛁🐕 We’re curious: what’s your pup’s go-to vibe when it’s grooming time? Tell us about your dog's grooming personality below!",
       "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #TransformationTuesday #BeforeAndAfter #GroomingTransformation #TriCities #TriCitiesDogs",
       "imageIdea": "A before/after side-by-side. TIP: photograph every dog before and after — this is your best-performing content.",
       "prefersPhoto": true,
-      "graphicText": "",
-      "freshCopy": false,
-      "awaitingCopy": true,
-      "image": null,
-      "imageUrl": null,
+      "graphicText": "Quick Splash or Spa Day? What’s Your Dog’s Grooming Style?",
+      "freshCopy": true,
+      "awaitingCopy": false,
+      "topic": "Exploring dogs' unique grooming preferences at home",
+      "freshScene": "A cozy home porch with a happy dog wagging its tail near a grooming van parked on the driveway, with tools and grooming supplies visible but not intrusive, showcasing a calm, friendly atmosphere.",
+      "postFormat": "question",
+      "supportLines": [
+        "Quick clean-up or full spa treatment?",
+        "Tail wags or wiggles during grooming?",
+        "Share your pup’s grooming personality!"
+      ],
+      "image": "images/reels/lil-bit-2026-08-28.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/reels/lil-bit-2026-08-28.jpg",
       "issueNumber": null,
       "status": "planned",
-      "mediaHashes": []
+      "mediaHashes": [
+        "53ccb96ab42bd0b227ac4d076ca80333589841134f0a7325a9cea68b8c4a3030",
+        "eeb0c7fa393e2fa5a5cdd0caaa9a761327fa3f015006deb660ab7eee43650175"
+      ],
+      "mediaSource": "images/reels/lil-bit-2026-08-28.mp4",
+      "videoRelPath": "images/reels/lil-bit-2026-08-28.mp4",
+      "imageSource": "reel",
+      "mediaType": "reel",
+      "videoUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/reels/lil-bit-2026-08-28.mp4",
+      "contentHold": null
     },
     {
       "copyRevision": 1,
@@ -2369,6 +2386,27 @@
       "awaitingCreative": true,
       "creativeAsset": null,
       "illustration": true,
+      "image": null,
+      "imageUrl": null,
+      "issueNumber": null,
+      "status": "planned",
+      "mediaHashes": []
+    },
+    {
+      "copyRevision": 1,
+      "id": "2026-11-24",
+      "date": "2026-11-24",
+      "time": "12:00",
+      "datetimeLocal": "2026-11-24T12:00:00",
+      "pillar": "transformation",
+      "pillarLabel": "Transformation",
+      "caption": "",
+      "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #TransformationTuesday #BeforeAndAfter #GroomingTransformation #TriCities #TriCitiesDogs",
+      "imageIdea": "A before/after side-by-side. TIP: photograph every dog before and after — this is your best-performing content.",
+      "prefersPhoto": true,
+      "graphicText": "",
+      "freshCopy": false,
+      "awaitingCopy": true,
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
