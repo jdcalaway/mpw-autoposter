@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T20:19:13.404Z",
+  "generatedAt": "2026-10-27T19:50:43.073Z",
   "timezone": "America/Los_Angeles",
   "posts": [
     {
@@ -1795,18 +1795,35 @@
       "datetimeLocal": "2026-10-28T08:00:00",
       "pillar": "tip",
       "pillarLabel": "Pet care tip",
-      "caption": "",
+      "caption": "Ever notice how some dogs act like shampoo commercials rolled into one while getting groomed at home? Wet paws, dramatic shakes, and blissfully content sighs all in the same session! It’s not just a bath; it’s a full theatrical performance. Have you seen your pup put on a show during grooming? Share your favorite quirky moves — we’re here to cheer on your star!",
       "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #DogCare #PetTips #DogGroomingTips #TriCities #TriCitiesDogs",
       "imageIdea": "A grooming-in-action photo, or a clean text graphic with the tip on-brand.",
       "prefersPhoto": false,
-      "graphicText": "",
-      "freshCopy": false,
-      "awaitingCopy": true,
-      "image": null,
-      "imageUrl": null,
+      "graphicText": "Grooming: The Daily Dog Drama Unfolds",
+      "freshCopy": true,
+      "awaitingCopy": false,
+      "topic": "Funny and endearing dog behaviors during grooming",
+      "freshScene": "Illustration of a playful dog mid-shake with bubbles flying and a surprised but amused groomer watching from a mobile grooming van curbside in a sunny suburban driveway.",
+      "postFormat": "punchline",
+      "supportLines": [
+        "Wet paws and belly rub theatrics",
+        "Master of the unexpected shake-off",
+        "Tail wags seal the deal"
+      ],
+      "conceptId": null,
+      "creativeAsset": null,
+      "illustration": false,
+      "awaitingCreative": false,
+      "forceGraphic": true,
+      "image": "images/generated/2026-10-28-tip.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-10-28-tip.jpg",
       "issueNumber": null,
       "status": "planned",
-      "mediaHashes": []
+      "mediaHashes": [
+        "09dc49d1fbbc5830f822c5c90ee96b4d18336aa4ed841a955ca321f2bf6614fb"
+      ],
+      "imageSource": "graphic",
+      "contentHold": null
     },
     {
       "copyRevision": 1,
@@ -2414,6 +2431,27 @@
       "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #TransformationTuesday #BeforeAndAfter #GroomingTransformation #TriCities #TriCitiesDogs",
       "imageIdea": "A before/after side-by-side. TIP: photograph every dog before and after — this is your best-performing content.",
       "prefersPhoto": true,
+      "graphicText": "",
+      "freshCopy": false,
+      "awaitingCopy": true,
+      "image": null,
+      "imageUrl": null,
+      "issueNumber": null,
+      "status": "planned",
+      "mediaHashes": []
+    },
+    {
+      "copyRevision": 1,
+      "id": "2026-11-25",
+      "date": "2026-11-25",
+      "time": "08:00",
+      "datetimeLocal": "2026-11-25T08:00:00",
+      "pillar": "tip",
+      "pillarLabel": "Pet care tip",
+      "caption": "",
+      "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #DogCare #PetTips #DogGroomingTips #TriCities #TriCitiesDogs",
+      "imageIdea": "A grooming-in-action photo, or a clean text graphic with the tip on-brand.",
+      "prefersPhoto": false,
       "graphicText": "",
       "freshCopy": false,
       "awaitingCopy": true,
