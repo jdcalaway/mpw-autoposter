@@ -212,5 +212,22 @@
     "revision": 1,
     "model": "gpt-4.1-mini",
     "createdAt": "2026-10-26T19:16:54.158Z"
+  },
+  {
+    "caption": "Ever notice how some dogs act like shampoo commercials rolled into one while getting groomed at home? Wet paws, dramatic shakes, and blissfully content sighs all in the same session! It’s not just a bath; it’s a full theatrical performance. Have you seen your pup put on a show during grooming? Share your favorite quirky moves — we’re here to cheer on your star!",
+    "headline": "Grooming: The Daily Dog Drama Unfolds",
+    "topic": "Funny and endearing dog behaviors during grooming",
+    "scene": "Illustration of a playful dog mid-shake with bubbles flying and a surprised but amused groomer watching from a mobile grooming van curbside in a sunny suburban driveway.",
+    "postFormat": "punchline",
+    "supportLines": [
+      "Wet paws and belly rub theatrics",
+      "Master of the unexpected shake-off",
+      "Tail wags seal the deal"
+    ],
+    "date": "2026-10-28",
+    "pillar": "tip",
+    "revision": 1,
+    "model": "gpt-4.1-mini",
+    "createdAt": "2026-10-27T18:41:36.022Z"
   }
 ]
