@@ -156,6 +156,13 @@
         "headline": "Black Pants. Bold Choice.",
         "topic": "The dog owner's battle with fur on clothing"
       }
+    },
+    {
+      "date": "2026-10-28",
+      "day": "2026-10-27",
+      "status": "requesting",
+      "model": "gpt-4.1-mini",
+      "revision": 1
     }
   ],
   "resolvedAuthAttempts": [
