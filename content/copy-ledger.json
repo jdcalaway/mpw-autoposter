@@ -146,9 +146,16 @@
     {
       "date": "2026-10-28",
       "day": "2026-10-27",
-      "status": "requesting",
+      "status": "rejected",
       "model": "gpt-4.1-mini",
-      "revision": 1
+      "revision": 1,
+      "httpStatus": null,
+      "reason": "Graphic wording already used on 2026-10-17.",
+      "rejectedDraft": {
+        "caption": "Ever noticed how your black pants are basically a dog hair magnet? Seems like a special skill our pups have perfected! Turns out, fur has impeccable taste — especially for our favorite dark clothes. \n\nSo, where's the weirdest or most surprising place you've found your dog's fur? A sneaky spot only your pet seems to know about? Drop your stories — we all need a little laugh (and maybe advice)!",
+        "headline": "Black Pants. Bold Choice.",
+        "topic": "The dog owner's battle with fur on clothing"
+      }
     }
   ],
   "resolvedAuthAttempts": [
