@@ -177,6 +177,13 @@
         "headline": "Rhythm on the Road or Calm at the Van? Your Grooming Pace",
         "topic": "Hiring groomers: Choosing your mobile grooming pace"
       }
+    },
+    {
+      "date": "2026-10-29",
+      "day": "2026-10-28",
+      "status": "requesting",
+      "model": "gpt-4.1-mini",
+      "revision": 1
     }
   ],
   "resolvedAuthAttempts": [
