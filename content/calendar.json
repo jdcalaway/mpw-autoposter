@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T19:50:43.073Z",
+  "generatedAt": "2026-10-28T20:05:49.059Z",
   "timezone": "America/Los_Angeles",
   "posts": [
     {
@@ -1838,18 +1838,30 @@
       "datetimeLocal": "2026-10-29T18:00:00",
       "pillar": "bts",
       "pillarLabel": "Behind the scenes",
-      "caption": "",
+      "caption": "Some groomers love the buzz of quick stop-and-go appointments, enjoying the fresh street views and a steady rhythm of happy paws and wagging tails. Others find real joy in slowing down, taking the time to perfect each snip and share a quiet moment with a pup in their own familiar space.\n\nDo you see yourself as a grooming sprinter or a craftsman? Which vibe feels like the better fit for your style?\n\nMobile Pet Works is looking for groomers who appreciate the unique blend of precision and movement our mobile salon offers right here in the Tri-Cities. Curious about what it’s like day-to-day? Call (509) 591-5913 to jump into the conversation.",
       "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #BehindTheScenes #MobileGrooming #SmallBusiness #TriCities #TriCitiesDogs",
       "imageIdea": "A photo or short video inside/of the van, or the groomer at work with a dog.",
       "prefersPhoto": true,
-      "graphicText": "",
-      "freshCopy": false,
-      "awaitingCopy": true,
-      "image": null,
-      "imageUrl": null,
+      "graphicText": "On the Road or Taking Time? Which Groomer Are You?",
+      "freshCopy": true,
+      "awaitingCopy": false,
+      "topic": "Hiring groomers: Mobile grooming styles in Tri-Cities",
+      "freshScene": "Two split panels: one showing a lively neighborhood street with a van ready to roll, the other showing a cozy mobile salon van setup with a groomer carefully trimming a dog. Warm autumn light suggests a peaceful but active day in Tri-Cities.",
+      "postFormat": "two_sides",
+      "supportLines": [
+        "Quick appointments: fast pace, many stops",
+        "Focused care: detailed grooming, fewer dogs",
+        "Which style suits your craft and charm?"
+      ],
+      "image": "images/generated/2026-10-29-bts.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-10-29-bts.jpg",
       "issueNumber": null,
       "status": "planned",
-      "mediaHashes": []
+      "mediaHashes": [
+        "6817ccb1436ebfc2aacdf76e76d6d7ff87571f974dd9c0557ebb602dbe236eea"
+      ],
+      "imageSource": "graphic",
+      "contentHold": null
     },
     {
       "copyRevision": 1,
@@ -2457,6 +2469,27 @@
       "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #DogCare #PetTips #DogGroomingTips #TriCities #TriCitiesDogs",
       "imageIdea": "A grooming-in-action photo, or a clean text graphic with the tip on-brand.",
       "prefersPhoto": false,
+      "graphicText": "",
+      "freshCopy": false,
+      "awaitingCopy": true,
+      "image": null,
+      "imageUrl": null,
+      "issueNumber": null,
+      "status": "planned",
+      "mediaHashes": []
+    },
+    {
+      "copyRevision": 1,
+      "id": "2026-11-26",
+      "date": "2026-11-26",
+      "time": "18:00",
+      "datetimeLocal": "2026-11-26T18:00:00",
+      "pillar": "bts",
+      "pillarLabel": "Behind the scenes",
+      "caption": "",
+      "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #BehindTheScenes #MobileGrooming #SmallBusiness #TriCities #TriCitiesDogs",
+      "imageIdea": "A photo or short video inside/of the van, or the groomer at work with a dog.",
+      "prefersPhoto": true,
       "graphicText": "",
       "freshCopy": false,
       "awaitingCopy": true,
