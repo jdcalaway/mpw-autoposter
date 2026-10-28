@@ -229,5 +229,22 @@
     "revision": 1,
     "model": "gpt-4.1-mini",
     "createdAt": "2026-10-27T18:41:36.022Z"
+  },
+  {
+    "caption": "Some groomers love the buzz of quick stop-and-go appointments, enjoying the fresh street views and a steady rhythm of happy paws and wagging tails. Others find real joy in slowing down, taking the time to perfect each snip and share a quiet moment with a pup in their own familiar space.\n\nDo you see yourself as a grooming sprinter or a craftsman? Which vibe feels like the better fit for your style?\n\nMobile Pet Works is looking for groomers who appreciate the unique blend of precision and movement our mobile salon offers right here in the Tri-Cities. Curious about what it’s like day-to-day? Call (509) 591-5913 to jump into the conversation.",
+    "headline": "On the Road or Taking Time? Which Groomer Are You?",
+    "topic": "Hiring groomers: Mobile grooming styles in Tri-Cities",
+    "scene": "Two split panels: one showing a lively neighborhood street with a van ready to roll, the other showing a cozy mobile salon van setup with a groomer carefully trimming a dog. Warm autumn light suggests a peaceful but active day in Tri-Cities.",
+    "postFormat": "two_sides",
+    "supportLines": [
+      "Quick appointments: fast pace, many stops",
+      "Focused care: detailed grooming, fewer dogs",
+      "Which style suits your craft and charm?"
+    ],
+    "date": "2026-10-29",
+    "pillar": "bts",
+    "revision": 1,
+    "model": "gpt-4.1-mini",
+    "createdAt": "2026-10-28T18:51:39.367Z"
   }
 ]
