@@ -167,9 +167,16 @@
     {
       "date": "2026-10-29",
       "day": "2026-10-28",
-      "status": "requesting",
+      "status": "rejected",
       "model": "gpt-4.1-mini",
-      "revision": 1
+      "revision": 1,
+      "httpStatus": null,
+      "reason": "Topic already used.",
+      "rejectedDraft": {
+        "caption": "Do you thrive on the buzz of steady appointments or prefer taking your time with each pup? Mobile grooming offers both: the energetic rhythm of driving to new neighborhoods and the calm focus when caring for a furry client one-on-one. Which pace suits your style? \n\nMobile Pet Works is building a team in the Tri-Cities and wants to hear from groomers who value craftsmanship and community. Curious about the day-to-day? Call (509) 591-5913 for a real talk about life on the road and in the van.",
+        "headline": "Rhythm on the Road or Calm at the Van? Your Grooming Pace",
+        "topic": "Hiring groomers: Choosing your mobile grooming pace"
+      }
     }
   ],
   "resolvedAuthAttempts": [
