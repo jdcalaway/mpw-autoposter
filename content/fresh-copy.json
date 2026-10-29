@@ -246,5 +246,22 @@
     "revision": 1,
     "model": "gpt-4.1-mini",
     "createdAt": "2026-10-28T18:51:39.367Z"
+  },
+  {
+    "caption": "What’s your dog’s favorite spot at home where they feel totally chill during grooming? The sunlit porch, the cozy living room, or maybe right by your feet? We love hearing how pups settle in when the groomer comes to their neighborhood—the familiar smells and sights can make all the difference.\n\nImagine a grooming visit that’s less about the car ride and more about the calm comfort of home. Curiosity piqued? Reach out anytime at mobilepetworks.com or (509) 591-5913. We'd love to hear your stories or answer questions about grooming right where your dog feels best.",
+    "headline": "Where’s Your Dog’s Grooming Comfort Zone at Home?",
+    "topic": "How familiar home spots help dogs relax during grooming",
+    "scene": "A sunny porch scene with a peaceful dog lounging comfortably, a mobile grooming van parked nearby, and a groomer smiling as they prepare a gentle grooming setup outside the house.",
+    "postFormat": "mini_story",
+    "supportLines": [
+      "Sunlit porch, cozy room, or by your feet?",
+      "Familiarness helps dogs relax during grooming",
+      "Mobile grooming brings calm to your dog’s space"
+    ],
+    "date": "2026-10-30",
+    "pillar": "booking",
+    "revision": 1,
+    "model": "gpt-4.1-mini",
+    "createdAt": "2026-10-29T18:56:49.069Z"
   }
 ]

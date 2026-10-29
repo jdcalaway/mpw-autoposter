@@ -202,7 +202,7 @@
     {
       "date": "2026-10-30",
       "day": "2026-10-29",
-      "status": "requesting",
+      "status": "complete",
       "model": "gpt-4.1-mini",
       "revision": 1
     }
