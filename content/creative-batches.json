@@ -705,6 +705,48 @@
       ],
       "referenceSha256": "e154ddfddbac882caeca42cc8346b04f1196c856da5cbcfa98eecf5aaa483259",
       "completedOn": "2026-10-24"
+    },
+    {
+      "id": "post-2026-10-30",
+      "date": "2026-10-29",
+      "provider": "github-openai",
+      "status": "partial",
+      "model": "gpt-image-2",
+      "size": "1536x1024",
+      "quality": "high",
+      "reference": "images/creative/van-reference.jpg",
+      "items": [
+        {
+          "id": "ai-2026-10-30-booking",
+          "freshCopy": true,
+          "targetDate": "2026-10-30",
+          "pillar": "booking",
+          "objective": "booking",
+          "sourceTemplateId": "fresh-copy-2026-10-30",
+          "headline": "Where’s Your Dog’s Grooming Comfort Zone at Home?",
+          "caption": "What’s your dog’s favorite spot at home where they feel totally chill during grooming? The sunlit porch, the cozy living room, or maybe right by your feet? We love hearing how pups settle in when the groomer comes to their neighborhood—the familiar smells and sights can make all the difference.\n\nImagine a grooming visit that’s less about the car ride and more about the calm comfort of home. Curiosity piqued? Reach out anytime at mobilepetworks.com or (509) 591-5913. We'd love to hear your stories or answer questions about grooming right where your dog feels best.",
+          "style": {
+            "name": "blue-garden",
+            "direction": "Painterly editorial illustration with a royal-blue field, cream highlights, soft botanical silhouettes and restrained coral details.",
+            "background": "#0146A3",
+            "ink": "#FFFFFF",
+            "accent": "#FFD25A"
+          },
+          "prompt": "Create new premium landscape social advertising artwork for Mobile Pet Works, mobile dog grooming in Tri-Cities, Washington.\nThe uploaded photo is ONLY a vehicle design reference. Invent a fresh illustration, composition, dog and environment; do not reproduce the photograph or its neighborhood.\nWhen the van is shown, preserve its distinctive elongated white shuttle-bus body, long dark tinted window band, white cab facing right, front passenger doors, blue lower stripe and large blue paw near the rear.\nThe side brand name, if visible, must read MOBILE PET WORKS. Omit the old website and phone lettering from the reference. Do not invent a different logo or vehicle.\nArt direction: Painterly editorial illustration with a royal-blue field, cream highlights, soft botanical silhouettes and restrained coral details.\nScene: A sunny porch scene with a peaceful dog lounging comfortably, a mobile grooming van parked nearby, and a groomer smiling as they prepare a gentle grooming setup outside the house.\nThe separately typeset ad headline will be: Where’s Your Dog’s Grooming Comfort Zone at Home?\nCreate illustration only: no headline, contact details, captions, watermarks, badges, prices or extra text in the artwork. The ad typography is added separately below the illustration.\nUse the entire 3:2 landscape canvas. Keep all important subjects within a generous 8% safe margin. Expressive beautiful dogs, correct anatomy and gentle, credible grooming handling.\nClearly crafted illustration, not a documentary photograph or a real employee/customer portrait. No before-and-after comparison, fabricated review, pay/benefit claim, scarcity, guaranteed results or availability. No scissors near faces.",
+          "sourceAsset": "images/creative/cloud/ai-2026-10-30-booking-source.png",
+          "asset": "images/creative/cloud/ai-2026-10-30-booking.jpg",
+          "status": "requesting",
+          "attempts": [
+            {
+              "date": "2026-10-29",
+              "startedAt": "2026-10-29T18:56:50.306Z",
+              "status": "requesting"
+            }
+          ]
+        }
+      ],
+      "assets": [],
+      "referenceSha256": "e154ddfddbac882caeca42cc8346b04f1196c856da5cbcfa98eecf5aaa483259"
     }
   ]
 }
