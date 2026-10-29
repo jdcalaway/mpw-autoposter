@@ -188,9 +188,16 @@
     {
       "date": "2026-10-30",
       "day": "2026-10-29",
-      "status": "requesting",
+      "status": "rejected",
       "model": "gpt-4.1-mini",
-      "revision": 1
+      "revision": 1,
+      "httpStatus": null,
+      "reason": "Graphic wording already used on 2026-10-25.",
+      "rejectedDraft": {
+        "caption": "The doorbell rings, and your furriest friend watches from the window, tail wagging with a hint of excitement and curiosity. The groomer arrives, and the day unfolds in familiar comfort—not a kennel in sight, just the gentle hum of the grooming van outside your home.\n\nImagine a slow afternoon where your dog enjoys focused care, belly rubs between brushes, and the calm feeling of being right where they belong. That’s mobile grooming—a personal spa experience tailored just for your dog in Tri-Cities.\n\nDoes your pup settle right in when someone new comes to the house, or do they need a little warming up? Share your stories—does home grooming feel like a treat or a surprise? \n\nReach out to mobilepetworks.com or call (509) 591-5913 to learn about appointments tailored to your dog’s comfort.",
+        "headline": "Home Sweet Groom: Calm Care Just Outside Your Door",
+        "topic": "The comfort advantage of mobile grooming at home"
+      }
     }
   ],
   "resolvedAuthAttempts": [
