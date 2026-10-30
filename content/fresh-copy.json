@@ -263,5 +263,22 @@
     "revision": 1,
     "model": "gpt-4.1-mini",
     "createdAt": "2026-10-29T18:56:49.069Z"
+  },
+  {
+    "caption": "Curious what a groomer's day looks like on the road? It’s not just about the snip and style—it’s a blend of practical juggling and joyful moments.\n\nHere’s a snapshot of the mobile groomer’s toolkit for a smooth day:\n• Planning routes that balance time driving with hands-on grooming\n• Maintaining a cozy, fully equipped van that feels like a true workspace\n• Handling unexpected smiles, wagging tails, and the occasional curious neighbor\n\nIf a career on wheels sounds intriguing, or you just want to know what the day-to-day really is, call (509) 591-5913 to chat about joining Mobile Pet Works in the Tri-Cities.",
+    "headline": "What’s it really like to groom on the go?",
+    "topic": "Hiring groomers: Inside a mobile grooming day",
+    "scene": "Illustrate a smiling groomer standing near a bright mobile grooming van parked on a sunny suburban street with lush trees and houses. Include subtle details hinting at grooming tools inside the van visible through windows, emphasizing a welcoming and professional vibe.",
+    "postFormat": "checklist",
+    "supportLines": [
+      "Plan routes to balance driving and grooming time",
+      "Keep the van comfy and equipped for each appointment",
+      "Enjoy moments with pups and local neighbors"
+    ],
+    "date": "2026-10-31",
+    "pillar": "hiring",
+    "revision": 1,
+    "model": "gpt-4.1-mini",
+    "createdAt": "2026-10-30T18:35:48.752Z"
   }
 ]
