@@ -209,9 +209,16 @@
     {
       "date": "2026-10-31",
       "day": "2026-10-30",
-      "status": "requesting",
+      "status": "rejected",
       "model": "gpt-4.1-mini",
-      "revision": 1
+      "revision": 1,
+      "httpStatus": null,
+      "reason": "Topic already used.",
+      "rejectedDraft": {
+        "caption": "Thinking about the day-to-day of mobile grooming? It’s not just grooming—it involves a rhythm of travel and care that’s unique to the craft. Here’s what you might experience working at Mobile Pet Works:\n\n• Rolling through Tri-Cities neighborhoods, each stop a new pup and a fresh connection\n• Managing a fully-equipped grooming salon inside a van that goes where your clients are\n• Balancing drive time with focused grooming to make every visit special\n\nCurious what a typical route looks like or how the van feels like home? Give us a ring at (509) 591-5913. We’re eager to share what working on wheels in the Tri-Cities really means.",
+        "headline": "A Day in the Life of a Mobile Groomer",
+        "topic": "Hiring groomers: Insider look at mobile grooming work"
+      }
     }
   ],
   "resolvedAuthAttempts": [
