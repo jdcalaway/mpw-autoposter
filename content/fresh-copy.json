@@ -280,5 +280,22 @@
     "revision": 1,
     "model": "gpt-4.1-mini",
     "createdAt": "2026-10-30T18:35:48.752Z"
+  },
+  {
+    "caption": "Does your dog have a grooming style? Are they the chill, let-it-happen type or the \"not today\" dash-and-hide? Share your dog’s grooming persona with us! Meanwhile, here are three classic signals that say it’s time for a groom:\n\n• Tangles you can't tackle at home\n• Noticeable shedding clouds\n• That \"I’m ready for a spa day\" doggy gaze\n\nIs your dog a drama queen or the calm companion when it’s grooming time? Tell us below!",
+    "headline": "Drama queen or chill pup? How does your dog groom?",
+    "topic": "Dogs’ unique grooming personalities in Tri-Cities homes",
+    "scene": "Illustrate a cozy home porch setting with two dogs displaying contrasting grooming moods—one lounging peacefully, the other making a playful dash around a garden bench, with subtle grooming tools nearby reflecting the mobile service.",
+    "postFormat": "question",
+    "supportLines": [
+      "Calm at home or bursts of energy?",
+      "Tangles, shedding, or spa-ready eyes?",
+      "Share your dog’s grooming style below!"
+    ],
+    "date": "2026-11-01",
+    "pillar": "booking",
+    "revision": 1,
+    "model": "gpt-4.1-mini",
+    "createdAt": "2026-10-31T17:42:49.786Z"
   }
 ]
