@@ -1986,12 +1986,17 @@
       "image": "images/generated/2026-11-01-booking.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-11-01-booking.jpg",
       "issueNumber": 68,
-      "status": "pending_approval",
+      "status": "posted",
       "mediaHashes": [
         "3685bba1788eb3c2108ecdc6deb7735f281ca18e2ec97debf6b3bd3154fd6a19"
       ],
       "imageSource": "graphic",
-      "contentHold": null
+      "contentHold": null,
+      "postedAt": "2026-11-01T13:45:32",
+      "results": {
+        "facebook": "1585957798283717_1791159649679352",
+        "instagram": "18107321828363613"
+      }
     },
     {
       "copyRevision": 1,
