@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T16:25:40.489Z",
+  "generatedAt": "2026-11-01T19:23:00.254Z",
   "timezone": "America/Los_Angeles",
   "posts": [
     {
@@ -2001,20 +2001,35 @@
       "datetimeLocal": "2026-11-02T18:00:00",
       "pillar": "hiring",
       "pillarLabel": "Groomer careers",
-      "caption": "",
+      "caption": "Mobile grooming is like a road trip with furry passengers — each stop brings a new buddy and a fresh coat! Some days it's zoom-zoom between homes, other days it's a peaceful pause to perfect the fluff. \n\nIf you enjoy the idea of blending travel with craftsmanship, or just wonder how grooming looks beyond the salon, we'd love to share the real scoop.\n\nCurious? Call (509) 591-5913 and let's chat about life on the road with Mobile Pet Works in the Tri-Cities.",
       "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #TriCitiesJobs #GroomerJobs #TriCities #TriCitiesDogs",
       "imageIdea": "Illustrated recruiting campaign or branded hiring card",
       "prefersPhoto": false,
-      "graphicText": "",
-      "freshCopy": false,
-      "awaitingCopy": true,
-      "awaitingCreative": true,
+      "graphicText": "Grooming on the Move: Blend Craft and Community",
+      "freshCopy": true,
+      "awaitingCopy": false,
+      "topic": "Hiring groomers: What working mobile really feels like",
+      "freshScene": "Illustration of a happy groomer in a mobile van surrounded by wagging dogs and local landmarks, capturing movement and a cozy workspace on wheels.",
+      "awaitingCreative": false,
       "creativeAsset": null,
-      "illustration": true,
-      "image": null,
-      "imageUrl": null,
+      "illustration": false,
+      "postFormat": "punchline",
+      "supportLines": [
+        "Dogs and destinations vary with every visit",
+        "Van is a mobile grooming salon, not just a vehicle",
+        "Work blends art of grooming and local navigation"
+      ],
+      "conceptId": null,
+      "forceGraphic": true,
+      "image": "images/generated/2026-11-02-hiring.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-11-02-hiring.jpg",
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": [
+        "796e373ac3f03f0a4ea70a26cf36c46f48a013bf9fd9092a491b01cb3764a659"
+      ],
+      "imageSource": "graphic",
+      "contentHold": null
     },
     {
       "copyRevision": 1,
@@ -2034,7 +2049,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -2054,7 +2070,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -2074,7 +2091,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -2097,7 +2115,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -2120,7 +2139,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -2143,7 +2163,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -2166,7 +2187,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -2186,7 +2208,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -2206,7 +2229,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -2226,7 +2250,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -2249,7 +2274,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -2272,7 +2298,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -2295,7 +2322,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -2318,7 +2346,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -2338,7 +2367,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -2358,7 +2388,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -2378,7 +2409,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -2401,7 +2433,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -2424,7 +2457,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -2447,7 +2481,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -2470,7 +2505,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -2490,7 +2526,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -2510,7 +2547,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -2530,7 +2568,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -2553,7 +2592,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -2576,7 +2616,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -2599,7 +2640,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -2622,7 +2664,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     }
   ]
 }
