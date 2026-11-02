@@ -258,9 +258,16 @@
     {
       "date": "2026-11-03",
       "day": "2026-11-02",
-      "status": "requesting",
+      "status": "rejected",
       "model": "gpt-4.1-mini",
-      "revision": 1
+      "revision": 1,
+      "httpStatus": null,
+      "reason": "Topic already used.",
+      "rejectedDraft": {
+        "caption": "Some days, your dog might prefer a quick trim that keeps the coat tidy without much fuss. Other days, a slow, sumptuous spa session with extra attention and belly rubs sounds just right. Which grooming style does your pup lean towards? Are they all about efficiency or loving the luxury? Share your dog’s grooming personality — we’re all ears!",
+        "headline": "Quick Trim or Long Spa? Your Pup’s Grooming Vibe",
+        "topic": "Exploring dogs' unique grooming preferences at home"
+      }
     }
   ],
   "resolvedAuthAttempts": [
