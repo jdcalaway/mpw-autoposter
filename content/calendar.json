@@ -2061,8 +2061,8 @@
       ],
       "image": "images/generated/2026-11-03-transformation.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-11-03-transformation.jpg",
-      "issueNumber": null,
-      "status": "planned",
+      "issueNumber": 70,
+      "status": "pending_approval",
       "mediaHashes": [
         "a575675d47cc352673ec7bc4302ad682072d18243c2f37f9bbe360a5a8019a89",
         "d9283066fd6422e0b8a70e37b9a4113d39d7b46f01b9902e49932541f1628622"
