@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T19:23:00.254Z",
+  "generatedAt": "2026-11-02T22:59:52.464Z",
   "timezone": "America/Los_Angeles",
   "posts": [
     {
@@ -2044,18 +2044,32 @@
       "datetimeLocal": "2026-11-03T12:00:00",
       "pillar": "transformation",
       "pillarLabel": "Transformation",
-      "caption": "",
+      "caption": "Some dogs love the flutter of a quick haircut and being back outside to play, while others savor the slow, detailed grooming that leaves them feeling pampered. In the fast-paced world of mobile grooming, which do you think suits your dog’s personality best? The express grooming pro or the leisurely spa aficionado? Share your pup’s style and why below!",
       "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #TransformationTuesday #BeforeAndAfter #GroomingTransformation #TriCities #TriCitiesDogs",
       "imageIdea": "A before/after side-by-side. TIP: photograph every dog before and after — this is your best-performing content.",
       "prefersPhoto": true,
-      "graphicText": "",
-      "freshCopy": false,
-      "awaitingCopy": true,
-      "image": null,
-      "imageUrl": null,
+      "graphicText": "Fast Snip or Leisurely Pamper? What Fits Your Pup?",
+      "freshCopy": true,
+      "awaitingCopy": false,
+      "topic": "Understanding dogs’ grooming pace preferences in home care",
+      "freshScene": "Illustration of two dogs side by side: one getting a quick trim with happy tail wagging, the other lounging calmly during a detailed grooming session inside a cozy mobile van parked outside a home.",
+      "postFormat": "two_sides",
+      "supportLines": [
+        "Quick grooming: less time, more playtime",
+        "Slow grooming: thorough care, extra pampering",
+        "Which does your dog prefer? Tell us below!"
+      ],
+      "image": "images/generated/2026-11-03-transformation.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-11-03-transformation.jpg",
       "issueNumber": null,
       "status": "planned",
-      "mediaHashes": []
+      "mediaHashes": [
+        "a575675d47cc352673ec7bc4302ad682072d18243c2f37f9bbe360a5a8019a89",
+        "d9283066fd6422e0b8a70e37b9a4113d39d7b46f01b9902e49932541f1628622"
+      ],
+      "mediaSource": "images/photos/transformation/dozer-2026-08-27.jpg",
+      "imageSource": "photo",
+      "contentHold": null
     },
     {
       "copyRevision": 1,
@@ -2666,6 +2680,27 @@
       "awaitingCreative": true,
       "creativeAsset": null,
       "illustration": true,
+      "image": null,
+      "imageUrl": null,
+      "issueNumber": null,
+      "status": "planned",
+      "mediaHashes": []
+    },
+    {
+      "copyRevision": 1,
+      "id": "2026-12-01",
+      "date": "2026-12-01",
+      "time": "12:00",
+      "datetimeLocal": "2026-12-01T12:00:00",
+      "pillar": "transformation",
+      "pillarLabel": "Transformation",
+      "caption": "",
+      "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #TransformationTuesday #BeforeAndAfter #GroomingTransformation #TriCities #TriCitiesDogs",
+      "imageIdea": "A before/after side-by-side. TIP: photograph every dog before and after — this is your best-performing content.",
+      "prefersPhoto": true,
+      "graphicText": "",
+      "freshCopy": false,
+      "awaitingCopy": true,
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
