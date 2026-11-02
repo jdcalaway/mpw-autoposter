@@ -314,5 +314,22 @@
     "revision": 1,
     "model": "gpt-4.1-mini",
     "createdAt": "2026-11-01T18:25:35.852Z"
+  },
+  {
+    "caption": "Some dogs love the flutter of a quick haircut and being back outside to play, while others savor the slow, detailed grooming that leaves them feeling pampered. In the fast-paced world of mobile grooming, which do you think suits your dog’s personality best? The express grooming pro or the leisurely spa aficionado? Share your pup’s style and why below!",
+    "headline": "Fast Snip or Leisurely Pamper? What Fits Your Pup?",
+    "topic": "Understanding dogs’ grooming pace preferences in home care",
+    "scene": "Illustration of two dogs side by side: one getting a quick trim with happy tail wagging, the other lounging calmly during a detailed grooming session inside a cozy mobile van parked outside a home.",
+    "postFormat": "two_sides",
+    "supportLines": [
+      "Quick grooming: less time, more playtime",
+      "Slow grooming: thorough care, extra pampering",
+      "Which does your dog prefer? Tell us below!"
+    ],
+    "date": "2026-11-03",
+    "pillar": "transformation",
+    "revision": 1,
+    "model": "gpt-4.1-mini",
+    "createdAt": "2026-11-02T22:18:27.224Z"
   }
 ]
