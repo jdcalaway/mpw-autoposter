@@ -2062,14 +2062,19 @@
       "image": "images/generated/2026-11-03-transformation.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-11-03-transformation.jpg",
       "issueNumber": 70,
-      "status": "pending_approval",
+      "status": "posted",
       "mediaHashes": [
         "a575675d47cc352673ec7bc4302ad682072d18243c2f37f9bbe360a5a8019a89",
         "d9283066fd6422e0b8a70e37b9a4113d39d7b46f01b9902e49932541f1628622"
       ],
       "mediaSource": "images/photos/transformation/dozer-2026-08-27.jpg",
       "imageSource": "photo",
-      "contentHold": null
+      "contentHold": null,
+      "postedAt": "2026-11-03T14:57:07",
+      "results": {
+        "facebook": "1585957798283717_1793636846098299",
+        "instagram": "18061160522799331"
+      }
     },
     {
       "copyRevision": 1,
