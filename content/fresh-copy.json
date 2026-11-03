@@ -331,5 +331,22 @@
     "revision": 1,
     "model": "gpt-4.1-mini",
     "createdAt": "2026-11-02T22:18:27.224Z"
+  },
+  {
+    "caption": "It’s a Wednesday morning in Tri-Cities. The van pulls up quietly to the cul-de-sac, its owner hopping out with a smile and a basket of grooming tools. Next door, a curious pup watches from the porch, tail wagging slowly. The groomer gently calls the dog over, and soon, the two are sharing calm moments in the familiar yard, no rides or loud noises needed.\n\nMobile Pet Works brings this simple scene to life every day. It’s more than grooming — it’s care that floats right to your doorstep, fitting into your dog’s world. Curious how this relaxed rhythm could be your dog’s new normal? Reach out at mobilepetworks.com or call (509) 591-5913 to talk about our mobile grooming in the Tri-Cities.",
+    "headline": "Grooming that visits your pup’s favorite spots",
+    "topic": "The everyday ease of grooming at home in Tri-Cities",
+    "scene": "Illustrate a peaceful suburban street with a modern white grooming van parked. A groomer gently interacts with a calm dog sitting on a sunlit porch steps, with a nearby neighbor peeking curiously. Trees and houses give a warm, familiar small-town feel.",
+    "postFormat": "mini_story",
+    "supportLines": [
+      "Van arrives softly in a quiet neighborhood",
+      "Pup greets groomer in a familiar yard",
+      "Grooming happens where dogs feel safest"
+    ],
+    "date": "2026-11-04",
+    "pillar": "tip",
+    "revision": 1,
+    "model": "gpt-4.1-mini",
+    "createdAt": "2026-11-03T20:06:27.950Z"
   }
 ]
