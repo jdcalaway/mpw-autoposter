@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T22:59:52.464Z",
+  "generatedAt": "2026-11-03T20:47:06.400Z",
   "timezone": "America/Los_Angeles",
   "posts": [
     {
@@ -2079,18 +2079,35 @@
       "datetimeLocal": "2026-11-04T08:00:00",
       "pillar": "tip",
       "pillarLabel": "Pet care tip",
-      "caption": "",
+      "caption": "It’s a Wednesday morning in Tri-Cities. The van pulls up quietly to the cul-de-sac, its owner hopping out with a smile and a basket of grooming tools. Next door, a curious pup watches from the porch, tail wagging slowly. The groomer gently calls the dog over, and soon, the two are sharing calm moments in the familiar yard, no rides or loud noises needed.\n\nMobile Pet Works brings this simple scene to life every day. It’s more than grooming — it’s care that floats right to your doorstep, fitting into your dog’s world. Curious how this relaxed rhythm could be your dog’s new normal? Reach out at mobilepetworks.com or call (509) 591-5913 to talk about our mobile grooming in the Tri-Cities.",
       "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #DogCare #PetTips #DogGroomingTips #TriCities #TriCitiesDogs",
       "imageIdea": "A grooming-in-action photo, or a clean text graphic with the tip on-brand.",
       "prefersPhoto": false,
-      "graphicText": "",
-      "freshCopy": false,
-      "awaitingCopy": true,
-      "image": null,
-      "imageUrl": null,
+      "graphicText": "Grooming that visits your pup’s favorite spots",
+      "freshCopy": true,
+      "awaitingCopy": false,
+      "topic": "The everyday ease of grooming at home in Tri-Cities",
+      "freshScene": "Illustrate a peaceful suburban street with a modern white grooming van parked. A groomer gently interacts with a calm dog sitting on a sunlit porch steps, with a nearby neighbor peeking curiously. Trees and houses give a warm, familiar small-town feel.",
+      "postFormat": "mini_story",
+      "supportLines": [
+        "Van arrives softly in a quiet neighborhood",
+        "Pup greets groomer in a familiar yard",
+        "Grooming happens where dogs feel safest"
+      ],
+      "conceptId": null,
+      "creativeAsset": null,
+      "illustration": false,
+      "awaitingCreative": false,
+      "forceGraphic": true,
+      "image": "images/generated/2026-11-04-tip.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-11-04-tip.jpg",
       "issueNumber": null,
       "status": "planned",
-      "mediaHashes": []
+      "mediaHashes": [
+        "ea9dbcac84d9827b57ad18764361eca2272753a93ebe2902f314b65671fe6206"
+      ],
+      "imageSource": "graphic",
+      "contentHold": null
     },
     {
       "copyRevision": 1,
@@ -2698,6 +2715,27 @@
       "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #TransformationTuesday #BeforeAndAfter #GroomingTransformation #TriCities #TriCitiesDogs",
       "imageIdea": "A before/after side-by-side. TIP: photograph every dog before and after — this is your best-performing content.",
       "prefersPhoto": true,
+      "graphicText": "",
+      "freshCopy": false,
+      "awaitingCopy": true,
+      "image": null,
+      "imageUrl": null,
+      "issueNumber": null,
+      "status": "planned",
+      "mediaHashes": []
+    },
+    {
+      "copyRevision": 1,
+      "id": "2026-12-02",
+      "date": "2026-12-02",
+      "time": "08:00",
+      "datetimeLocal": "2026-12-02T08:00:00",
+      "pillar": "tip",
+      "pillarLabel": "Pet care tip",
+      "caption": "",
+      "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #DogCare #PetTips #DogGroomingTips #TriCities #TriCitiesDogs",
+      "imageIdea": "A grooming-in-action photo, or a clean text graphic with the tip on-brand.",
+      "prefersPhoto": false,
       "graphicText": "",
       "freshCopy": false,
       "awaitingCopy": true,
