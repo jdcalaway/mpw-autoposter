@@ -348,5 +348,22 @@
     "revision": 1,
     "model": "gpt-4.1-mini",
     "createdAt": "2026-11-03T20:06:27.950Z"
+  },
+  {
+    "caption": "Groomers, do you thrive on mixing your craft with a bit of local sightseeing? Mobile Pet Works turns the Tri-Cities streets into your grooming route. Here’s what keeps the wheels turning:\n\n• Balanced routes that keep groom time and drive time smooth\n• A cozy salon-on-wheels setup that feels just right\n• Being part of a close-knit mobile team with on-the-road support\n\nIf traveling from doorstep to doorstep while doing what you love sounds like your kind of pace, why not chat with us? Call (509) 591-5913 — let’s see if this mobile groove fits your style.",
+    "headline": "Inside a groomer’s day on the Tri-Cities roads",
+    "topic": "Hiring groomers: The rhythm and tools of mobile grooming",
+    "scene": "An illustrated map showing a winding route through Tri-Cities neighborhoods with paw prints marking grooming stops. Include a cozy van with grooming tools visible inside, and a smiling groomer waving from the driver’s seat, set against a backdrop of local landmarks and homes.",
+    "postFormat": "checklist",
+    "supportLines": [
+      "Plan smooth routes to balance drive and groom time",
+      "Equip vans as cozy, full-service grooming salons",
+      "Provide strong support for groomers on the road"
+    ],
+    "date": "2026-11-05",
+    "pillar": "bts",
+    "revision": 1,
+    "model": "gpt-4.1-mini",
+    "createdAt": "2026-11-04T20:25:26.496Z"
   }
 ]
