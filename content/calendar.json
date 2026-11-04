@@ -2107,12 +2107,17 @@
       "image": "images/generated/2026-11-04-tip.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-11-04-tip.jpg",
       "issueNumber": 71,
-      "status": "pending_approval",
+      "status": "posted",
       "mediaHashes": [
         "ea9dbcac84d9827b57ad18764361eca2272753a93ebe2902f314b65671fe6206"
       ],
       "imageSource": "graphic",
-      "contentHold": null
+      "contentHold": null,
+      "postedAt": "2026-11-04T10:28:50",
+      "results": {
+        "facebook": "1585957798283717_1794696209325696",
+        "instagram": "18131499895870314"
+      }
     },
     {
       "copyRevision": 1,
