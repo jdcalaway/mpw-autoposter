@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T20:47:06.400Z",
+  "generatedAt": "2026-11-04T21:04:11.544Z",
   "timezone": "America/Los_Angeles",
   "posts": [
     {
@@ -2127,18 +2127,30 @@
       "datetimeLocal": "2026-11-05T18:00:00",
       "pillar": "bts",
       "pillarLabel": "Behind the scenes",
-      "caption": "",
+      "caption": "Groomers, do you thrive on mixing your craft with a bit of local sightseeing? Mobile Pet Works turns the Tri-Cities streets into your grooming route. Here’s what keeps the wheels turning:\n\n• Balanced routes that keep groom time and drive time smooth\n• A cozy salon-on-wheels setup that feels just right\n• Being part of a close-knit mobile team with on-the-road support\n\nIf traveling from doorstep to doorstep while doing what you love sounds like your kind of pace, why not chat with us? Call (509) 591-5913 — let’s see if this mobile groove fits your style.",
       "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #BehindTheScenes #MobileGrooming #SmallBusiness #TriCities #TriCitiesDogs",
       "imageIdea": "A photo or short video inside/of the van, or the groomer at work with a dog.",
       "prefersPhoto": true,
-      "graphicText": "",
-      "freshCopy": false,
-      "awaitingCopy": true,
-      "image": null,
-      "imageUrl": null,
+      "graphicText": "Inside a groomer’s day on the Tri-Cities roads",
+      "freshCopy": true,
+      "awaitingCopy": false,
+      "topic": "Hiring groomers: The rhythm and tools of mobile grooming",
+      "freshScene": "An illustrated map showing a winding route through Tri-Cities neighborhoods with paw prints marking grooming stops. Include a cozy van with grooming tools visible inside, and a smiling groomer waving from the driver’s seat, set against a backdrop of local landmarks and homes.",
+      "postFormat": "checklist",
+      "supportLines": [
+        "Plan smooth routes to balance drive and groom time",
+        "Equip vans as cozy, full-service grooming salons",
+        "Provide strong support for groomers on the road"
+      ],
+      "image": "images/generated/2026-11-05-bts.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-11-05-bts.jpg",
       "issueNumber": null,
       "status": "planned",
-      "mediaHashes": []
+      "mediaHashes": [
+        "08e7b003427fc18138c306670814c40ce017f97c181d4b6b9dbc7fe73ece6477"
+      ],
+      "imageSource": "graphic",
+      "contentHold": null
     },
     {
       "copyRevision": 1,
@@ -2746,6 +2758,27 @@
       "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #DogCare #PetTips #DogGroomingTips #TriCities #TriCitiesDogs",
       "imageIdea": "A grooming-in-action photo, or a clean text graphic with the tip on-brand.",
       "prefersPhoto": false,
+      "graphicText": "",
+      "freshCopy": false,
+      "awaitingCopy": true,
+      "image": null,
+      "imageUrl": null,
+      "issueNumber": null,
+      "status": "planned",
+      "mediaHashes": []
+    },
+    {
+      "copyRevision": 1,
+      "id": "2026-12-03",
+      "date": "2026-12-03",
+      "time": "18:00",
+      "datetimeLocal": "2026-12-03T18:00:00",
+      "pillar": "bts",
+      "pillarLabel": "Behind the scenes",
+      "caption": "",
+      "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #BehindTheScenes #MobileGrooming #SmallBusiness #TriCities #TriCitiesDogs",
+      "imageIdea": "A photo or short video inside/of the van, or the groomer at work with a dog.",
+      "prefersPhoto": true,
       "graphicText": "",
       "freshCopy": false,
       "awaitingCopy": true,
