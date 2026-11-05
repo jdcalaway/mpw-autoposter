@@ -365,5 +365,22 @@
     "revision": 1,
     "model": "gpt-4.1-mini",
     "createdAt": "2026-11-04T20:25:26.496Z"
+  },
+  {
+    "caption": "Your dog’s grooming routine: are they the \"sit still and soak it in\" type or the \"escape artist\" at the first suds? 🛁 Share your pet's bath-time antics or grooming quirks in the comments! Let's see who wins the 'Most Dramatic' or 'Most Zen' pup title in Tri-Cities.",
+    "headline": "Bath Time Drama or Zen Mode? Tell Us Your Dog's Style",
+    "topic": "Dogs’ unique grooming time personalities in Tri-Cities homes",
+    "scene": "A simple illustration showing two dogs side by side—one splashing energetically in a tub, the other calmly enjoying a gentle brush. The background conveys a cozy home environment with warm tones.",
+    "postFormat": "question",
+    "supportLines": [
+      "Do they soak quietly or splash like a pro?",
+      "Hide behind the couch or sit for treats?",
+      "Share your funniest bath-time story below!"
+    ],
+    "date": "2026-11-06",
+    "pillar": "booking",
+    "revision": 1,
+    "model": "gpt-4.1-mini",
+    "createdAt": "2026-11-05T20:38:56.583Z"
   }
 ]
