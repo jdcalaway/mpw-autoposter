@@ -2182,8 +2182,8 @@
       "forceGraphic": true,
       "image": "images/generated/2026-11-06-booking.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-11-06-booking.jpg",
-      "issueNumber": null,
-      "status": "planned",
+      "issueNumber": 73,
+      "status": "pending_approval",
       "mediaHashes": [
         "7d7dfacafbda46edee2b3b50d8803bee23b4e0564f9dfba275b9454fa551d2b4"
       ],
