@@ -324,6 +324,13 @@
         "headline": "Grooming on the Move: Blend Craft and Community",
         "topic": "Hiring groomers: What working mobile really feels like"
       }
+    },
+    {
+      "date": "2026-11-07",
+      "day": "2026-11-06",
+      "status": "requesting",
+      "model": "gpt-4.1-mini",
+      "revision": 1
     }
   ],
   "resolvedAuthAttempts": [
