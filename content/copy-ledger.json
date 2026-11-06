@@ -314,9 +314,16 @@
     {
       "date": "2026-11-07",
       "day": "2026-11-06",
-      "status": "requesting",
+      "status": "rejected",
       "model": "gpt-4.1-mini",
-      "revision": 1
+      "revision": 1,
+      "httpStatus": null,
+      "reason": "Graphic wording already used on 2026-11-02.",
+      "rejectedDraft": {
+        "caption": "Mobile Pet Works isn’t just about grooming—it’s about the unique rhythm of life on the move. Our groomers travel the Tri-Cities, turning every route into a new opportunity to connect with pets and their people. It’s the art of blending craft with community, one yard at a time. Ever wonder what it’s like to sharpen your skills while cruising neighborhood streets? We’d love to hear your take on mixing work with the open road. Curious about joining our mobile team? Call (509) 591-5913 for a real chat.",
+        "headline": "Grooming on the Move: Blend Craft and Community",
+        "topic": "Hiring groomers: What working mobile really feels like"
+      }
     }
   ],
   "resolvedAuthAttempts": [
