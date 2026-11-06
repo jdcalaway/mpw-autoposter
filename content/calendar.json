@@ -2145,12 +2145,17 @@
       "image": "images/generated/2026-11-05-bts.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-11-05-bts.jpg",
       "issueNumber": 72,
-      "status": "pending_approval",
+      "status": "posted",
       "mediaHashes": [
         "08e7b003427fc18138c306670814c40ce017f97c181d4b6b9dbc7fe73ece6477"
       ],
       "imageSource": "graphic",
-      "contentHold": null
+      "contentHold": null,
+      "postedAt": "2026-11-05T19:14:00",
+      "results": {
+        "facebook": "1585957798283717_1796342755827708",
+        "instagram": "17981306022132779"
+      }
     },
     {
       "copyRevision": 1,
