@@ -382,5 +382,22 @@
     "revision": 1,
     "model": "gpt-4.1-mini",
     "createdAt": "2026-11-05T20:38:56.583Z"
+  },
+  {
+    "caption": "Even experienced groomers sometimes wonder: is it better to zip through a day packed with appointments, or take the time to savor each dog's unique personality? Mobile Pet Works in the Tri-Cities offers a rhythm all its own—a mobile salon that travels with you, blending craftsmanship with the changing scenery of neighborhood streets. If you’ve ever imagined grooming as an adventure on wheels, or just want to know how it feels to work one-on-one with pets in their own environment, let's talk. Call (509) 591-5913 to explore this unique role.",
+    "headline": "Groom Light and Fast or Take Your Time? Find Your Mobile Rhythm",
+    "topic": "Hiring groomers: Balancing pace and care in mobile grooming",
+    "scene": "Illustration of a mobile grooming van parked under a tree on a sunny street, a groomer smiling and gently tending a happy dog on a grooming table outside the van, with a backdrop of neighborhood houses and changing seasons visible along the road.",
+    "postFormat": "punchline",
+    "supportLines": [
+      "Speedy stops or calm, full grooms?",
+      "Mobile grooming fits your pace.",
+      "Which rhythm suits your style?"
+    ],
+    "date": "2026-11-07",
+    "pillar": "hiring",
+    "revision": 1,
+    "model": "gpt-4.1-mini",
+    "createdAt": "2026-11-06T19:56:55.760Z"
   }
 ]
