@@ -399,5 +399,22 @@
     "revision": 1,
     "model": "gpt-4.1-mini",
     "createdAt": "2026-11-06T19:56:55.760Z"
+  },
+  {
+    "caption": "Ever notice how some pups strut their stuff like runway models during grooming, while others just want to curl up and snooze? It’s fascinating to see these two sides of the grooming spectrum! Do you think your dog prefers quick and efficient trims or savoring every calm moment? Maybe a little bit of both? Share your observations and stories—we’re all ears (and some fur)!",
+    "headline": "Quick Snip or Chill Session? Which Grooming Style Suits Your Pup?",
+    "topic": "Spotting your dog's unique grooming vibe at home",
+    "scene": "Illustrate two dogs side by side in a peaceful front yard — one eagerly posing for a quick trim, the other blissfully relaxed getting a slow, gentle groom. Soft colors with cozy home elements and the Mobile Pet Works van subtly parked nearby, connecting grooming comfort with neighborhood ease.",
+    "postFormat": "two_sides",
+    "supportLines": [
+      "Quick trims: fast, focused, getting back to play",
+      "Slow grooms: calm moments, extra care and cuddles",
+      "Which style fits your dog’s mood best? We want to know!"
+    ],
+    "date": "2026-11-08",
+    "pillar": "booking",
+    "revision": 1,
+    "model": "gpt-4.1-mini",
+    "createdAt": "2026-11-07T18:01:41.828Z"
   }
 ]
