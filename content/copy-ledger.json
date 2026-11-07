@@ -335,9 +335,16 @@
     {
       "date": "2026-11-08",
       "day": "2026-11-07",
-      "status": "requesting",
+      "status": "rejected",
       "model": "gpt-4.1-mini",
-      "revision": 1
+      "revision": 1,
+      "httpStatus": null,
+      "reason": "Graphic wording already used on 2026-11-03.",
+      "rejectedDraft": {
+        "caption": "When it comes to grooming time, what's your dog's vibe? Are they the quick trim, ready-to-play type or the slow, spa-day lover who enjoys every pampering moment? Some pups want to dash after a swift snip, while others luxuriate in extra belly rubs and fluffing. Which camp does your furry friend fall into, and why? Share your pup's grooming personality — we’d love to hear!",
+        "headline": "Fast Snip or Leisurely Pamper? What Fits Your Pup?",
+        "topic": "Understanding dogs’ grooming pace preferences in home care"
+      }
     }
   ],
   "resolvedAuthAttempts": [
