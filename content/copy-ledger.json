@@ -345,6 +345,13 @@
         "headline": "Fast Snip or Leisurely Pamper? What Fits Your Pup?",
         "topic": "Understanding dogs’ grooming pace preferences in home care"
       }
+    },
+    {
+      "date": "2026-11-08",
+      "day": "2026-11-07",
+      "status": "requesting",
+      "model": "gpt-4.1-mini",
+      "revision": 1
     }
   ],
   "resolvedAuthAttempts": [
