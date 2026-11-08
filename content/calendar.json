@@ -2226,12 +2226,17 @@
       "image": "images/generated/2026-11-07-hiring.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-11-07-hiring.jpg",
       "issueNumber": 74,
-      "status": "pending_approval",
+      "status": "posted",
       "mediaHashes": [
         "72005f5c0fbe677e99ce0afc3024da6553572f4d951f882c8117d099dda54d68"
       ],
       "imageSource": "graphic",
-      "contentHold": null
+      "contentHold": null,
+      "postedAt": "2026-11-08T00:39:35",
+      "results": {
+        "facebook": "1585957798283717_1799107152217935",
+        "instagram": "18651209152024772"
+      }
     },
     {
       "copyRevision": 1,
