@@ -433,5 +433,22 @@
     "revision": 1,
     "model": "gpt-4.1-mini",
     "createdAt": "2026-11-08T18:20:37.921Z"
+  },
+  {
+    "caption": "Every dog has their own style of \"strutting their stuff\" post-groom. Does your pup do a victory lap around the yard, strike a regal pose, or dive straight into their favorite cozy corner? Share your dog's signature \"freshly groomed\" move with us! 🐕✨\n\nHere’s what makes a mobile groom unique:\n\n• Your dog feels at ease in their own space, no car rides required.\n• One-on-one attention without the noise of a busy salon.\n• Each visit tailored to your dog’s individual style and pace.\n\nWe love hearing how pups shine in their own way—drop your stories below! And if you’re curious about booking a mobile groom that meets your dog’s personality, reach out at mobilepetworks.com or (509) 591-5913. No promises on availability, but always happy to chat.",
+    "headline": "What’s Your Dog’s Signature Post-Groom Move?",
+    "topic": "Celebrating dogs’ unique personalities after grooming",
+    "scene": "Illustration of a variety of dogs showing off different post-groom behaviors—some prancing proudly in a yard, others lounging contentedly on a couch, and one giving a playful paw high-five, all set in cozy home and front-yard scenes within a neighborhood.",
+    "postFormat": "checklist",
+    "supportLines": [
+      "Feel at ease without car rides.",
+      "One-on-one attention, no noisy salon.",
+      "Tailored visits for every dog’s style."
+    ],
+    "date": "2026-11-10",
+    "pillar": "transformation",
+    "revision": 1,
+    "model": "gpt-4.1-mini",
+    "createdAt": "2026-11-09T22:58:41.060Z"
   }
 ]
