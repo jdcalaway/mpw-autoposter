@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T19:21:30.321Z",
+  "generatedAt": "2026-11-09T23:42:06.258Z",
   "timezone": "America/Los_Angeles",
   "posts": [
     {
@@ -2328,18 +2328,32 @@
       "datetimeLocal": "2026-11-10T12:00:00",
       "pillar": "transformation",
       "pillarLabel": "Transformation",
-      "caption": "",
+      "caption": "Every dog has their own style of \"strutting their stuff\" post-groom. Does your pup do a victory lap around the yard, strike a regal pose, or dive straight into their favorite cozy corner? Share your dog's signature \"freshly groomed\" move with us! 🐕✨\n\nHere’s what makes a mobile groom unique:\n\n• Your dog feels at ease in their own space, no car rides required.\n• One-on-one attention without the noise of a busy salon.\n• Each visit tailored to your dog’s individual style and pace.\n\nWe love hearing how pups shine in their own way—drop your stories below! And if you’re curious about booking a mobile groom that meets your dog’s personality, reach out at mobilepetworks.com or (509) 591-5913. No promises on availability, but always happy to chat.",
       "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #TransformationTuesday #BeforeAndAfter #GroomingTransformation #TriCities #TriCitiesDogs",
       "imageIdea": "A before/after side-by-side. TIP: photograph every dog before and after — this is your best-performing content.",
       "prefersPhoto": true,
-      "graphicText": "",
-      "freshCopy": false,
-      "awaitingCopy": true,
-      "image": null,
-      "imageUrl": null,
+      "graphicText": "What’s Your Dog’s Signature Post-Groom Move?",
+      "freshCopy": true,
+      "awaitingCopy": false,
+      "topic": "Celebrating dogs’ unique personalities after grooming",
+      "freshScene": "Illustration of a variety of dogs showing off different post-groom behaviors—some prancing proudly in a yard, others lounging contentedly on a couch, and one giving a playful paw high-five, all set in cozy home and front-yard scenes within a neighborhood.",
+      "postFormat": "checklist",
+      "supportLines": [
+        "Feel at ease without car rides.",
+        "One-on-one attention, no noisy salon.",
+        "Tailored visits for every dog’s style."
+      ],
+      "image": "images/generated/2026-11-10-transformation.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-11-10-transformation.jpg",
       "issueNumber": null,
       "status": "planned",
-      "mediaHashes": []
+      "mediaHashes": [
+        "d2a21d1ab8555d4c4aadd34cd2def79cd187f6c0f60adae11ebdd9167053cddf",
+        "9cad2089e0ccbd542fa87d5a291a89df021c69be519bc88927e0b8bb8bd2dea9"
+      ],
+      "mediaSource": "images/photos/transformation/daisy-2026-08-27.jpg",
+      "imageSource": "photo",
+      "contentHold": null
     },
     {
       "copyRevision": 1,
@@ -2950,6 +2964,27 @@
       "awaitingCreative": true,
       "creativeAsset": null,
       "illustration": true,
+      "image": null,
+      "imageUrl": null,
+      "issueNumber": null,
+      "status": "planned",
+      "mediaHashes": []
+    },
+    {
+      "copyRevision": 1,
+      "id": "2026-12-08",
+      "date": "2026-12-08",
+      "time": "12:00",
+      "datetimeLocal": "2026-12-08T12:00:00",
+      "pillar": "transformation",
+      "pillarLabel": "Transformation",
+      "caption": "",
+      "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #TransformationTuesday #BeforeAndAfter #GroomingTransformation #TriCities #TriCitiesDogs",
+      "imageIdea": "A before/after side-by-side. TIP: photograph every dog before and after — this is your best-performing content.",
+      "prefersPhoto": true,
+      "graphicText": "",
+      "freshCopy": false,
+      "awaitingCopy": true,
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
