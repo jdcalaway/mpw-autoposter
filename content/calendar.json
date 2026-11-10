@@ -2312,13 +2312,18 @@
       "image": "images/generated/2026-11-09-creative.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-11-09-creative.jpg",
       "issueNumber": 76,
-      "status": "pending_approval",
+      "status": "posted",
       "mediaHashes": [
         "ed0e5b44364ad738fabe63466b44bfc879703a256c1f385331b89363345d358f",
         "d2427c4752c6e1c95c382e5f371952a33368be8f14f60ef2a2f37f4756089989"
       ],
       "imageSource": "illustration",
-      "contentHold": null
+      "contentHold": null,
+      "postedAt": "2026-11-10T01:20:50",
+      "results": {
+        "facebook": "1585957798283717_1801633165298667",
+        "instagram": "17918774664538705"
+      }
     },
     {
       "copyRevision": 1,
