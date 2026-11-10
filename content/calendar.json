@@ -2351,14 +2351,19 @@
       "image": "images/generated/2026-11-10-transformation.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-11-10-transformation.jpg",
       "issueNumber": 77,
-      "status": "pending_approval",
+      "status": "posted",
       "mediaHashes": [
         "d2a21d1ab8555d4c4aadd34cd2def79cd187f6c0f60adae11ebdd9167053cddf",
         "9cad2089e0ccbd542fa87d5a291a89df021c69be519bc88927e0b8bb8bd2dea9"
       ],
       "mediaSource": "images/photos/transformation/daisy-2026-08-27.jpg",
       "imageSource": "photo",
-      "contentHold": null
+      "contentHold": null,
+      "postedAt": "2026-11-10T14:53:58",
+      "results": {
+        "facebook": "1585957798283717_1802430021885648",
+        "instagram": "17875957872639155"
+      }
     },
     {
       "copyRevision": 1,
