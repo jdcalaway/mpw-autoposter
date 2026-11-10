@@ -450,5 +450,22 @@
     "revision": 1,
     "model": "gpt-4.1-mini",
     "createdAt": "2026-11-09T22:58:41.060Z"
+  },
+  {
+    "caption": "Every pup has that one unexpected hiding spot for freshly shed fur. Beyond the couch cushions and your favorite sweater, what's the weirdest place you've found your dog's fur? Dust bunnies under the bed? Wrapped around the ceiling fan? Share your pet's fur phenomenon in the comments—we’re all in this fluff-filled together!",
+    "headline": "Where’s the Strangest Spot You’ve Found Dog Fur?",
+    "topic": "Unexpected places dog fur ends up around the house",
+    "scene": "A cozy Tri-Cities living room scene showing common rogue fur spots like under a couch, on a sweater draped over a chair, and on a ceiling fan pull string, illustrated whimsically.",
+    "postFormat": "question",
+    "supportLines": [
+      "Under the bed dust bunnies",
+      "Stuck to your favorite black pants",
+      "Wrapped around door handles"
+    ],
+    "date": "2026-11-11",
+    "pillar": "tip",
+    "revision": 1,
+    "model": "gpt-4.1-mini",
+    "createdAt": "2026-11-10T20:27:33.475Z"
   }
 ]
