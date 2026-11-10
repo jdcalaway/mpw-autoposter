@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T23:42:06.258Z",
+  "generatedAt": "2026-11-10T21:13:00.746Z",
   "timezone": "America/Los_Angeles",
   "posts": [
     {
@@ -2368,18 +2368,35 @@
       "datetimeLocal": "2026-11-11T08:00:00",
       "pillar": "tip",
       "pillarLabel": "Pet care tip",
-      "caption": "",
+      "caption": "Every pup has that one unexpected hiding spot for freshly shed fur. Beyond the couch cushions and your favorite sweater, what's the weirdest place you've found your dog's fur? Dust bunnies under the bed? Wrapped around the ceiling fan? Share your pet's fur phenomenon in the comments—we’re all in this fluff-filled together!",
       "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #DogCare #PetTips #DogGroomingTips #TriCities #TriCitiesDogs",
       "imageIdea": "A grooming-in-action photo, or a clean text graphic with the tip on-brand.",
       "prefersPhoto": false,
-      "graphicText": "",
-      "freshCopy": false,
-      "awaitingCopy": true,
-      "image": null,
-      "imageUrl": null,
+      "graphicText": "Where’s the Strangest Spot You’ve Found Dog Fur?",
+      "freshCopy": true,
+      "awaitingCopy": false,
+      "topic": "Unexpected places dog fur ends up around the house",
+      "freshScene": "A cozy Tri-Cities living room scene showing common rogue fur spots like under a couch, on a sweater draped over a chair, and on a ceiling fan pull string, illustrated whimsically.",
+      "postFormat": "question",
+      "supportLines": [
+        "Under the bed dust bunnies",
+        "Stuck to your favorite black pants",
+        "Wrapped around door handles"
+      ],
+      "conceptId": null,
+      "creativeAsset": null,
+      "illustration": false,
+      "awaitingCreative": false,
+      "forceGraphic": true,
+      "image": "images/generated/2026-11-11-tip.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-11-11-tip.jpg",
       "issueNumber": null,
       "status": "planned",
-      "mediaHashes": []
+      "mediaHashes": [
+        "30ff8873ae654ff8ed2dc3950cbc68635099b8787054fb931a81218d8227b48e"
+      ],
+      "imageSource": "graphic",
+      "contentHold": null
     },
     {
       "copyRevision": 1,
@@ -2987,6 +3004,27 @@
       "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #TransformationTuesday #BeforeAndAfter #GroomingTransformation #TriCities #TriCitiesDogs",
       "imageIdea": "A before/after side-by-side. TIP: photograph every dog before and after — this is your best-performing content.",
       "prefersPhoto": true,
+      "graphicText": "",
+      "freshCopy": false,
+      "awaitingCopy": true,
+      "image": null,
+      "imageUrl": null,
+      "issueNumber": null,
+      "status": "planned",
+      "mediaHashes": []
+    },
+    {
+      "copyRevision": 1,
+      "id": "2026-12-09",
+      "date": "2026-12-09",
+      "time": "08:00",
+      "datetimeLocal": "2026-12-09T08:00:00",
+      "pillar": "tip",
+      "pillarLabel": "Pet care tip",
+      "caption": "",
+      "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #DogCare #PetTips #DogGroomingTips #TriCities #TriCitiesDogs",
+      "imageIdea": "A grooming-in-action photo, or a clean text graphic with the tip on-brand.",
+      "prefersPhoto": false,
       "graphicText": "",
       "freshCopy": false,
       "awaitingCopy": true,
