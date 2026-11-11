@@ -467,5 +467,22 @@
     "revision": 1,
     "model": "gpt-4.1-mini",
     "createdAt": "2026-11-10T20:27:33.475Z"
+  },
+  {
+    "caption": "Ever catch your dog adding \"fur confetti\" to an unexpected spot? We’ve seen it all—from couch cushions buried in fluff to mysterious clumps clinging to ceiling fans. It's like their way of leaving a furry calling card! What's the quirkiest place your dog's fur has turned up? Share your findings with us and join the fluff-filled fun.",
+    "headline": "Fur confetti alert: What’s the quirkiest fur spot?",
+    "topic": "Unexpected dog fur hideouts around your home",
+    "scene": "Illustrate a cozy living room with whimsical fur patches scattered in odd places—on a lampshade, under a couch cushion, and even on a ceiling fan blade—as if the dog has left a playful trail of fluffy confetti.",
+    "postFormat": "punchline",
+    "supportLines": [
+      "Fur on couch cushions: classic hiding spot!",
+      "Ceiling fan blades: unexpected fluff zones",
+      "Under furniture: the secret fur stash"
+    ],
+    "date": "2026-11-12",
+    "pillar": "bts",
+    "revision": 1,
+    "model": "gpt-4.1-mini",
+    "createdAt": "2026-11-11T20:10:49.198Z"
   }
 ]
