@@ -2396,12 +2396,17 @@
       "image": "images/generated/2026-11-11-tip.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-11-11-tip.jpg",
       "issueNumber": 78,
-      "status": "pending_approval",
+      "status": "posted",
       "mediaHashes": [
         "30ff8873ae654ff8ed2dc3950cbc68635099b8787054fb931a81218d8227b48e"
       ],
       "imageSource": "graphic",
-      "contentHold": null
+      "contentHold": null,
+      "postedAt": "2026-11-11T10:24:24",
+      "results": {
+        "facebook": "1585957798283717_1803556681772982",
+        "instagram": "18079722785427605"
+      }
     },
     {
       "copyRevision": 1,
