@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T21:13:00.746Z",
+  "generatedAt": "2026-11-11T21:45:26.060Z",
   "timezone": "America/Los_Angeles",
   "posts": [
     {
@@ -2416,18 +2416,30 @@
       "datetimeLocal": "2026-11-12T18:00:00",
       "pillar": "bts",
       "pillarLabel": "Behind the scenes",
-      "caption": "",
+      "caption": "Ever catch your dog adding \"fur confetti\" to an unexpected spot? We’ve seen it all—from couch cushions buried in fluff to mysterious clumps clinging to ceiling fans. It's like their way of leaving a furry calling card! What's the quirkiest place your dog's fur has turned up? Share your findings with us and join the fluff-filled fun.",
       "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #BehindTheScenes #MobileGrooming #SmallBusiness #TriCities #TriCitiesDogs",
       "imageIdea": "A photo or short video inside/of the van, or the groomer at work with a dog.",
       "prefersPhoto": true,
-      "graphicText": "",
-      "freshCopy": false,
-      "awaitingCopy": true,
-      "image": null,
-      "imageUrl": null,
+      "graphicText": "Fur confetti alert: What’s the quirkiest fur spot?",
+      "freshCopy": true,
+      "awaitingCopy": false,
+      "topic": "Unexpected dog fur hideouts around your home",
+      "freshScene": "Illustrate a cozy living room with whimsical fur patches scattered in odd places—on a lampshade, under a couch cushion, and even on a ceiling fan blade—as if the dog has left a playful trail of fluffy confetti.",
+      "postFormat": "punchline",
+      "supportLines": [
+        "Fur on couch cushions: classic hiding spot!",
+        "Ceiling fan blades: unexpected fluff zones",
+        "Under furniture: the secret fur stash"
+      ],
+      "image": "images/generated/2026-11-12-bts.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-11-12-bts.jpg",
       "issueNumber": null,
       "status": "planned",
-      "mediaHashes": []
+      "mediaHashes": [
+        "af5d498334006b23e76a31c3f7088be2f226379947f994ed097ce4edc8774b08"
+      ],
+      "imageSource": "graphic",
+      "contentHold": null
     },
     {
       "copyRevision": 1,
@@ -3035,6 +3047,27 @@
       "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #DogCare #PetTips #DogGroomingTips #TriCities #TriCitiesDogs",
       "imageIdea": "A grooming-in-action photo, or a clean text graphic with the tip on-brand.",
       "prefersPhoto": false,
+      "graphicText": "",
+      "freshCopy": false,
+      "awaitingCopy": true,
+      "image": null,
+      "imageUrl": null,
+      "issueNumber": null,
+      "status": "planned",
+      "mediaHashes": []
+    },
+    {
+      "copyRevision": 1,
+      "id": "2026-12-10",
+      "date": "2026-12-10",
+      "time": "18:00",
+      "datetimeLocal": "2026-12-10T18:00:00",
+      "pillar": "bts",
+      "pillarLabel": "Behind the scenes",
+      "caption": "",
+      "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #BehindTheScenes #MobileGrooming #SmallBusiness #TriCities #TriCitiesDogs",
+      "imageIdea": "A photo or short video inside/of the van, or the groomer at work with a dog.",
+      "prefersPhoto": true,
       "graphicText": "",
       "freshCopy": false,
       "awaitingCopy": true,
