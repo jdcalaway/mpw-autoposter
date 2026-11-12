@@ -484,5 +484,22 @@
     "revision": 1,
     "model": "gpt-4.1-mini",
     "createdAt": "2026-11-11T20:10:49.198Z"
+  },
+  {
+    "caption": "When your pup’s grooming day includes their favorite sunbeam spot versus the classic quick trim to keep things neat, which side are you on?\n\nOutdoor chill in familiar sunlit comfort?\nFast-paced, in-and-out trims to keep up with busy schedules?\n\nWhich do you think suits your dog’s personality better? Share your pup’s grooming vibe!",
+    "headline": "Sunbeam Chill or Quick Trim? Which Grooming Style Fits?",
+    "topic": "Choosing between leisurely home grooming or speedy trims",
+    "scene": "Two contrasting scenes side-by-side: a dog lounging happily in a warm sunbeam by a window with a groomer gently brushing, and another dog quickly and neatly trimmed in a van, tail wagging energetically with the groomer focused and efficient.",
+    "postFormat": "two_sides",
+    "supportLines": [
+      "Leisurely groom: calm, comfy, sunlit spots",
+      "Quick trims: efficient, neat, fits busy days",
+      "Which grooming suits your dog’s style? Share below!"
+    ],
+    "date": "2026-11-13",
+    "pillar": "booking",
+    "revision": 1,
+    "model": "gpt-4.1-mini",
+    "createdAt": "2026-11-12T20:47:40.006Z"
   }
 ]
