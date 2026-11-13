@@ -807,6 +807,48 @@
       ],
       "referenceSha256": "e154ddfddbac882caeca42cc8346b04f1196c856da5cbcfa98eecf5aaa483259",
       "completedOn": "2026-11-08"
+    },
+    {
+      "id": "post-2026-11-14",
+      "date": "2026-11-13",
+      "provider": "github-openai",
+      "status": "partial",
+      "model": "gpt-image-2",
+      "size": "1536x1024",
+      "quality": "high",
+      "reference": "images/creative/van-reference.jpg",
+      "items": [
+        {
+          "id": "ai-2026-11-14-hiring",
+          "freshCopy": true,
+          "targetDate": "2026-11-14",
+          "pillar": "hiring",
+          "objective": "hiring",
+          "sourceTemplateId": "fresh-copy-2026-11-14",
+          "headline": "Behind the Wheel: A Groomer’s Day in the Tri-Cities",
+          "caption": "Meet Leah, one of our Mobile Pet Works groomers, who started her day rolling down quiet Tri-Cities streets. After a warm cup of coffee and a quick playlist shuffle, she parks the van, opens the door, and is greeted by a wagging tail and familiar sniffs. No busy salon noises, just calm, focused grooming in a cozy mobile studio. Between appointments, she spots a new neighborhood mural or a blooming flower bed — these small joys shape a different kind of workday.\n\nCurious about what it’s really like to craft styles on wheels and meet local furry friends? Call (509) 591-5913 to chat about joining the family behind these vans. Your next grooming chapter might just be a drive away.",
+          "style": {
+            "name": "sunlit-paper",
+            "direction": "Sophisticated tactile cut-paper illustration with layered shadows, cream sky, golden sunlight and royal-blue accents.",
+            "background": "#FFF8EB",
+            "ink": "#172E4D",
+            "accent": "#0146A3"
+          },
+          "prompt": "Create new premium landscape social advertising artwork for Mobile Pet Works, mobile dog grooming in Tri-Cities, Washington.\nThe uploaded photo is ONLY a vehicle design reference. Invent a fresh illustration, composition, dog and environment; do not reproduce the photograph or its neighborhood.\nWhen the van is shown, preserve its distinctive elongated white shuttle-bus body, long dark tinted window band, white cab facing right, front passenger doors, blue lower stripe and large blue paw near the rear.\nThe side brand name, if visible, must read MOBILE PET WORKS. Omit the old website and phone lettering from the reference. Do not invent a different logo or vehicle.\nArt direction: Sophisticated tactile cut-paper illustration with layered shadows, cream sky, golden sunlight and royal-blue accents.\nScene: Illustrate a peaceful early morning scene with a grooming van parked on a quiet suburban street in the Tri-Cities. A groomer gently interacts with a happy dog on a front porch. Nearby, colorful neighborhood details like blooming flowers or a mural add warmth and local charm. The groomer’s tools peek from the open van door, showing a cozy, well-equipped mobile salon.\nThe separately typeset ad headline will be: Behind the Wheel: A Groomer’s Day in the Tri-Cities\nCreate illustration only: no headline, contact details, captions, watermarks, badges, prices or extra text in the artwork. The ad typography is added separately below the illustration.\nUse the entire 3:2 landscape canvas. Keep all important subjects within a generous 8% safe margin. Expressive beautiful dogs, correct anatomy and gentle, credible grooming handling.\nClearly crafted illustration, not a documentary photograph or a real employee/customer portrait. No before-and-after comparison, fabricated review, pay/benefit claim, scarcity, guaranteed results or availability. No scissors near faces.",
+          "sourceAsset": "images/creative/cloud/ai-2026-11-14-hiring-source.png",
+          "asset": "images/creative/cloud/ai-2026-11-14-hiring.jpg",
+          "status": "requesting",
+          "attempts": [
+            {
+              "date": "2026-11-13",
+              "startedAt": "2026-11-13T20:28:43.642Z",
+              "status": "requesting"
+            }
+          ]
+        }
+      ],
+      "assets": [],
+      "referenceSha256": "e154ddfddbac882caeca42cc8346b04f1196c856da5cbcfa98eecf5aaa483259"
     }
   ]
 }
