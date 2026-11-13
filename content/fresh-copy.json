@@ -501,5 +501,22 @@
     "revision": 1,
     "model": "gpt-4.1-mini",
     "createdAt": "2026-11-12T20:47:40.006Z"
+  },
+  {
+    "caption": "Meet Leah, one of our Mobile Pet Works groomers, who started her day rolling down quiet Tri-Cities streets. After a warm cup of coffee and a quick playlist shuffle, she parks the van, opens the door, and is greeted by a wagging tail and familiar sniffs. No busy salon noises, just calm, focused grooming in a cozy mobile studio. Between appointments, she spots a new neighborhood mural or a blooming flower bed — these small joys shape a different kind of workday.\n\nCurious about what it’s really like to craft styles on wheels and meet local furry friends? Call (509) 591-5913 to chat about joining the family behind these vans. Your next grooming chapter might just be a drive away.",
+    "headline": "Behind the Wheel: A Groomer’s Day in the Tri-Cities",
+    "topic": "Hiring groomers: A glimpse into mobile grooming life",
+    "scene": "Illustrate a peaceful early morning scene with a grooming van parked on a quiet suburban street in the Tri-Cities. A groomer gently interacts with a happy dog on a front porch. Nearby, colorful neighborhood details like blooming flowers or a mural add warmth and local charm. The groomer’s tools peek from the open van door, showing a cozy, well-equipped mobile salon.",
+    "postFormat": "mini_story",
+    "supportLines": [
+      "Start your day cruising quiet Tri-Cities streets",
+      "Groom pups one-on-one in a cozy van salon",
+      "Enjoy neighborhood sights between appointments"
+    ],
+    "date": "2026-11-14",
+    "pillar": "hiring",
+    "revision": 1,
+    "model": "gpt-4.1-mini",
+    "createdAt": "2026-11-13T20:28:42.326Z"
   }
 ]
