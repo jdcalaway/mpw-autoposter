@@ -518,5 +518,22 @@
     "revision": 1,
     "model": "gpt-4.1-mini",
     "createdAt": "2026-11-13T20:28:42.326Z"
+  },
+  {
+    "caption": "Got any tips for keeping your dog's paws clean and happy between grooms? Share your go-to tricks! Meanwhile, a few basics to keep your pup feeling fresh:\n\n• Wipe paws after walks to remove dirt and debris\n• Check nails regularly to spot any quick growth\n• Use pet-safe balm for dry paw pads\n\nGot a favorite paw-care hack? Drop it below and let's swap paw care wisdom!",
+    "headline": "Keep Those Paws Happy: Simple Care Tips Between Grooms",
+    "topic": "Basic paw care tips for dogs between grooming sessions",
+    "scene": "Illustration of a cheerful dog owner wiping paws with a soft cloth near a doorstep. The dog happily looks on, surrounded by simple paw-care items: balm, towel, and nail clippers.",
+    "postFormat": "checklist",
+    "supportLines": [
+      "Wipe paws after walks to clear dirt and debris",
+      "Check nails often to avoid overgrowth",
+      "Use pet-safe balm for dry paw pads"
+    ],
+    "date": "2026-11-15",
+    "pillar": "booking",
+    "revision": 1,
+    "model": "gpt-4.1-mini",
+    "createdAt": "2026-11-14T18:43:44.970Z"
   }
 ]
