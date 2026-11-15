@@ -535,5 +535,22 @@
     "revision": 1,
     "model": "gpt-4.1-mini",
     "createdAt": "2026-11-14T18:43:44.970Z"
+  },
+  {
+    "caption": "Ever wondered what it’s like to spend a day gallivanting around the Tri-Cities, turning scruffy pups into neighborhood celebrities? If you were a mobile groomer, would you prefer a packed schedule—fast stops, quick cuts, and lots of variety—or a slower pace, savoring each snip in a quiet driveway?\n\nTell us: What’s your ideal rhythm for a grooming day on wheels? \n\nCall (509) 591-5913 if you want to hear more about joining Mobile Pet Works as a groomer!",
+    "headline": "Fast Trips or Slow Snips: Your Grooming Day Preference?",
+    "topic": "Hiring groomers: Choosing your ideal mobile grooming pace",
+    "scene": "Illustrate a groomer smiling inside a sleek mobile grooming van parked by a calm home on one side, and on the other side, the same groomer quickly moving between homes with a cheerful dog waiting. Bright, friendly colors capture two distinct grooming day vibes in the Tri-Cities neighborhoods.",
+    "postFormat": "question",
+    "supportLines": [
+      "Fast-moving days, quick trims, many happy pups",
+      "Slow-paced afternoons, perfecting every detail",
+      "Which grooming rhythm fits your style best?"
+    ],
+    "date": "2026-11-16",
+    "pillar": "hiring",
+    "revision": 1,
+    "model": "gpt-4.1-mini",
+    "createdAt": "2026-11-15T19:22:05.993Z"
   }
 ]
