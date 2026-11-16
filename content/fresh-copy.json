@@ -552,5 +552,22 @@
     "revision": 1,
     "model": "gpt-4.1-mini",
     "createdAt": "2026-11-15T19:22:05.993Z"
+  },
+  {
+    "caption": "Ever wonder why your black pants seem magnetically drawn to your dog's fur? It's like a secret paw-sitive alliance against fashion! At Mobile Pet Works, we've noticed some hilarious hideouts for dog hair — from keyboard keys to the mystery corners of your car seats. Let's face it: dog fur has a mind of its own. Got a weird/funny fur story? Share the strangest fur invasion you've battled in your home or wardrobe! No judgment here, just fellow fur-fighting comrades. 📞 Curious about tame grooming? Reach out anytime at mobilepetworks.com or (509) 591-5913.",
+    "headline": "Dog Fur’s Secret Lairs: Hidden & Hilarious",
+    "topic": "The invisible places dog fur loves to hide",
+    "scene": "Illustrate a cozy, sunlit living room with quirky dog fur patches in unexpected spots: behind cushions, inside shoes, and floating mid-air around a black pant leg. Include a smiling pet owner attempting to lint-roll their clothes with a clever dog watching nearby.",
+    "postFormat": "punchline",
+    "supportLines": [
+      "Fur hides in shoes, keyboard keys, and couch cracks",
+      "Black pants: dog fur’s favorite hiding spot",
+      "Got a fur invasion story? Share your laugh with us!"
+    ],
+    "date": "2026-11-17",
+    "pillar": "transformation",
+    "revision": 1,
+    "model": "gpt-4.1-mini",
+    "createdAt": "2026-11-16T22:52:39.229Z"
   }
 ]
