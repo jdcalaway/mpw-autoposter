@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-15T20:10:34.448Z",
+  "generatedAt": "2026-11-16T23:39:21.287Z",
   "timezone": "America/Los_Angeles",
   "posts": [
     {
@@ -2612,18 +2612,35 @@
       "datetimeLocal": "2026-11-17T12:00:00",
       "pillar": "transformation",
       "pillarLabel": "Transformation",
-      "caption": "",
+      "caption": "Ever wonder why your black pants seem magnetically drawn to your dog's fur? It's like a secret paw-sitive alliance against fashion! At Mobile Pet Works, we've noticed some hilarious hideouts for dog hair — from keyboard keys to the mystery corners of your car seats. Let's face it: dog fur has a mind of its own. Got a weird/funny fur story? Share the strangest fur invasion you've battled in your home or wardrobe! No judgment here, just fellow fur-fighting comrades. 📞 Curious about tame grooming? Reach out anytime at mobilepetworks.com or (509) 591-5913.",
       "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #TransformationTuesday #BeforeAndAfter #GroomingTransformation #TriCities #TriCitiesDogs",
       "imageIdea": "A before/after side-by-side. TIP: photograph every dog before and after — this is your best-performing content.",
       "prefersPhoto": true,
-      "graphicText": "",
-      "freshCopy": false,
-      "awaitingCopy": true,
-      "image": null,
-      "imageUrl": null,
+      "graphicText": "Dog Fur’s Secret Lairs: Hidden & Hilarious",
+      "freshCopy": true,
+      "awaitingCopy": false,
+      "topic": "The invisible places dog fur loves to hide",
+      "freshScene": "Illustrate a cozy, sunlit living room with quirky dog fur patches in unexpected spots: behind cushions, inside shoes, and floating mid-air around a black pant leg. Include a smiling pet owner attempting to lint-roll their clothes with a clever dog watching nearby.",
+      "postFormat": "punchline",
+      "supportLines": [
+        "Fur hides in shoes, keyboard keys, and couch cracks",
+        "Black pants: dog fur’s favorite hiding spot",
+        "Got a fur invasion story? Share your laugh with us!"
+      ],
+      "image": "images/reels/ernie-2026-08-28.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/reels/ernie-2026-08-28.jpg",
       "issueNumber": null,
       "status": "planned",
-      "mediaHashes": []
+      "mediaHashes": [
+        "37e70d0dd147ebb0c072122661a684be716da0e921454779511394e51c9e713c",
+        "0bbade539c8084a52cf28c072cc5294dec45563ef173051b0b6bb1db37c1befc"
+      ],
+      "mediaSource": "images/reels/ernie-2026-08-28.mp4",
+      "videoRelPath": "images/reels/ernie-2026-08-28.mp4",
+      "imageSource": "reel",
+      "mediaType": "reel",
+      "videoUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/reels/ernie-2026-08-28.mp4",
+      "contentHold": null
     },
     {
       "copyRevision": 1,
@@ -3234,6 +3251,27 @@
       "awaitingCreative": true,
       "creativeAsset": null,
       "illustration": true,
+      "image": null,
+      "imageUrl": null,
+      "issueNumber": null,
+      "status": "planned",
+      "mediaHashes": []
+    },
+    {
+      "copyRevision": 1,
+      "id": "2026-12-15",
+      "date": "2026-12-15",
+      "time": "12:00",
+      "datetimeLocal": "2026-12-15T12:00:00",
+      "pillar": "transformation",
+      "pillarLabel": "Transformation",
+      "caption": "",
+      "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #TransformationTuesday #BeforeAndAfter #GroomingTransformation #TriCities #TriCitiesDogs",
+      "imageIdea": "A before/after side-by-side. TIP: photograph every dog before and after — this is your best-performing content.",
+      "prefersPhoto": true,
+      "graphicText": "",
+      "freshCopy": false,
+      "awaitingCopy": true,
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
