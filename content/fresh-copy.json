@@ -569,5 +569,22 @@
     "revision": 1,
     "model": "gpt-4.1-mini",
     "createdAt": "2026-11-16T22:52:39.229Z"
+  },
+  {
+    "caption": "When it comes to home grooming, some pups love a relaxing sit-down spa day, while others prefer the quick in-and-out trim to keep things moving. Which side does your dog fall on? The laid-back lounger soaking up belly rubs, or the speedy sprinter eager to get back to play? Share your dog's grooming personality—we're curious! \n\nThinking about how these styles fit into your dog's home routine? Ask us at (509) 591-5913 or visit mobilepetworks.com to chat.",
+    "headline": "Spa Day or Quick Trim? Which Grooming Style Fits Your Pup?",
+    "topic": "Choosing your dog’s grooming routine and personality",
+    "scene": "A bright, cozy home living room with a happy dog lounging comfortably on a rug, while a groomer attends gently. In the background, a clock suggests a relaxed pace, contrasting with a calendar showing scheduled appointments, hinting at different grooming rhythms.",
+    "postFormat": "two_sides",
+    "supportLines": [
+      "Relaxed spa with belly rubs and extra care",
+      "Speedy trims for busy weeks and quick refreshes",
+      "Which grooming pace suits your dog's style?"
+    ],
+    "date": "2026-11-18",
+    "pillar": "tip",
+    "revision": 1,
+    "model": "gpt-4.1-mini",
+    "createdAt": "2026-11-17T21:45:29.242Z"
   }
 ]
