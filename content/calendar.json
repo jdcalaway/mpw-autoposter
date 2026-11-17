@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T23:39:21.287Z",
+  "generatedAt": "2026-11-17T22:47:08.814Z",
   "timezone": "America/Los_Angeles",
   "posts": [
     {
@@ -2650,18 +2650,35 @@
       "datetimeLocal": "2026-11-18T08:00:00",
       "pillar": "tip",
       "pillarLabel": "Pet care tip",
-      "caption": "",
+      "caption": "When it comes to home grooming, some pups love a relaxing sit-down spa day, while others prefer the quick in-and-out trim to keep things moving. Which side does your dog fall on? The laid-back lounger soaking up belly rubs, or the speedy sprinter eager to get back to play? Share your dog's grooming personality—we're curious! \n\nThinking about how these styles fit into your dog's home routine? Ask us at (509) 591-5913 or visit mobilepetworks.com to chat.",
       "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #DogCare #PetTips #DogGroomingTips #TriCities #TriCitiesDogs",
       "imageIdea": "A grooming-in-action photo, or a clean text graphic with the tip on-brand.",
       "prefersPhoto": false,
-      "graphicText": "",
-      "freshCopy": false,
-      "awaitingCopy": true,
-      "image": null,
-      "imageUrl": null,
+      "graphicText": "Spa Day or Quick Trim? Which Grooming Style Fits Your Pup?",
+      "freshCopy": true,
+      "awaitingCopy": false,
+      "topic": "Choosing your dog’s grooming routine and personality",
+      "freshScene": "A bright, cozy home living room with a happy dog lounging comfortably on a rug, while a groomer attends gently. In the background, a clock suggests a relaxed pace, contrasting with a calendar showing scheduled appointments, hinting at different grooming rhythms.",
+      "postFormat": "two_sides",
+      "supportLines": [
+        "Relaxed spa with belly rubs and extra care",
+        "Speedy trims for busy weeks and quick refreshes",
+        "Which grooming pace suits your dog's style?"
+      ],
+      "conceptId": null,
+      "creativeAsset": null,
+      "illustration": false,
+      "awaitingCreative": false,
+      "forceGraphic": true,
+      "image": "images/generated/2026-11-18-tip.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-11-18-tip.jpg",
       "issueNumber": null,
       "status": "planned",
-      "mediaHashes": []
+      "mediaHashes": [
+        "5f8953ea5989893471b2ac6247368f408fe7020382f2ffa1ea3519f92d991056"
+      ],
+      "imageSource": "graphic",
+      "contentHold": null
     },
     {
       "copyRevision": 1,
@@ -3269,6 +3286,27 @@
       "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #TransformationTuesday #BeforeAndAfter #GroomingTransformation #TriCities #TriCitiesDogs",
       "imageIdea": "A before/after side-by-side. TIP: photograph every dog before and after — this is your best-performing content.",
       "prefersPhoto": true,
+      "graphicText": "",
+      "freshCopy": false,
+      "awaitingCopy": true,
+      "image": null,
+      "imageUrl": null,
+      "issueNumber": null,
+      "status": "planned",
+      "mediaHashes": []
+    },
+    {
+      "copyRevision": 1,
+      "id": "2026-12-16",
+      "date": "2026-12-16",
+      "time": "08:00",
+      "datetimeLocal": "2026-12-16T08:00:00",
+      "pillar": "tip",
+      "pillarLabel": "Pet care tip",
+      "caption": "",
+      "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #DogCare #PetTips #DogGroomingTips #TriCities #TriCitiesDogs",
+      "imageIdea": "A grooming-in-action photo, or a clean text graphic with the tip on-brand.",
+      "prefersPhoto": false,
       "graphicText": "",
       "freshCopy": false,
       "awaitingCopy": true,
