@@ -426,9 +426,16 @@
     {
       "date": "2026-11-19",
       "day": "2026-11-18",
-      "status": "requesting",
+      "status": "rejected",
       "model": "gpt-4.1-mini",
-      "revision": 1
+      "revision": 1,
+      "httpStatus": null,
+      "reason": "Graphic wording already used on 2026-11-14.",
+      "rejectedDraft": {
+        "caption": "Leah starts her day with a playlist and a warm cup of coffee before parking her mobile salon in a quiet Tri-Cities neighborhood. As the van door opens, a wagging tail signals a new friend ready for some one-on-one grooming away from the busy salon noise. Between appointments, she spots a vibrant mural or a blooming flower bed, small joys that turn grooming into a neighborhood adventure.\n\nThinking about a grooming role that blends craft with fresh air and community? Call (509) 591-5913 to learn about joining Mobile Pet Works. This could be the change your career needs.",
+        "headline": "Behind the Wheel: A Groomer’s Day in the Tri-Cities",
+        "topic": "Hiring groomers: A glimpse into mobile grooming life"
+      }
     }
   ],
   "resolvedAuthAttempts": [
