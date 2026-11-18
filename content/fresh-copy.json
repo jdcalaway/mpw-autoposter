@@ -586,5 +586,22 @@
     "revision": 1,
     "model": "gpt-4.1-mini",
     "createdAt": "2026-11-17T21:45:29.242Z"
+  },
+  {
+    "caption": "Picture a mobile groomer pulling up in the Tri-Cities on a chilly November morning. Inside the van, everything’s ready—tools, warm water, and a cozy atmosphere just for one happy pup. After a quick chat with the pet parent about the dog's favorite treats and quirks, the groomer gently begins, making sure those cold noses feel warm and calm. Between stops, the groomer enjoys a quick coffee at a local cafe, reflecting on the smiles—a job well done on wheels.\n\nGroomers, if this sounds like your kind of day, what moment would make you smile most? The quick wag of a tail? Discovering a new favorite playlist? Share your thoughts or questions about our mobile grooming life at (509) 591-5913. Let’s talk about joining Mobile Pet Works in the Tri-Cities!",
+    "headline": "Inside a Mobile Groomer’s Day: Care on Wheels",
+    "topic": "Hiring groomers: A close look at mobile grooming life",
+    "scene": "Illustrate a mobile pet grooming van parked on a quiet residential street in Tri-Cities during a crisp fall morning. Through the open van door, a calm dog and a groomer are visible. The streetscape includes colorful fall leaves and a nearby coffee shop sign, emphasizing local community and the cozy mobile salon environment.",
+    "postFormat": "mini_story",
+    "supportLines": [
+      "Warm, cozy mobile van ready for grooming appointments",
+      "Quick chats with pet parents about pups' unique needs",
+      "Neighborhood stops bring smiles and fresh local views"
+    ],
+    "date": "2026-11-19",
+    "pillar": "bts",
+    "revision": 1,
+    "model": "gpt-4.1-mini",
+    "createdAt": "2026-11-18T21:25:36.532Z"
   }
 ]
