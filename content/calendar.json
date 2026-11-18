@@ -2630,7 +2630,7 @@
       "image": "images/reels/ernie-2026-08-28.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/reels/ernie-2026-08-28.jpg",
       "issueNumber": 84,
-      "status": "pending_approval",
+      "status": "posted",
       "mediaHashes": [
         "37e70d0dd147ebb0c072122661a684be716da0e921454779511394e51c9e713c",
         "0bbade539c8084a52cf28c072cc5294dec45563ef173051b0b6bb1db37c1befc"
@@ -2640,7 +2640,12 @@
       "imageSource": "reel",
       "mediaType": "reel",
       "videoUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/reels/ernie-2026-08-28.mp4",
-      "contentHold": null
+      "contentHold": null,
+      "postedAt": "2026-11-17T18:09:33",
+      "results": {
+        "facebook": "4671631136429229",
+        "instagram": "17912788920665843"
+      }
     },
     {
       "copyRevision": 1,
