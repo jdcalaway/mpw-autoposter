@@ -436,6 +436,13 @@
         "headline": "Behind the Wheel: A Groomer’s Day in the Tri-Cities",
         "topic": "Hiring groomers: A glimpse into mobile grooming life"
       }
+    },
+    {
+      "date": "2026-11-19",
+      "day": "2026-11-18",
+      "status": "requesting",
+      "model": "gpt-4.1-mini",
+      "revision": 1
     }
   ],
   "resolvedAuthAttempts": [
