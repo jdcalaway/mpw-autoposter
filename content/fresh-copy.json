@@ -603,5 +603,22 @@
     "revision": 1,
     "model": "gpt-4.1-mini",
     "createdAt": "2026-11-18T21:25:36.532Z"
+  },
+  {
+    "caption": "Ever find dog fur where you'd least expect it—like your laptop keyboard or inside your shoes? It’s like our pups have a secret mission to leave little reminders everywhere! Here’s how to keep the fluff manageable until your next groom:\n\n• Use a lint roller daily to catch loose fur before it spreads\n• Keep grooming tools handy for quick touch-ups between appointments\n• Designate a fuzzy-fur-zone, like a washable blanket, to contain shedding\n\nGot a go-to trick for taming runaway fur? Share your tips or funniest fur hideout stories below! We’re all in the fur game together.",
+    "headline": "Dog Fur Patrol: Smart Tips to Fight the Fluff",
+    "topic": "Everyday tricks to manage dog fur between grooming",
+    "scene": "A cozy home setting showing a person using a lint roller on their sweater while a dog lies nearby on a designated pet blanket surrounded by some grooming tools and pet hair caught in a roller. The scene feels warm, lived-in, and relatable to dog owners managing shedding.",
+    "postFormat": "checklist",
+    "supportLines": [
+      "Use a lint roller daily to catch loose dog fur",
+      "Keep grooming tools handy for quick touch-ups",
+      "Create a washable space to contain shedding fur"
+    ],
+    "date": "2026-11-20",
+    "pillar": "booking",
+    "revision": 1,
+    "model": "gpt-4.1-mini",
+    "createdAt": "2026-11-19T21:29:31.663Z"
   }
 ]
