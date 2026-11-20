@@ -26,3 +26,10 @@ test('all five layouts render complete distinct images and reject missing text',
  await assert.rejects(renderGraphic({cfg,pillar:{},pillarKey:'engagement',bodyText:'Missing text',postFormat:'checklist',outPath:join(dir,'bad.jpg')}),/three supporting/);
  } finally{await rm(dir,{recursive:true,force:true});}
 });
+test('booking posts never get the comment-bait formats',()=>{
+ assert.equal(nextFormat([],'2026-11-20','booking'),'punchline');
+ assert.equal(nextFormat([{date:'2026-11-19',postFormat:'punchline'}],'2026-11-20','booking'),'mini_story');
+ const history=FORMATS.map((postFormat,i)=>({date:`2026-11-${10+i}`,postFormat}));
+ assert.ok(['punchline','mini_story','two_sides'].includes(nextFormat(history,'2026-11-20','booking')));
+ assert.equal(nextFormat([],'2026-11-20','tip'),'question');
+});
