@@ -43,3 +43,18 @@ test('calendar starts empty, loads date-specific writing, and preserves it on re
  await writeFile(join(root,'content/fresh-copy.json'),JSON.stringify([{...draft,date:post.date,pillar:cal.posts[0].pillar}]));
  run();run();cal=JSON.parse(await readFile(join(root,'content/calendar.json')));assert.equal(cal.posts[0].caption,draft.caption);assert.equal(cal.posts[0].freshCopy,true);assert.equal(cal.posts[0].awaitingCopy,false);
 }));
+test('booking posts must ask to book, stay on pillar and avoid recent themes',()=>{
+ const business={name:'Mobile Pet Works',website:'mobilepetworks.com',phone:'(509) 591-5913'};
+ const booking={id:'2026-11-20',date:'2026-11-20',pillar:'booking'};
+ const base={postFormat:'punchline',supportLines:['one','two','three'],headline:'The salon comes to you',topic:'Skipping the drive to the groomer',scene:'A van in a driveway'};
+ const ask={...base,caption:'Lint rollers handle the couch. We will handle the dog. Ask about your next appointment at mobilepetworks.com.'};
+ assert.equal(validateCopy(ask,booking,[],business).caption,ask.caption);
+ assert.equal(validateCopy({...ask,caption:'Your dog has an appointment. Text (509) 591-5913 to ask about availability.'},booking,[],business).postFormat,'punchline');
+ assert.throws(()=>validateCopy({...base,caption:'Ever find dog fur in your shoes? Share your tips below!'},booking,[],business),/website or phone/);
+ assert.throws(()=>validateCopy({...ask,caption:ask.caption+' Share your tips below!'},booking,[],business),/comments instead/);
+ assert.throws(()=>validateCopy({...base,postFormat:'checklist',caption:ask.caption},booking,[],business),/assigned format/);
+ const bts={id:'2026-11-19',date:'2026-11-19',pillar:'bts'};
+ assert.throws(()=>validateCopy({...ask,postFormat:'question',topic:'Hiring groomers: a close look at mobile life'},bts,[],business),/Hiring content/);
+ const fur=[{date:'2026-11-11',topic:'Unexpected places dog fur ends up around the house'},{date:'2026-11-12',topic:'Unexpected dog fur hideouts around your home'},{date:'2026-11-17',topic:'The invisible places dog fur loves to hide'}];
+ assert.throws(()=>validateCopy({...ask,topic:'Everyday tricks to manage dog fur between grooming'},booking,fur,business),/recent theme \(fur\)/);
+});

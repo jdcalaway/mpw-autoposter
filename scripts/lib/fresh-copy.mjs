@@ -2,6 +2,29 @@ import { nextFormat } from './post-formats.mjs';
 import { contentHoldReason, sameCopy } from './content-policy.mjs';
 export const MODEL = 'gpt-4.1-mini';
 export const LIMITS = { perDay: 4, perMonth: 100, perDate: 3, maxOutputTokens: 700 };
+// What each post type is for. The writer gets the brief for its pillar, and
+// validateCopy enforces the hard parts (booking ask, no off-pillar hiring copy).
+export const PILLAR_BRIEFS = {
+  booking: 'Goal: get readers to ask about booking a mobile groom. Open with a fresh, specific hook, then END with a clear ask to book or ask about an appointment that uses the website and/or phone from business exactly. Do not ask readers to comment, share tips or stories. No grooming-tip lists, shedding/fur hacks or hiring content. Do not promise availability.',
+  transformation: 'Goal: celebrate what a professional groom does for a dog, in general terms (the media has not been inspected). End with a light invitation to book using the website or phone. No home-care tip lists, no fur/shedding jokes, no hiring content.',
+  bts: 'Goal: show customers what mobile grooming looks like from our side (the van, the routine, one dog at a time) without claiming a specific event happened. Write for customers, not job seekers: no hiring content.',
+  tip: 'Goal: one basic, low-risk grooming tip owners can use between grooms. A soft mention that we can help is fine; no hard sell, no hiring content.',
+  engagement: 'Goal: a fun conversation starter for dog owners. Inviting comments is the point. No hiring content.',
+  featured: 'Goal: a warm Furry Friday post celebrating freshly groomed pups in general terms. No hiring content.',
+  testimonial: 'Goal: thank customers warmly and invite them to ask about their next appointment. No hiring content.',
+  hiring: 'Goal: invite experienced groomers to start a conversation about joining the team. Hiring content belongs only in this pillar.',
+};
+const STOP = new Set('the and for with your you our dog dogs dogs pup pups puppy grooming groom grooms groomer groomers mobile home homes between about from into what when how why tips tip that this their them they more less keep everyday daily basic simple best ways things hiring team join'.split(' '));
+const keywords = s => String(s||'').toLowerCase().replace(/[^a-z\s]/g,' ').split(/\s+/).filter(w=>w.length>=3&&!STOP.has(w)).map(w=>w.replace(/(ies)$/,'y').replace(/s$/,''));
+// Words that already appeared in two or more topics in the last 14 days.
+export function overusedTopicWords(history, date) {
+  const since = new Date(`${date}T00:00:00Z`); since.setUTCDate(since.getUTCDate()-14);
+  const from = since.toISOString().slice(0,10);
+  const counts = new Map();
+  for (const p of history) if (p.topic && p.date >= from && p.date < date) for (const w of new Set(keywords(p.topic))) counts.set(w,(counts.get(w)||0)+1);
+  return [...counts].filter(([,n])=>n>=2).map(([w])=>w).sort();
+}
+const digits = s => String(s||'').replace(/\D/g,'');
 export function copyBlock(attempts, date, today, revision = 1) {
   if (attempts.filter(a=>a.day===today).length >= LIMITS.perDay) return 'Daily writing limit reached.';
   if (attempts.filter(a=>a.day.slice(0,7)===today.slice(0,7)).length >= LIMITS.perMonth) return 'Monthly writing limit reached.';
@@ -9,11 +32,11 @@ export function copyBlock(attempts, date, today, revision = 1) {
   if (attempts.some(a=>a.date===date && a.day===today && !['auth_error','rejected'].includes(a.status) && (a.revision||1)===revision)) return 'Already attempted this post today.';
   return null;
 }
-export function validateCopy(draft, post, history) {
+export function validateCopy(draft, post, history, business = {}) {
   for (const [key,max] of [['caption',900],['headline',70],['topic',160],['scene',400]]) {
     if (typeof draft[key] !== 'string' || !draft[key].trim() || draft[key].length > max) throw new Error(`Invalid fresh ${key}.`);
   }
-  if (draft.postFormat !== nextFormat(history, post.date)) throw new Error('Writer did not follow the assigned format.');
+  if (draft.postFormat !== nextFormat(history, post.date, post.pillar)) throw new Error('Writer did not follow the assigned format.');
   if (!Array.isArray(draft.supportLines) || draft.supportLines.length !== 3 || draft.supportLines.some(s=>typeof s!=='string'||!s.trim()||s.length>90)) throw new Error('Invalid graphic supporting lines.');
   if (/without traffic|traffic.free|flexible (role|schedule|hours)|guaranteed|competitive pay|paid vacation/i.test([draft.caption,draft.headline,...draft.supportLines].join(' '))) throw new Error('Unverified job or service claim.');
   const words=draft.headline.split(/\s+/); let lines=1, width=0;
@@ -23,13 +46,23 @@ export function validateCopy(draft, post, history) {
   if (hold) throw new Error(hold);
   if (history.some(p=>p.id!==post.id && (sameCopy(draft.topic,p.topic)||sameCopy(draft.caption,p.caption)))) throw new Error('Topic already used.');
   if (/https?:\/\/(?!mobilepetworks\.com)/i.test(draft.caption)) throw new Error('Unexpected external link.');
+  if (post.pillar === 'booking') {
+    const site = String(business.website||'').toLowerCase(), phone = digits(business.phone);
+    const hasContact = (site && draft.caption.toLowerCase().includes(site)) || (phone.length >= 10 && digits(draft.caption).includes(phone));
+    if (!hasContact) throw new Error('Booking post must end with an ask that uses the website or phone.');
+    if (/\b(comment|comments|share your|tell us|drop (it|them|yours|your)|below)\b/i.test(draft.caption)) throw new Error('Booking post asks for comments instead of a booking.');
+  }
+  if (post.pillar && post.pillar !== 'hiring' && /\b(hiring|join (our|the) team|groomer jobs?)\b/i.test([draft.caption,draft.headline,draft.topic].join(' '))) throw new Error('Hiring content outside the hiring pillar.');
+  const overused = overusedTopicWords(history, post.date);
+  const repeat = keywords(draft.topic).find(w => overused.includes(w));
+  if (repeat) throw new Error(`Topic repeats a recent theme (${repeat}).`);
   return draft;
 }
 export async function writeFreshCopy({post, history, business, apiKey, rejectionFeedback = [], fetchImpl=fetch}) {
-  const format = nextFormat(history, post.date);
+  const format = nextFormat(history, post.date, post.pillar);
   const schema={type:'object',additionalProperties:false,properties:{...Object.fromEntries(['caption','headline','topic','scene'].map(k=>[k,{type:'string'}])),postFormat:{type:'string',enum:[format]},supportLines:{type:'array',items:{type:'string'},minItems:3,maxItems:3}},required:['caption','headline','topic','scene','postFormat','supportLines']};
   const archive=history.filter(p=>p.id!==post.id && p.caption && (p.status!=='planned'||p.freshCopy)).map(p=>({date:p.date,pillar:p.pillar,caption:p.caption,headline:p.graphicText,topic:p.topic,postFormat:p.postFormat}));
-  const data={business,date:post.date,pillar:post.pillar,assignedFormat:format,creativeBrief:post.creativeBrief||null,rejectionFeedback,history:archive};
+  const data={business,date:post.date,pillar:post.pillar,pillarBrief:PILLAR_BRIEFS[post.pillar]||null,avoidRecentThemes:overusedTopicWords(history,post.date),assignedFormat:format,creativeBrief:post.creativeBrief||null,rejectionFeedback,history:archive};
   if (JSON.stringify(data).length>180000) throw new Error('Content history needs compaction; holding rather than forgetting old posts.');
   const response=await fetchImpl('https://api.openai.com/v1/chat/completions',{
     method:'POST',redirect:'error',signal:AbortSignal.timeout(90000),
@@ -38,12 +71,14 @@ export async function writeFreshCopy({post, history, business, apiKey, rejection
       response_format:{type:'json_schema',json_schema:{name:'fresh_social_post',strict:true,schema}},
       messages:[{role:'system',content:[
         'Write ONE original Facebook/Instagram post for Mobile Pet Works. Never select or paraphrase a stock caption. Read the history and find a meaningfully different specific angle, opening, and message; do not merely swap words in an old post.',
-        'Make this feel like a real varied social feed, not the same promotional paragraph. Do not open with Imagine or Thinking about. Do not use the recurring structure: generic question, mobile convenience claim, call us. Some posts should invite a comment instead of a booking. Avoid a sales CTA on every post. Write with specifics, personality and restraint, without inventing business facts.',
+        'Make this feel like a real varied social feed, not the same promotional paragraph. Do not open with Imagine or Thinking about. Do not use the recurring structure: generic question, mobile convenience claim, call us. Write with specifics, personality and restraint, without inventing business facts.',
+        'Follow pillarBrief exactly: it says what this post type is for and overrides any general guidance here. Engagement and tip posts may invite comments; booking posts must end with an ask to book, never a request to comment. Only the hiring pillar may talk about hiring or jobs.',
+        'Pick a topic outside avoidRecentThemes; those themes were already used recently.',
         'Follow assignedFormat exactly. question: one playful, specific conversation starter and an invitation to comment; checklist: three useful short points with line breaks; two_sides: two distinct perspectives or choices with a question; mini_story: a clearly hypothetical everyday vignette, never a fabricated client experience; punchline: a concise witty observation plus one short follow-up. Hiring formats can ask about professional preferences but must not imply we offer those preferences.',
         'Return postFormat and exactly three supportLines for the graphic, each under 90 characters. For checklist these are three concrete points; for two_sides the first two are the two choices and the third is the prompt; for question they are short possible answers/response prompts; for punchline or mini_story they are three brief connected beats. The graphic should stand on its own and the caption should add something, not repeat every line. No unverified claims in any field.',
         'Return caption (under 900 characters, no hashtags), headline (under 70 characters, short words, fits three lines), topic (a specific plain-language angle, not a broad category), and scene (fresh illustration direction, under 400 characters).',
         'Known facts only: mobile dog grooming in Tri-Cities, Washington, salon comes to the home; the business is hiring groomers. Driving between customers is part of mobile work. Schedule flexibility, pay and benefits have NOT been confirmed. Use provided website/phone exactly. No invented clients, employee stories, reviews, prices, discounts, available openings, pay, benefits, credentials, or guaranteed comfort/results.',
-        'Use a warm, practical local-business voice and varied formats. An optional brief question is fine. Booking CTA should invite inquiries without promising availability. Hiring should invite a conversation without making unsupported job promises.',
+        'Use a warm, practical local-business voice and varied formats. An optional brief question is fine. Booking CTA must close with an inquiry or booking ask without promising availability. Hiring should invite a conversation without making unsupported job promises.',
         'Tips must be basic low-risk grooming education, no diagnoses, treatments, medical claims or unsafe home cutting. Consider the date/season without inventing local weather or events.',
         'Real photo/video has NOT been visually inspected. Do not describe a pictured dog, breed, named pet, before/after result, clip, tools or setting; use a general relevant caption. Behind-the-scenes must not pretend an event happened. Never say swipe/watch or refer to an image.',
         'If rejectionFeedback is present, the earlier draft failed review. Choose a different specific idea and new graphic wording. Do not retry the rejected idea with synonyms. Observe the rejection reason as well as the post history.',
@@ -54,6 +89,6 @@ export async function writeFreshCopy({post, history, business, apiKey, rejection
   const choice=result.choices?.[0];
   if(choice?.finish_reason!=='stop'||choice.message?.refusal) throw new Error('Writer did not return a complete draft.');
   const draft=JSON.parse(choice.message.content);
-  try { return validateCopy(draft,post,history); }
+  try { return validateCopy(draft,post,history,business); }
   catch(error) { error.code='CONTENT_REJECTED'; error.rejectedDraft={caption:draft.caption,headline:draft.headline,topic:draft.topic}; throw error; }
 }
