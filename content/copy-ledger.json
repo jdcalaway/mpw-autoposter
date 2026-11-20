@@ -454,9 +454,16 @@
     {
       "date": "2026-11-21",
       "day": "2026-11-20",
-      "status": "requesting",
+      "status": "rejected",
       "model": "gpt-4.1-mini",
-      "revision": 1
+      "revision": 1,
+      "httpStatus": null,
+      "reason": "Topic repeats a recent theme (unique).",
+      "rejectedDraft": {
+        "caption": "Mobile pet groomers, when your 'office' is the open road of the Tri-Cities, what’s the best surprise you've found while driving between appointments? A cozy coffee shop, a street art gem, or something else that makes your day? Share your favorites or wish list spots! \n\nMobile Pet Works is eager to welcome groomers who love blending craft with discovery. Interested? Dial (509) 591-5913 for a chat about joining our team on wheels.",
+        "headline": "Roadside Surprises: Groomers' Favorite Stops Between Jobs",
+        "topic": "Hiring groomers: The unique joys of mobile grooming routes"
+      }
     }
   ],
   "resolvedAuthAttempts": [
