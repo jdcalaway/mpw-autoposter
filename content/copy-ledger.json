@@ -468,9 +468,16 @@
     {
       "date": "2026-11-21",
       "day": "2026-11-20",
-      "status": "requesting",
+      "status": "rejected",
       "model": "gpt-4.1-mini",
-      "revision": 1
+      "revision": 1,
+      "httpStatus": null,
+      "reason": "Graphic wording already used on 2026-11-16.",
+      "rejectedDraft": {
+        "caption": "Groomers of Tri-Cities, what's your grooming day style on the go? Do you prefer hopping between quick trims to keep tails wagging fast, or savoring the slower moments with each pup to perfect every detail? \n\nImagine your ideal mobile day: Zooming through neighborhoods, or enjoying calm, focused cuts? Tell us your groove, and if mobile grooming intrigues you, let's connect! Call (509) 591-5913 and share your style.",
+        "headline": "Fast Trips or Slow Snips: Your Grooming Day Preference?",
+        "topic": "Hiring groomers: Choosing your ideal mobile grooming pace"
+      }
     }
   ],
   "resolvedAuthAttempts": [
