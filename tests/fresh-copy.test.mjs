@@ -57,4 +57,7 @@ test('booking posts must ask to book, stay on pillar and avoid recent themes',()
  assert.throws(()=>validateCopy({...ask,postFormat:'question',topic:'Hiring groomers: a close look at mobile life'},bts,[],business),/Hiring content/);
  const fur=[{date:'2026-11-11',topic:'Unexpected places dog fur ends up around the house'},{date:'2026-11-12',topic:'Unexpected dog fur hideouts around your home'},{date:'2026-11-17',topic:'The invisible places dog fur loves to hide'}];
  assert.throws(()=>validateCopy({...ask,topic:'Everyday tricks to manage dog fur between grooming'},booking,fur,business),/recent theme \(fur\)/);
+ const unique=[{date:'2026-11-08',topic:'Unique coats need unique care'},{date:'2026-11-09',topic:'What makes each pup unique'},{date:'2026-11-10',topic:'Unique personalities on the table'}];
+ assert.equal(validateCopy({...ask,topic:'The unique joys of a driveway groom'},booking,unique,business).caption,ask.caption);
+ assert.equal(validateCopy({...ask,topic:'Fur on the couch again'},booking,fur.slice(0,2),business).caption,ask.caption);
 });

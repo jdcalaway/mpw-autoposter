@@ -14,15 +14,15 @@ export const PILLAR_BRIEFS = {
   testimonial: 'Goal: thank customers warmly and invite them to ask about their next appointment. No hiring content.',
   hiring: 'Goal: invite experienced groomers to start a conversation about joining the team. Hiring content belongs only in this pillar.',
 };
-const STOP = new Set('the and for with your you our dog dogs dogs pup pups puppy grooming groom grooms groomer groomers mobile home homes between about from into what when how why tips tip that this their them they more less keep everyday daily basic simple best ways things hiring team join'.split(' '));
+const STOP = new Set('the and for with your you our dog dogs dogs pup pups puppy grooming groom grooms groomer groomers mobile home homes between about from into what when how why tips tip that this their them they more less keep everyday daily basic simple best ways things hiring team join unique choosing choose ideal care life place around after end look love close house routine session unexpected celebrating glimpse spotting vibe'.split(' '));
 const keywords = s => String(s||'').toLowerCase().replace(/[^a-z\s]/g,' ').split(/\s+/).filter(w=>w.length>=3&&!STOP.has(w)).map(w=>w.replace(/(ies)$/,'y').replace(/s$/,''));
-// Words that already appeared in two or more topics in the last 14 days.
-export function overusedTopicWords(history, date) {
+// Words that already appeared in at least `min` topics in the last 14 days.
+export function overusedTopicWords(history, date, min = 2) {
   const since = new Date(`${date}T00:00:00Z`); since.setUTCDate(since.getUTCDate()-14);
   const from = since.toISOString().slice(0,10);
   const counts = new Map();
   for (const p of history) if (p.topic && p.date >= from && p.date < date) for (const w of new Set(keywords(p.topic))) counts.set(w,(counts.get(w)||0)+1);
-  return [...counts].filter(([,n])=>n>=2).map(([w])=>w).sort();
+  return [...counts].filter(([,n])=>n>=min).map(([w])=>w).sort();
 }
 const digits = s => String(s||'').replace(/\D/g,'');
 export function copyBlock(attempts, date, today, revision = 1) {
@@ -53,7 +53,9 @@ export function validateCopy(draft, post, history, business = {}) {
     if (/\b(comment|comments|share your|tell us|drop (it|them|yours|your)|below)\b/i.test(draft.caption)) throw new Error('Booking post asks for comments instead of a booking.');
   }
   if (post.pillar && post.pillar !== 'hiring' && /\b(hiring|join (our|the) team|groomer jobs?)\b/i.test([draft.caption,draft.headline,draft.topic].join(' '))) throw new Error('Hiring content outside the hiring pillar.');
-  const overused = overusedTopicWords(history, post.date);
+  // The writer is told to avoid words seen twice; only a theme used 3+ times is a hard stop,
+  // so one shared word doesn't burn a limited writing attempt.
+  const overused = overusedTopicWords(history, post.date, 3);
   const repeat = keywords(draft.topic).find(w => overused.includes(w));
   if (repeat) throw new Error(`Topic repeats a recent theme (${repeat}).`);
   return draft;
