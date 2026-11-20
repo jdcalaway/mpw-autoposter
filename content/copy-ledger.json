@@ -464,6 +464,13 @@
         "headline": "Roadside Surprises: Groomers' Favorite Stops Between Jobs",
         "topic": "Hiring groomers: The unique joys of mobile grooming routes"
       }
+    },
+    {
+      "date": "2026-11-21",
+      "day": "2026-11-20",
+      "status": "requesting",
+      "model": "gpt-4.1-mini",
+      "revision": 1
     }
   ],
   "resolvedAuthAttempts": [
