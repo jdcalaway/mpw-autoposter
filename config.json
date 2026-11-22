@@ -3,11 +3,27 @@
     "name": "Mobile Pet Works",
     "website": "mobilepetworks.com",
     "phone": "(509) 591-5913",
-    "serviceArea": "Tri-Cities"
+    "serviceArea": "Tri-Cities",
+    "hiring": {
+      "role": "Mobile Dog Groomer, full-time, Tri-Cities WA",
+      "work": "Full grooms and baths, one dog at a time, in a fully equipped grooming van at clients' homes. Our dispatcher handles booking.",
+      "pay": "40% commission plus tips",
+      "schedule": "Full-time, grooming Monday to Saturday",
+      "timeOff": "1 week of paid time off after one year",
+      "requirements": [
+        "2+ years of professional grooming experience",
+        "Comfortable with a range of breeds and coat types (no training offered)",
+        "Valid Washington driver's license"
+      ],
+      "applyUrl": "https://docs.google.com/forms/d/e/1FAIpQLScMPLC9fDGcR0McxfOrfhEoPH3rwr82XPtQJoIue56WkpUZMA/viewform",
+      "applyNote": "Apply with the online form and include photos of recent grooms."
+    }
   },
   "timezone": "America/Los_Angeles",
   "approverLogin": "jdcalaway",
-  "graph": { "apiVersion": "v21.0" },
+  "graph": {
+    "apiVersion": "v21.0"
+  },
   "approvalGraceHours": 12,
   "graphic": {
     "width": 1080,

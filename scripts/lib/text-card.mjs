@@ -47,6 +47,11 @@ export async function renderTextCard({sharp,cfg,bodyText,postFormat,supportLines
   await text(bodyText,72,205,936,370,100,ink);
   rect(72,615,936,8,ink);
   for(let i=0;i<3;i++)await text(lines[i],72,665+i*95,936,75,36,ink);
+ } else if(postFormat==='job_ad'){
+  field=cream;rect(0,0,1080,125,blue);
+  await text('NOW HIRING  ·  TRI-CITIES',72,43,936,65,30,gold);
+  await text(bodyText,72,175,936,250,80,ink);
+  for(let i=0;i<3;i++){rect(72,470+i*160,936,130,i===2?gold:'#FFFFFF',22);rect(72,470+i*160,14,130,i===2?ink:blue,7);await text(lines[i],110,515+i*160,875,75,38,ink);}
  } else throw new Error('Unknown text-card format.');
  rect(0,965,1080,115,postFormat==='question'?blue:ink);
  layers.push(await logoLayer(sharp,{left:54,top:976,size:90}));

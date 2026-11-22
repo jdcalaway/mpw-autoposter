@@ -183,7 +183,7 @@ export async function renderCampaign({ source, item, business }) {
     textLayer(hiring ? "WE’RE HIRING GROOMERS" : "MOBILE DOG GROOMING · TRI-CITIES", 22, accent, 747),
     ...lines.map((line, i) => textLayer(line, 52, ink, 788 + (3 - lines.length) * 29 + i * 58)),
     textLayer(business.name, 30, ink, 973, 170),
-    textLayer(hiring ? `Let’s talk: ${business.phone}` : `Ask about availability: ${business.website}`, 26, accent, 1016, 170)
+    textLayer(hiring ? "Apply online: link in the post" : `Ask about availability: ${business.website}`, 26, accent, 1016, 170)
   ]);
   return sharp({ create: { width: 1080, height: 1080, channels: 3, background } })
     .composite([{ input: art, top: 0, left: 0 }, { input: overlay }, ...typography, await logoLayer(sharp,{left:56,top:966,size:94})]).jpeg({ quality: 93 }).toBuffer();
