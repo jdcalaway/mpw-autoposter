@@ -75,6 +75,8 @@ test('hiring posts must be direct job ads with the confirmed pay and the form li
  assert.throws(()=>validateCopy({...ad,caption:ad.caption+'\nTag a groomer friend below!'},hp,[],biz),/engagement/);
  assert.throws(()=>validateCopy({...ad,caption:ad.caption+'\nMedical included.'},hp,[],biz),/benefit/);
  assert.throws(()=>validateCopy({...ad,caption:ad.caption.replace('40%','up to 40%')},hp,[],biz),/flat rate/);
+ assert.throws(()=>validateCopy({...ad,caption:ad.caption+'\n1 week of paid time off after one year.'},hp,[],biz),/time off or training/);
+ assert.throws(()=>validateCopy({...ad,caption:ad.caption+'\nRange of breeds and coats (no training offered).'},hp,[],biz),/time off or training/);
  assert.throws(()=>validateCopy({...ad,caption:ad.caption+'\nYoung, energetic team!'},hp,[],biz),/personal traits/);
  // The form link is only allowed on hiring posts.
  const bp={id:'2026-11-29',date:'2026-11-29',pillar:'booking',status:'planned',awaitingCopy:true};
