@@ -2845,12 +2845,17 @@
       "image": "images/generated/2026-11-22-booking.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-11-22-booking.jpg",
       "issueNumber": 91,
-      "status": "pending_approval",
+      "status": "posted",
       "mediaHashes": [
         "b28df4f9601ea3ee4e7775e34a309fa67803c2ce115ff5190a7a785892af6c15"
       ],
       "imageSource": "graphic",
-      "contentHold": null
+      "contentHold": null,
+      "postedAt": "2026-11-22T13:34:11",
+      "results": {
+        "facebook": "1585957798283717_1818583190270331",
+        "instagram": "17920488087495581"
+      }
     },
     {
       "copyRevision": 1,
@@ -2908,7 +2913,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -2928,7 +2934,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -2948,7 +2955,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -2971,7 +2979,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -2994,7 +3003,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -3017,7 +3027,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -3040,7 +3051,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -3060,7 +3072,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -3080,7 +3093,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -3100,7 +3114,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -3123,7 +3138,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -3146,7 +3162,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -3169,7 +3186,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -3192,7 +3210,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -3212,7 +3231,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -3232,7 +3252,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -3252,7 +3273,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -3275,7 +3297,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -3298,7 +3321,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -3321,7 +3345,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -3344,7 +3369,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -3364,7 +3390,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -3384,7 +3411,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -3404,7 +3432,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -3427,7 +3456,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -3450,7 +3480,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -3473,7 +3504,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     },
     {
       "copyRevision": 1,
@@ -3496,7 +3528,8 @@
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
-      "status": "planned"
+      "status": "planned",
+      "mediaHashes": []
     }
   ]
 }
