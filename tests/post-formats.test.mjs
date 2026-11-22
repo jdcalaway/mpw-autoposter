@@ -33,3 +33,8 @@ test('booking posts never get the comment-bait formats',()=>{
  assert.ok(['punchline','mini_story','two_sides'].includes(nextFormat(history,'2026-11-20','booking')));
  assert.equal(nextFormat([],'2026-11-20','tip'),'question');
 });
+test('hiring posts are always job ads with a graphic',()=>{
+ assert.equal(nextFormat([{date:'2026-11-20',pillar:'hiring',postFormat:'job_ad'}],'2026-11-28','hiring'),'job_ad');
+ assert.equal(graphicMode('hiring','job_ad'),true);
+ assert.ok(!['question','checklist','two_sides','mini_story','punchline'].includes(nextFormat([],'2026-11-28','hiring')));
+});

@@ -61,3 +61,33 @@ test('booking posts must ask to book, stay on pillar and avoid recent themes',()
  assert.equal(validateCopy({...ask,topic:'The unique joys of a driveway groom'},booking,unique,business).caption,ask.caption);
  assert.equal(validateCopy({...ask,topic:'Fur on the couch again'},booking,fur.slice(0,2),business).caption,ask.caption);
 });
+test('hiring posts must be direct job ads with the confirmed pay and the form link',()=>{
+ const hiring={pay:'40% commission plus tips',applyUrl:'https://docs.google.com/forms/d/e/TESTFORM/viewform'};
+ const biz={name:'Mobile Pet Works',website:'mobilepetworks.com',phone:'(509) 591-5913',hiring};
+ const hp={id:'2026-11-28',date:'2026-11-28',pillar:'hiring',status:'planned',awaitingCopy:true};
+ const ad={postFormat:'job_ad',supportLines:['40% commission plus tips','Full-time, grooming Monday to Saturday','Apply online: link in the post'],
+  caption:`Mobile Pet Works is hiring a full-time mobile dog groomer in the Tri-Cities.\n\nPay: 40% commission plus tips.\nSchedule: grooming Monday to Saturday.\n\nApply here, with photos of recent grooms: ${hiring.applyUrl}`,
+  headline:'Mobile dog groomer wanted',topic:'Full-time mobile groomer opening with commission pay',scene:'A clean grooming van parked outside a Tri-Cities home'};
+ assert.equal(validateCopy(ad,hp,[],biz),ad);
+ assert.throws(()=>validateCopy({...ad,caption:ad.caption.replace(hiring.applyUrl,'')},hp,[],biz),/form link/);
+ assert.throws(()=>validateCopy({...ad,caption:ad.caption.replace('Pay: 40% commission','Pay: commission')},hp,[],biz),/state the pay/);
+ assert.throws(()=>validateCopy({...ad,caption:'Love working with dogs? '+ad.caption},hp,[],biz),/open with the role/);
+ assert.throws(()=>validateCopy({...ad,caption:ad.caption+'\nTag a groomer friend below!'},hp,[],biz),/engagement/);
+ assert.throws(()=>validateCopy({...ad,caption:ad.caption+'\nMedical included.'},hp,[],biz),/benefit/);
+ assert.throws(()=>validateCopy({...ad,caption:ad.caption.replace('40%','up to 40%')},hp,[],biz),/flat rate/);
+ assert.throws(()=>validateCopy({...ad,caption:ad.caption+'\n1 week of paid time off after one year.'},hp,[],biz),/time off or training/);
+ assert.throws(()=>validateCopy({...ad,caption:ad.caption+'\nRange of breeds and coats (no training offered).'},hp,[],biz),/time off or training/);
+ assert.throws(()=>validateCopy({...ad,caption:ad.caption+'\nYoung, energetic team!'},hp,[],biz),/personal traits/);
+ // The form link is only allowed on hiring posts.
+ const bp={id:'2026-11-29',date:'2026-11-29',pillar:'booking',status:'planned',awaitingCopy:true};
+ const book={...ad,postFormat:'punchline',caption:`Book at mobilepetworks.com ${hiring.applyUrl}`,topic:'Weekend booking reminder',headline:'Book your groom'};
+ assert.throws(()=>validateCopy(book,bp,[],biz),/external link/);
+});
+test('hiring facts reach the writer only for hiring posts',async()=>{
+ const biz={name:'Mobile Pet Works',hiring:{pay:'40% commission plus tips'}};
+ const seen=[];const fetchImpl=async(url,options)=>{seen.push(JSON.parse(JSON.parse(options.body).messages[1].content));return Response.json({choices:[{finish_reason:'stop',message:{content:JSON.stringify(draft)}}]});};
+ await writeFreshCopy({post,history:[],business:biz,apiKey:'fixture',fetchImpl});
+ assert.equal(seen[0].hiringFacts,null);assert.equal(seen[0].business.hiring,undefined);
+ await assert.rejects(writeFreshCopy({post:{...post,pillar:'hiring'},history:[],business:biz,apiKey:'fixture',fetchImpl}));
+ assert.deepEqual(seen[1].hiringFacts,biz.hiring);
+});

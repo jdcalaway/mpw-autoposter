@@ -12,7 +12,7 @@ export const PILLAR_BRIEFS = {
   engagement: 'Goal: a fun conversation starter for dog owners. Inviting comments is the point. No hiring content.',
   featured: 'Goal: a warm Furry Friday post celebrating freshly groomed pups in general terms. No hiring content.',
   testimonial: 'Goal: thank customers warmly and invite them to ask about their next appointment. No hiring content.',
-  hiring: 'Goal: invite experienced groomers to start a conversation about joining the team. Hiring content belongs only in this pillar.',
+  hiring: 'Goal: a direct job ad that gets qualified groomers to apply. Open by naming the role (we are hiring a mobile dog groomer in the Tri-Cities). State the pay and schedule from hiringFacts in their exact wording, then the requirements, then END with how to apply: the applyUrl exactly, plus the applyNote. No questions to readers, no asks to comment, tag or share, no chatty hook. Do not mention time off, PTO, vacation or training, and mention no benefit, perk or bonus beyond hiringFacts. Hiring content belongs only in this pillar.',
 };
 const STOP = new Set('the and for with your you our dog dogs dogs pup pups puppy grooming groom grooms groomer groomers mobile home homes between about from into what when how why tips tip that this their them they more less keep everyday daily basic simple best ways things hiring team join unique choosing choose ideal care life place around after end look love close house routine session unexpected celebrating glimpse spotting vibe'.split(' '));
 const keywords = s => String(s||'').toLowerCase().replace(/[^a-z\s]/g,' ').split(/\s+/).filter(w=>w.length>=3&&!STOP.has(w)).map(w=>w.replace(/(ies)$/,'y').replace(/s$/,''));
@@ -45,7 +45,10 @@ export function validateCopy(draft, post, history, business = {}) {
   const hold=contentHoldReason({...post,caption:draft.caption,graphicText:draft.headline},history);
   if (hold) throw new Error(hold);
   if (history.some(p=>p.id!==post.id && (sameCopy(draft.topic,p.topic)||sameCopy(draft.caption,p.caption)))) throw new Error('Topic already used.');
-  if (/https?:\/\/(?!mobilepetworks\.com)/i.test(draft.caption)) throw new Error('Unexpected external link.');
+  const applyUrl = post.pillar === 'hiring' ? String(business.hiring?.applyUrl || '') : '';
+  const linkCheck = applyUrl ? draft.caption.split(applyUrl).join(' ') : draft.caption;
+  if (/https?:\/\/(?!mobilepetworks\.com)/i.test(linkCheck)) throw new Error('Unexpected external link.');
+  if (post.pillar === 'hiring') validateJobAd(draft, business.hiring || {});
   if (post.pillar === 'booking') {
     const site = String(business.website||'').toLowerCase(), phone = digits(business.phone);
     const hasContact = (site && draft.caption.toLowerCase().includes(site)) || (phone.length >= 10 && digits(draft.caption).includes(phone));
@@ -60,11 +63,25 @@ export function validateCopy(draft, post, history, business = {}) {
   if (repeat) throw new Error(`Topic repeats a recent theme (${repeat}).`);
   return draft;
 }
+// Hiring posts must read as a real job ad: the confirmed pay, the apply link, no chat bait.
+function validateJobAd(draft, hiring) {
+  const text = [draft.caption, draft.headline, ...draft.supportLines].join(' ');
+  if (hiring.applyUrl && !draft.caption.includes(hiring.applyUrl)) throw new Error('Job ad must include the application form link.');
+  const pay = String(hiring.pay || '').match(/\d+%/)?.[0];
+  if (pay && !draft.caption.includes(pay)) throw new Error(`Job ad must state the pay (${pay}).`);
+  if (/\bup to \d+%/i.test(text)) throw new Error('Job ad must state the pay as a flat rate, not "up to".');
+  if (/^[^.!\n]*\?/.test(draft.caption.trim())) throw new Error('Job ad must open with the role, not a question.');
+  if (/\b(comment|comments|tell us|tag (a|your)|share (this|your)|drop (it|them|yours|your)|below)\b/i.test(draft.caption)) throw new Error('Job ad asks for engagement instead of applications.');
+  if (/\b(medical|health insurance|dental insurance|401\(?k\)?|retirement|sign.on bonus|bonus|training provided|we('ll| will) train|paid training)\b/i.test(text)) throw new Error('Job ad mentions a benefit that is not offered.');
+  if (/\b(time off|pto|vacation|holidays? off|training)\b/i.test(text)) throw new Error('Job ad mentions time off or training.');
+  if (/\b(young|energetic|digital native|recent grads?|guys|gals|ladies|men only|women only|no kids)\b/i.test(text)) throw new Error('Job ad uses wording about personal traits.');
+}
 export async function writeFreshCopy({post, history, business, apiKey, rejectionFeedback = [], fetchImpl=fetch}) {
   const format = nextFormat(history, post.date, post.pillar);
   const schema={type:'object',additionalProperties:false,properties:{...Object.fromEntries(['caption','headline','topic','scene'].map(k=>[k,{type:'string'}])),postFormat:{type:'string',enum:[format]},supportLines:{type:'array',items:{type:'string'},minItems:3,maxItems:3}},required:['caption','headline','topic','scene','postFormat','supportLines']};
   const archive=history.filter(p=>p.id!==post.id && p.caption && (p.status!=='planned'||p.freshCopy)).map(p=>({date:p.date,pillar:p.pillar,caption:p.caption,headline:p.graphicText,topic:p.topic,postFormat:p.postFormat}));
-  const data={business,date:post.date,pillar:post.pillar,pillarBrief:PILLAR_BRIEFS[post.pillar]||null,avoidRecentThemes:overusedTopicWords(history,post.date),assignedFormat:format,creativeBrief:post.creativeBrief||null,rejectionFeedback,history:archive};
+  const {hiring:hiringFacts=null,...publicBusiness}=business||{};
+  const data={business:publicBusiness,hiringFacts:post.pillar==='hiring'?hiringFacts:null,date:post.date,pillar:post.pillar,pillarBrief:PILLAR_BRIEFS[post.pillar]||null,avoidRecentThemes:overusedTopicWords(history,post.date),assignedFormat:format,creativeBrief:post.creativeBrief||null,rejectionFeedback,history:archive};
   if (JSON.stringify(data).length>180000) throw new Error('Content history needs compaction; holding rather than forgetting old posts.');
   const response=await fetchImpl('https://api.openai.com/v1/chat/completions',{
     method:'POST',redirect:'error',signal:AbortSignal.timeout(90000),
@@ -76,11 +93,11 @@ export async function writeFreshCopy({post, history, business, apiKey, rejection
         'Make this feel like a real varied social feed, not the same promotional paragraph. Do not open with Imagine or Thinking about. Do not use the recurring structure: generic question, mobile convenience claim, call us. Write with specifics, personality and restraint, without inventing business facts.',
         'Follow pillarBrief exactly: it says what this post type is for and overrides any general guidance here. Engagement and tip posts may invite comments; booking posts must end with an ask to book, never a request to comment. Only the hiring pillar may talk about hiring or jobs.',
         'Pick a topic outside avoidRecentThemes; those themes were already used recently.',
-        'Follow assignedFormat exactly. question: one playful, specific conversation starter and an invitation to comment; checklist: three useful short points with line breaks; two_sides: two distinct perspectives or choices with a question; mini_story: a clearly hypothetical everyday vignette, never a fabricated client experience; punchline: a concise witty observation plus one short follow-up. Hiring formats can ask about professional preferences but must not imply we offer those preferences.',
-        'Return postFormat and exactly three supportLines for the graphic, each under 90 characters. For checklist these are three concrete points; for two_sides the first two are the two choices and the third is the prompt; for question they are short possible answers/response prompts; for punchline or mini_story they are three brief connected beats. The graphic should stand on its own and the caption should add something, not repeat every line. No unverified claims in any field.',
+        'Follow assignedFormat exactly. question: one playful, specific conversation starter and an invitation to comment; checklist: three useful short points with line breaks; two_sides: two distinct perspectives or choices with a question; mini_story: a clearly hypothetical everyday vignette, never a fabricated client experience; punchline: a concise witty observation plus one short follow-up. job_ad: a plain, direct job post (role, what the work is, pay, schedule, requirements, how to apply) with short lines; no question and no invitation to comment.',
+        'Return postFormat and exactly three supportLines for the graphic, each under 90 characters. For checklist these are three concrete points; for two_sides the first two are the two choices and the third is the prompt; for question they are short possible answers/response prompts; for punchline or mini_story they are three brief connected beats; for job_ad they are the pay, the schedule and how to apply (say: apply online, link in the post). The graphic should stand on its own and the caption should add something, not repeat every line. No unverified claims in any field.',
         'Return caption (under 900 characters, no hashtags), headline (under 70 characters, short words, fits three lines), topic (a specific plain-language angle, not a broad category), and scene (fresh illustration direction, under 400 characters).',
-        'Known facts only: mobile dog grooming in Tri-Cities, Washington, salon comes to the home; the business is hiring groomers. Driving between customers is part of mobile work. Schedule flexibility, pay and benefits have NOT been confirmed. Use provided website/phone exactly. No invented clients, employee stories, reviews, prices, discounts, available openings, pay, benefits, credentials, or guaranteed comfort/results.',
-        'Use a warm, practical local-business voice and varied formats. An optional brief question is fine. Booking CTA must close with an inquiry or booking ask without promising availability. Hiring should invite a conversation without making unsupported job promises.',
+        'Known facts only: mobile dog grooming in Tri-Cities, Washington, salon comes to the home; the business is hiring groomers. Driving between customers is part of mobile work. For hiring posts, the job facts are exactly what hiringFacts says and nothing more (no medical, time off or other benefits, and no mention of training); outside hiring posts, mention no pay or benefits. Use provided website/phone exactly. No invented clients, employee stories, reviews, prices, discounts, available openings, pay, benefits, credentials, or guaranteed comfort/results.',
+        'Use a warm, practical local-business voice and varied formats. An optional brief question is fine. Booking CTA must close with an inquiry or booking ask without promising availability. Hiring posts are job ads: state the facts and how to apply. Write them so they meet Facebook rules for job posts: describe the job and its requirements only, never age, gender, family status, religion, national origin, disability or other personal traits (no words like young, energetic, guys or ladies).',
         'Tips must be basic low-risk grooming education, no diagnoses, treatments, medical claims or unsafe home cutting. Consider the date/season without inventing local weather or events.',
         'Real photo/video has NOT been visually inspected. Do not describe a pictured dog, breed, named pet, before/after result, clip, tools or setting; use a general relevant caption. Behind-the-scenes must not pretend an event happened. Never say swipe/watch or refer to an image.',
         'If rejectionFeedback is present, the earlier draft failed review. Choose a different specific idea and new graphic wording. Do not retry the rejected idea with synonyms. Observe the rejection reason as well as the post history.',
