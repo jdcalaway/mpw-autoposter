@@ -2882,8 +2882,8 @@
       "forceGraphic": true,
       "image": "images/generated/2026-11-23-hiring.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-11-23-hiring.jpg",
-      "issueNumber": null,
-      "status": "planned",
+      "issueNumber": 93,
+      "status": "pending_approval",
       "mediaHashes": [
         "cd2f94a58f89c14fef88990ae44b7102bd76b40807954f07d6ca4384d945eb43"
       ],
