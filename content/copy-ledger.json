@@ -503,9 +503,16 @@
     {
       "date": "2026-11-24",
       "day": "2026-11-23",
-      "status": "requesting",
+      "status": "rejected",
       "model": "gpt-4.1-mini",
-      "revision": 1
+      "revision": 1,
+      "httpStatus": null,
+      "reason": "Graphic wording already used on 2026-11-03.",
+      "rejectedDraft": {
+        "caption": "Is your pup the quick snip type or do they savor every calming moment of a spa day? Some dogs wiggle their way through fast trims, eager to return to play, while others luxuriate in the slow, pampering process with belly rubs and soothing touches. Which side fits your dog’s grooming personality? Share your thoughts on what makes grooming time special for your furry friend! Ready to book a groom in Tri-Cities? Visit mobilepetworks.com or call (509) 591-5913.",
+        "headline": "Fast Snip or Leisurely Pamper? What Fits Your Pup?",
+        "topic": "Understanding dogs’ grooming pace preferences in home care"
+      }
     }
   ],
   "resolvedAuthAttempts": [
