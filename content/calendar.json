@@ -2921,8 +2921,8 @@
       ],
       "image": "images/reels/ellie-2026-08-28.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/reels/ellie-2026-08-28.jpg",
-      "issueNumber": null,
-      "status": "planned",
+      "issueNumber": 94,
+      "status": "pending_approval",
       "mediaHashes": [
         "6e63ed64c98edc057366801f1a601ebe6d90b88268c092d8853921b61d0e97f4",
         "7a0d898da19dae542ffd7d333ad6135ef43aa1a3e00f8045a2aaeb8466ca374e"
