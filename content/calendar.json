@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T02:00:10.322Z",
+  "generatedAt": "2026-11-24T23:46:21.514Z",
   "timezone": "America/Los_Angeles",
   "posts": [
     {
@@ -2947,18 +2947,35 @@
       "datetimeLocal": "2026-11-25T08:00:00",
       "pillar": "tip",
       "pillarLabel": "Pet care tip",
-      "caption": "",
+      "caption": "Picture this: You're offering your dog a quick brush session on the living room floor. Suddenly, they roll over, expose a tangle, and up comes your handy comb. A calm, small grooming moment to keep mats away until the next big groom. \n\nA few easy wins:\n• Start with short, gentle strokes to spot tangles early\n• Give breaks with treats or belly rubs for happy vibes\n• Focus on common trouble spots like behind ears and under legs\n\nHow do you sneak in quick grooming moments? Share your tips or surprises! Need some extra help? Mobile Pet Works is just a call away at (509) 591-5913.",
       "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #DogCare #PetTips #DogGroomingTips #TriCities #TriCitiesDogs",
       "imageIdea": "A grooming-in-action photo, or a clean text graphic with the tip on-brand.",
       "prefersPhoto": false,
-      "graphicText": "",
-      "freshCopy": false,
-      "awaitingCopy": true,
-      "image": null,
-      "imageUrl": null,
+      "graphicText": "Quick brush breaks keep mats at bay between grooms",
+      "freshCopy": true,
+      "awaitingCopy": false,
+      "topic": "Simple at-home grooming to prevent mats between visits",
+      "freshScene": "Illustration of a cozy living room corner with a dog relaxed on a rug, a hand gently brushing a paw or ear area, and grooming tools neatly arranged nearby for easy access.",
+      "postFormat": "mini_story",
+      "supportLines": [
+        "Short, gentle strokes spot tangles early",
+        "Treats and breaks keep grooming stress-free",
+        "Focus on ears, legs and common tangle spots"
+      ],
+      "conceptId": null,
+      "creativeAsset": null,
+      "illustration": false,
+      "awaitingCreative": false,
+      "forceGraphic": true,
+      "image": "images/generated/2026-11-25-tip.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-11-25-tip.jpg",
       "issueNumber": null,
       "status": "planned",
-      "mediaHashes": []
+      "mediaHashes": [
+        "338a08aba02b9d4aa4297202aa12ff63e6b33ff03b292b28460179c77c7f5e72"
+      ],
+      "imageSource": "graphic",
+      "contentHold": null
     },
     {
       "copyRevision": 1,
@@ -3566,6 +3583,27 @@
       "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #TransformationTuesday #BeforeAndAfter #GroomingTransformation #TriCities #TriCitiesDogs",
       "imageIdea": "A before/after side-by-side. TIP: photograph every dog before and after — this is your best-performing content.",
       "prefersPhoto": true,
+      "graphicText": "",
+      "freshCopy": false,
+      "awaitingCopy": true,
+      "image": null,
+      "imageUrl": null,
+      "issueNumber": null,
+      "status": "planned",
+      "mediaHashes": []
+    },
+    {
+      "copyRevision": 1,
+      "id": "2026-12-23",
+      "date": "2026-12-23",
+      "time": "08:00",
+      "datetimeLocal": "2026-12-23T08:00:00",
+      "pillar": "tip",
+      "pillarLabel": "Pet care tip",
+      "caption": "",
+      "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #DogCare #PetTips #DogGroomingTips #TriCities #TriCitiesDogs",
+      "imageIdea": "A grooming-in-action photo, or a clean text graphic with the tip on-brand.",
+      "prefersPhoto": false,
       "graphicText": "",
       "freshCopy": false,
       "awaitingCopy": true,
