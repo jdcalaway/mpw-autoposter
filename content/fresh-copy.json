@@ -671,5 +671,22 @@
     "revision": 1,
     "model": "gpt-4.1-mini",
     "createdAt": "2026-11-22T16:24:52.599Z"
+  },
+  {
+    "caption": "Some dogs rock the \"fresh and ready to run\" look after grooming, while others bask in their new shine, stretching out like royalty by their favorite window. Is your pup more \"let's get out there\" or \"let me enjoy this\" post-groom? We know each style is part of what makes your dog special and grooming a tailored celebration of them. Curious about booking a personalized groom? We're here at mobilepetworks.com or (509) 591-5913!",
+    "headline": "Ready to Run or Reign Supreme? Your Dog’s Post-Groom Style",
+    "topic": "Dogs’ unique ways of enjoying their fresh groom at home",
+    "scene": "Illustration of two dogs side by side: one energetically bounding out the door, the other lounging contentedly in a sunny window seat, both happy after grooming. Bright, cheerful style with warm home details.",
+    "postFormat": "two_sides",
+    "supportLines": [
+      "Boundless energy: zooming out to play",
+      "Relaxed royalty: soaking in the calm",
+      "Which fits your pup’s post-groom vibe?"
+    ],
+    "date": "2026-11-24",
+    "pillar": "transformation",
+    "revision": 1,
+    "model": "gpt-4.1-mini",
+    "createdAt": "2026-11-24T00:48:59.684Z"
   }
 ]
