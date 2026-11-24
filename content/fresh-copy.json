@@ -688,5 +688,22 @@
     "revision": 1,
     "model": "gpt-4.1-mini",
     "createdAt": "2026-11-24T00:48:59.684Z"
+  },
+  {
+    "caption": "Picture this: You're offering your dog a quick brush session on the living room floor. Suddenly, they roll over, expose a tangle, and up comes your handy comb. A calm, small grooming moment to keep mats away until the next big groom. \n\nA few easy wins:\n• Start with short, gentle strokes to spot tangles early\n• Give breaks with treats or belly rubs for happy vibes\n• Focus on common trouble spots like behind ears and under legs\n\nHow do you sneak in quick grooming moments? Share your tips or surprises! Need some extra help? Mobile Pet Works is just a call away at (509) 591-5913.",
+    "headline": "Quick brush breaks keep mats at bay between grooms",
+    "topic": "Simple at-home grooming to prevent mats between visits",
+    "scene": "Illustration of a cozy living room corner with a dog relaxed on a rug, a hand gently brushing a paw or ear area, and grooming tools neatly arranged nearby for easy access.",
+    "postFormat": "mini_story",
+    "supportLines": [
+      "Short, gentle strokes spot tangles early",
+      "Treats and breaks keep grooming stress-free",
+      "Focus on ears, legs and common tangle spots"
+    ],
+    "date": "2026-11-25",
+    "pillar": "tip",
+    "revision": 1,
+    "model": "gpt-4.1-mini",
+    "createdAt": "2026-11-24T23:00:10.961Z"
   }
 ]
