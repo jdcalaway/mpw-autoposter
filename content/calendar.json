@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-22T20:56:01.958Z",
+  "generatedAt": "2026-11-24T02:00:10.322Z",
   "timezone": "America/Los_Angeles",
   "posts": [
     {
@@ -2890,7 +2890,8 @@
       "issueNumber": 93,
       "status": "pending_approval",
       "mediaHashes": [
-        "cd2f94a58f89c14fef88990ae44b7102bd76b40807954f07d6ca4384d945eb43"
+        "cd2f94a58f89c14fef88990ae44b7102bd76b40807954f07d6ca4384d945eb43",
+        "49a699895a1769614544d4f9de2b153641ee3d7b50d41499644d70cc49733d81"
       ],
       "imageSource": "graphic",
       "contentHold": null
@@ -2903,18 +2904,35 @@
       "datetimeLocal": "2026-11-24T12:00:00",
       "pillar": "transformation",
       "pillarLabel": "Transformation",
-      "caption": "",
+      "caption": "Some dogs rock the \"fresh and ready to run\" look after grooming, while others bask in their new shine, stretching out like royalty by their favorite window. Is your pup more \"let's get out there\" or \"let me enjoy this\" post-groom? We know each style is part of what makes your dog special and grooming a tailored celebration of them. Curious about booking a personalized groom? We're here at mobilepetworks.com or (509) 591-5913!",
       "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #TransformationTuesday #BeforeAndAfter #GroomingTransformation #TriCities #TriCitiesDogs",
       "imageIdea": "A before/after side-by-side. TIP: photograph every dog before and after — this is your best-performing content.",
       "prefersPhoto": true,
-      "graphicText": "",
-      "freshCopy": false,
-      "awaitingCopy": true,
-      "image": null,
-      "imageUrl": null,
+      "graphicText": "Ready to Run or Reign Supreme? Your Dog’s Post-Groom Style",
+      "freshCopy": true,
+      "awaitingCopy": false,
+      "topic": "Dogs’ unique ways of enjoying their fresh groom at home",
+      "freshScene": "Illustration of two dogs side by side: one energetically bounding out the door, the other lounging contentedly in a sunny window seat, both happy after grooming. Bright, cheerful style with warm home details.",
+      "postFormat": "two_sides",
+      "supportLines": [
+        "Boundless energy: zooming out to play",
+        "Relaxed royalty: soaking in the calm",
+        "Which fits your pup’s post-groom vibe?"
+      ],
+      "image": "images/reels/ellie-2026-08-28.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/reels/ellie-2026-08-28.jpg",
       "issueNumber": null,
       "status": "planned",
-      "mediaHashes": []
+      "mediaHashes": [
+        "6e63ed64c98edc057366801f1a601ebe6d90b88268c092d8853921b61d0e97f4",
+        "7a0d898da19dae542ffd7d333ad6135ef43aa1a3e00f8045a2aaeb8466ca374e"
+      ],
+      "mediaSource": "images/reels/ellie-2026-08-28.mp4",
+      "videoRelPath": "images/reels/ellie-2026-08-28.mp4",
+      "imageSource": "reel",
+      "mediaType": "reel",
+      "videoUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/reels/ellie-2026-08-28.mp4",
+      "contentHold": null
     },
     {
       "copyRevision": 1,
@@ -3525,6 +3543,27 @@
       "awaitingCreative": true,
       "creativeAsset": null,
       "illustration": true,
+      "image": null,
+      "imageUrl": null,
+      "issueNumber": null,
+      "status": "planned",
+      "mediaHashes": []
+    },
+    {
+      "copyRevision": 1,
+      "id": "2026-12-22",
+      "date": "2026-12-22",
+      "time": "12:00",
+      "datetimeLocal": "2026-12-22T12:00:00",
+      "pillar": "transformation",
+      "pillarLabel": "Transformation",
+      "caption": "",
+      "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #TransformationTuesday #BeforeAndAfter #GroomingTransformation #TriCities #TriCitiesDogs",
+      "imageIdea": "A before/after side-by-side. TIP: photograph every dog before and after — this is your best-performing content.",
+      "prefersPhoto": true,
+      "graphicText": "",
+      "freshCopy": false,
+      "awaitingCopy": true,
       "image": null,
       "imageUrl": null,
       "issueNumber": null,
