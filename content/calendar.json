@@ -3012,8 +3012,8 @@
       ],
       "image": "images/generated/2026-11-26-bts.jpg",
       "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-11-26-bts.jpg",
-      "issueNumber": null,
-      "status": "planned",
+      "issueNumber": 96,
+      "status": "pending_approval",
       "mediaHashes": [
         "84593d1820c42385e42a38c1d24face377a08efc6f2672aeeed626acaac199ce"
       ],
