@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T23:46:21.514Z",
+  "generatedAt": "2026-11-25T23:28:29.363Z",
   "timezone": "America/Los_Angeles",
   "posts": [
     {
@@ -2995,18 +2995,30 @@
       "datetimeLocal": "2026-11-26T18:00:00",
       "pillar": "bts",
       "pillarLabel": "Behind the scenes",
-      "caption": "",
+      "caption": "Ever wonder what it takes to keep a mobile grooming van running smoothly during a busy day? It’s not just about the clippers and suds — there's a whole rhythm to balancing drive time with pampering pups on their home turf. Here’s a peek behind the scenes:\n\n• Efficient route planning to spend more time grooming, less driving\n• Keeping tools and supplies organized in a compact space\n• Quick outfit changes to keep fur off the van’s interior\n\nGot a question about what we juggle on the go? Drop it below!",
       "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #BehindTheScenes #MobileGrooming #SmallBusiness #TriCities #TriCitiesDogs",
       "imageIdea": "A photo or short video inside/of the van, or the groomer at work with a dog.",
       "prefersPhoto": true,
-      "graphicText": "",
-      "freshCopy": false,
-      "awaitingCopy": true,
-      "image": null,
-      "imageUrl": null,
+      "graphicText": "Behind the Van Doors: What Goes Into Mobile Grooming?",
+      "freshCopy": true,
+      "awaitingCopy": false,
+      "topic": "Behind the scenes of managing a mobile grooming day",
+      "freshScene": "Illustrate the inside of a mobile grooming van layout with labeled compartments: grooming tools, products, storage bins, and a cozy grooming station. Bright and clean, with a view through the windshield showing a quiet neighborhood street. The style is warm and inviting, capturing both the practical and homey feel of the mobile salon.",
+      "postFormat": "checklist",
+      "supportLines": [
+        "Efficient route planning cuts drive time",
+        "Tools & supplies neatly stored on board",
+        "Outfit changes keep the van fur-free"
+      ],
+      "image": "images/generated/2026-11-26-bts.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jdcalaway/mpw-autoposter/main/images/generated/2026-11-26-bts.jpg",
       "issueNumber": null,
       "status": "planned",
-      "mediaHashes": []
+      "mediaHashes": [
+        "84593d1820c42385e42a38c1d24face377a08efc6f2672aeeed626acaac199ce"
+      ],
+      "imageSource": "graphic",
+      "contentHold": null
     },
     {
       "copyRevision": 1,
@@ -3614,6 +3626,27 @@
       "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #DogCare #PetTips #DogGroomingTips #TriCities #TriCitiesDogs",
       "imageIdea": "A grooming-in-action photo, or a clean text graphic with the tip on-brand.",
       "prefersPhoto": false,
+      "graphicText": "",
+      "freshCopy": false,
+      "awaitingCopy": true,
+      "image": null,
+      "imageUrl": null,
+      "issueNumber": null,
+      "status": "planned",
+      "mediaHashes": []
+    },
+    {
+      "copyRevision": 1,
+      "id": "2026-12-24",
+      "date": "2026-12-24",
+      "time": "18:00",
+      "datetimeLocal": "2026-12-24T18:00:00",
+      "pillar": "bts",
+      "pillarLabel": "Behind the scenes",
+      "caption": "",
+      "hashtags": "#MobilePetWorks #MobileDogGrooming #DogGrooming #BehindTheScenes #MobileGrooming #SmallBusiness #TriCities #TriCitiesDogs",
+      "imageIdea": "A photo or short video inside/of the van, or the groomer at work with a dog.",
+      "prefersPhoto": true,
       "graphicText": "",
       "freshCopy": false,
       "awaitingCopy": true,
