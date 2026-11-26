@@ -552,9 +552,16 @@
     {
       "date": "2026-11-27",
       "day": "2026-11-26",
-      "status": "requesting",
+      "status": "rejected",
       "model": "gpt-4.1-mini",
-      "revision": 1
+      "revision": 1,
+      "httpStatus": null,
+      "reason": "Topic already used.",
+      "rejectedDraft": {
+        "caption": "Some pups turn grooming into a runway walk, others into a cozy nap spot. Which style does your dog rock—quick snip or chill session? Either way, Mobile Pet Works brings the salon to your Tri-Cities doorstep, matching your dog's vibe without the hassle of travel. Curious about how your pup might enjoy grooming at home? Call (509) 591-5913 or visit mobilepetworks.com to learn more and book a visit.",
+        "headline": "Quick Snip or Chill Session? Find Your Pup’s Grooming Style",
+        "topic": "Spotting your dog's unique grooming vibe at home"
+      }
     }
   ],
   "resolvedAuthAttempts": [
