@@ -722,5 +722,22 @@
     "revision": 1,
     "model": "gpt-4.1-mini",
     "createdAt": "2026-11-25T22:29:30.472Z"
+  },
+  {
+    "caption": "Waiting in the car for a grooming appointment? Your dog misses the good part—the calm, cozy space of home. With Mobile Pet Works, grooming isn't a ride or a wait; it's a visit. Call (509) 591-5913 or visit mobilepetworks.com to see how easy it can be to book a mobile grooming session right where your dog feels best.",
+    "headline": "Skip the Wait, Groom at Home with Mobile Pet Works",
+    "topic": "Convenience of at-home mobile pet grooming in Tri-Cities",
+    "scene": "An illustration of a dog happily lounging at home while outside, a friendly Mobile Pet Works van pulls up, ready to groom onsite without the dog needing to leave.",
+    "postFormat": "punchline",
+    "supportLines": [
+      "No car rides or waiting rooms for your dog",
+      "Grooming happens in your driveway or yard",
+      "Professional care comes directly to you"
+    ],
+    "date": "2026-11-27",
+    "pillar": "booking",
+    "revision": 1,
+    "model": "gpt-4.1-mini",
+    "createdAt": "2026-11-26T23:30:35.540Z"
   }
 ]
