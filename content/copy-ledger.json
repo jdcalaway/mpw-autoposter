@@ -538,9 +538,16 @@
     {
       "date": "2026-11-27",
       "day": "2026-11-26",
-      "status": "requesting",
+      "status": "rejected",
       "model": "gpt-4.1-mini",
-      "revision": 1
+      "revision": 1,
+      "httpStatus": null,
+      "reason": "Topic repeats a recent theme (fur).",
+      "rejectedDraft": {
+        "caption": "When the lint roller comes out, but you swear the fur multiplies just for fun. We've all been there in the Tri-Cities! Save your favorite black pants for special occasions and leave the rest to us — we'll help keep your pup's coat neat, fresh, and fur-friendly. Curious about booking a grooming session that actually keeps the fluff at bay? Check us out at mobilepetworks.com or call (509) 591-5913.",
+        "headline": "Dog Fur’s Secret Hideouts: Why Your Clothes Are Not Safe",
+        "topic": "The tricky places dog fur loves to sneak onto clothes"
+      }
     }
   ],
   "resolvedAuthAttempts": [
