@@ -562,6 +562,13 @@
         "headline": "Quick Snip or Chill Session? Find Your Pup’s Grooming Style",
         "topic": "Spotting your dog's unique grooming vibe at home"
       }
+    },
+    {
+      "date": "2026-11-27",
+      "day": "2026-11-26",
+      "status": "requesting",
+      "model": "gpt-4.1-mini",
+      "revision": 1
     }
   ],
   "resolvedAuthAttempts": [
