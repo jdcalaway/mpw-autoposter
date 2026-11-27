@@ -601,9 +601,16 @@
     {
       "date": "2026-11-28",
       "day": "2026-11-27",
-      "status": "requesting",
+      "status": "rejected",
       "model": "gpt-4.1-mini",
-      "revision": 1
+      "revision": 1,
+      "httpStatus": null,
+      "reason": "Topic already used.",
+      "rejectedDraft": {
+        "caption": "Mobile Pet Works is hiring for a Mobile Dog Groomer position in the Tri-Cities, WA! This full-time role offers 40% commission plus tips. You'll work Monday to Saturday performing full grooms and baths one dog at a time in our fully equipped grooming van right at clients' homes. Candidates need 2+ years of grooming experience, be comfortable with various breeds and coat types, and have a valid Washington driver's license. Interested? Apply online: https://docs.google.com/forms/d/e/1FAIpQLScMPLC9fDGcR0McxfOrfhEoPH3rwr82XPtQJoIue56WkpUZMA/viewform - Apply with the short online form.",
+        "headline": "Mobile Dog Groomer Wanted in Tri-Cities!",
+        "topic": "Hiring groomers: Mobile Dog Groomer role in Tri-Cities, WA"
+      }
     }
   ],
   "resolvedAuthAttempts": [
