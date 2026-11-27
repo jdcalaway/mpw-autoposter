@@ -597,6 +597,13 @@
         "headline": "Hiring Mobile Dog Groomer in Tri-Cities: Join Our Team",
         "topic": "Hiring groomers: Mobile Dog Groomer role in Tri-Cities, WA"
       }
+    },
+    {
+      "date": "2026-11-28",
+      "day": "2026-11-27",
+      "status": "requesting",
+      "model": "gpt-4.1-mini",
+      "revision": 1
     }
   ],
   "resolvedAuthAttempts": [
